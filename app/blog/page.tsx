@@ -1,0 +1,10 @@
+export default function BlogPage() {
+  return (
+    <main className="py-section">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <h1 className="text-4xl font-bold text-slate-900">Blog</h1>
+        <p className="mt-4 text-slate-600">Articles coming soon.</p>
+      </div>
+    </main>
+  )
+}

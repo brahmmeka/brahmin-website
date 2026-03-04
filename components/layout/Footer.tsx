@@ -28,25 +28,44 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-300">
-      <div className="container mx-auto px-6 max-w-7xl py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-          <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="text-xl font-bold text-white">
-              Brahmin Solutions
+    <footer className="bg-slate-900">
+      <div className="container mx-auto px-6 max-w-7xl">
+        {/* Top section */}
+        <div className="py-14 grid grid-cols-2 md:grid-cols-6 gap-x-8 gap-y-10">
+          {/* Brand col */}
+          <div className="col-span-2">
+            <Link href="/" className="flex items-center gap-2">
+              <div className="w-7 h-7 bg-primary-600 rounded-md flex items-center justify-center">
+                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+              </div>
+              <span className="text-base font-bold text-white">Brahmin Solutions</span>
             </Link>
-            <p className="mt-3 text-sm text-slate-400 leading-relaxed">
-              Cloud-based MRP and inventory management for small manufacturers.
+            <p className="mt-4 text-sm text-slate-400 leading-relaxed max-w-xs">
+              Cloud-based MRP and inventory management for small to mid-sized manufacturers.
             </p>
-            <p className="mt-4 text-sm text-slate-500">Starting at $129/month</p>
+            <div className="mt-5 space-y-1.5">
+              <p className="text-xs text-slate-500">Starting at <span className="text-slate-300 font-semibold">$129/month</span></p>
+              <p className="text-xs text-slate-500">Founded <span className="text-slate-300">2015</span> &middot; 300+ customers</p>
+            </div>
+
+            {/* CTA */}
+            <Link
+              href="/demo"
+              className="inline-block mt-6 bg-accent-500 hover:bg-accent-600 text-white text-sm px-5 py-2.5 rounded-lg font-semibold transition-colors"
+            >
+              Book a Demo
+            </Link>
           </div>
 
+          {/* Link columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
+              <h3 className="text-xs font-semibold text-white uppercase tracking-widest mb-4">
                 {category}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link.href}>
                     <Link
@@ -62,16 +81,23 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} Brahmin Solutions. All rights reserved.
+        {/* Divider */}
+        <div className="border-t border-slate-800" />
+
+        {/* Bottom section */}
+        <div className="py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-slate-500">
+            © {new Date().getFullYear()} Brahmin Solutions, Inc. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <Link href="/privacy" className="text-sm text-slate-500 hover:text-slate-300 transition-colors">
+          <div className="flex items-center gap-6">
+            <Link href="/privacy" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-sm text-slate-500 hover:text-slate-300 transition-colors">
+            <Link href="/terms" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
               Terms of Service
+            </Link>
+            <Link href="/security" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+              Security
             </Link>
           </div>
         </div>

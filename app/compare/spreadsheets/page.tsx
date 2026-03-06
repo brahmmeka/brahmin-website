@@ -104,7 +104,7 @@ export default function VsSpreadsheetsPage() {
                 Book a Demo
               </Link>
               <Link href="/pricing" className="flex items-center gap-2 border-2 border-primary-200 text-primary-600 hover:border-primary-300 hover:bg-primary-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all">
-                See Pricing from $129/mo
+                See Pricing from $199/mo
               </Link>
             </div>
             <p className="mt-5 text-sm text-slate-400">No credit card required &middot; 14-day free trial &middot; We handle data migration</p>
@@ -191,7 +191,7 @@ export default function VsSpreadsheetsPage() {
                   <th className="text-left px-6 py-5 text-sm font-semibold text-slate-500 w-1/2">Capability</th>
                   <th className="px-6 py-5 text-center w-1/4">
                     <div className="text-sm font-bold text-primary-600">Brahmin Solutions</div>
-                    <div className="text-xs text-slate-400 mt-0.5">from $129/mo</div>
+                    <div className="text-xs text-slate-400 mt-0.5">from $199/mo</div>
                   </th>
                   <th className="px-6 py-5 text-center w-1/4">
                     <div className="text-sm font-bold text-slate-500">Spreadsheets</div>

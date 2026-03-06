@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 type RowValue = string | boolean
 
 const comparisonRows: { feature: string; brahmin: RowValue; cin7: RowValue; note?: string }[] = [
-  { feature: 'Starting price', brahmin: '$129/month', cin7: '$349/month', note: 'Cin7 Core starts at $349; Cin7 Omni higher' },
+  { feature: 'Starting price', brahmin: '$199/month', cin7: '$349/month', note: 'Cin7 Core starts at $349; Cin7 Omni higher' },
   { feature: 'Per-transaction fees', brahmin: false, cin7: true, note: 'Cin7 charges per order on some plans' },
   { feature: 'Setup fee', brahmin: false, cin7: true, note: 'Cin7 often charges onboarding fees' },
   { feature: 'Support response time', brahmin: '15 minutes', cin7: '24–72 hours' },
@@ -37,7 +37,7 @@ const switchReasons = [
   },
   {
     title: 'Lower price. No surprise fees.',
-    description: "Cin7 starts at $349/month and adds per-order fees and setup costs on top. Brahmin starts at $129/month—flat-rate, no per-order fees, no surprise invoices.",
+    description: "Cin7 starts at $349/month and adds per-order fees and setup costs on top. Brahmin starts at $199/month—flat-rate, no per-order fees, no surprise invoices.",
     icon: '💰',
   },
   {
@@ -131,7 +131,7 @@ export default function VsCin7Page() {
             </div>
             <div className="bg-primary-600 rounded-2xl p-6 border border-primary-500">
               <div className="text-xs font-bold text-primary-200 uppercase tracking-widest mb-3">Brahmin Solutions</div>
-              <div className="text-4xl font-bold text-white">$129<span className="text-xl text-primary-200">/mo</span></div>
+              <div className="text-4xl font-bold text-white">$199<span className="text-xl text-primary-200">/mo</span></div>
               <div className="text-primary-200 text-sm mt-1">Flat rate. No hidden fees.</div>
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function VsCin7Page() {
                   <th className="text-left px-6 py-5 text-sm font-semibold text-slate-500 w-1/2">Feature</th>
                   <th className="px-6 py-5 text-center w-1/4">
                     <div className="text-sm font-bold text-primary-600">Brahmin Solutions</div>
-                    <div className="text-xs text-slate-400 mt-0.5">from $129/mo</div>
+                    <div className="text-xs text-slate-400 mt-0.5">from $199/mo</div>
                   </th>
                   <th className="px-6 py-5 text-center w-1/4">
                     <div className="text-sm font-bold text-slate-500">Cin7</div>

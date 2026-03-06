@@ -12,7 +12,7 @@ type RowValue = string | boolean
 
 const comparisonRows: { feature: string; brahmin: RowValue; fishbowl: RowValue; note?: string }[] = [
   { feature: 'Deployment', brahmin: 'Cloud (browser)', fishbowl: 'On-premise server', note: 'Fishbowl requires server hardware and IT maintenance' },
-  { feature: 'Starting price', brahmin: '$129/month', fishbowl: '$4,395+ one-time', note: 'Fishbowl has large upfront license costs' },
+  { feature: 'Starting price', brahmin: '$199/month', fishbowl: '$4,395+ one-time', note: 'Fishbowl has large upfront license costs; Brahmin no per-user fees' },
   { feature: 'Implementation time', brahmin: '21 days avg.', fishbowl: '60–120 days', note: 'Server setup, data migration, training' },
   { feature: 'Dedicated implementation manager', brahmin: true, fishbowl: false },
   { feature: 'Support response time', brahmin: '15 minutes', fishbowl: '24–48 hours' },
@@ -37,7 +37,7 @@ const switchReasons = [
   },
   {
     title: 'No upfront license fee',
-    description: "Fishbowl requires a large upfront license purchase—often $4,000–$10,000—before you even start. Brahmin starts at $129/month with a 14-day free trial and no commitment.",
+    description: "Fishbowl requires a large upfront license purchase—often $4,000–$10,000—before you even start. Brahmin starts at $199/month with a 14-day free trial and no commitment.",
     icon: '💳',
   },
   {
@@ -145,7 +145,7 @@ export default function VsFishbowlPage() {
                   <th className="text-left px-6 py-5 text-sm font-semibold text-slate-500 w-1/2">Feature</th>
                   <th className="px-6 py-5 text-center w-1/4">
                     <div className="text-sm font-bold text-primary-600">Brahmin Solutions</div>
-                    <div className="text-xs text-slate-400 mt-0.5">from $129/mo</div>
+                    <div className="text-xs text-slate-400 mt-0.5">from $199/mo</div>
                   </th>
                   <th className="px-6 py-5 text-center w-1/4">
                     <div className="text-sm font-bold text-slate-500">Fishbowl</div>

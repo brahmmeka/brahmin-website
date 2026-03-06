@@ -10,8 +10,8 @@
 
 ### Pages Built ✅
 - Homepage (`/`)
-- Features (`/features`) — renamed from `/product`
-- Pricing (`/pricing`) — interactive plan builder, 4 tiers, revenue toggle
+- Features (`/features`)
+- Pricing (`/pricing`)
 - Comparison pages (`/compare/*`)
 - Industry pages (`/industries/*`)
 
@@ -44,17 +44,9 @@
 7. 📱 Mobile — Clickable menu with sub-screens
 
 ### 3. Pricing
-- **Price:** $199/month (Starter, never $129)
-- No per-transaction fees, no per-seat charges
+- **Price:** $199/month (updated from $129)
+- No per-transaction fees
 - Includes dedicated support
-- **4 plans:** Starter ($199) | Growth ($499/$449 annual) | Pro ($999/$899 annual) | Enterprise (custom)
-- **Revenue toggle:** Under $1M → Starter (50% off everything) | $1M+ → Growth/Pro/Enterprise
-- **Annual discount:** 10% off Growth and Pro (Starter is monthly-only — already 50% off)
-- **Free trial:** 14-day for Starter (no credit card) | 30-day money-back for Growth/Pro
-- **Starter apps:** Pick 1 free (Mobile or B2B Portal); add second for $50/mo
-- **Pro includes all add-ons** (Manufacturing Pro, Compliance Essentials, Planning & Analytics)
-- **Interactive plan builder:** Real-time pricing with sliders for orders & locations
-- **Full spec:** See `PRICING-SPEC.md`
 
 ### 4. Navigation Structure
 - `/product` renamed to `/features`
@@ -165,12 +157,26 @@
 ## FILES IN THIS REPO
 
 ### Spec Files (Root)
-- `CLAUDE.md` — Master website specification
-- `HANDOFF.md` — This file (context from planning)
-- `ABOUT-PAGE-SPEC.md` — Detailed About page spec
-- `PROMPT-About.md` — Quick prompt for building About page
-- `PROMPT-Homepage.md` — Quick prompt for Homepage
-- `SITEMAP-Complete.md` — Full 28-page sitemap
+| File | Status | Purpose |
+|------|--------|---------|
+| `INSTRUCTIONS.md` | ✅ Ready | Rules Claude Code follows every session |
+| `HANDOFF.md` | ✅ Ready | Status tracker + all decisions (auto-updated) |
+| `CLAUDE.md` | ✅ Ready | Master website specification |
+| `SITEMAP-Complete.md` | ✅ Ready | Full 28-page sitemap with meta tags |
+| `ABOUT-PAGE-SPEC.md` | ✅ Ready | About page detailed spec |
+| `PRICING-SPEC.md` | ❌ Needs creation | Document from existing page |
+| `PROMPT-About.md` | ✅ Ready | Quick prompt for About page |
+| `PROMPT-Homepage.md` | ✅ Ready | Quick prompt for Homepage |
+
+### Page Spec Status
+| Page | Spec File | Status |
+|------|-----------|--------|
+| Homepage | In CLAUDE.md | ✅ Documented |
+| Features | `FEATURES-SPEC.md` | ✅ Documented |
+| Pricing | `PRICING-SPEC.md` | ✅ Documented |
+| About | `ABOUT-PAGE-SPEC.md` | ✅ Ready to build |
+| Compare pages | `COMPARE-TEMPLATE-SPEC.md` | ✅ Documented |
+| Industry pages | `INDUSTRY-TEMPLATE-SPEC.md` | ✅ Documented |
 
 ### Key Components
 - `FeaturesTabbed.jsx` — Interactive 7-tab features component (ready to use)
@@ -179,16 +185,24 @@
 
 ## NEXT ACTIONS
 
-### Immediate
+### Immediate — Build
 1. [ ] Build About page using ABOUT-PAGE-SPEC.md
 2. [ ] Add Brahm's headshot to `/public/images/`
 3. [ ] Collect 2-4 team member photos + titles
 
+### Immediate — Document Existing Pages
+1. [x] Create PRICING-SPEC.md from existing `/app/pricing/page.tsx`
+2. [x] Create FEATURES-SPEC.md from existing `/app/features/page.tsx`
+3. [x] Create COMPARE-TEMPLATE-SPEC.md from existing comparison pages
+4. [x] Create INDUSTRY-TEMPLATE-SPEC.md from existing industry pages
+
 ### Audit Needed
 1. [ ] Review all built pages against CLAUDE.md spec
 2. [ ] Check FeaturesTabbed is integrated into homepage
-3. [ ] Verify pricing shows $199/month everywhere
+3. [x] Verify pricing shows $199/month everywhere — fixed $129 in all 4 compare pages
 4. [ ] Confirm all pages use sentence case headings
+5. [ ] Verify SITEMAP-Complete.md matches actual pages
+6. [ ] Fix features page Hero eyebrow (still reads "Product" instead of "Features")
 
 ### Future
 1. [ ] Blog migration from Webflow (see MIGRATION-Webflow-to-Sanity.md)

@@ -150,7 +150,7 @@ export default function ProductPage() {
         </div>
         <div className="relative container mx-auto px-6 max-w-7xl text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">
-            Product
+            Features
           </span>
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08] max-w-4xl mx-auto">
             Everything you need.{' '}

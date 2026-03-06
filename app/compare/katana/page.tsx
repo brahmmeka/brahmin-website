@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 type RowValue = string | boolean
 
 const comparisonRows: { feature: string; brahmin: RowValue; katana: RowValue; note?: string }[] = [
-  { feature: 'Starting price', brahmin: '$129/month', katana: '$179/month', note: 'Katana charges more for fewer users' },
+  { feature: 'Starting price', brahmin: '$199/month', katana: '$179/month', note: 'No per-user fees, no per-transaction fees' },
   { feature: 'Per-order fees', brahmin: false, katana: true, note: 'Katana charges per sales order on some plans' },
   { feature: 'Support response time', brahmin: '15 minutes', katana: '1–3 business days', note: 'Brahmin measured and published' },
   { feature: 'Dedicated implementation manager', brahmin: true, katana: false },
@@ -130,7 +130,7 @@ export default function VsKatanaPage() {
                   <th className="text-left px-6 py-5 text-sm font-semibold text-slate-500 w-1/2">Feature</th>
                   <th className="px-6 py-5 text-center w-1/4">
                     <div className="text-sm font-bold text-primary-600">Brahmin Solutions</div>
-                    <div className="text-xs text-slate-400 mt-0.5">from $129/mo</div>
+                    <div className="text-xs text-slate-400 mt-0.5">from $199/mo</div>
                   </th>
                   <th className="px-6 py-5 text-center w-1/4">
                     <div className="text-sm font-bold text-slate-500">Katana</div>

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useRef, useEffect } from 'react'
 
 const industries = [
@@ -69,22 +70,24 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
       <div className="container mx-auto px-6 max-w-7xl">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-7 h-7 bg-primary-600 rounded-md flex items-center justify-center">
-              <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-              </svg>
-            </div>
-            <span className="text-lg font-bold text-slate-900">Brahmin Solutions</span>
+          <Link href="/" className="flex items-center shrink-0">
+            <Image
+              src="/images/logo.webp"
+              alt="Brahmin Solutions"
+              width={160}
+              height={40}
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-7">
-            <Link href="/product" className="text-sm text-slate-600 hover:text-slate-900 font-medium transition-colors">
-              Product
+            <Link href="/features" className="text-sm text-slate-600 hover:text-slate-900 font-medium transition-colors">
+              Features
             </Link>
             <Dropdown label="Industries" items={industries} />
             <Link href="/pricing" className="text-sm text-slate-600 hover:text-slate-900 font-medium transition-colors">
@@ -105,7 +108,7 @@ export default function Header() {
               href="/demo"
               className="bg-accent-500 hover:bg-accent-600 text-white text-sm px-5 py-2.5 rounded-lg font-semibold transition-colors shadow-sm"
             >
-              Book a Demo
+              Book a demo
             </Link>
           </div>
 
@@ -132,7 +135,7 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden border-t border-slate-200 bg-white">
           <div className="px-6 py-4 space-y-1">
-            <Link href="/product" onClick={() => setMobileOpen(false)} className="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Product</Link>
+            <Link href="/features" onClick={() => setMobileOpen(false)} className="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Features</Link>
             <div className="py-2">
               <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Industries</p>
               {industries.map(i => (
@@ -148,7 +151,7 @@ export default function Header() {
             </div>
             <div className="pt-3 pb-1 border-t border-slate-100 flex flex-col gap-2">
               <a href="https://app.brahmin-solutions.com/login" className="text-sm text-center py-2.5 text-slate-700 font-medium border border-slate-200 rounded-lg hover:bg-slate-50">Log in</a>
-              <Link href="/demo" onClick={() => setMobileOpen(false)} className="text-sm text-center py-2.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors">Book a Demo</Link>
+              <Link href="/demo" onClick={() => setMobileOpen(false)} className="text-sm text-center py-2.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-colors">Book a demo</Link>
             </div>
           </div>
         </div>

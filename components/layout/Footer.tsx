@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const footerLinks = {
   Product: [
-    { label: 'Features', href: '/product' },
+    { label: 'Features', href: '/features' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Integrations', href: '/integrations' },
     { label: 'Book a Demo', href: '/demo' },
@@ -46,7 +46,7 @@ export default function Footer() {
               Cloud-based MRP and inventory management for small to mid-sized manufacturers.
             </p>
             <div className="mt-5 space-y-1.5">
-              <p className="text-xs text-slate-500">Starting at <span className="text-slate-300 font-semibold">$129/month</span></p>
+              <p className="text-xs text-slate-500">Starting at <span className="text-slate-300 font-semibold">$199/month</span></p>
               <p className="text-xs text-slate-500">Founded <span className="text-slate-300">2015</span> &middot; 300+ customers</p>
             </div>
 

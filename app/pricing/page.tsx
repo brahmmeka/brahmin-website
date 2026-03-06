@@ -1,10 +1,12 @@
-export default function Page() {
-  return (
-    <main className="py-section">
-      <div className="container mx-auto px-6 max-w-7xl">
-        <h1 className="text-4xl font-bold text-slate-900">Coming Soon</h1>
-        <p className="mt-4 text-slate-600">This page is under construction.</p>
-      </div>
-    </main>
-  )
+import type { Metadata } from 'next'
+import PricingPageClient from './PricingPageClient'
+
+export const metadata: Metadata = {
+  title: 'Pricing | Brahmin Solutions',
+  description:
+    'Transparent pricing for manufacturers. Startups get 50% off. Everyone gets unlimited users and training. No per-seat fees.',
+}
+
+export default function PricingPage() {
+  return <PricingPageClient />
 }

@@ -1,18 +1,18 @@
 # CLAUDE.md - Brahmin Solutions Website
 
-> This file contains all specifications for the Brahmin Solutions website.
+> **IMPORTANT:** This file contains all specifications for the Brahmin Solutions website.
 > Read this file completely before starting any work.
 
 ---
 
 ## PROJECT OVERVIEW
 
-**Company:** Brahmin Solutions
-**Product:** Cloud-based MRP and inventory management software
-**Target:** Small to mid-sized manufacturers (up to $50M revenue)
-**Founded:** 2015
-**Customers:** 300+
-**Starting Price:** $129/month
+**Company:** Brahmin Solutions  
+**Product:** Cloud-based MRP and inventory management software  
+**Target:** Small to mid-sized manufacturers (up to $50M revenue)  
+**Founded:** 2015  
+**Customers:** 300+  
+**Starting Price:** $199/month
 
 **Tech Stack:**
 - Next.js 14 (App Router)
@@ -31,25 +31,43 @@ brahmin-website/
 ├── app/
 │   ├── layout.tsx              # Root layout with header/footer
 │   ├── page.tsx                # Homepage
-│   ├── product/page.tsx        # Features page
+│   ├── features/page.tsx       # Features overview
 │   ├── pricing/page.tsx        # Pricing page
-│   ├── integrations/page.tsx   # Integrations page
+│   ├── integrations/page.tsx   # Integrations overview
 │   ├── demo/page.tsx           # Book demo page
 │   ├── faq/page.tsx            # FAQ page
 │   ├── about/page.tsx          # About us page
 │   ├── customers/page.tsx      # Customer stories
-│   ├── manufacturing/page.tsx  # Industry: Manufacturing
-│   ├── food-beverage/page.tsx  # Industry: Food & Beverage
-│   ├── wholesale-distribution/page.tsx  # Industry: Wholesale
-│   ├── compare/
+│   │
+│   ├── industries/             # Industry pages
+│   │   ├── manufacturing/page.tsx
+│   │   ├── food-beverage/page.tsx
+│   │   ├── cosmetics/page.tsx
+│   │   ├── supplements/page.tsx
+│   │   └── wholesale-distribution/page.tsx
+│   │
+│   ├── compare/                # Competitor comparison pages
+│   │   ├── page.tsx            # Comparison hub/overview
 │   │   ├── katana/page.tsx
+│   │   ├── wherefour/page.tsx
+│   │   ├── mrpeasy/page.tsx
 │   │   ├── fishbowl/page.tsx
 │   │   ├── cin7/page.tsx
+│   │   ├── dear-systems/page.tsx
+│   │   ├── netsuite/page.tsx
+│   │   ├── sap-business-one/page.tsx
+│   │   ├── odoo/page.tsx
+│   │   ├── inflow/page.tsx
+│   │   ├── craftybase/page.tsx
+│   │   ├── sortly/page.tsx
 │   │   └── spreadsheets/page.tsx
+│   │
 │   ├── blog/
 │   │   ├── page.tsx            # Blog listing
 │   │   └── [slug]/page.tsx     # Individual post
+│   │
 │   └── not-found.tsx           # 404 page
+│
 ├── components/
 │   ├── layout/
 │   │   ├── Header.tsx
@@ -59,32 +77,34 @@ brahmin-website/
 │   │   ├── Button.tsx
 │   │   ├── Card.tsx
 │   │   ├── Accordion.tsx
+│   │   ├── ComparisonTable.tsx
 │   │   └── ...
 │   ├── sections/
 │   │   ├── Hero.tsx
+│   │   ├── TrustBar.tsx
+│   │   ├── BeforeAfter.tsx
+│   │   ├── FeaturesTabbed.tsx
 │   │   ├── WhoItsFor.tsx
-│   │   ├── SwitchingFrom.tsx
-│   │   ├── SupportStats.tsx
+│   │   ├── WhyBrahmin.tsx
 │   │   ├── SocialProof.tsx
-│   │   ├── FeaturesGrid.tsx
-│   │   ├── FAQ.tsx
-│   │   └── CTA.tsx
+│   │   └── FinalCTA.tsx
 │   └── blog/
 │       ├── PostCard.tsx
 │       └── PostContent.tsx
 ├── lib/
-│   ├── sanity.ts               # Sanity client config
-│   └── utils.ts                # Utility functions
+│   ├── sanity.ts
+│   └── utils.ts
 ├── public/
 │   ├── images/
 │   │   ├── logo.svg
-│   │   ├── customers/          # Customer logos
-│   │   └── integrations/       # Integration logos
+│   │   ├── customers/
+│   │   ├── integrations/
+│   │   └── competitors/
 │   ├── robots.txt
 │   └── sitemap.xml
 ├── sanity/
 │   ├── schemas/
-│   │   └── post.ts             # Blog post schema
+│   │   └── post.ts
 │   └── sanity.config.ts
 ├── styles/
 │   └── globals.css
@@ -102,7 +122,6 @@ brahmin-website/
 ```javascript
 // tailwind.config.ts
 colors: {
-  // Primary - Deep blue (trust, professionalism)
   primary: {
     50: '#eff6ff',
     100: '#dbeafe',
@@ -115,7 +134,6 @@ colors: {
     800: '#1e40af',
     900: '#1e3a8a',
   },
-  // Secondary - Slate (text, backgrounds)
   slate: {
     50: '#f8fafc',
     100: '#f1f5f9',
@@ -128,7 +146,6 @@ colors: {
     800: '#1e293b',
     900: '#0f172a',
   },
-  // Accent - Green (CTAs, success, support differentiator)
   accent: {
     50: '#f0fdf4',
     100: '#dcfce7',
@@ -145,67 +162,64 @@ colors: {
 ### Typography
 
 ```javascript
-// Use system fonts for fast loading
 fontFamily: {
   sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
 }
 
-// Font sizes
 fontSize: {
-  'xs': '0.75rem',     // 12px
-  'sm': '0.875rem',    // 14px
-  'base': '1rem',      // 16px
-  'lg': '1.125rem',    // 18px
-  'xl': '1.25rem',     // 20px
-  '2xl': '1.5rem',     // 24px
-  '3xl': '1.875rem',   // 30px
-  '4xl': '2.25rem',    // 36px
-  '5xl': '3rem',       // 48px
-  '6xl': '3.75rem',    // 60px
+  'xs': '0.75rem',
+  'sm': '0.875rem',
+  'base': '1rem',
+  'lg': '1.125rem',
+  'xl': '1.25rem',
+  '2xl': '1.5rem',
+  '3xl': '1.875rem',
+  '4xl': '2.25rem',
+  '5xl': '3rem',
+  '6xl': '3.75rem',
 }
 ```
+
+**Capitalization:** Use sentence case for ALL headings, titles, buttons, and navigation.
+
+| Element | ❌ Don't | ✅ Do |
+|---------|---------|-------|
+| H1 | "Inventory and Production Software That Just Works" | "Inventory and production software that just works" |
+| H2 | "Everything You Need. Nothing You Don't." | "Everything you need. Nothing you don't." |
+| Buttons | "Book A Demo" | "Book a demo" |
+
+**Exceptions:** Proper nouns (Brahmin, QuickBooks), Acronyms (MRP, ERP, 3PL)
 
 ### Spacing
 
 ```javascript
-// Standard spacing scale
 spacing: {
-  'section': '6rem',      // Between major sections (96px)
-  'component': '3rem',    // Between components (48px)
-  'element': '1.5rem',    // Between elements (24px)
-  'tight': '0.75rem',     // Tight spacing (12px)
+  'section': '6rem',      // 96px
+  'component': '3rem',    // 48px
+  'element': '1.5rem',    // 24px
+  'tight': '0.75rem',     // 12px
 }
 ```
 
 ### Components
 
-**Buttons:**
 ```jsx
 // Primary CTA (green)
-<Button variant="primary">Book a Demo</Button>
-// Styles: bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 rounded-lg font-semibold
+<Button variant="primary">Book a demo</Button>
+// bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 rounded-lg font-semibold
 
 // Secondary (outline)
-<Button variant="secondary">Learn More</Button>
-// Styles: border-2 border-primary-600 text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-lg font-semibold
+<Button variant="secondary">Learn more</Button>
+// border-2 border-primary-600 text-primary-600 hover:bg-primary-50 px-6 py-3 rounded-lg font-semibold
 
 // Ghost (text link)
 <Button variant="ghost">See how it works →</Button>
-// Styles: text-primary-600 hover:text-primary-700 font-medium
-```
+// text-primary-600 hover:text-primary-700 font-medium
 
-**Cards:**
-```jsx
 // Standard card
-<Card>
-  <CardHeader>Title</CardHeader>
-  <CardContent>Content</CardContent>
-</Card>
-// Styles: bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md transition-shadow
-```
+<Card>...</Card>
+// bg-white rounded-xl shadow-sm border border-slate-200 p-6 hover:shadow-md transition-shadow
 
-**Section Layout:**
-```jsx
 // Standard section
 <section className="py-section">
   <div className="container mx-auto px-6 max-w-7xl">
@@ -216,364 +230,461 @@ spacing: {
 
 ---
 
-## HOMEPAGE COPY
+## HOMEPAGE SECTIONS (8 Total)
 
-### Hero Section
-
-**H1 Headline:**
-"MRP Software With Support That Actually Picks Up"
-
-**Subheadline:**
-"Cloud-based inventory and production management for small manufacturers—backed by a team that knows your business by name."
-
-**Trust Bar:**
-"Trusted by 300+ manufacturers since 2015"
-
-**Primary CTA:** "Book a Demo"
-**Secondary CTA:** "See how it works →"
+| # | Section | Component | Purpose |
+|---|---------|-----------|---------|
+| 1 | Hero | `Hero.tsx` | Hook + primary CTA + dashboard preview |
+| 2 | Trust Bar | `TrustBar.tsx` | Quick credibility stats |
+| 3 | Before/After | `BeforeAfter.tsx` | Pain points embedded in visual comparison |
+| 4 | Capabilities | `FeaturesTabbed.tsx` | 7 features with pill tabs + dashboard mockups |
+| 5 | Who It's For | `WhoItsFor.tsx` | 3 personas: Makers, Movers, Sellers |
+| 6 | Why Brahmin | `WhyBrahmin.tsx` | Switching reasons + support differentiator |
+| 7 | Social Proof | `SocialProof.tsx` | Testimonials + logo wall |
+| 8 | Final CTA | `FinalCTA.tsx` | Book demo with reassurance |
 
 ---
 
-### Who It's For Section
+## SECTION 1: Hero
 
-**Headline:** "Built for how you actually work"
+**File:** `components/sections/Hero.tsx`
 
-**Card 1 - In-House Manufacturers:**
-- Icon: Factory
-- Headline: "Making products in-house?"
-- Body: "Track production, BOMs, and real-time costs across your shop floor. Know exactly what's being made, what it costs, and when it ships."
+**H1:** "Inventory and production software that just works"
 
-**Card 2 - Multi-Location / Co-Manufacturing:**
-- Icon: Warehouse
-- Headline: "Working with co-manufacturers or 3PLs?"
-- Body: "See inventory across every warehouse—even ones you don't own. Sync with partners without spreadsheet chaos."
+**Subheadline:** "Cloud-based inventory and production management for small manufacturers—backed by a team that knows your business by name."
 
-**Card 3 - B2B + DTC Sellers:**
-- Icon: Shopping cart
-- Headline: "Selling wholesale and direct-to-consumer?"
-- Body: "Sync with Shopify, manage custom price lists, and let B2B customers order 24/7 through your portal."
+**Primary CTA:** "Book a demo"  
+**Secondary CTA:** "See how it works"
 
----
+**Reassurance:** "No credit card required · 14-day free trial · Live in 21 days"
 
-### Switching From Section
+**Visual:** Dashboard mockup in browser frame (built in code, not image)
 
-**Headline:** "Switching from?"
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  [Dark gradient: slate-900 → slate-800 + blur orbs]            │
+│                                                                 │
+│       TRUSTED BY 300+ MANUFACTURERS SINCE 2015                  │
+│                                                                 │
+│    Inventory and production software                            │
+│         that just works                                         │
+│                                                                 │
+│  Cloud-based inventory and production management...             │
+│                                                                 │
+│      [Book a demo]    [See how it works]                        │
+│                                                                 │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │ ● ● ●   app.brahmin-solutions.com                         │  │
+│  │ ┌─────────────────────────────────────────────────────┐   │  │
+│  │ │  Orders: 147  │  Inventory: 2,847  │  Production: 89%│  │  │
+│  │ │  [chart]         [chart]              [chart]        │  │  │
+│  │ └─────────────────────────────────────────────────────┘   │  │
+│  └───────────────────────────────────────────────────────────┘  │
+│                                                                 │
+│  ✓ No credit card required  ✓ 14-day trial  ✓ Setup in minutes │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-**Item 1 - Katana:**
-"Frustrated with Katana? Get support that actually responds—in 15 minutes, not 3 days."
-Link: "See the comparison →" → /compare/katana
-
-**Item 2 - Fishbowl:**
-"Outgrowing Fishbowl? Move to cloud without losing your production tracking."
-Link: "See the comparison →" → /compare/fishbowl
-
-**Item 3 - Cin7:**
-"Cin7 too complex (and expensive)? Same features. Simpler interface. Better price."
-Link: "See the comparison →" → /compare/cin7
-
-**Item 4 - Spreadsheets:**
-"Still on spreadsheets? We'll migrate your data and get you live in 21 days."
-Link: "See how it works →" → /compare/spreadsheets
-
----
-
-### Support Differentiator Section
-
-**Headline:** "Support that doesn't make you want to throw your laptop"
-
-**Subheadline:** "Most MRP vendors sell you software and disappear. We stick around."
-
-**Stats:**
-1. Number: "15 min" | Label: "Average response time" | Subtext: "(Yes, really. We measured.)"
-2. Number: "21 days" | Label: "Average implementation" | Subtext: "Not 6 months. Not 'it depends.'"
-3. Number: "1:1" | Label: "Dedicated manager" | Subtext: "Your own implementation human."
-4. Number: "24/7" | Label: "Human support" | Subtext: "Not a chatbot. Actual people."
+**Dashboard Elements (built in code):**
+- Browser frame with traffic lights
+- 4 stat cards: Orders (147), Inventory (2,847), Production (89%), Revenue ($124K)
+- Area chart with green gradient
+- Activity feed items
 
 ---
 
-### Social Proof Section
+## SECTION 2: Trust Bar
 
-**Headline:** "Real results from real manufacturers"
+**File:** `components/sections/TrustBar.tsx`
 
-**Card 1 - Sfoglini Pasta:**
-- Result: "$87,500 in recall costs avoided"
-- Context: "Full lot traceability caught a supplier issue before it shipped."
-- Industry: Food Manufacturing
-- Link: "Read the story →"
+**Format:** Stat badges in a row (not logos)
 
-**Card 2 - Bold Distribution:**
-- Result: "15 hours/week saved per team"
-- Context: "Automated inventory sync eliminated manual data entry."
-- Industry: Wholesale Distribution
-- Link: "Read the story →"
-
-**Card 3 - Nefaire:**
-- Result: "6x more orders handled"
-- Context: "B2B portal let customers self-serve instead of calling in orders."
-- Industry: Cosmetics Manufacturing
-- Link: "Read the story →"
+| Stat | Label |
+|------|-------|
+| 300+ | Manufacturers |
+| Since 2015 | In business |
+| 50+ | Integrations |
+| <15 min | Support response |
+| 21 days | Avg. go-live |
 
 ---
 
-### Features Grid Section
+## SECTION 3: Before/After
+
+**File:** `components/sections/BeforeAfter.tsx`
+
+**Headline:** "Stop juggling. Start running."
+
+**Subheadline:** "Most manufacturers run on duct tape and spreadsheets. Here's what life looks like on the other side."
+
+**Layout:** Side-by-side comparison (grid-cols-2), stack on mobile
+
+### LEFT: "✕ BEFORE BRAHMIN"
+
+Desktop chaos mockup showing:
+- File browser with messy xlsx files
+- QuickBooks widget: "⚠ Manual sync needed"
+- Shopify widget: "⚠ Inventory not synced"
+- Bottom bar: 😫 YOUR BRAIN "which file has the right inventory count?"
+
+**Pain Points (below):**
+- ✕ Inventory counts nobody trusts
+- ✕ Three versions of every spreadsheet
+- ✕ Orders falling through the cracks
+- ✕ No real-time visibility into costs
+
+### RIGHT: "✓ AFTER BRAHMIN"
+
+Clean dashboard mockup showing:
+- Browser with "app.brahmin-solutions.com/dashboard"
+- Live indicator (green dot)
+- "✓ Everything connected — no spreadsheets needed"
+- 4 stat cards: Inventory 2,841 SKUs, Orders 47, Production 12 active, Revenue $84,291
+- Recent orders table with status badges
+- "Shopify synced ✓"
+
+**Benefits (below):**
+- ✓ One source of truth for every team
+- ✓ Real-time inventory across every location
+- ✓ Orders, production, and costs all connected
+- ✓ Live in 2–4 weeks with a dedicated manager
+
+---
+
+## SECTION 4: Capabilities (Tabbed)
+
+**File:** `components/sections/FeaturesTabbed.tsx`
 
 **Headline:** "Everything you need. Nothing you don't."
 
-**Feature 1 - Multi-Location Inventory:**
-- Icon: Map pin
-- Description: "Track stock across warehouses, 3PLs, and co-manufacturers in real-time."
+**Subheadline:** "Purpose-built for small manufacturers. No bloat, no complexity — just the tools your team actually uses."
 
-**Feature 2 - Production Tracking:**
-- Icon: Factory
-- Description: "See what's being made, by whom, and at what cost—down to the work order."
+### Tab Design
 
-**Feature 3 - 50+ Integrations:**
-- Icon: Plug
-- Description: "Connect QuickBooks, Shopify, ShipStation, and the tools you already use."
+**Layout:** Horizontal pill tabs, centered
 
-**Feature 4 - Batch & Lot Tracking:**
-- Icon: Tag
-- Description: "Full traceability from raw materials to finished goods. Recall-ready in minutes."
+**Tab Styles:**
+- Inactive: `bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-full text-sm font-medium`
+- Active: `bg-emerald-600 text-white shadow-lg shadow-emerald-200 px-5 py-2.5 rounded-full text-sm font-medium`
 
-**Feature 5 - B2B Customer Portal:**
-- Icon: Users
-- Description: "Let wholesale customers see inventory, place orders, and pay—24/7."
+### The 7 Tabs
 
-**Feature 6 - Mobile Warehouse:**
-- Icon: Smartphone
-- Description: "Receive, pick, pack, and ship from any device with barcode scanning."
+| Tab | Icon | Headline | Description | Bullets |
+|-----|------|----------|-------------|---------|
+| Inventory | 📍 | See stock everywhere | Track inventory across warehouses, 3PLs, and co-manufacturers — updated in real time as orders ship and production runs complete. | Multi-location tracking, Real-time stock levels, Batch & lot visibility, Barcode scanning |
+| Purchasing | 🛒 | Never run out of materials | Create purchase orders, track deliveries, and manage vendors — with automatic reorder points to keep production running smoothly. | Purchase order management, Vendor management, Auto reorder points, Receiving & inspection |
+| Production | 🏭 | Know what it costs | Build recipes, schedule production runs, and see true landed costs — including labor, overhead, and yield loss. | Multi-level BOMs, Work order management, Real-time cost visibility, Labor & overhead tracking |
+| Traceability | 🏷️ | Stay recall-ready | Track every ingredient from receiving to customer. Generate recall reports in minutes, not days. | Full lot genealogy, One-click recall reports, FDA & FSMA compliant, Supplier traceability |
+| Integrations | 🔌 | Connect everything | Sync with the tools you already use. No more double-entry or copy-paste between systems. | QuickBooks & Xero, Shopify & Amazon, ShipStation & 3PLs, 50+ native integrations |
+| B2B Portal | 👥 | Let customers order 24/7 | Give wholesale buyers their own login to place orders, view pricing, and track shipments. | Customer-specific pricing, Self-service ordering, Order history & reorder, Payment processing |
+| Mobile | 📱 | Run the floor anywhere | Scan barcodes, receive inventory, and pick orders from any phone or tablet. | Barcode scanning, Inventory receiving, Pick pack & ship, Works offline |
 
-**CTA:** "See all features →" → /product
+### Content Layout
+
+50/50 split: Text left, Dashboard mockup right
+
+```
+┌────────────────────────────┬────────────────────────────┐
+│  🏭                        │  ┌──────────────────────┐  │
+│                            │  │                      │  │
+│  Know what it costs        │  │  [DASHBOARD MOCKUP]  │  │
+│                            │  │  Work Order #1042    │  │
+│  Description text...       │  │  Cost Breakdown      │  │
+│                            │  │  $1,445.00 total     │  │
+│  ✓ Multi-level BOMs        │  │                      │  │
+│  ✓ Work order management   │  └──────────────────────┘  │
+│  ✓ Real-time cost          │                            │
+│  ✓ Labor tracking          │                            │
+│                            │                            │
+│  [Learn more →]            │                            │
+└────────────────────────────┴────────────────────────────┘
+```
+
+### Dashboard Mockups (per tab) - ALL INTERACTIVE
+
+**Inventory:** Interactive SKU detail modal with clickable stat cards
+- Header: Product name ("Organic Maple Granola") + status badge + SKU
+- 4 clickable stat cards: On Hand (12,847 - blue), Allocated (8,234 - amber), Expected (3,500 - purple), Shortage (892 - red)
+- Click On Hand → shows warehouse breakdown table
+- Click Allocated → shows orders table with status badges
+- Click Expected → shows incoming PO info
+- Click Shortage → shows shortage alert
+- Generic product/warehouse names (not customer data)
+
+**Purchasing:** Interactive PO management with 3 tabs (Purchase Orders, Reorder Alerts, Vendors)
+- "+ New PO" button in header
+- Purchase Orders Tab: List of POs with status badges (Pending/Shipped/Received), click to expand with View/Receive buttons
+- Reorder Alerts Tab: Items below reorder point with current vs. minimum quantities, "Create PO" button per item
+- Vendors Tab: Vendor list with star ratings, item count, last order date, "+ Add Vendor" button
+
+**Production:** Interactive work order with 3 tabs (Recipe, Costs, Timeline)
+- Work Order #WO-1042, "In Progress" badge
+- Recipe Tab: Ingredient list with pick status (green dots for picked)
+- Costs Tab: Bar visualization of ingredient/labor/overhead costs, total $1,445.00
+- Timeline Tab: Progress steps with animated "in progress" indicator
+
+**Traceability:** Interactive lot trace with expandable timeline
+- Lot #: LOT-2026-0342
+- Click each step (Received → Production → QA → Shipped) to expand details
+- Expanded view shows: Location, PO#, Temperature, Tests passed, Tracking#
+- "Generate Recall Report" button opens preview with affected lots/units/customers
+- Download button in recall preview
+
+**Integrations:** Interactive connected apps list
+- Click each app (QuickBooks, Shopify, ShipStation, Amazon) to expand
+- Expanded view shows: Last Sync, Records count, Sync Type
+- Action buttons: "Sync Now" and "Settings"
+- "+ Add Integration" reveals grid of available apps (Xero, WooCommerce, etc.)
+
+**B2B Portal:** Interactive wholesale ordering cart
+- Products with +/- quantity buttons (live updating)
+- Click product to expand: Case Price, Line Total, Stock status
+- "+ Add Product" button adds new item to cart
+- Dynamic order total calculation
+- "Place Order" shows success confirmation with email message
+
+**Mobile:** Interactive phone mockup matching actual Brahmin app
+- Phone frame with status bar and home indicator
+- App header with Brahmin logo
+- Main menu: Receive, Work Order, Pick & Pack, Inventory Adjustment, Cycle Count
+- Clickable buttons open sub-screens:
+  - Receive: Barcode scan + recent receives
+  - Work Order: Active work orders list
+  - Pick & Pack: Scan to pick + orders to pick
+  - Inventory Adjustment: Scan item interface
+  - Cycle Count: Active counts with progress
+- Each sub-screen has back navigation  
+**Traceability:** Lot trace timeline (Received → Production → QA → Shipped)  
+**Integrations:** Connected apps list with sync status  
+**B2B Portal:** Wholesale ordering interface  
+**Mobile:** Phone frame with app UI
+
+### Bottom Elements
+
+**CTA:** "See all features →"
+
+**Mini-testimonial:**
+```
+"We cut inventory counting time by 75% in the first month."
+— Sarah Chen, Operations Manager, Elevated Oats
+```
 
 ---
 
-### FAQ Section
+## SECTION 5: Who It's For
 
-**Headline:** "Frequently Asked Questions"
+**File:** `components/sections/WhoItsFor.tsx`
 
-**Q1:** What is Brahmin Solutions?
-**A1:** Brahmin Solutions is cloud-based MRP and inventory management software built for small to mid-sized manufacturers. Founded in 2015, we help 300+ manufacturing businesses track inventory, manage production, and sell across multiple channels—with support that actually picks up the phone.
+**Headline:** "Built for how you work"
 
-**Q2:** How much does Brahmin Solutions cost?
-**A2:** Brahmin Solutions starts at $129/month. Pricing scales based on features and users. Unlike some competitors, we don't charge per-transaction fees or nickel-and-dime you with expensive add-ons. See our pricing page for details.
+**Subheadline:** "Whether you make it, move it, or sell it—Brahmin has the workflow for you."
 
-**Q3:** How long does implementation take?
-**A3:** Average implementation is 21 days with a dedicated implementation manager. We handle data migration from spreadsheets or other systems and train your team—no 6-month enterprise rollouts.
+### Card 1: Makers
+- Icon: Factory (blue)
+- Badge: "In-house manufacturing"
+- Tags: Food & Beverage, Cosmetics, Supplements, Hardware
+- Headline: "You make it"
+- Body: "Track production, BOMs, and real-time costs across your shop floor. Know exactly what's being made, what it costs, and when it ships."
+- Features: Bill of Materials (BOM), Work order tracking, Real-time cost visibility
 
-**Q4:** What integrations does Brahmin Solutions support?
-**A4:** Brahmin Solutions integrates with 50+ tools including QuickBooks, Xero, Shopify, WooCommerce, ShipStation, and more. We also offer API access for custom integrations.
+### Card 2: Movers
+- Icon: Truck (purple)
+- Badge: "Distribution & 3PL"
+- Tags: Wholesale, 3PL, Co-manufacturing, Import
+- Headline: "You move it"
+- Body: "See inventory across every warehouse—even ones you don't own. Sync with 3PLs and co-manufacturers without spreadsheet chaos."
+- Features: Multi-location inventory, 3PL & co-mfg sync, Real-time visibility
 
-**Q5:** Is Brahmin Solutions good for food manufacturers?
-**A5:** Yes. Brahmin Solutions includes full lot traceability, batch tracking, expiration date management, and recall-readiness features. We serve food, beverage, cosmetics, and supplement manufacturers who need FDA-compliant tracking.
-
-**Q6:** How is Brahmin Solutions different from Katana or Cin7?
-**A6:** Three main differences: (1) Support that responds in 15 minutes vs. days, (2) Simpler interface without the bloat, and (3) Transparent pricing without per-order fees. We're built specifically for small manufacturers who need powerful features without enterprise complexity.
-
-**Q7:** Can I track inventory across multiple warehouses?
-**A7:** Yes. Brahmin Solutions supports multi-location inventory tracking, including 3PLs and co-manufacturers. You see real-time stock levels across every location from one dashboard.
-
-**Q8:** Do you offer a free trial?
-**A8:** We offer a 14-day free trial. You can also book a demo to see the software with your actual use case before committing.
+### Card 3: Sellers
+- Icon: ShoppingCart (green)
+- Badge: "Wholesale & DTC"
+- Tags: B2B Wholesale, Shopify DTC, Faire, Amazon
+- Headline: "You sell it"
+- Body: "Sync with Shopify, manage custom price lists, and let B2B customers order 24/7 through your portal."
+- Features: Shopify integration, Custom price lists, B2B self-service portal
 
 ---
 
-### Final CTA Section
+## SECTION 6: Why Brahmin
+
+**File:** `components/sections/WhyBrahmin.tsx`
+
+**Headline:** "Why manufacturers switch to Brahmin"
+
+**Subheadline:** "Real support, fast implementation, and a team that picks up the phone."
+
+### Part A: Where You're Coming From
+
+3 cards showing migration paths:
+
+**Card 1 - Spreadsheets:**
+- Icon: Table (green border)
+- Badge: "Manual data entry"
+- Headline: "Excel & Google Sheets"
+- Body: "Still on spreadsheets? We'll migrate your data and get you live in 21 days — no 6-month implementation project."
+- CTA: "See how it works →"
+
+**Card 2 - Other Software:**
+- Icon: Package (orange border)
+- Badge: "Poor support or wrong fit"
+- Headline: "Other MRP/inventory software"
+- Body: "Frustrated with Katana, Fishbowl, or Cin7? Same features, simpler interface, and support that responds in 15 minutes — not 3 days."
+- CTA: "See the comparison →"
+
+**Card 3 - Enterprise ERP:**
+- Icon: Building (purple border)
+- Badge: "Too complex & expensive"
+- Headline: "Enterprise ERP"
+- Body: "Enterprise software is built for enterprises. If you're a small manufacturer, you're paying for features you'll never use — and support you'll never get."
+- CTA: "See the comparison →"
+
+### Part B: What You Get With Us
+
+**Badge:** "REAL HUMANS. NO CHATBOT."
+
+**Headline:** "We don't disappear after the sale"
+
+**Body:** "Real support from real people — not a ticket queue, not a chatbot, not a help center article. A human who knows your account and picks up when you call."
+
+**Stats Grid (2x3):**
+
+| Stat | Label | Subtext |
+|------|-------|---------|
+| <15 min | Average support response | Measured, not estimated |
+| 2-4 weeks | Average implementation | Not 6 months |
+| Dedicated | Implementation manager | Assigned to you personally |
+| Unlimited | Training calls included | For every plan, forever |
+| 6 countries | Support coverage | US, Canada, MX, UK, AU, NZ |
+| 2+ features | New releases per month | Based on customer feedback |
+
+**Supporting Copy:** "Every Brahmin customer gets a dedicated implementation manager, unlimited training, and direct access to our support team — not a tiered support package you have to pay extra for."
+
+---
+
+## SECTION 7: Social Proof
+
+**File:** `components/sections/SocialProof.tsx`
+
+**Headline:** "Real results from real manufacturers"
+
+**Subheadline:** "Don't take our word for it. Here's what manufacturers say after switching."
+
+### Bento Grid Layout
+
+```
+┌─────────────────────────────┬─────────────────────────┐
+│  [FEATURED - Ryan Photo]    │  [Bakkar Sweets Quote]  │
+│  Large, spans 2 rows        │                         │
+│  "Brahmin syncs to all..."  ├─────────────────────────┤
+│                             │  [Sfoglini - 5 stars]   │
+│                             │                         │
+├──────────────┬──────────────┴─────────────────────────┤
+│  [FLFF Quote]│  [LOGO WALL - 12 logos]                │
+│              │  "Trusted by 300+ manufacturers"       │
+└──────────────┴────────────────────────────────────────┘
+```
+
+### Card Content
+
+**Featured (Ryan):**
+- Image: `/images/customers/ryan-chugach.jpg`
+- Quote: "Brahmin syncs to all our systems and handles batch tracking, order capture, and fulfillment — everything we need in one place."
+- Attribution: Ryan, Chugach Chocolates
+
+**Bakkar Sweets:**
+- 5 stars
+- Quote: "Brahmin allows us to focus on growing our business instead of worrying about inventory. It's easy to use, quick, and always improving."
+- Attribution: Tameer, Bakkar Sweets
+
+**Sfoglini:**
+- 5 stars
+- Quote: "We have yearly inspections which include mock recalls and mass balance exercises, and both went the smoothest they ever have after using Brahmin Solutions."
+- Attribution: Sfoglini Pasta
+
+**FLFF:**
+- 5 stars
+- Quote: "Full visibility from purchase order to manufacturing to sales — plus accurate cost of goods. And the support is exceptional."
+- Attribution: Sheldon, FLFF
+
+**Logo Wall:**
+- sfoglini.png, wild-zora.png, elevated-oats.png, codexing_logo.png, oyin-handmade.png, nanustudio.png, caterstyle.png, daily-concepts.png, cusatea.png, kalamazoo-candle.png, pse.png, bakkar-sweets.jpg
+
+---
+
+## SECTION 8: Final CTA
+
+**File:** `components/sections/FinalCTA.tsx`
 
 **Headline:** "Ready to stop fighting your software?"
 
 **Subheadline:** "Book a 30-minute demo. We'll show you the software with your actual products and workflows."
 
-**CTA Button:** "Book Your Demo"
+**CTA Button:** "Book your demo"
 
-**Reassurance:** "No credit card required. 14-day free trial available."
+**Reassurance:** "No credit card required · 14-day free trial available."
+
+**Stats Row:**
+- 300+ Manufacturers
+- 21 days Avg. go-live
+- <15 min Support response
 
 ---
 
-## META TAGS (All Pages)
+## IMAGES
+
+```
+/public/images/
+├── logo.webp
+├── customers/
+│   └── ryan-chugach.jpg
+└── logos/
+    ├── bakkar-sweets.jpg
+    ├── caterstyle.png
+    ├── codexing_logo.png
+    ├── cusatea.png
+    ├── daily-concepts.png
+    ├── elevated-oats.png
+    ├── FLFF.png
+    ├── kalamazoo-candle.png
+    ├── nanustudio.png
+    ├── oyin-handmade.png
+    ├── pse.png
+    ├── sfoglini.png
+    └── wild-zora.png
+```
+
+---
+
+## META TAGS
 
 ### Homepage
-- **Title:** Brahmin Solutions | MRP Software for Small Manufacturers
-- **Description:** Cloud-based MRP and inventory software for small manufacturers. Production tracking, multi-location inventory, and support that responds in 15 minutes. Free trial.
+- **Title:** Brahmin Solutions | Inventory and production software that just works
+- **Description:** Production tracking, inventory control, and traceability for small and mid-sized manufacturers. Go live in weeks with dedicated support. Free 14-day trial.
 
-### Product
+### Features
 - **Title:** MRP Software Features | Brahmin Solutions
-- **Description:** Production tracking, multi-location inventory, batch traceability, B2B portal, and 50+ integrations. See all features of Brahmin Solutions MRP software.
+- **Description:** Inventory management, production tracking, batch traceability, B2B portal, and 50+ integrations. See all features of Brahmin Solutions MRP software.
 
 ### Pricing
 - **Title:** Pricing | Brahmin Solutions MRP Software
-- **Description:** Brahmin Solutions starts at $129/month. No per-transaction fees. Includes dedicated support and implementation. See all plans and pricing.
+- **Description:** Brahmin Solutions starts at $199/month. No per-transaction fees. Includes dedicated support and implementation. See all plans and pricing.
 
-### Integrations
-- **Title:** 50+ Integrations | Brahmin Solutions
-- **Description:** Connect Brahmin Solutions to QuickBooks, Shopify, Xero, ShipStation, Amazon, WooCommerce, and 50+ other tools. API access available.
-
-### Book Demo
-- **Title:** Book a Demo | Brahmin Solutions
-- **Description:** See Brahmin Solutions with your actual products and workflows. 30-minute personalized demo. No commitment required.
-
-### FAQ
-- **Title:** Frequently Asked Questions | Brahmin Solutions
-- **Description:** Common questions about Brahmin Solutions MRP software: pricing, implementation, features, integrations, and support.
-
-### About
-- **Title:** About Us | Brahmin Solutions
-- **Description:** Brahmin Solutions was founded in 2015 to help small manufacturers compete with enterprise-level tools and white-glove support.
-
-### Manufacturing
-- **Title:** Manufacturing Software for Small Business | Brahmin
-- **Description:** Production tracking, BOMs, work orders, and real-time cost visibility for small manufacturers. Go live in 21 days with dedicated support.
-
-### Food & Beverage
-- **Title:** Food Manufacturing Software | Brahmin Solutions
-- **Description:** Lot traceability, expiration tracking, and recall-ready reporting for food and beverage manufacturers. FDA compliance built in.
-
-### Wholesale & Distribution
-- **Title:** Wholesale Distribution Software | Brahmin Solutions
-- **Description:** Multi-warehouse inventory, B2B customer portal, and Shopify sync for wholesalers and distributors. Let customers order 24/7.
-
-### vs Katana
-- **Title:** Brahmin Solutions vs Katana MRP | Comparison
-- **Description:** Compare Brahmin Solutions and Katana MRP. See why manufacturers switch: 15-min support response, simpler interface, no per-order fees.
-
-### vs Fishbowl
-- **Title:** Brahmin Solutions vs Fishbowl | Comparison
-- **Description:** Switching from Fishbowl? Brahmin Solutions is cloud-based with modern UI, better support, and no server maintenance. Compare features.
-
-### vs Cin7
-- **Title:** Brahmin Solutions vs Cin7 | Comparison
-- **Description:** Cin7 too complex and expensive? Brahmin Solutions offers the same features with simpler UI, lower price, and better support.
-
----
-
-## SCHEMA MARKUP
-
-Add this to the homepage `<head>`:
-
-```html
-<script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Brahmin Solutions",
-    "url": "https://www.brahmin-solutions.com",
-    "logo": "https://www.brahmin-solutions.com/images/logo.png",
-    "foundingDate": "2015",
-    "description": "Cloud-based MRP and inventory management software for small to mid-sized manufacturers."
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Brahmin Solutions",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web browser",
-    "offers": {
-      "@type": "Offer",
-      "price": "129",
-      "priceCurrency": "USD"
-    },
-    "featureList": [
-      "Multi-location inventory tracking",
-      "Production management",
-      "Batch and lot traceability",
-      "B2B customer portal",
-      "50+ integrations"
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is Brahmin Solutions?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Brahmin Solutions is cloud-based MRP and inventory management software for small to mid-sized manufacturers. Founded in 2015, we help 300+ manufacturers track inventory, manage production, and sell across multiple channels."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does Brahmin Solutions cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Brahmin Solutions starts at $129 per month with no per-transaction fees."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does implementation take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Average implementation is 21 days with a dedicated implementation manager."
-        }
-      }
-    ]
-  }
-]
-</script>
-```
+### Compare (Hub)
+- **Title:** Compare Brahmin to Other MRP Software
+- **Description:** See how Brahmin compares to Katana, Fishbowl, Cin7, NetSuite, and other inventory and production software for manufacturers.
 
 ---
 
 ## CODING STANDARDS
 
-### General
 - Use TypeScript for all files
 - Use functional components with hooks
-- Keep components small and focused
-- Extract reusable logic into custom hooks
-- Use descriptive variable and function names
-
-### Styling
-- Use Tailwind CSS exclusively (no custom CSS unless necessary)
+- Use Tailwind CSS exclusively
 - Follow mobile-first approach
-- Use design tokens from tailwind.config.ts
-- Maintain consistent spacing using the spacing scale
-
-### SEO
-- Every page must have unique title and meta description
-- Use semantic HTML (header, main, section, article, etc.)
-- All images must have alt text
-- Use proper heading hierarchy (one H1 per page)
-
-### Performance
-- Optimize images (use next/image)
+- Every page: unique title and meta description
+- All images: alt text required
+- Proper heading hierarchy (one H1 per page)
 - Lazy load below-the-fold content
-- Minimize JavaScript bundle size
-- Use static generation where possible
-
-### Accessibility
-- Maintain proper heading hierarchy
-- Use ARIA labels where needed
-- Ensure sufficient color contrast
-- Make all interactive elements keyboard accessible
-
----
-
-## ROBOTS.TXT
-
-```
-User-agent: *
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-Sitemap: https://www.brahmin-solutions.com/sitemap.xml
-```
 
 ---
 

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/sections/Hero'
+import TrustBar from '@/components/sections/TrustBar'
+import BeforeAfter from '@/components/sections/BeforeAfter'
+import FeaturesTabbed from '@/components/sections/FeaturesTabbed'
 import WhoItsFor from '@/components/sections/WhoItsFor'
-import SwitchingFrom from '@/components/sections/SwitchingFrom'
-import SupportStats from '@/components/sections/SupportStats'
+import WhyBrahmin from '@/components/sections/WhyBrahmin'
 import SocialProof from '@/components/sections/SocialProof'
-import FeaturesGrid from '@/components/sections/FeaturesGrid'
-import FAQ from '@/components/sections/FAQ'
-import CTA from '@/components/sections/CTA'
+import FinalCTA from '@/components/sections/FinalCTA'
 
 export const metadata: Metadata = {
   title: 'Brahmin Solutions | MRP Software for Small Manufacturers',
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main>
-      <Hero />
-      <WhoItsFor />
-      <SwitchingFrom />
-      <SupportStats />
-      <SocialProof />
-      <FeaturesGrid />
-      <FAQ />
-      <CTA />
+      {/* 1 */ }<Hero />
+      {/* 2 */ }<TrustBar />
+      {/* 3 */ }<BeforeAfter />
+      {/* 4 */ }<FeaturesTabbed />
+      {/* 5 */ }<WhoItsFor />
+      {/* 6 */ }<WhyBrahmin />
+      {/* 7 */ }<SocialProof />
+      {/* 8 */ }<FinalCTA />
     </main>
   )
 }

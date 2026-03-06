@@ -107,7 +107,7 @@ export default function FeaturesGrid() {
         {/* CTA */}
         <div className="text-center mt-12">
           <Link
-            href="/product"
+            href="/features"
             className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
           >
             See all features

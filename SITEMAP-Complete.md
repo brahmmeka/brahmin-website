@@ -16,38 +16,36 @@
 ### 1. Homepage `/`
 - **Purpose:** Primary conversion page
 - **Sections:** Hero, Trust Bar, Before/After, Features, Who It's For, Why Brahmin, Social Proof, CTA
-- **Status:** ✅ Specified in CLAUDE.md
+- **Status:** ✅ Built
 
 ### 2. Features `/features`
 - **Purpose:** Deep dive into product capabilities
-- **H1:** "Everything you need to run your operation"
+- **H1:** "Everything you need. Nothing you don't."
+- **Status:** ✅ Built — see `FEATURES-SPEC.md`
 - **Structure:**
-  - Hero with feature overview
-  - 7 feature sections (expanded from homepage tabs):
-    - Inventory Management
-    - Purchasing & Vendor Management
-    - Production & BOMs
-    - Traceability & Recalls
-    - Integrations
-    - B2B Portal
-    - Mobile App
-  - Each section: Full description, screenshots, use cases
-  - CTA: Book demo
+  - Hero
+  - 6 alternating feature categories (Inventory, Production, Traceability, B2B Portal, Warehouse, Integrations)
+  - Additional features chip grid (12 items)
+  - CTA component
 
 ### 3. Pricing `/pricing`
 - **Purpose:** Transparent pricing, reduce friction
-- **H1:** "Simple, transparent pricing"
+- **H1:** "One platform. Transparent pricing."
+- **Status:** ✅ Built — see `PRICING-SPEC.md`
 - **Structure:**
-  - Pricing tiers (if applicable) or single price
-  - Starting at $199/month
-  - What's included list
-  - FAQ accordion
-  - "No hidden fees" messaging
-  - CTA: Start free trial / Book demo
+  - Hero + trust badges
+  - Revenue toggle (Under $1M / $1M+)
+  - Interactive plan builder with sliders
+  - Plan cards (Growth / Pro / Enterprise)
+  - Comparison table
+  - Volume discounts
+  - FAQ (10 questions)
+  - Final CTA
 
 ### 4. Integrations `/integrations`
 - **Purpose:** Show ecosystem, reduce "will it work with X" objections
 - **H1:** "Connect with the tools you already use"
+- **Status:** ✅ Built (placeholder page)
 - **Structure:**
   - Integration grid (50+ logos)
   - Categories: Accounting, Ecommerce, Shipping, Marketplaces
@@ -57,60 +55,55 @@
 ### 5. Book Demo `/demo`
 - **Purpose:** Primary conversion point
 - **H1:** "See Brahmin in action"
-- **Structure:**
-  - HubSpot embedded calendar
-  - What to expect
-  - Testimonial
-  - Trust badges
+- **Status:** ✅ Built (placeholder — needs HubSpot calendar embed)
 
 ### 6. About `/about`
 - **Purpose:** Build trust, tell founder story, show team, differentiate from VC-funded competitors
 - **H1:** "I built Brahmin because small manufacturers deserve enterprise-grade tools — without the enterprise price or complexity."
-- **Tone:** Polished & confident
-- **Full Spec:** ABOUT-PAGE-SPEC.md
+- **Status:** ✅ Built — see `ABOUT-SPEC.md`
 - **Structure (8 sections):**
-  1. Hero — Brahm photo + headline + positioning
-  2. The Gap — Enterprise vs SMB data problem (emotional hook)
-  3. Origin Story — Enterprise background → family pain → solution (3 paragraphs)
-  4. By The Numbers — 2015 | 100+ | <15 min | 0 VC
-  5. How We're Different — 3 cards (Built to last, Real humans, Made for manufacturers)
-  6. The Team — Brahm (featured) + 2-4 key people
-  7. Values — Build to last, Support like we mean it, Ship what matters, Stay lean
-  8. CTA — "Ready to see the difference?"
+  1. Hero — Brahm photo placeholder + founder quote (needs real photo)
+  2. The Gap — Enterprise vs SMB comparison + emotional hook
+  3. Origin Story — Kuehne+Nagel → Lenoir Tech → family food business → 2015
+  4. By The Numbers — 2015 · 100+ · <15 min · 0 VC
+  5. How We're Different — Built to last / Real humans / Made for manufacturers
+  6. The Team — Brahm featured + 4 placeholders (needs real names/photos)
+  7. Values — Build to last · Support like we mean it · Ship what matters · Stay lean
+  8. CTA — "Ready to see the difference?" (green bg)
 
 ---
 
 ## INDUSTRY PAGES (P1)
 
-### `/industries/manufacturing`
-- **H1:** "MRP software for small manufacturers"
+> **Route note:** Industry pages are at the root level, NOT under `/industries/`.
+
+### `/manufacturing` ✅ Built
+- **H1:** "MRP software built for how you actually manufacture"
 - **Target:** General manufacturing (hardware, electronics, etc.)
-- **Key Features:** BOMs, work orders, cost tracking
-- **Testimonials:** Hardware/general manufacturing customers
+- **Status:** ✅ Built — see `INDUSTRY-TEMPLATE-SPEC.md`
+- **Sections:** Hero, 6-feature grid, Implementation steps + stats, Testimonial (dark card), CTA
 
-### `/industries/food-beverage`
-- **H1:** "Inventory software for food & beverage manufacturers"
+### `/food-beverage` ✅ Built
+- **H1:** (tailored to food & beverage)
 - **Target:** CPG food brands, bakeries, beverage companies
+- **Status:** ✅ Built
 - **Key Features:** Lot traceability, expiration dates, FDA compliance, recipe management
-- **Testimonials:** Sfoglini, Wild Zora, Elevated Oats
 
-### `/industries/cosmetics`
+### `/cosmetics` ❌ Not built
 - **H1:** "Production software for cosmetics & beauty brands"
 - **Target:** Skincare, haircare, beauty product manufacturers
 - **Key Features:** Batch tracking, formula management, FDA compliance
-- **Testimonials:** Oyin Handmade
 
-### `/industries/supplements`
+### `/supplements` ❌ Not built
 - **H1:** "MRP software for supplement manufacturers"
 - **Target:** Vitamin, supplement, nutraceutical brands
 - **Key Features:** FDA/cGMP compliance, lot traceability, COAs
-- **Testimonials:** Any supplement customers
 
-### `/industries/wholesale-distribution`
-- **H1:** "Inventory management for wholesale distributors"
+### `/wholesale-distribution` ✅ Built
+- **H1:** (tailored to wholesale/distribution)
 - **Target:** Distributors, importers, 3PLs
+- **Status:** ✅ Built
 - **Key Features:** Multi-location inventory, B2B portal, order management
-- **Testimonials:** Distribution customers
 
 ---
 
@@ -133,8 +126,8 @@
 
 ---
 
-### `/compare/katana`
-- **H1:** "Brahmin vs Katana MRP"
+### `/compare/katana` ✅ Built
+- **H1:** "Brahmin Solutions vs Katana MRP"
 - **Target Keywords:** katana mrp alternative, katana vs brahmin
 - **Competitor Overview:**
   - Cloud-based MRP for small manufacturers
@@ -150,7 +143,7 @@
   - Dedicated implementation manager
   - Better for food/bev compliance
 
-### `/compare/wherefour`
+### `/compare/wherefour` ❌ Not built
 - **H1:** "Brahmin vs Wherefour"
 - **Target Keywords:** wherefour alternative, wherefour vs brahmin
 - **Competitor Overview:**
@@ -166,7 +159,7 @@
   - 21-day average go-live
   - More affordable for small teams
 
-### `/compare/mrpeasy`
+### `/compare/mrpeasy` ❌ Not built
 - **H1:** "Brahmin vs MRPeasy"
 - **Target Keywords:** mrpeasy alternative, mrpeasy vs brahmin
 - **Competitor Overview:**
@@ -182,8 +175,8 @@
   - Stronger traceability
   - US-based support team
 
-### `/compare/fishbowl`
-- **H1:** "Brahmin vs Fishbowl"
+### `/compare/fishbowl` ✅ Built
+- **H1:** "Brahmin Solutions vs Fishbowl"
 - **Target Keywords:** fishbowl alternative, fishbowl inventory vs brahmin
 - **Competitor Overview:**
   - On-premise + cloud inventory
@@ -198,8 +191,8 @@
   - Simpler implementation
   - All-in-one (no add-ons needed)
 
-### `/compare/cin7`
-- **H1:** "Brahmin vs Cin7"
+### `/compare/cin7` ✅ Built
+- **H1:** "Brahmin Solutions vs Cin7"
 - **Target Keywords:** cin7 alternative, cin7 vs brahmin
 - **Competitor Overview:**
   - Inventory + order management
@@ -214,7 +207,7 @@
   - Better production costing
   - More hands-on support
 
-### `/compare/dear-systems`
+### `/compare/dear-systems` ❌ Not built
 - **H1:** "Brahmin vs DEAR Systems (Cin7 Core)"
 - **Target Keywords:** dear systems alternative, dear inventory vs brahmin
 - **Competitor Overview:**
@@ -229,7 +222,7 @@
   - Stable, independent company
   - Better for production-heavy workflows
 
-### `/compare/netsuite`
+### `/compare/netsuite` ❌ Not built
 - **H1:** "Brahmin vs NetSuite"
 - **Target Keywords:** netsuite alternative for small manufacturers
 - **Competitor Overview:**
@@ -245,7 +238,7 @@
   - 21-day implementation
   - 10x more affordable
 
-### `/compare/sap-business-one`
+### `/compare/sap-business-one` ❌ Not built
 - **H1:** "Brahmin vs SAP Business One"
 - **Target Keywords:** sap b1 alternative, sap business one vs brahmin
 - **Competitor Overview:**
@@ -261,7 +254,7 @@
   - Self-service with support
   - Affordable monthly pricing
 
-### `/compare/odoo`
+### `/compare/odoo` ❌ Not built
 - **H1:** "Brahmin vs Odoo"
 - **Target Keywords:** odoo mrp alternative, odoo vs brahmin
 - **Competitor Overview:**
@@ -277,7 +270,7 @@
   - Included implementation support
   - Purpose-built for manufacturers
 
-### `/compare/inflow`
+### `/compare/inflow` ❌ Not built
 - **H1:** "Brahmin vs inFlow"
 - **Target Keywords:** inflow inventory alternative
 - **Competitor Overview:**
@@ -292,7 +285,7 @@
   - Production costing
   - Lot tracking & recalls
 
-### `/compare/craftybase`
+### `/compare/craftybase` ❌ Not built
 - **H1:** "Brahmin vs Craftybase"
 - **Target Keywords:** craftybase alternative
 - **Competitor Overview:**
@@ -308,7 +301,7 @@
   - Real production planning
   - Multi-warehouse support
 
-### `/compare/sortly`
+### `/compare/sortly` ❌ Not built
 - **H1:** "Brahmin vs Sortly"
 - **Target Keywords:** sortly alternative
 - **Competitor Overview:**
@@ -324,7 +317,7 @@
   - BOMs and work orders
   - Cost tracking
 
-### `/compare/spreadsheets`
+### `/compare/spreadsheets` ✅ Built
 - **H1:** "Why manufacturers switch from spreadsheets to Brahmin"
 - **Target Keywords:** spreadsheet alternative for inventory
 - **Competitor Overview:**
@@ -368,11 +361,15 @@
 
 | Page | Title | Description |
 |------|-------|-------------|
-| `/` | Brahmin Solutions \| Inventory and production software | Production tracking, inventory control, and traceability for small manufacturers. Go live in weeks. Free trial. |
-| `/features` | MRP Software Features \| Brahmin Solutions | Inventory management, production tracking, traceability, integrations, B2B portal, and mobile app for manufacturers. |
-| `/pricing` | Pricing \| Brahmin Solutions | Starting at $199/month. No per-transaction fees. Dedicated support included. See plans. |
-| `/compare/katana` | Brahmin vs Katana MRP \| Comparison | Compare Brahmin and Katana MRP for small manufacturers. See features, pricing, and support differences. |
-| `/compare/wherefour` | Brahmin vs Wherefour \| Comparison | Looking for a Wherefour alternative? Compare features, implementation time, and pricing. |
+| `/` | Brahmin Solutions \| Inventory and production software that just works | Production tracking, inventory control, and traceability for small manufacturers. Go live in weeks. Free trial. |
+| `/features` | MRP Software Features \| Brahmin Solutions | Production tracking, multi-location inventory, batch traceability, B2B portal, and 50+ integrations. |
+| `/pricing` | Pricing \| Brahmin Solutions MRP Software | Brahmin Solutions starts at $199/month. No per-transaction fees. Includes dedicated support. See all plans. |
+| `/about` | About Us \| Brahmin Solutions | Founded in 2015 by Brahm Meka. Helping 100+ small manufacturers. Independently owned, customer-funded. |
+| `/compare/katana` | Brahmin Solutions vs Katana MRP \| Comparison | Compare Brahmin and Katana MRP. 15-min support, no per-order fees, B2B portal included. |
+| `/compare/fishbowl` | Brahmin Solutions vs Fishbowl \| Comparison | Modern cloud MRP vs legacy on-premise. No upfront license fee, 21-day implementation. |
+| `/compare/cin7` | Brahmin Solutions vs Cin7 \| Comparison | Same features, simpler interface, manufacturing-first. Starting at $199/mo flat rate. |
+| `/compare/spreadsheets` | Why manufacturers switch from spreadsheets to Brahmin | Single source of truth vs spreadsheet chaos. Real-time inventory, 21-day migration. |
+| `/manufacturing` | Manufacturing Software for Small Business \| Brahmin Solutions | Production tracking, BOMs, work orders, and real-time cost visibility. Go live in 21 days. |
 
 ---
 
@@ -389,12 +386,11 @@ brahmin-solutions.com/
 ├── faq
 ├── blog/
 │   └── [slug]
-├── industries/
-│   ├── manufacturing
-│   ├── food-beverage
-│   ├── cosmetics
-│   ├── supplements
-│   └── wholesale-distribution
+├── manufacturing          (⚠️ root level, NOT /industries/)
+├── food-beverage
+├── cosmetics
+├── supplements
+└── wholesale-distribution
 └── compare/
     ├── katana
     ├── wherefour
@@ -415,29 +411,32 @@ brahmin-solutions.com/
 
 ## PRIORITY BUILD ORDER
 
-### Phase 1 (Launch)
-1. Homepage ✅
-2. Features
-3. Pricing
-4. Demo (HubSpot embed)
-5. Integrations
+### Phase 1 (Launch) — ✅ Complete
+1. ✅ Homepage
+2. ✅ Features
+3. ✅ Pricing
+4. ✅ Demo (placeholder — needs HubSpot embed)
+5. ✅ Integrations (placeholder)
+6. ✅ About
 
-### Phase 2 (SEO)
-6. Compare hub + top 5 competitors:
-   - Katana
-   - Fishbowl
-   - Cin7
-   - Spreadsheets
-   - NetSuite
-7. Industries:
-   - Food & Beverage (highest traffic)
-   - Manufacturing
+### Phase 2 (SEO) — ✅ Partial
+7. Compare pages built:
+   - ✅ Katana
+   - ✅ Fishbowl
+   - ✅ Cin7
+   - ✅ Spreadsheets
+8. Industry pages built:
+   - ✅ Manufacturing
+   - ✅ Food & Beverage
+   - ✅ Wholesale Distribution
 
-### Phase 3 (Expansion)
-8. Remaining competitor pages
-9. Remaining industry pages
-10. Blog migration
-11. Customer stories
+### Phase 3 (Expansion) — ❌ Not started
+9. Remaining compare pages (Wherefour, MRPeasy, NetSuite, SAP, Odoo, inFlow, Craftybase, Sortly, DEAR)
+10. Remaining industry pages (Cosmetics, Supplements)
+11. Blog migration from Webflow → Sanity
+12. Customer stories page
+13. FAQ page
+14. Compare hub page (`/compare`)
 
 ---
 

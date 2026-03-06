@@ -52,38 +52,29 @@
 ### 4. Navigation Structure
 - `/product` renamed to `/features`
 - Comparison pages at `/compare/[competitor]`
-- Industry pages at `/industries/[industry]`
+- Industry pages at root level: `/manufacturing`, `/food-beverage`, `/wholesale-distribution` (NOT `/industries/`)
 
 ---
 
-## ABOUT PAGE SPEC (Ready to Build)
+## ABOUT PAGE ✅ Built
 
 **URL:** `/about`
-**Tone:** Polished & confident (not humble/apologetic)
+**Full spec:** `ABOUT-SPEC.md`
+**Components:** `components/about/` (8 files)
 
-### 8 Sections:
-1. **Hero** — Brahm photo + "I built Brahmin because small manufacturers deserve enterprise-grade tools"
-2. **The Gap** — Enterprise vs SMB data problem (emotional hook)
-3. **Origin Story** — Enterprise WMS background → Family food business pain → Solution (3 paragraphs)
-4. **By The Numbers** — 2015 | 100+ | <15 min | 0 VC
-5. **How We're Different** — 3 cards (Built to last, Real humans, Made for manufacturers)
-6. **The Team** — Brahm (featured) + 2-4 key people
-7. **Values** — Build to last, Support like we mean it, Ship what matters, Stay lean
-8. **CTA** — "Ready to see the difference?"
+### 8 Sections built:
+1. **AboutHero** — Brahm photo placeholder + founder quote + "independently owned" badge
+2. **TheGap** — Enterprise vs SMB comparison cards + 3-paragraph emotional hook
+3. **OriginStory** — Kuehne+Nagel → Lenoir Tech → family food business → 2015 founding
+4. **ByTheNumbers** — 2015 · 100+ · <15 min · 0 VC
+5. **HowWereDifferent** — Built to last / Real humans / Made for manufacturers
+6. **TheTeam** — Brahm featured + 4 team placeholders (needs real names/photos)
+7. **Values** — Build to last · Support like we mean it · Ship what matters · Stay lean
+8. **AboutCTA** — Green bg, "Ready to see the difference?" + Book demo / See product
 
-### Founder Story Key Points:
-- Worked at Kuehne + Nagel (Fortune 1000 freight forwarding)
-- Worked at Lenoir Technologies (cloud WMS)
-- Family food business struggled with spreadsheets
-- Founded 2015, beta 2018, all beta customers converted
-- Independently owned (small friends/family raise in 2021, stopped taking funding)
-- 100+ manufacturers served
-
-### Values (Action Verbs):
-1. **Build to last** — No shortcuts, long-term decisions
-2. **Support like we mean it** — Real humans, fast responses, follow-through
-3. **Ship what matters** — Features that help, not flashy demos
-4. **Stay lean** — Small team, fast, close to customers
+### Pending:
+- [ ] Drop `brahm-meka.jpg` into `/public/images/`
+- [ ] Update `TheTeam.tsx` with real team names, titles, and photos
 
 ---
 
@@ -127,15 +118,17 @@
 
 ---
 
-## INDUSTRY PAGES MAPPED (5 total)
+## INDUSTRY PAGES MAPPED (5 total, 3 built)
 
-| Industry | URL |
-|----------|-----|
-| Manufacturing | `/industries/manufacturing` |
-| Food & Beverage | `/industries/food-beverage` |
-| Cosmetics | `/industries/cosmetics` |
-| Supplements | `/industries/supplements` |
-| Wholesale/Distribution | `/industries/wholesale-distribution` |
+| Industry | URL | Status |
+|----------|-----|--------|
+| Manufacturing | `/manufacturing` | ✅ Built |
+| Food & Beverage | `/food-beverage` | ✅ Built |
+| Cosmetics | `/cosmetics` | ❌ Not built |
+| Supplements | `/supplements` | ❌ Not built |
+| Wholesale/Distribution | `/wholesale-distribution` | ✅ Built |
+
+> **Note:** Routes are at root level, not `/industries/` prefix.
 
 ---
 
@@ -165,7 +158,7 @@
 | `CLAUDE.md` | ✅ Ready | Master website specification |
 | `SITEMAP-Complete.md` | ✅ Ready | Full 28-page sitemap with meta tags |
 | `ABOUT-PAGE-SPEC.md` | ✅ Ready | About page detailed spec |
-| `PRICING-SPEC.md` | ❌ Needs creation | Document from existing page |
+| `PRICING-SPEC.md` | ✅ Created | Pricing page full documentation |
 | `PROMPT-About.md` | ✅ Ready | Quick prompt for About page |
 | `PROMPT-Homepage.md` | ✅ Ready | Quick prompt for Homepage |
 
@@ -175,7 +168,7 @@
 | Homepage | In CLAUDE.md | ✅ Documented |
 | Features | `FEATURES-SPEC.md` | ✅ Documented |
 | Pricing | `PRICING-SPEC.md` | ✅ Documented |
-| About | `ABOUT-PAGE-SPEC.md` | ✅ Ready to build |
+| About | `ABOUT-SPEC.md` | ✅ Built |
 | Compare pages | `COMPARE-TEMPLATE-SPEC.md` | ✅ Documented |
 | Industry pages | `INDUSTRY-TEMPLATE-SPEC.md` | ✅ Documented |
 
@@ -203,7 +196,7 @@
 3. [x] Verify pricing shows $199/month everywhere — fixed $129 in all 4 compare pages
 4. [ ] Confirm all pages use sentence case headings
 5. [ ] Verify SITEMAP-Complete.md matches actual pages
-6. [ ] Fix features page Hero eyebrow (still reads "Product" instead of "Features")
+6. [x] Fix features page Hero eyebrow — updated to "Features"
 
 ### Future
 1. [ ] Blog migration from Webflow (see MIGRATION-Webflow-to-Sanity.md)

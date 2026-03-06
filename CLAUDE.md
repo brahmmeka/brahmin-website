@@ -91,6 +91,15 @@ brahmin-website/
 │   └── blog/
 │       ├── PostCard.tsx
 │       └── PostContent.tsx
+│   └── about/
+│       ├── AboutHero.tsx
+│       ├── TheGap.tsx
+│       ├── OriginStory.tsx
+│       ├── ByTheNumbers.tsx
+│       ├── HowWereDifferent.tsx
+│       ├── TheTeam.tsx
+│       ├── Values.tsx
+│       └── AboutCTA.tsx
 ├── lib/
 │   ├── sanity.ts
 │   └── utils.ts
@@ -630,49 +639,6 @@ Clean dashboard mockup showing:
 
 ---
 
-## PRICING PAGE SUMMARY
-
-**File:** `app/pricing/PricingPageClient.tsx` (client component, 857 lines)
-**Full spec:** See `PRICING-SPEC.md`
-
-### Plans
-
-| Plan | Monthly | Annual | Orders | Locations |
-|------|---------|--------|--------|-----------|
-| Starter | $199/mo | Monthly only | 500 | 1 |
-| Growth | $499/mo | $449/mo | 2,500 | 3 |
-| Pro | $999/mo | $899/mo | 6,000 | 6 |
-| Enterprise | Custom | Custom | Unlimited | Unlimited |
-
-### Key rules
-- **Starter = 50% off everything** (targeting <$1M revenue)
-- **Annual = 10% off** Growth and Pro only
-- **All plans:** Unlimited users & products, all integrations included
-- **Pro:** includes all add-ons (Manufacturing Pro, Compliance Essentials, Planning & Analytics)
-- **Starter:** picks 1 free app (Mobile or B2B Portal); add second for $50/mo
-
-### Add-ons (monthly)
-
-| Add-on | Full price | Starter price |
-|--------|-----------|---------------|
-| Manufacturing Pro | $200/mo | $100/mo |
-| Compliance Essentials | $75/mo | $38/mo |
-| Planning & Analytics | $100/mo | $50/mo |
-
-### One-time onboarding services
-
-| Service | Price |
-|---------|-------|
-| Advanced Workflow Setup | $1,500 |
-| Data Migration | $2,500 |
-| On-Site Training | $5,000 |
-
-### Guarantees
-- Starter: 14-day free trial, no credit card
-- Growth/Pro: 30-day money-back guarantee
-
----
-
 ## IMAGES
 
 ```
@@ -715,6 +681,36 @@ Clean dashboard mockup showing:
 ### Compare (Hub)
 - **Title:** Compare Brahmin to Other MRP Software
 - **Description:** See how Brahmin compares to Katana, Fishbowl, Cin7, NetSuite, and other inventory and production software for manufacturers.
+
+### About
+- **Title:** About Us | Brahmin Solutions
+- **Description:** Founded in 2015 by Brahm Meka. Brahmin Solutions helps 100+ small manufacturers move from spreadsheets to a single source of truth. Independently owned, customer-funded.
+- **Full Spec:** See ABOUT-PAGE-SPEC.md for complete page specification
+
+---
+
+## ABOUT PAGE SUMMARY
+
+**URL:** `/about`  
+**Tone:** Polished & confident  
+**Founder:** Brahm Meka (photo + bio available)
+
+**8 Sections:**
+1. **Hero** — Brahm photo + "I built Brahmin because small manufacturers deserve enterprise-grade tools"
+2. **The Gap** — Enterprise vs SMB data gap (emotional hook)
+3. **Origin Story** — Enterprise WMS background → Family food business pain → Solution (2015)
+4. **By The Numbers** — 2015 founded | 100+ manufacturers | <15 min support | 0 VC investors
+5. **How We're Different** — Built to last, Real humans real help, Made for manufacturers
+6. **The Team** — Brahm (featured) + 2-4 key team members
+7. **Values** — Build to last, Support like we mean it, Ship what matters, Stay lean
+8. **CTA** — "Ready to see the difference?"
+
+**Key Story Points:**
+- Worked at Kuehne + Nagel (Fortune 1000 freight forwarding)
+- Worked at Lenoir Technologies (cloud WMS)
+- Family food business struggled with spreadsheets
+- All beta customers converted to paying
+- Independently owned (small friends/family raise, stopped 2021)
 
 ---
 

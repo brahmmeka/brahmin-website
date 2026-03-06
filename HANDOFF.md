@@ -12,11 +12,12 @@
 - Homepage (`/`)
 - Features (`/features`)
 - Pricing (`/pricing`)
-- Comparison pages (`/compare/*`)
-- Industry pages (`/industries/*`)
+- About (`/about`) — 8 sections per ABOUT-PAGE-SPEC.md
+- Comparison pages (`/compare/katana`, `/compare/fishbowl`, `/compare/cin7`, `/compare/spreadsheets`)
+- Industry pages (`/manufacturing`, `/food-beverage`, `/wholesale-distribution`)
 
 ### Pages NOT Built ❌
-- About (`/about`) — **Spec ready, needs to be built**
+- *(all planned pages are built)*
 
 ---
 
@@ -186,9 +187,9 @@
 ## NEXT ACTIONS
 
 ### Immediate — Build
-1. [ ] Build About page using ABOUT-PAGE-SPEC.md
-2. [ ] Add Brahm's headshot to `/public/images/`
-3. [ ] Collect 2-4 team member photos + titles
+1. [x] Build About page using ABOUT-PAGE-SPEC.md
+2. [ ] Add Brahm's headshot to `/public/images/brahm-meka.jpg` — placeholder shown
+3. [ ] Add team photos to `/public/images/team/` + update TheTeam.tsx with real names/titles
 
 ### Immediate — Document Existing Pages
 1. [x] Create PRICING-SPEC.md from existing `/app/pricing/page.tsx`

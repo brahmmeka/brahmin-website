@@ -630,6 +630,49 @@ Clean dashboard mockup showing:
 
 ---
 
+## PRICING PAGE SUMMARY
+
+**File:** `app/pricing/PricingPageClient.tsx` (client component, 857 lines)
+**Full spec:** See `PRICING-SPEC.md`
+
+### Plans
+
+| Plan | Monthly | Annual | Orders | Locations |
+|------|---------|--------|--------|-----------|
+| Starter | $199/mo | Monthly only | 500 | 1 |
+| Growth | $499/mo | $449/mo | 2,500 | 3 |
+| Pro | $999/mo | $899/mo | 6,000 | 6 |
+| Enterprise | Custom | Custom | Unlimited | Unlimited |
+
+### Key rules
+- **Starter = 50% off everything** (targeting <$1M revenue)
+- **Annual = 10% off** Growth and Pro only
+- **All plans:** Unlimited users & products, all integrations included
+- **Pro:** includes all add-ons (Manufacturing Pro, Compliance Essentials, Planning & Analytics)
+- **Starter:** picks 1 free app (Mobile or B2B Portal); add second for $50/mo
+
+### Add-ons (monthly)
+
+| Add-on | Full price | Starter price |
+|--------|-----------|---------------|
+| Manufacturing Pro | $200/mo | $100/mo |
+| Compliance Essentials | $75/mo | $38/mo |
+| Planning & Analytics | $100/mo | $50/mo |
+
+### One-time onboarding services
+
+| Service | Price |
+|---------|-------|
+| Advanced Workflow Setup | $1,500 |
+| Data Migration | $2,500 |
+| On-Site Training | $5,000 |
+
+### Guarantees
+- Starter: 14-day free trial, no credit card
+- Growth/Pro: 30-day money-back guarantee
+
+---
+
 ## IMAGES
 
 ```

@@ -49,10 +49,14 @@
 - No per-transaction fees
 - Includes dedicated support
 
-### 4. Navigation Structure
-- `/product` renamed to `/features`
+### 4. Navigation Structure (Updated March 6, 2026)
+- **5 top-level items:** Features (dropdown), Industries (dropdown), Integrations (direct `/integrations`), Resources (mega-menu), Pricing (direct `/pricing`)
+- **Features dropdown:** 8 items with descriptions → `/features/[slug]` routes
+- **Industries dropdown:** 6 items → `/industries/[slug]` routes (NEW — previously root-level)
+- **Resources mega-menu:** 4 columns — Compare (6 links + see all), Learn (6 links), Tools (ROI Calculator), Company (About, Contact)
+- **Mobile:** Accordion expand per section
 - Comparison pages at `/compare/[competitor]`
-- Industry pages at root level: `/manufacturing`, `/food-beverage`, `/wholesale-distribution` (NOT `/industries/`)
+- Industry page URLs now use `/industries/` prefix per SITEMAP-Complete.md (existing root-level pages still exist)
 
 ---
 

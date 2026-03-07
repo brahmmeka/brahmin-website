@@ -229,16 +229,17 @@ export default function VsKatanaPage() {
 
       {/* ── 4. WHERE BRAHMIN EXCELS ──────────────────────────────────────────── */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 max-w-4xl">
+        <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-3">What you get when you switch</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Where Brahmin excels</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto">Predictable pricing, faster implementation, and real humans on support.</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {brahminStrengths.map((s) => (
-              <div key={s.headline} className="bg-slate-50 rounded-2xl border border-slate-200 p-6">
-                <div className="text-2xl mb-3">{s.icon}</div>
-                <h3 className="font-bold text-slate-900 text-sm mb-2">{s.headline}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{s.body}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {brahminStrengths.map((card) => (
+              <div key={card.headline} className="bg-slate-50 rounded-2xl border border-slate-200 p-6">
+                <div className="text-3xl mb-4">{card.icon}</div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">{card.headline}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{card.body}</p>
               </div>
             ))}
           </div>
@@ -252,10 +253,10 @@ export default function VsKatanaPage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-3">Feature-by-feature breakdown</h2>
           </div>
           <div className="rounded-2xl border border-slate-200 overflow-hidden shadow-sm bg-white">
-            <div className="grid grid-cols-[1fr_160px_160px] border-b border-slate-200 bg-slate-50 text-sm font-semibold text-slate-500 uppercase tracking-wide">
+            <div className="grid grid-cols-[1fr_160px_160px] bg-slate-800 text-white text-sm font-semibold">
               <div className="px-6 py-4">Feature</div>
-              <div className="px-4 py-4 text-center text-emerald-700 bg-emerald-50">Brahmin</div>
-              <div className="px-4 py-4 text-center">Katana</div>
+              <div className="px-6 py-4 text-center bg-emerald-700">Brahmin Solutions</div>
+              <div className="px-6 py-4 text-center">Katana MRP</div>
             </div>
             {tableGroups.map((group) => (
               <div key={group.label}>
@@ -268,7 +269,7 @@ export default function VsKatanaPage() {
                       <p className="text-sm font-medium text-slate-700">{row.feature}</p>
                       {row.note && <p className="text-xs text-slate-400 mt-0.5">{row.note}</p>}
                     </div>
-                    <div className="px-4 py-4 flex items-center justify-center border-l border-slate-100 bg-emerald-50/30">
+                    <div className="px-4 py-4 flex items-center justify-center border-l border-slate-100 bg-emerald-900/5">
                       <Cell value={row.brahmin} />
                     </div>
                     <div className="px-4 py-4 flex items-center justify-center border-l border-slate-100">

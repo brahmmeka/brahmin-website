@@ -14,8 +14,8 @@
 | 1 | Hero | `bg-gradient-to-br from-slate-900 via-slate-800` | Dark gradient, trust pills, two CTAs |
 | 2 | Quick comparison table | `bg-white` | 5-row snapshot: price, model, support, key feature, implementation |
 | 3 | Where [competitor] falls short | `bg-slate-50` | 4–5 pain points with real customer quotes |
-| 4 | Where Brahmin excels | `bg-white` | 4 strength cards (2×2 grid) |
-| 5 | Feature-by-feature breakdown | `bg-slate-50` | Full table, grouped into 6–8 categories |
+| 4 | Where Brahmin excels | `bg-white` | H2: "Where Brahmin excels" + subhead + 4 strength cards in `grid grid-cols-1 md:grid-cols-2 gap-6` — icon `text-3xl mb-4`, headline `text-lg font-semibold text-slate-900` |
+| 5 | Feature-by-feature breakdown | `bg-slate-50` | Table header: `bg-slate-800 text-white`, Brahmin column: `bg-emerald-700`, grouped into 6–8 categories |
 | 6 | Who should choose Brahmin | `bg-white` | Two-column: "Choose Brahmin if…" vs "[Competitor] may be fine if…" + testimonial |
 | 7 | CTA + more comparisons | `bg-slate-900` | Dark section + links to other compare pages + `<CTA />` |
 

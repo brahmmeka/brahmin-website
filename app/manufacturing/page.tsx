@@ -5,7 +5,7 @@ import CTA from '@/components/sections/CTA'
 export const metadata: Metadata = {
   title: 'Manufacturing Software for Small Business | Brahmin Solutions',
   description:
-    'Production tracking, BOMs, work orders, and real-time cost visibility for small manufacturers. Go live in 21 days with dedicated support.',
+    'Production tracking, BOMs, work orders, and real-time cost visibility for small manufacturers. Go live in as little as 3 weeks with dedicated support.',
 }
 
 const features = [
@@ -77,7 +77,7 @@ const steps = [
   { n: '01', title: 'Data migration', desc: 'We import your existing BOMs, inventory, and customer data. No manual re-entry.' },
   { n: '02', title: 'Configuration', desc: 'Your dedicated manager sets up locations, workflows, and integrations to match how you work.' },
   { n: '03', title: 'Team training', desc: 'We train every role—from purchasing to shop floor—with live sessions and recorded walkthroughs.' },
-  { n: '04', title: 'Go live', desc: 'Average time from contract to production: 21 days. We stay on to make sure day one goes smoothly.' },
+  { n: '04', title: 'Go live', desc: 'Average time from contract to production: 2–6 weeks. We stay on to make sure day one goes smoothly.' },
 ]
 
 export default function ManufacturingPage() {
@@ -111,7 +111,7 @@ export default function ManufacturingPage() {
                 See Pricing
               </Link>
             </div>
-            <p className="mt-5 text-sm text-slate-400">No credit card required &middot; 14-day free trial &middot; Go live in 21 days</p>
+            <p className="mt-5 text-sm text-slate-400">No credit card required &middot; 14-day free trial &middot; Go live in as little as 3 weeks</p>
           </div>
         </div>
       </section>
@@ -151,7 +151,7 @@ export default function ManufacturingPage() {
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">Implementation</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
-                Live in 21 days.<br />Not 6 months.
+                Live in as little as 3 weeks.<br />Not 6 months.
               </h2>
               <p className="mt-4 text-lg text-slate-500 leading-relaxed">
                 We assign your implementation manager before you sign the contract. They know manufacturing—not just software.
@@ -170,7 +170,7 @@ export default function ManufacturingPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { n: '21 days', l: 'Average go-live', sub: 'Not 6 months.' },
+                { n: '2–6 weeks', l: 'Average go-live', sub: 'Not 6 months.' },
                 { n: '1:1', l: 'Implementation manager', sub: 'Your own human.' },
                 { n: '15 min', l: 'Support response', sub: 'After you\'re live too.' },
                 { n: '300+', l: 'Manufacturers', sub: 'Since 2015.' },

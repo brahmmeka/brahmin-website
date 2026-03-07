@@ -104,7 +104,7 @@ export default function WholesaleDistributionPage() {
                 See Pricing
               </Link>
             </div>
-            <p className="mt-5 text-sm text-slate-400">No credit card required &middot; 14-day free trial &middot; Go live in 21 days</p>
+            <p className="mt-5 text-sm text-slate-400">No credit card required &middot; 14-day free trial &middot; Go live in as little as 3 weeks</p>
           </div>
         </div>
       </section>
@@ -216,7 +216,7 @@ export default function WholesaleDistributionPage() {
                   { n: '15 hrs', l: 'Saved per week' },
                   { n: '3', l: 'Systems replaced' },
                   { n: '2×', l: 'Order throughput' },
-                  { n: '21 days', l: 'Implementation' },
+                  { n: '2–6 wks', l: 'Implementation' },
                 ].map((s) => (
                   <div key={s.l} className="bg-primary-500/30 rounded-xl p-4 text-center border border-primary-400/30">
                     <div className="text-2xl font-bold text-white">{s.n}</div>

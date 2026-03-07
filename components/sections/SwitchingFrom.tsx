@@ -29,7 +29,7 @@ const competitors = [
     name: 'Excel & Google Sheets',
     tag: 'Manual data entry',
     tagStyle: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-    text: "Still on spreadsheets? We'll migrate your data and get you live in 21 days — no 6-month implementation project.",
+    text: "Still on spreadsheets? We'll migrate your data and get you live in as little as 3 weeks — no 6-month implementation project.",
     href: '/compare/spreadsheets',
     linkLabel: 'See how it works',
   },

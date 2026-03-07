@@ -144,7 +144,7 @@ export default function PurchasingPage() {
                 See pricing →
               </Link>
             </div>
-            <p className="mt-5 text-sm text-slate-400">300+ manufacturers · $199/month flat · No credit card required</p>
+            <p className="mt-5 text-sm text-slate-400">300+ manufacturers · From $199/month · No credit card required</p>
           </div>
         </div>
       </section>

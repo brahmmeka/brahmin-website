@@ -155,7 +155,7 @@ export default function FeaturesPage() {
               See pricing
             </Link>
           </div>
-          <p className="mt-5 text-sm text-slate-400">300+ manufacturers · Go live in 21 days · $199/month flat</p>
+          <p className="mt-5 text-sm text-slate-400">300+ manufacturers · Go live in as little as 3 weeks · From $199/month</p>
         </div>
       </section>
 
@@ -224,9 +224,9 @@ export default function FeaturesPage() {
       {/* Pricing callout */}
       <section className="py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-6 max-w-3xl text-center">
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">All features. One flat price.</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">All features. Transparent pricing.</h2>
           <p className="text-slate-500 mb-8">
-            Every feature above is included at $199/month. No per-user fees. No module add-ons. No surprises.
+            Every feature above is included from $199/month. No per-user fees. No module add-ons. No surprises.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/pricing" className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-xl font-semibold transition-colors">

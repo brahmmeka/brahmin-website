@@ -10,7 +10,7 @@ const stats = [
     ),
   },
   {
-    number: '21 days',
+    number: '2–6 weeks',
     label: 'Average implementation',
     sub: 'Not 6 months. Not "it depends."',
     icon: (

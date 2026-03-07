@@ -13,7 +13,7 @@ type RowValue = string | boolean
 const quickStats = [
   { label: 'Deployment', brahmin: 'Cloud-native (browser + app)', fishbowl: 'On-premise server (cloud = legacy hosted)', brahminBetter: true },
   { label: 'Starting cost', brahmin: 'From $199/month', fishbowl: '$6,495+ one-time (Manufacturing)', brahminBetter: true },
-  { label: 'Implementation', brahmin: 'Dedicated manager, 21 days', fishbowl: '60–120 days + $2K–$10K setup fee', brahminBetter: true },
+  { label: 'Implementation', brahmin: 'Dedicated manager, 2–6 weeks', fishbowl: '60–120 days + $2K–$10K setup fee', brahminBetter: true },
   { label: 'Support response', brahmin: '<15 minutes', fishbowl: 'Voicemail, days to weeks', brahminBetter: true },
   { label: 'QuickBooks required', brahmin: false, fishbowl: true, brahminBetter: true },
 ]
@@ -85,7 +85,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; fishbowl: RowValue; 
   { feature: 'Average support response time', brahmin: '<15 minutes', fishbowl: 'Days to weeks (per reviews)' },
   { feature: 'Live human support available', brahmin: true, fishbowl: false, note: 'Verified reviews describe voicemail-only experience on standard plans' },
   { feature: 'Dedicated implementation manager', brahmin: true, fishbowl: false },
-  { feature: 'Average time to go-live', brahmin: '21 days', fishbowl: '60–120 days' },
+  { feature: 'Average time to go-live', brahmin: '3–6 weeks', fishbowl: '60–120 days' },
   { feature: 'Unlimited training calls', brahmin: true, fishbowl: false, note: 'Fishbowl charges per-user training fees' },
   // Platform
   { feature: 'Cloud-native (no local server)', brahmin: true, fishbowl: false },
@@ -125,7 +125,7 @@ const idealFor = [
   'Your team needs to access inventory from browsers and mobile devices, not a server',
   'You need support that responds in minutes, not voicemail',
   'You don\'t want to depend on QuickBooks to run your inventory system',
-  'You need a dedicated implementation manager who gets you live in 21 days',
+  'You need a dedicated implementation manager who gets you live in 3–6 weeks',
   'You want reporting you can customize without paying for back-end development',
 ]
 

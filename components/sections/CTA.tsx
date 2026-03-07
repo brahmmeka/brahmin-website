@@ -61,7 +61,7 @@ export default function CTA() {
           <div className="mt-12 pt-8 border-t border-primary-500/40 flex flex-wrap justify-center gap-8">
             {[
               { n: '300+', l: 'Manufacturers' },
-              { n: '21 days', l: 'Avg. go-live' },
+              { n: '2–6 weeks', l: 'Avg. go-live' },
               { n: '<15 min', l: 'Support response' },
             ].map((s) => (
               <div key={s.l} className="text-center">

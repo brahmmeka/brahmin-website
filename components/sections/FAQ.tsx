@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: 'How long does implementation take?',
-    a: 'Average implementation is 21 days with a dedicated implementation manager. We handle data migration from spreadsheets or other systems and train your team—no 6-month enterprise rollouts.',
+    a: 'Average implementation is 2–6 weeks with a dedicated implementation manager. We handle data migration from spreadsheets or other systems and train your team — no 6-month enterprise rollouts.',
   },
   {
     q: 'What integrations does Brahmin Solutions support?',

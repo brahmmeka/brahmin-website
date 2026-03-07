@@ -82,7 +82,7 @@ export default function Hero() {
           </m.div>
 
           <m.p {...fadeUp(0.32)} className="mt-5 text-sm text-slate-500">
-            No credit card required &middot; 14-day free trial &middot; Live in 21 days
+            No credit card required &middot; 14-day free trial &middot; Go live in as little as 3 weeks
           </m.p>
         </div>
 

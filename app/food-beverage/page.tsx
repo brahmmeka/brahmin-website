@@ -112,7 +112,7 @@ export default function FoodBeveragePage() {
                 See Pricing
               </Link>
             </div>
-            <p className="mt-5 text-sm text-slate-400">No credit card required &middot; 14-day free trial &middot; Go live in 21 days</p>
+            <p className="mt-5 text-sm text-slate-400">No credit card required &middot; 14-day free trial &middot; Go live in as little as 3 weeks</p>
           </div>
         </div>
       </section>

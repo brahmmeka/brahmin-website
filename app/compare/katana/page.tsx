@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import CTA from '@/components/sections/CTA'
 
 export const metadata: Metadata = {
   title: 'Brahmin Solutions vs Katana MRP | Comparison',
@@ -12,10 +11,10 @@ type RowValue = string | boolean
 
 const quickStats = [
   { label: 'Starting price', brahmin: 'From $199/mo', katana: '$299/mo + add-ons', brahminBetter: true },
-  { label: 'Pricing model', brahmin: 'Flat per tier — no revenue-based fees', katana: 'GMV/order-count tiers', brahminBetter: true },
+  { label: 'Pricing model', brahmin: 'Per tier — no revenue-based fees', katana: 'GMV + order-count tiers', brahminBetter: true },
   { label: 'Support response', brahmin: '<15 minutes', katana: '1–3 business days', brahminBetter: true },
-  { label: 'Lot traceability', brahmin: 'Add-on from $38/mo · Included on Pro', katana: 'Add-on ($199/mo extra)', brahminBetter: true },
-  { label: 'Implementation', brahmin: 'Dedicated manager, 21 days', katana: 'Self-serve, 30–60 days', brahminBetter: true },
+  { label: 'Lot traceability', brahmin: 'Add-on from $75/mo · Included on Pro', katana: 'Add-on ($199/mo extra)', brahminBetter: true },
+  { label: 'Implementation', brahmin: 'Dedicated manager, 3–6 weeks', katana: 'Self-serve, 30–60 days', brahminBetter: true },
 ]
 
 const katanaShortfalls = [
@@ -55,7 +54,7 @@ const brahminStrengths = [
   {
     icon: '💰',
     headline: 'Predictable pricing. No revenue-based fees.',
-    body: "Brahmin plans start at $199/month and scale with your operation — more orders or locations, not with how much revenue you earn. Your pricing tier is based on what you do, not what you sell. As your order volume grows within your tier, your bill stays exactly the same.",
+    body: "Brahmin plans start at $199/month and scale with your operation — by order volume and locations, not by how much revenue you earn. As your sales grow within your tier, your bill stays exactly the same.",
   },
   {
     icon: '💬',
@@ -65,12 +64,12 @@ const brahminStrengths = [
   {
     icon: '🏷️',
     headline: 'Lot traceability at a fraction of the cost.',
-    body: "Katana charges $199/month extra for lot and serial number tracking. Brahmin's Compliance add-on is $75/month on Growth — and on Brahmin Pro, full lot traceability, expiration management, and one-click recall reports are fully included. That's the same capability for 62% less, or nothing extra at Pro.",
+    body: "Katana charges $199/month extra for lot and serial number tracking. Brahmin's Compliance add-on is $75/month on Growth — and on Brahmin Pro, full lot traceability, expiration management, and one-click recall reports are fully included.",
   },
   {
     icon: '🚀',
-    headline: 'Dedicated implementation. Live in 21 days.',
-    body: 'Every new customer gets a dedicated implementation manager who stays with you through go-live and beyond. We move fast: average implementation is 21 days. You will never be left to figure it out from a help center article.',
+    headline: 'Dedicated implementation. Live in 3–6 weeks.',
+    body: 'Every new customer gets a dedicated implementation manager who stays with you through go-live and beyond. Average implementation is 3–6 weeks. You will never be left to figure it out from a help center article.',
   },
 ]
 
@@ -84,7 +83,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; katana: RowValue; no
   // Support
   { feature: 'Average support response time', brahmin: '<15 minutes', katana: '1–3 business days' },
   { feature: 'Dedicated implementation manager', brahmin: true, katana: false },
-  { feature: 'Average time to go-live', brahmin: '21 days', katana: '30–60 days' },
+  { feature: 'Average time to go-live', brahmin: '3–6 weeks', katana: '30–60 days' },
   { feature: 'US business hours support', brahmin: true, katana: false, note: 'Katana support is Europe-based' },
   { feature: 'Unlimited training calls', brahmin: true, katana: false },
   // Inventory & Production
@@ -107,7 +106,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; katana: RowValue; no
   { feature: 'Shopify integration', brahmin: true, katana: true },
   { feature: 'ShipStation integration', brahmin: true, katana: false },
   { feature: 'WooCommerce integration', brahmin: true, katana: false },
-  // Other
+  // Platform
   { feature: 'B2B wholesale customer portal', brahmin: true, katana: false },
   { feature: 'Mobile warehouse app', brahmin: true, katana: false },
   { feature: 'MRP / demand planning', brahmin: true, katana: 'Basic' },
@@ -127,13 +126,13 @@ const tableGroups = [
 
 const idealFor = [
   'You are outgrowing Katana — more locations, more orders, more complexity',
-  'Your Katana bill keeps climbing as your order volume grows',
+  'Your Katana bill keeps climbing as your order volume or revenue grows',
   'You need FDA-ready lot traceability — included on Pro, or add-on at 62% less than Katana charges',
   'You want support that responds in minutes, not days',
   'You sell wholesale and need a B2B ordering portal for your buyers',
   'You want a dedicated implementation manager, not a help center article',
   'You manufacture food, cosmetics, supplements, or other regulated products',
-  'You want a flat monthly price that does not change as you grow',
+  'You want pricing that does not change as your revenue grows',
 ]
 
 function Cell({ value }: { value: RowValue }) {
@@ -158,97 +157,66 @@ export default function VsKatanaPage() {
   return (
     <main>
 
-      {/* ── 1. HERO ── */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white pt-20 pb-16">
-        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-primary-100 rounded-full opacity-25 blur-3xl pointer-events-none" />
-        <div className="relative container mx-auto px-6 max-w-7xl">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white border border-slate-200 text-slate-500 px-4 py-1.5 rounded-full text-sm font-medium mb-6 shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary-500" />
-              Comparison
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
-              Brahmin Solutions vs Katana MRP
-            </h1>
-            <p className="mt-6 text-xl text-slate-500 leading-relaxed max-w-2xl">
-              Tired of Katana raising prices every year? Brahmin is $199/month flat — no order-count tiers, no traceability add-ons, no support queue. Just software that works, with a team that picks up.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/demo"
-                className="bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg shadow-accent-500/25 hover:-translate-y-0.5 text-center"
-              >
-                Book a demo
-              </Link>
-              <Link
-                href="/pricing"
-                className="flex items-center justify-center gap-2 border border-slate-200 text-slate-700 hover:border-slate-300 hover:bg-slate-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all"
-              >
-                See pricing →
-              </Link>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-6">
-              {['$199/month flat', '<15 min support response', 'Lot traceability included', '300+ manufacturers'].map((t) => (
-                <div key={t} className="flex items-center gap-2 text-sm text-slate-500">
-                  <svg className="w-4 h-4 text-emerald-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                  {t}
-                </div>
-              ))}
-            </div>
+      {/* ── 1. HERO ─────────────────────────────────────────────────────────── */}
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20 md:py-28">
+        <div className="container mx-auto px-6 max-w-5xl text-center">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-sm text-slate-300 mb-8">
+            <span>Comparison</span><span className="text-slate-500">·</span><span>Updated March 2026</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Brahmin Solutions vs Katana MRP</h1>
+          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-10">
+            Katana has raised prices 300–523% for long-term customers and moved traceability features behind a $199/month add-on. Brahmin starts at $199/month — no revenue-based tiers, no traceability paywall.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {[
+              '✓ From $199/mo — no revenue-based fees',
+              '✓ Lot traceability at 62% less than Katana',
+              '✓ <15 min support response',
+              '✓ Dedicated implementation manager',
+            ].map((pill) => (
+              <span key={pill} className="bg-emerald-600/20 border border-emerald-500/30 text-emerald-300 text-sm px-4 py-1.5 rounded-full">{pill}</span>
+            ))}
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/demo" className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-semibold transition-colors">Book a demo</Link>
+            <Link href="/pricing" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-xl font-semibold transition-colors">See our pricing</Link>
           </div>
         </div>
       </section>
 
-      {/* ── 2. QUICK COMPARISON ── */}
-      <section className="py-16 bg-white border-b border-slate-100">
+      {/* ── 2. QUICK COMPARISON ─────────────────────────────────────────────── */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8 text-center">At a glance</h2>
-          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-            <div className="grid grid-cols-3 border-b border-slate-200">
-              <div className="px-6 py-4 text-sm font-semibold text-slate-400 uppercase tracking-wide"></div>
-              <div className="px-6 py-4 text-center border-l border-slate-200 bg-primary-50/40">
-                <p className="text-sm font-bold text-primary-700">Brahmin Solutions</p>
-              </div>
-              <div className="px-6 py-4 text-center border-l border-slate-200">
-                <p className="text-sm font-bold text-slate-500">Katana</p>
-              </div>
+          <h2 className="text-2xl font-bold text-slate-900 text-center mb-10">Quick comparison</h2>
+          <div className="rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+            <div className="grid grid-cols-3 bg-slate-50 border-b border-slate-200 text-sm font-semibold text-slate-500 uppercase tracking-wide">
+              <div className="px-6 py-4"></div>
+              <div className="px-6 py-4 text-center text-emerald-700 bg-emerald-50">Brahmin Solutions</div>
+              <div className="px-6 py-4 text-center">Katana MRP</div>
             </div>
-            {quickStats.map((row, i) => (
-              <div key={row.label} className={`grid grid-cols-3 border-b border-slate-100 ${i % 2 === 0 ? '' : 'bg-slate-50/50'}`}>
-                <div className="px-6 py-4 text-sm text-slate-600 font-medium">{row.label}</div>
-                <div className="px-6 py-4 text-center border-l border-slate-100 bg-primary-50/20">
-                  <span className="text-sm font-semibold text-emerald-700">{row.brahmin}</span>
-                </div>
-                <div className="px-6 py-4 text-center border-l border-slate-100">
-                  <span className="text-sm text-slate-500">{row.katana}</span>
-                </div>
+            {quickStats.map((row) => (
+              <div key={row.label} className="grid grid-cols-3 border-b border-slate-100 last:border-0 items-center">
+                <div className="px-6 py-4 text-sm font-medium text-slate-700">{row.label}</div>
+                <div className={`px-6 py-4 text-sm font-semibold text-center ${row.brahminBetter ? 'text-emerald-700 bg-emerald-50' : 'text-slate-700'}`}>{row.brahmin}</div>
+                <div className="px-6 py-4 text-sm text-slate-500 text-center">{row.katana}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 3. WHERE KATANA FALLS SHORT ── */}
-      <section className="py-section bg-slate-50">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-14">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-rose-600 mb-4">
-              Where Katana falls short
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
-              What Katana customers complain about
-            </h2>
-            <p className="mt-4 text-slate-500 max-w-xl mx-auto">
-              Based on hundreds of verified reviews on G2, Capterra, and Trustpilot.
-            </p>
+      {/* ── 3. WHERE KATANA FALLS SHORT ─────────────────────────────────────── */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Where Katana falls short</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto">Based on verified reviews from G2, Capterra, and Trustpilot.</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6">
             {katanaShortfalls.map((item) => (
-              <div key={item.headline} className="bg-white rounded-2xl border border-slate-200 p-7">
-                <div className="text-3xl mb-4">{item.icon}</div>
-                <h3 className="font-bold text-slate-900 text-lg mb-3">{item.headline}</h3>
+              <div key={item.headline} className="bg-white rounded-2xl border border-slate-200 p-6">
+                <div className="text-2xl mb-3">{item.icon}</div>
+                <h3 className="font-bold text-slate-900 text-base mb-2">{item.headline}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed mb-4">{item.body}</p>
                 <blockquote className="border-l-2 border-slate-200 pl-4 text-xs text-slate-400 italic leading-relaxed">
                   {item.quote}
@@ -259,22 +227,17 @@ export default function VsKatanaPage() {
         </div>
       </section>
 
-      {/* ── 4. WHERE BRAHMIN EXCELS ── */}
-      <section className="py-section bg-white">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-14">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">
-              Where Brahmin excels
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
-              What you get when you switch
-            </h2>
+      {/* ── 4. WHERE BRAHMIN EXCELS ──────────────────────────────────────────── */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">What you get when you switch</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {brahminStrengths.map((s) => (
-              <div key={s.headline} className="bg-slate-50 rounded-2xl border border-slate-200 p-7">
-                <div className="text-3xl mb-4">{s.icon}</div>
-                <h3 className="font-bold text-slate-900 text-base mb-3">{s.headline}</h3>
+              <div key={s.headline} className="bg-slate-50 rounded-2xl border border-slate-200 p-6">
+                <div className="text-2xl mb-3">{s.icon}</div>
+                <h3 className="font-bold text-slate-900 text-sm mb-2">{s.headline}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">{s.body}</p>
               </div>
             ))}
@@ -282,50 +245,30 @@ export default function VsKatanaPage() {
         </div>
       </section>
 
-      {/* ── 5. FEATURE-BY-FEATURE BREAKDOWN ── */}
-      <section className="py-section bg-slate-50">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <div className="text-center mb-12">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">
-              Full comparison
-            </span>
-            <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
-              Feature-by-feature breakdown
-            </h2>
+      {/* ── 5. FEATURE-BY-FEATURE BREAKDOWN ─────────────────────────────────── */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Feature-by-feature breakdown</h2>
           </div>
-
-          <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
-            {/* Header */}
-            <div className="grid grid-cols-[1fr_140px_140px] border-b border-slate-200 bg-slate-50">
-              <div className="px-6 py-5 text-sm font-semibold text-slate-400">Feature</div>
-              <div className="px-4 py-5 text-center border-l border-slate-200 bg-primary-50/60">
-                <p className="text-sm font-bold text-primary-700">Brahmin</p>
-                <p className="text-xs text-slate-400 mt-0.5">$199/mo</p>
-              </div>
-              <div className="px-4 py-5 text-center border-l border-slate-200">
-                <p className="text-sm font-bold text-slate-500">Katana</p>
-                <p className="text-xs text-slate-400 mt-0.5">$299/mo+</p>
-              </div>
+          <div className="rounded-2xl border border-slate-200 overflow-hidden shadow-sm bg-white">
+            <div className="grid grid-cols-[1fr_160px_160px] border-b border-slate-200 bg-slate-50 text-sm font-semibold text-slate-500 uppercase tracking-wide">
+              <div className="px-6 py-4">Feature</div>
+              <div className="px-4 py-4 text-center text-emerald-700 bg-emerald-50">Brahmin</div>
+              <div className="px-4 py-4 text-center">Katana</div>
             </div>
-
-            {tableGroups.map((group, gi) => (
+            {tableGroups.map((group) => (
               <div key={group.label}>
-                {/* Group header */}
-                <div className="grid grid-cols-[1fr_140px_140px] border-b border-slate-100 bg-slate-50/80">
-                  <div className="px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-slate-400 col-span-3">
-                    {group.label}
-                  </div>
+                <div className="px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-50/80 border-b border-slate-100">
+                  {group.label}
                 </div>
                 {group.rows.map((row, i) => (
-                  <div
-                    key={row.feature}
-                    className={`grid grid-cols-[1fr_140px_140px] border-b border-slate-100 ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50/30'}`}
-                  >
+                  <div key={row.feature} className={`grid grid-cols-[1fr_160px_160px] border-b border-slate-100 ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50/30'}`}>
                     <div className="px-6 py-4">
                       <p className="text-sm font-medium text-slate-700">{row.feature}</p>
                       {row.note && <p className="text-xs text-slate-400 mt-0.5">{row.note}</p>}
                     </div>
-                    <div className="px-4 py-4 flex items-center justify-center border-l border-slate-100 bg-primary-50/20">
+                    <div className="px-4 py-4 flex items-center justify-center border-l border-slate-100 bg-emerald-50/30">
                       <Cell value={row.brahmin} />
                     </div>
                     <div className="px-4 py-4 flex items-center justify-center border-l border-slate-100">
@@ -336,25 +279,18 @@ export default function VsKatanaPage() {
               </div>
             ))}
           </div>
-
           <p className="mt-4 text-xs text-slate-400 text-center">
             Katana pricing and features based on publicly available information as of March 2026. Features and pricing subject to change.
           </p>
         </div>
       </section>
 
-      {/* ── 6. WHO SHOULD CHOOSE BRAHMIN ── */}
-      <section className="py-section bg-white">
+      {/* ── 6. WHO SHOULD CHOOSE BRAHMIN ────────────────────────────────────── */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6 max-w-4xl">
-          <div className="text-center mb-12">
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">
-              Is Brahmin right for you?
-            </span>
-            <h2 className="text-3xl font-bold text-slate-900 tracking-tight">
-              Who should choose Brahmin over Katana
-            </h2>
+          <div className="text-center mb-10">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">Who should choose Brahmin over Katana</h2>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
@@ -376,7 +312,6 @@ export default function VsKatanaPage() {
                 ))}
               </ul>
             </div>
-
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-8 rounded-full bg-slate-400 flex items-center justify-center">
@@ -402,9 +337,8 @@ export default function VsKatanaPage() {
               </ul>
             </div>
           </div>
-
           {/* Testimonial */}
-          <div className="bg-primary-50 border border-primary-100 rounded-2xl p-8 text-center">
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 text-center">
             <div className="flex gap-0.5 justify-center mb-5">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="w-5 h-5 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
@@ -416,7 +350,7 @@ export default function VsKatanaPage() {
               &ldquo;Full visibility from purchase order to manufacturing to sales — plus accurate cost of goods. And the support is exceptional. I switched and wish I had done it sooner.&rdquo;
             </blockquote>
             <div className="flex items-center justify-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary-200 flex items-center justify-center text-primary-700 font-bold text-sm">SH</div>
+              <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-700 font-bold text-sm">SH</div>
               <div className="text-left">
                 <p className="font-semibold text-slate-900">Sheldon</p>
                 <p className="text-sm text-slate-500">FLFF</p>
@@ -426,53 +360,43 @@ export default function VsKatanaPage() {
         </div>
       </section>
 
-      {/* ── 7. CTA ── */}
-      <section className="py-16 bg-slate-50 border-t border-slate-200">
+      {/* ── 7. FINAL CTA ─────────────────────────────────────────────────────── */}
+      <section className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-6 max-w-3xl text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Ready to see the difference?</h2>
-          <p className="text-slate-500 mb-8 text-lg">
-            Book a 30-minute demo. We will show you Brahmin with your actual products and workflows — no slides, no sales pitch.
+          <h2 className="text-3xl font-bold mb-4">Ready to see the difference?</h2>
+          <p className="text-slate-300 mb-8 text-lg">
+            Book a 30-minute demo. We&apos;ll show you Brahmin with your actual products and workflows — no slides, no sales pitch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href="/demo"
-              className="bg-accent-500 hover:bg-accent-600 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg shadow-accent-500/25 hover:-translate-y-0.5"
-            >
+            <Link href="/demo" className="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-4 rounded-xl font-semibold transition-colors">
               Book a demo
             </Link>
-            <Link
-              href="/pricing"
-              className="border border-slate-200 hover:border-slate-300 text-slate-700 px-10 py-4 rounded-xl font-semibold text-lg transition-all hover:bg-white"
-            >
+            <Link href="/pricing" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-10 py-4 rounded-xl font-semibold transition-colors">
               See pricing
             </Link>
           </div>
-          <p className="text-sm text-slate-400">No credit card required · $199/month flat · Live in 21 days</p>
-        </div>
-      </section>
-
-      {/* Other comparisons */}
-      <section className="py-12 bg-white border-t border-slate-100">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4 text-center">More comparisons</p>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              { label: 'vs Fishbowl', href: '/compare/fishbowl' },
-              { label: 'vs Cin7', href: '/compare/cin7' },
-              { label: 'vs NetSuite', href: '/compare/netsuite' },
-              { label: 'vs MRPeasy', href: '/compare/mrpeasy' },
-              { label: 'vs Wherefour', href: '/compare/wherefour' },
-              { label: 'vs Spreadsheets', href: '/compare/spreadsheets' },
-            ].map((c) => (
-              <Link key={c.href} href={c.href} className="text-sm text-slate-600 hover:text-primary-600 border border-slate-200 hover:border-primary-200 px-4 py-2 rounded-lg transition-colors hover:bg-primary-50">
-                {c.label}
-              </Link>
-            ))}
+          <p className="text-sm text-slate-400">No credit card required · From $199/month · Live in 3–6 weeks</p>
+          {/* Other comparisons */}
+          <div className="mt-12 pt-8 border-t border-white/10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">More comparisons</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                { label: 'vs Fishbowl', href: '/compare/fishbowl' },
+                { label: 'vs Cin7', href: '/compare/cin7' },
+                { label: 'vs NetSuite', href: '/compare/netsuite' },
+                { label: 'vs MRPeasy', href: '/compare/mrpeasy' },
+                { label: 'vs Wherefour', href: '/compare/wherefour' },
+                { label: 'vs Spreadsheets', href: '/compare/spreadsheets' },
+              ].map((c) => (
+                <Link key={c.href} href={c.href} className="text-sm text-slate-400 hover:text-white border border-white/10 hover:border-white/30 px-4 py-2 rounded-lg transition-colors">
+                  {c.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <CTA />
     </main>
   )
 }

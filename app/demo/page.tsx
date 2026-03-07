@@ -13,7 +13,7 @@ const benefits = [
 const stats = [
   { n: '30 min', l: 'Demo length' },
   { n: '15 min', l: 'Support response' },
-  { n: '21 days', l: 'Avg. go-live' },
+  { n: '2–6 weeks', l: 'Avg. go-live' },
 ]
 
 export default function DemoPage() {

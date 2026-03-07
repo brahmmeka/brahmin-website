@@ -84,7 +84,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; mrpeasy: RowValue; n
   // Support
   { feature: 'Support channels', brahmin: 'Phone + chat + email', mrpeasy: 'Ticket / email only' },
   { feature: 'Dedicated implementation manager', brahmin: true, mrpeasy: false },
-  { feature: 'Average time to go-live', brahmin: '21 days', mrpeasy: 'Self-guided, timeline varies' },
+  { feature: 'Average time to go-live', brahmin: '3–6 weeks', mrpeasy: 'Self-guided, timeline varies' },
   { feature: 'Live walkthrough / onboarding calls', brahmin: true, mrpeasy: false, note: 'MRPeasy reviewers specifically request this feature' },
   { feature: 'Unlimited training calls', brahmin: true, mrpeasy: false },
   // Inventory & Production

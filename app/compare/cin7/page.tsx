@@ -165,7 +165,7 @@ export default function Cin7Compare() {
             Cin7 starts at $349/month — and the MRP module, Advanced Manufacturing, and B2B portal all cost extra on top. After the DEAR Systems acquisition, support wait times stretched from hours to weeks. Here&apos;s the full picture.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {['✓ From $199/month — published pricing', '✓ Manufacturing features included', '✓ <15 min support response', '✓ Live in 21 days'].map((pill) => (
+            {['✓ From $199/month — published pricing', '✓ Manufacturing features included', '✓ <15 min support response', '✓ Live in 3–6 weeks'].map((pill) => (
               <span key={pill} className="bg-emerald-600/20 border border-emerald-500/30 text-emerald-300 text-sm px-4 py-1.5 rounded-full">{pill}</span>
             ))}
           </div>

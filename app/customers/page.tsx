@@ -19,7 +19,7 @@ const featuredStories = [
     role: 'Operations Manager',
     stats: [
       { n: '$87.5K', l: 'Recall costs avoided' },
-      { n: '21 days', l: 'Implementation' },
+      { n: '3 weeks', l: 'Implementation' },
       { n: '100%', l: 'Lot traceability' },
     ],
     color: 'from-rose-50 to-white',

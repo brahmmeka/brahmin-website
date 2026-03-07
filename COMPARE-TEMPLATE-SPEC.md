@@ -2,8 +2,8 @@
 
 > **Last Updated:** March 2026
 > **Route pattern:** `/compare/[competitor]`
-> **Built pages:** katana ✅, wherefour ✅, fishbowl ✅, cin7 ✅, spreadsheets ✅
-> **Not yet built:** mrpeasy, netsuite, dear-systems, sap-business-one, odoo, inflow, craftybase, sortly
+> **Built pages:** katana ✅, wherefour ✅, fishbowl ✅, cin7 ✅, mrpeasy ✅, netsuite ✅, spreadsheets ✅
+> **Not yet built:** dear-systems, sap-business-one, odoo, inflow, craftybase, sortly
 
 ---
 
@@ -62,7 +62,13 @@ All compare pages must reflect actual Brahmin pricing tiers:
 - **Key angle:** (legacy page — verify structure matches 7-section template)
 
 ### `/compare/cin7`
-- **Key angle:** (legacy page — verify structure matches 7-section template)
+- **Key angle:** Support collapse after DEAR Systems acquisition, recurring price hikes, manufacturing features as add-ons (MRP, B2B portal, Advanced Manufacturing all extra)
+
+### `/compare/mrpeasy`
+- **Key angle:** Per-user pricing math (5 users Professional = $345/mo vs Brahmin $199 flat), outdated UI, email-only support, API locked to Unlimited tier (~$149/user/mo)
+
+### `/compare/netsuite`
+- **Key angle:** Enterprise overkill — year-one cost $52K-$91K+ (base $999/mo + $129/user + $25K-$150K implementation); 4-6 month implementations; not built for small manufacturers
 
 ### `/compare/spreadsheets`
 - **Key angle:** (legacy page — verify structure matches 7-section template)

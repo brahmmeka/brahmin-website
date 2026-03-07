@@ -14,7 +14,7 @@
 | Features | 9 | ✅ Built |
 | Industries | 10 | To build |
 | Integrations | 1 | To build |
-| Compare | 14 | Partial (katana ✅ rebuilt, wherefour ✅ built, fishbowl/cin7/spreadsheets ✅, others TBD) |
+| Compare | 14 | Partial (katana/wherefour/fishbowl/cin7/mrpeasy/netsuite/spreadsheets ✅, dear-systems/sap/odoo/inflow/craftybase/sortly TBD) |
 | Resources | 8 | To build |
 | **TOTAL** | **46** | |
 
@@ -236,9 +236,9 @@ Description: Connect Brahmin Solutions with QuickBooks, Xero, Shopify, ShipStati
 | vs Katana | `/compare/katana` | Brahmin Solutions vs Katana | ✅ | ✅ Built (rebuilt March 2026) |
 | vs Fishbowl | `/compare/fishbowl` | Brahmin Solutions vs Fishbowl | ✅ | ✅ Built |
 | vs Cin7 | `/compare/cin7` | Brahmin Solutions vs Cin7 | ✅ | ✅ Built |
-| vs MRPeasy | `/compare/mrpeasy` | Brahmin Solutions vs MRPeasy | ✅ | ❌ Not built yet |
+| vs MRPeasy | `/compare/mrpeasy` | Brahmin Solutions vs MRPeasy | ✅ | ✅ Built (March 2026) |
 | vs Wherefour | `/compare/wherefour` | Brahmin Solutions vs Wherefour | ✅ | ✅ Built (March 2026) |
-| vs NetSuite | `/compare/netsuite` | Brahmin Solutions vs NetSuite | ✅ | ❌ Not built yet |
+| vs NetSuite | `/compare/netsuite` | Brahmin Solutions vs NetSuite | ✅ | ✅ Built (March 2026) |
 | vs DEAR Systems | `/compare/dear-systems` | Brahmin Solutions vs DEAR | Hub | ❌ Not built yet |
 | vs SAP Business One | `/compare/sap-business-one` | Brahmin Solutions vs SAP | Hub | ❌ Not built yet |
 | vs Odoo | `/compare/odoo` | Brahmin Solutions vs Odoo | Hub | ❌ Not built yet |

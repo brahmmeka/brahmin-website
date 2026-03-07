@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import CTA from '@/components/sections/CTA'
 
 export const metadata: Metadata = {
   title: 'Brahmin Solutions vs Fishbowl | Comparison',
@@ -350,7 +349,6 @@ export default function FishbowlCompare() {
           </div>
         </div>
       </section>
-      <CTA />
     </>
   )
 }

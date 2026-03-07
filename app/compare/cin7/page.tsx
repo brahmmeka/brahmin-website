@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import CTA from '@/components/sections/CTA'
 
 export const metadata: Metadata = {
   title: 'Brahmin Solutions vs Cin7 | Comparison',
@@ -354,7 +353,6 @@ export default function Cin7Compare() {
           </div>
         </div>
       </section>
-      <CTA />
     </>
   )
 }

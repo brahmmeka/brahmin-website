@@ -5,16 +5,16 @@ import CTA from '@/components/sections/CTA'
 export const metadata: Metadata = {
   title: 'Brahmin Solutions vs Katana MRP | Comparison',
   description:
-    'See how Brahmin Solutions compares to Katana MRP. Flat $199/month pricing, <15 min support, full lot traceability included — no add-ons, no order-count fees.',
+    'See how Brahmin Solutions compares to Katana MRP. Predictable pricing from $199/month, <15 min support, and lot traceability at a fraction of what Katana charges.',
 }
 
 type RowValue = string | boolean
 
 const quickStats = [
-  { label: 'Starting price', brahmin: '$199/mo flat', katana: '$299/mo + add-ons', brahminBetter: true },
-  { label: 'Pricing model', brahmin: 'Flat rate — no order fees', katana: 'GMV/order-count tiers', brahminBetter: true },
+  { label: 'Starting price', brahmin: 'From $199/mo', katana: '$299/mo + add-ons', brahminBetter: true },
+  { label: 'Pricing model', brahmin: 'Flat per tier — no revenue-based fees', katana: 'GMV/order-count tiers', brahminBetter: true },
   { label: 'Support response', brahmin: '<15 minutes', katana: '1–3 business days', brahminBetter: true },
-  { label: 'Lot traceability', brahmin: 'Included', katana: 'Add-on ($199/mo extra)', brahminBetter: true },
+  { label: 'Lot traceability', brahmin: 'Add-on from $38/mo · Included on Pro', katana: 'Add-on ($199/mo extra)', brahminBetter: true },
   { label: 'Implementation', brahmin: 'Dedicated manager, 21 days', katana: 'Self-serve, 30–60 days', brahminBetter: true },
 ]
 
@@ -54,8 +54,8 @@ const katanaShortfalls = [
 const brahminStrengths = [
   {
     icon: '💰',
-    headline: 'One flat price. No surprises.',
-    body: 'Brahmin is $199/month. Period. No per-order fees. No GMV tiers. No add-ons for features you actually need. As your order volume grows, your Brahmin bill stays the same. We grow when you grow — not before.',
+    headline: 'Predictable pricing. No revenue-based fees.',
+    body: "Brahmin plans start at $199/month and scale with your operation — more orders or locations, not with how much revenue you earn. Your pricing tier is based on what you do, not what you sell. As your order volume grows within your tier, your bill stays exactly the same.",
   },
   {
     icon: '💬',
@@ -64,8 +64,8 @@ const brahminStrengths = [
   },
   {
     icon: '🏷️',
-    headline: 'Full lot traceability. Included.',
-    body: 'Full forward and backward lot traceability, expiration management, and one-click recall reports are included in every Brahmin plan. No add-ons, no paywalls. We built Brahmin for food, cosmetics, and supplement manufacturers who need FDA-ready traceability on day one.',
+    headline: 'Lot traceability at a fraction of the cost.',
+    body: "Katana charges $199/month extra for lot and serial number tracking. Brahmin's Compliance add-on is $75/month on Growth — and on Brahmin Pro, full lot traceability, expiration management, and one-click recall reports are fully included. That's the same capability for 62% less, or nothing extra at Pro.",
   },
   {
     icon: '🚀',
@@ -76,10 +76,10 @@ const brahminStrengths = [
 
 const comparisonRows: { feature: string; brahmin: RowValue; katana: RowValue; note?: string }[] = [
   // Pricing
-  { feature: 'Starting price', brahmin: '$199/month', katana: '$299/month', note: 'Katana Core plan, single location' },
-  { feature: 'Pricing model', brahmin: 'Flat rate', katana: 'GMV + order count tiers', note: 'Katana pricing increases with order volume' },
+  { feature: 'Starting price', brahmin: 'From $199/month (Starter)', katana: '$299/month', note: 'Katana Core plan, single location' },
+  { feature: 'Pricing model', brahmin: 'Per tier (orders + locations)', katana: 'GMV + order count tiers', note: 'Katana pricing increases with gross revenue' },
   { feature: 'Per-order / per-transaction fees', brahmin: false, katana: true },
-  { feature: 'Add-on costs for core features', brahmin: false, katana: true, note: 'Katana charges $199/mo for serial/lot tracking' },
+  { feature: 'Lot/serial tracking add-on cost', brahmin: '$75/mo on Growth · Included on Pro', katana: '$199/mo extra', note: 'Brahmin compliance add-on costs 62% less than Katana' },
   { feature: 'Price stability over time', brahmin: true, katana: false, note: 'Katana has raised prices 300–523% for long-term customers' },
   // Support
   { feature: 'Average support response time', brahmin: '<15 minutes', katana: '1–3 business days' },
@@ -96,10 +96,10 @@ const comparisonRows: { feature: string; brahmin: RowValue; katana: RowValue; no
   { feature: 'Yield and scrap tracking', brahmin: true, katana: 'Limited' },
   { feature: 'Subcontract manufacturing', brahmin: true, katana: false },
   // Traceability
-  { feature: 'Batch & lot traceability', brahmin: true, katana: 'Add-on', note: 'Katana charges extra for this' },
-  { feature: 'Expiration date management', brahmin: true, katana: 'Limited' },
-  { feature: 'One-click recall reports', brahmin: true, katana: false },
-  { feature: 'FDA/FSMA audit trails', brahmin: true, katana: false },
+  { feature: 'Batch & lot traceability', brahmin: 'Pro · Add-on on Starter/Growth', katana: 'Add-on ($199/mo)', note: 'Brahmin add-on ($75/mo) costs 62% less than Katana' },
+  { feature: 'Expiration date management', brahmin: 'Pro · Add-on on Starter/Growth', katana: 'Limited' },
+  { feature: 'One-click recall reports', brahmin: 'Pro · Add-on on Starter/Growth', katana: false },
+  { feature: 'FDA/FSMA audit trails', brahmin: 'Pro · Add-on on Starter/Growth', katana: false },
   { feature: 'Certificate of analysis (CoA) storage', brahmin: true, katana: false },
   // Integrations
   { feature: 'QuickBooks integration', brahmin: true, katana: true },
@@ -128,7 +128,7 @@ const tableGroups = [
 const idealFor = [
   'You are outgrowing Katana — more locations, more orders, more complexity',
   'Your Katana bill keeps climbing as your order volume grows',
-  'You need FDA-ready lot traceability without paying extra for it',
+  'You need FDA-ready lot traceability — included on Pro, or add-on at 62% less than Katana charges',
   'You want support that responds in minutes, not days',
   'You sell wholesale and need a B2B ordering portal for your buyers',
   'You want a dedicated implementation manager, not a help center article',

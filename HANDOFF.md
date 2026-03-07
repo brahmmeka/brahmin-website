@@ -10,10 +10,12 @@
 
 ### Pages Built ✅
 - Homepage (`/`)
-- Features (`/features`)
+- Features overview (`/features`) — 8 feature cards linking to sub-pages
+- Feature sub-pages (all 8): `/features/inventory`, `/features/production`, `/features/traceability`, `/features/purchasing`, `/features/mrp`, `/features/warehouse`, `/features/b2b-portal`, `/features/mobile`
 - Pricing (`/pricing`)
 - About (`/about`) — 8 sections per ABOUT-PAGE-SPEC.md
-- Comparison pages (`/compare/katana`, `/compare/fishbowl`, `/compare/cin7`, `/compare/spreadsheets`)
+- Comparison pages: `/compare/katana` ✅ (rebuilt March 2026 — research-backed, accurate pricing), `/compare/wherefour` ✅ (built March 2026), `/compare/fishbowl` ✅, `/compare/cin7` ✅, `/compare/spreadsheets` ✅
+- Comparison pages NOT yet built: mrpeasy, netsuite, dear-systems, sap-business-one, odoo, inflow, craftybase, sortly
 - Industry pages (`/manufacturing`, `/food-beverage`, `/wholesale-distribution`)
 
 ### Pages NOT Built ❌

@@ -1,157 +1,118 @@
 # COMPARE-TEMPLATE-SPEC.md — Comparison Page Template
 
-> **Example file:** `app/compare/katana/page.tsx`
+> **Last Updated:** March 2026
 > **Route pattern:** `/compare/[competitor]`
-> **Built pages:** `/compare/katana`, `/compare/fishbowl`, `/compare/cin7`, `/compare/spreadsheets`
+> **Built pages:** katana ✅, wherefour ✅, fishbowl ✅, cin7 ✅, spreadsheets ✅
+> **Not yet built:** mrpeasy, netsuite, dear-systems, sap-business-one, odoo, inflow, craftybase, sortly
 
 ---
 
-## META TAGS (per page)
+## PAGE STRUCTURE (7 sections)
 
-| Page | Title | Description |
-|------|-------|-------------|
-| katana | Brahmin Solutions vs Katana MRP \| Comparison | Compare Brahmin Solutions and Katana MRP. See why manufacturers switch: 15-min support response, simpler interface, no per-order fees. |
-| fishbowl | *(similar pattern)* | *(tailored to Fishbowl)* |
-| cin7 | *(similar pattern)* | *(tailored to Cin7)* |
-| spreadsheets | *(similar pattern)* | *(tailored to spreadsheets)* |
-
----
-
-## PAGE SECTIONS (5 total)
-
-| # | Section | Background |
-|---|---------|------------|
-| 1 | Hero | `bg-gradient-to-b from-slate-50 to-white` |
-| 2 | Why manufacturers switch (3 reasons) | `bg-white` |
-| 3 | Feature-by-feature comparison table | `bg-slate-50` |
-| 4 | Testimonial | `bg-white` |
-| 5 | Final CTA | `<CTA />` component |
+| # | Section | Background | Notes |
+|---|---------|------------|-------|
+| 1 | Hero | `bg-gradient-to-br from-slate-900 via-slate-800` | Dark gradient, trust pills, two CTAs |
+| 2 | Quick comparison table | `bg-white` | 5-row snapshot: price, model, support, key feature, implementation |
+| 3 | Where [competitor] falls short | `bg-slate-50` | 4–5 pain points with real customer quotes |
+| 4 | Where Brahmin excels | `bg-white` | 4 strength cards (2×2 grid) |
+| 5 | Feature-by-feature breakdown | `bg-slate-50` | Full table, grouped into 6–8 categories |
+| 6 | Who should choose Brahmin | `bg-white` | Two-column: "Choose Brahmin if…" vs "[Competitor] may be fine if…" + testimonial |
+| 7 | CTA + more comparisons | `bg-slate-900` | Dark section + links to other compare pages + `<CTA />` |
 
 ---
 
-## SECTION 1: Hero
+## META TAG PATTERN
 
-**Layout:** Left-aligned, max-w-3xl
-
-- **Badge:** "Comparison" — `bg-slate-100 border border-slate-200 text-slate-600 rounded-full`
-- **H1:** "Brahmin Solutions vs [Competitor Name]"
-- **Subheadline:** Frustration hook + 2–3 key differentiators
-- **Primary CTA:** "Book a Demo" → `/demo` (green)
-- **Secondary CTA:** "See Pricing" → `/pricing` (blue outline)
-- **Background detail:** Blue blur orb top-right
-
-### Katana example:
-> "Frustrated with Katana? Get support that actually responds—in 15 minutes, not 3 days. Plus no per-order fees, a B2B portal, and a dedicated implementation manager."
-
----
-
-## SECTION 2: Why Manufacturers Switch
-
-**Eyebrow:** "Why Manufacturers Switch"
-**H2:** "3 reasons manufacturers leave [Competitor]"
-**Layout:** `grid md:grid-cols-3 gap-6`
-
-Each card: `bg-slate-50 rounded-2xl p-8 border border-slate-200`
-- Large emoji icon (text-3xl)
-- Bold title
-- Body paragraph (text-sm, text-slate-500)
-
-### Katana switch reasons:
-1. 💬 **Support that actually responds** — Katana averages 1–3 business days. Brahmin responds in 15 minutes—measured, tracked, and guaranteed.
-2. 💰 **No per-order fees** — Katana charges per sales order on higher-volume plans. Brahmin is flat-rate.
-3. 🏪 **B2B portal included** — Katana doesn't have a B2B customer portal.
-
----
-
-## SECTION 3: Comparison Table
-
-**H2:** "Feature-by-feature comparison"
-**Layout:** `bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm`
-
-**Table structure:**
-- Column 1: Feature (w-1/2, left-aligned)
-- Column 2: Brahmin Solutions (w-1/4, highlighted `bg-primary-50/20`, `text-primary-600`)
-- Column 3: Competitor (w-1/4)
-
-**Table header:** Shows plan name + starting price for each column
-
-**Cell renderer (`Cell` component):**
-- `true` → Green checkmark SVG (`text-accent-500`)
-- `false` → Red/grey X SVG (`text-slate-300`)
-- string → Text value (`text-sm text-slate-700 font-medium`)
-
-**Optional `note` field** under feature name (`text-xs text-slate-400`)
-
-**Alternating row background:** Even rows `bg-white`, odd rows `bg-slate-50/50`
-
-### Katana comparison rows (16 rows):
-
-| Feature | Brahmin | Katana | Note |
-|---------|---------|--------|------|
-| Starting price | $199/month ⚠️ | $179/month | Katana charges more for fewer users |
-| Per-order fees | ✗ | ✓ | Katana charges per sales order on some plans |
-| Support response time | 15 minutes | 1–3 business days | Brahmin measured and published |
-| Dedicated implementation manager | ✓ | ✗ | |
-| Average implementation time | 21 days | 30–60 days | |
-| Multi-location inventory | ✓ | ✓ | |
-| Bills of materials (multi-level) | ✓ | ✓ | |
-| Work orders | ✓ | ✓ | |
-| Batch & lot traceability | ✓ | Add-on | |
-| B2B customer portal | ✓ | ✗ | |
-| Mobile warehouse app | ✓ | ✗ | |
-| QuickBooks integration | ✓ | ✓ | |
-| Shopify integration | ✓ | ✓ | |
-| ShipStation integration | ✓ | ✗ | |
-| Open REST API | ✓ | ✓ | |
-| 24/7 human support | ✓ | ✗ | |
-
-> ⚠️ **Pricing bug:** Katana page shows `$129/month` for Brahmin — must be updated to `$199/month`
-
----
-
-## SECTION 4: Testimonial
-
-**Layout:** `max-w-3xl text-center`
-
-- 5 gold stars
-- Large blockquote (`text-2xl font-medium`)
-- Avatar: initials circle + name + title
-
-### Katana testimonial:
-> "I switched from Katana and wish I had done it sooner. The support alone made it worth it—I'd been waiting 2 days for answers that Brahmin resolves in 15 minutes."
-> — Rachel N., Founder, Bright Labs
-
----
-
-## SECTION 5: Final CTA
-
-Uses shared `<CTA />` component from `components/sections/CTA.tsx`.
-
----
-
-## DATA STRUCTURE
-
-```typescript
-type RowValue = string | boolean
-
-const comparisonRows: {
-  feature: string
-  brahmin: RowValue
-  [competitor]: RowValue
-  note?: string
-}[]
-
-const switchReasons: {
-  title: string
-  description: string
-  icon: string  // emoji
-}[]
+```
+Title: Brahmin Solutions vs [Competitor] | Comparison
+Description: See how Brahmin Solutions compares to [Competitor]. [Key differentiator 1], [key differentiator 2].
 ```
 
 ---
 
-## KNOWN ISSUES / TODO
+## PRICING ACCURACY RULES
 
-- [ ] **All compare pages:** `$129/month` must be updated to `$199/month` in comparison table headers and data rows
-- [ ] Confirm each page has unique meta title and description
-- [ ] Consider adding a `/compare` hub page listing all competitors
+All compare pages must reflect actual Brahmin pricing tiers:
+
+| Claim | Correct wording |
+|-------|----------------|
+| Starting price | "From $199/month (Starter)" — NOT "flat $199" |
+| Lot traceability | "Included on Pro · Add-on from $38/mo on lower plans" |
+| Growth plan | $499/month |
+| Pro plan | $999/month |
+
+**Never claim:** "no add-ons", "included in every plan", or "flat $199" — these are inaccurate.
+**Always say:** "from $199/month" and be specific about what's included per tier.
+
+---
+
+## BUILT PAGES
+
+### `/compare/katana`
+- **Key angle:** GMV/order-count pricing punishes growth; $299/mo+ vs Brahmin from $199/mo; Europe-based support; lot tracking $199/mo add-on vs Brahmin $75/mo
+- **Katana pricing:** $299/month base (confirmed March 2026)
+- **Rebuilt:** March 2026 with research-backed content + pricing accuracy fix
+
+### `/compare/wherefour`
+- **Key angle:** Opaque quote-based pricing ($600+/mo) vs Brahmin published tiers; 24hr email-only support; no native mobile app; allergen management workaround
+- **Wherefour pricing:** $600+/month (quote required, no published pricing)
+- **Built:** March 2026
+
+### `/compare/fishbowl`
+- **Key angle:** (legacy page — verify structure matches 7-section template)
+
+### `/compare/cin7`
+- **Key angle:** (legacy page — verify structure matches 7-section template)
+
+### `/compare/spreadsheets`
+- **Key angle:** (legacy page — verify structure matches 7-section template)
+
+---
+
+## COMPONENT PATTERNS
+
+### Quick comparison row
+```tsx
+{ label: 'Starting price', brahmin: 'From $199/mo', competitor: '$X/mo', brahminBetter: true }
+```
+
+### Feature table Cell component
+```tsx
+function Cell({ value }: { value: string | boolean }) {
+  if (value === true)  return <svg>✓ emerald</svg>
+  if (value === false) return <svg>✗ slate-300</svg>
+  return <span className="text-sm text-slate-600 text-center block">{value}</span>
+}
+```
+
+### Table groups pattern
+```tsx
+const tableGroups = [
+  { label: 'Pricing',                 rows: comparisonRows.slice(0, 5) },
+  { label: 'Support & implementation', rows: comparisonRows.slice(5, 10) },
+  { label: 'Inventory & production',  rows: comparisonRows.slice(10, ...) },
+  { label: 'Traceability & compliance', rows: ... },
+  { label: 'Integrations',            rows: ... },
+  { label: 'Platform',                rows: ... },
+]
+```
+
+---
+
+## RESEARCH PROCESS
+
+Before building a new compare page:
+1. Search `"[Competitor] reviews"` and `"[Competitor] MRP alternatives"` for real pain points
+2. Verify current competitor pricing (check their pricing page + G2/Capterra)
+3. Find 3–5 real customer quotes from G2, Capterra, Trustpilot
+4. Identify where Brahmin is genuinely better (not just claimed)
+5. Identify where the competitor is genuinely better (be honest in the "may be fine if…" column)
+
+---
+
+## CONTENT PRINCIPLES
+
+- Pain points backed by **real customer quotes** — not just assertions
+- Competitor pricing verified from current sources — cite month/year
+- Be honest in the "Competitor may be fine if…" column — builds credibility
+- Brahmin pricing must use accurate tier language throughout

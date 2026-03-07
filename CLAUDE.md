@@ -31,7 +31,16 @@ brahmin-website/
 ├── app/
 │   ├── layout.tsx              # Root layout with header/footer
 │   ├── page.tsx                # Homepage
-│   ├── features/page.tsx       # Features overview
+│   ├── features/
+│   │   ├── page.tsx            # Features overview
+│   │   ├── inventory/page.tsx  # Inventory Management
+│   │   ├── production/page.tsx # Production & Manufacturing
+│   │   ├── traceability/page.tsx # Traceability & Compliance
+│   │   ├── purchasing/page.tsx # Purchasing
+│   │   ├── mrp/page.tsx        # MRP & Forecasting
+│   │   ├── warehouse/page.tsx  # Warehouse Management
+│   │   ├── b2b-portal/page.tsx # B2B Portal
+│   │   └── mobile/page.tsx     # Mobile App
 │   ├── pricing/page.tsx        # Pricing page
 │   ├── integrations/page.tsx   # Integrations overview
 │   ├── demo/page.tsx           # Book demo page

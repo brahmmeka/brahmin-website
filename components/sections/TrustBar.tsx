@@ -13,7 +13,7 @@ const stats = [
     ),
   },
   {
-    value: 'Since 2015',
+    value: 'Since 2019',
     label: 'In business',
     icon: (
       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -40,7 +40,7 @@ const stats = [
     ),
   },
   {
-    value: '2–6 weeks',
+    value: '3–6 weeks',
     label: 'Avg. go-live',
     icon: (
       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

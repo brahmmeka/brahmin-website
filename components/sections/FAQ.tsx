@@ -6,15 +6,15 @@ import Link from 'next/link'
 const faqs = [
   {
     q: 'What is Brahmin Solutions?',
-    a: 'Brahmin Solutions is cloud-based MRP and inventory management software built for small to mid-sized manufacturers. Founded in 2015, we help 300+ manufacturing businesses track inventory, manage production, and sell across multiple channels—with support that actually picks up the phone.',
+    a: 'Brahmin Solutions is cloud-based MRP and inventory management software built for small to mid-sized manufacturers. We help 300+ manufacturing businesses track inventory, manage production, and sell across multiple channels—with support that actually picks up the phone.',
   },
   {
     q: 'How much does Brahmin Solutions cost?',
-    a: 'Brahmin Solutions starts at $129/month. Pricing scales based on features and users. Unlike some competitors, we don\'t charge per-transaction fees or nickel-and-dime you with expensive add-ons. See our pricing page for details.',
+    a: 'Brahmin Solutions starts at $199/month. Pricing scales based on features and users. Unlike some competitors, we don\'t charge per-user fees or per-transaction fees. Advanced features are available as add-ons. See our pricing page for details.',
   },
   {
     q: 'How long does implementation take?',
-    a: 'Average implementation is 2–6 weeks with a dedicated implementation manager. We handle data migration from spreadsheets or other systems and train your team — no 6-month enterprise rollouts.',
+    a: 'Average implementation is 3–6 weeks with a dedicated implementation manager. We handle data migration from spreadsheets or other systems and train your team — no 6-month enterprise rollouts.',
   },
   {
     q: 'What integrations does Brahmin Solutions support?',
@@ -88,7 +88,7 @@ export default function FAQ() {
                 href="/demo"
                 className="inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-colors shadow-sm"
               >
-                Book a Demo
+                Book a demo
               </Link>
               <Link
                 href="/faq"

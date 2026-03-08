@@ -1,12 +1,12 @@
 const stats = [
   {
-    value: '2015',
-    label: 'Founded',
+    value: '2019',
+    label: 'Serving customers',
     sub: 'Building for the long haul',
     color: 'text-primary-600',
   },
   {
-    value: '100+',
+    value: '300+',
     label: 'Manufacturers',
     sub: 'From $500K to $50M in revenue',
     color: 'text-accent-600',
@@ -34,7 +34,7 @@ export default function ByTheNumbers() {
             By the numbers
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
-            Ten years of doing things right
+            Seven years of doing things right
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5">

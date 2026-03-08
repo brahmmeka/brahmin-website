@@ -14,7 +14,7 @@ const quickStats = [
   { label: 'Pricing model', brahmin: 'Flat per tier, stable', cin7: 'Recurring price increases reported', brahminBetter: true },
   { label: 'Support response', brahmin: '<15 minutes', cin7: 'Days to weeks (post-acquisition)', brahminBetter: true },
   { label: 'MRP module', brahmin: 'Included on Pro', cin7: 'Separate paid add-on', brahminBetter: true },
-  { label: 'Implementation', brahmin: 'Dedicated manager, 21 days', cin7: '4–12 week paid packages', brahminBetter: true },
+  { label: 'Implementation', brahmin: 'Dedicated manager, 3–6 weeks', cin7: '4–12 week paid packages', brahminBetter: true },
 ]
 
 const cin7Shortfalls = [
@@ -27,7 +27,7 @@ const cin7Shortfalls = [
   {
     icon: '📈',
     headline: 'Price hikes with no warning — even for long-term customers',
-    body: 'Multiple customers who have been with the platform since the DEAR Systems days report recurring, significant price increases after locking in their workflows and integrations. Once you\'re embedded, you have little leverage. Brahmin has maintained stable pricing since 2015 — no surprise renewal bills.',
+    body: 'Multiple customers who have been with the platform since the DEAR Systems days report recurring, significant price increases after locking in their workflows and integrations. Once you\'re embedded, you have little leverage. Brahmin maintains stable pricing — no surprise renewal bills.',
     quote: '"You think you\'re signing up at one price, but prices will continue to rise every year. No other third-party app has acted in this manner." — Cin7 Core customer, Capterra',
   },
   {
@@ -63,13 +63,13 @@ const brahminStrengths = [
   },
   {
     icon: '🚀',
-    headline: 'Dedicated implementation. Live in 21 days.',
-    body: 'Every customer gets a dedicated implementation manager at no extra charge. Average go-live is 21 days — not a 4-to-12-week paid onboarding package. You\'re not paying a subscription while still in setup.',
+    headline: 'Dedicated implementation. Live in 3–6 weeks.',
+    body: 'Every customer gets a dedicated implementation manager at no extra charge. Average go-live is 3–6 weeks — not a 4-to-12-week paid onboarding package you front the cost for. You\'re not paying a subscription while still in setup.',
   },
   {
     icon: '📊',
-    headline: 'Stable pricing since 2015.',
-    body: 'Brahmin is independently owned with no VC pressure to extract more revenue from existing customers at renewal. We\'ve been operating since 2015 with the same pricing philosophy: grow when our customers grow, not before.',
+    headline: 'Stable pricing. No renewal surprises.',
+    body: 'Brahmin is independently owned with no VC pressure to extract more revenue from existing customers at renewal. Our pricing philosophy is simple: grow when our customers grow, not before.',
   },
 ]
 
@@ -84,7 +84,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; cin7: RowValue; note
   { feature: 'Average support response time', brahmin: '<15 minutes', cin7: 'Days to weeks', note: 'Post-acquisition support widely reported as degraded' },
   { feature: 'Live human support', brahmin: true, cin7: false, note: 'Cin7 standard plans route to ticket queue' },
   { feature: 'Dedicated implementation manager', brahmin: true, cin7: false, note: 'Cin7 sells onboarding as paid packages' },
-  { feature: 'Average time to go-live', brahmin: '21 days', cin7: '4–12 weeks (paid)' },
+  { feature: 'Average time to go-live', brahmin: '3–6 weeks', cin7: '4–12 weeks (paid)' },
   { feature: 'Unlimited training calls', brahmin: true, cin7: false },
   // Inventory & Production
   { feature: 'Real-time multi-location inventory', brahmin: true, cin7: true },
@@ -105,11 +105,11 @@ const comparisonRows: { feature: string; brahmin: RowValue; cin7: RowValue; note
   { feature: 'QuickBooks integration', brahmin: true, cin7: true },
   { feature: 'Shopify integration', brahmin: true, cin7: true, note: 'Cin7 Shopify sync has documented reliability issues' },
   { feature: 'ShipStation integration', brahmin: true, cin7: true },
-  { feature: 'Number of native integrations', brahmin: '50+', cin7: '700+', note: 'Cin7 has more integrations; many require higher plan tiers' },
+  { feature: 'Number of native integrations', brahmin: '8 native + 5,000+ via Zapier', cin7: '700+ (many gated by plan tier)', note: 'Brahmin native integrations are all two-way and included on every plan' },
   // Platform
   { feature: 'B2B wholesale customer portal', brahmin: true, cin7: 'Add-on cost' },
-  { feature: 'Native mobile app', brahmin: true, cin7: true },
-  { feature: 'Open REST API', brahmin: true, cin7: true },
+  { feature: 'Mobile warehouse app', brahmin: 'Browser-based (no install)', cin7: true },
+  { feature: 'REST API', brahmin: 'Beta', cin7: true },
   { feature: 'VC / PE backed', brahmin: false, cin7: true, note: 'Cin7 is PE-backed (Rubicon Technology Partners)' },
 ]
 
@@ -225,7 +225,7 @@ export default function Cin7Compare() {
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-3">Where Brahmin excels</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto">Measurable, tracked, and visible on our pricing page.</p>
+            <p className="text-slate-500 max-w-2xl mx-auto">Four things manufacturers consistently say they wished they had before switching from Cin7.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {brahminStrengths.map((card) => (

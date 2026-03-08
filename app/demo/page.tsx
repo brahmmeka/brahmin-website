@@ -13,7 +13,7 @@ const benefits = [
 const stats = [
   { n: '30 min', l: 'Demo length' },
   { n: '15 min', l: 'Support response' },
-  { n: '2–6 weeks', l: 'Avg. go-live' },
+  { n: '3–6 weeks', l: 'Avg. go-live' },
 ]
 
 export default function DemoPage() {
@@ -51,7 +51,7 @@ export default function DemoPage() {
             {/* Left: Info */}
             <div className="lg:pt-8">
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">
-                Book a Demo
+                Book a demo
               </span>
               <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
                 See Brahmin with your actual products

@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Brahmin Solutions vs MRPeasy | Comparison',
   description:
-    'See how Brahmin Solutions compares to MRPeasy. Flat $199/month unlimited users vs $49/user — 5 users on MRPeasy Professional costs $345/month. Plus modern UI, 50+ integrations, and real humans on support.',
+    'See how Brahmin Solutions compares to MRPeasy. From $199/month with unlimited users vs $49/user — 5 users on MRPeasy Professional costs $345/month. Plus modern UI, native integrations with two-way sync, and real humans on support.',
 }
 
 type RowValue = string | boolean
@@ -14,7 +14,7 @@ const quickStats = [
   { label: 'Cost at 5 users', brahmin: '$199/mo', mrpeasy: '$345/mo (Professional plan)', brahminBetter: true },
   { label: 'Cost at 10 users', brahmin: '$199–$499/mo', mrpeasy: '$690/mo (Professional plan)', brahminBetter: true },
   { label: 'Support channel', brahmin: 'Live phone + dedicated manager', mrpeasy: 'Ticket / email only', brahminBetter: true },
-  { label: 'Native integrations', brahmin: '50+', mrpeasy: '~14', brahminBetter: true },
+  { label: 'Native integrations', brahmin: '8 native + Zapier', mrpeasy: '~14 (limited)', brahminBetter: true },
 ]
 
 const mrpeasyShortfalls = [
@@ -45,7 +45,7 @@ const mrpeasyShortfalls = [
   {
     icon: '🔌',
     headline: 'Limited integrations with one-way syncs',
-    body: 'MRPeasy offers roughly 14 native integrations versus Brahmin\'s 50+. The ShipStation integration is documented as one-way — data flows from MRPeasy into ShipStation, but cannot be reversed if a condition is undone. For manufacturers who rely on tight sync between production, inventory, and fulfillment, partial integrations create data gaps that require manual reconciliation.',
+    body: 'MRPeasy offers roughly 14 native integrations, all with varying levels of sync quality. Brahmin has 8 deep, two-way native integrations — QuickBooks Online, Xero, Shopify, WooCommerce, BigCommerce, Faire, ShipStation, and SPS Commerce — plus 5,000+ apps via Zapier. The MRPeasy ShipStation integration is documented as one-way only, which creates data gaps manufacturers have to reconcile manually.',
     quote: '"This works only okay as the information is one-way and if the condition is ever undone, that information cannot be pulled back from ShipStation." — MRPeasy customer, verified review',
   },
 ]
@@ -53,7 +53,7 @@ const mrpeasyShortfalls = [
 const brahminStrengths = [
   {
     icon: '💰',
-    headline: 'Unlimited users. One flat price.',
+    headline: 'Unlimited users. No per-user fees.',
     body: 'Brahmin charges per tier, not per user. Starter at $199/month includes unlimited users with up to 500 orders/month. Growth at $499 scales to 2,500 orders. No per-seat fees. As your team grows — adding warehouse staff, purchasing managers, production leads — your Brahmin bill stays the same.',
   },
   {
@@ -63,8 +63,8 @@ const brahminStrengths = [
   },
   {
     icon: '🔌',
-    headline: '50+ integrations with two-way sync.',
-    body: 'Brahmin connects natively to QuickBooks, Xero, Shopify, WooCommerce, ShipStation, Amazon, and 45+ more. All major integrations are two-way — changes flow in both directions without manual intervention. API access is included on Pro, not gated behind the most expensive tier.',
+    headline: 'Native integrations with two-way sync.',
+    body: 'Brahmin connects natively to QuickBooks Online, Xero, Shopify, WooCommerce, BigCommerce, Faire, ShipStation, and SPS Commerce. All major integrations are two-way — changes flow in both directions without manual intervention. Plus 5,000+ apps via Zapier.',
   },
   {
     icon: '📊',
@@ -79,7 +79,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; mrpeasy: RowValue; n
   { feature: 'Starting price (1 user)', brahmin: '$199/month', mrpeasy: '$49/month' },
   { feature: 'Cost at 5 users (Professional)', brahmin: '$199/month', mrpeasy: '$345/month', note: 'Brahmin Starter includes unlimited users' },
   { feature: 'Cost at 10 users (Professional)', brahmin: '$199–$499/month', mrpeasy: '$690/month' },
-  { feature: 'API access', brahmin: 'Included on Pro', mrpeasy: 'Unlimited plan only ($149/user)', note: 'MRPeasy API requires most expensive tier' },
+  { feature: 'API access', brahmin: 'Beta', mrpeasy: 'Unlimited plan only ($149/user)', note: 'Brahmin API is currently in beta; MRPeasy API requires most expensive tier' },
   // Support
   { feature: 'Support channels', brahmin: 'Phone + chat + email', mrpeasy: 'Ticket / email only' },
   { feature: 'Dedicated implementation manager', brahmin: true, mrpeasy: false },
@@ -102,11 +102,11 @@ const comparisonRows: { feature: string; brahmin: RowValue; mrpeasy: RowValue; n
   { feature: 'QuickBooks integration', brahmin: true, mrpeasy: true },
   { feature: 'Shopify integration', brahmin: true, mrpeasy: true },
   { feature: 'ShipStation integration (two-way)', brahmin: true, mrpeasy: false, note: 'MRPeasy ShipStation sync is one-way only' },
-  { feature: 'Number of native integrations', brahmin: '50+', mrpeasy: '~14' },
+  { feature: 'Number of native integrations', brahmin: '8 (+ 5,000+ via Zapier)', mrpeasy: '~14 (limited sync quality)' },
   // Platform
   { feature: 'Daily production dashboard', brahmin: true, mrpeasy: false, note: 'MRPeasy reviewers flag missing daily dashboard' },
   { feature: 'Custom reports without export', brahmin: true, mrpeasy: 'Limited' },
-  { feature: 'Native mobile app', brahmin: true, mrpeasy: 'Mobile-responsive only' },
+  { feature: 'Mobile warehouse app', brahmin: 'Browser-based (no install)', mrpeasy: 'Mobile-responsive only' },
   { feature: 'B2B wholesale portal', brahmin: true, mrpeasy: false },
   { feature: 'Bootstrapped / no VC pressure', brahmin: true, mrpeasy: true, note: 'Both independently owned' },
 ]
@@ -121,12 +121,11 @@ const tableGroups = [
 ]
 
 const idealFor = [
-  'You have 5+ users — Brahmin\'s flat pricing saves money immediately',
+  'You have 5+ users — Brahmin\'s per-tier pricing saves money immediately',
   'You want live phone support and a dedicated implementation manager',
-  'You need 50+ integrations with two-way sync, not 14 one-way connectors',
+  'You need reliable two-way sync (not 14 limited, one-way connectors)',
   'You want a modern UI your team will actually use without training sessions',
   'You need a real-time production dashboard, not reports you export to spreadsheets',
-  'You want API access without paying for the most expensive per-user tier',
   'You need a B2B wholesale portal for your buyers',
 ]
 
@@ -162,7 +161,7 @@ export default function MRPeasyCompare() {
             MRPeasy charges $49–$149 per user per month. At 5 users on the Professional plan, that&apos;s $345/month — 72% more than Brahmin Starter with unlimited users. Here&apos;s the full comparison.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {['✓ Unlimited users from $199/mo', '✓ 50+ integrations with two-way sync', '✓ Live phone support', '✓ Dedicated implementation manager'].map((pill) => (
+            {['✓ Unlimited users from $199/mo', '✓ Native two-way integrations + Zapier', '✓ Live phone support', '✓ Dedicated implementation manager'].map((pill) => (
               <span key={pill} className="bg-emerald-600/20 border border-emerald-500/30 text-emerald-300 text-sm px-4 py-1.5 rounded-full">{pill}</span>
             ))}
           </div>
@@ -223,7 +222,7 @@ export default function MRPeasyCompare() {
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-3">Where Brahmin excels</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto">Measurable, tracked, and visible on our pricing page.</p>
+            <p className="text-slate-500 max-w-2xl mx-auto">Flat pricing, real humans on support, two-way integrations, and a UI your team will actually use.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {brahminStrengths.map((card) => (
@@ -328,7 +327,7 @@ export default function MRPeasyCompare() {
       <section className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <h2 className="text-3xl font-bold mb-4">See the difference yourself</h2>
-          <p className="text-slate-300 text-lg mb-8">Book a 30-minute demo. We&apos;ll show you the software with your actual products and team size — and the math on why flat pricing wins.</p>
+          <p className="text-slate-300 text-lg mb-8">Book a 30-minute demo. We&apos;ll show you the software with your actual products and team size — and the math on why per-tier pricing wins.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Link href="/demo" className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-semibold transition-colors">Book a demo</Link>
             <Link href="/pricing" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-xl font-semibold transition-colors">See pricing</Link>

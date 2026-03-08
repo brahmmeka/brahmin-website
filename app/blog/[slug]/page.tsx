@@ -256,7 +256,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             href="/demo"
             className="inline-block bg-accent-500 hover:bg-accent-600 text-white px-8 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-accent-500/30"
           >
-            Book a Demo
+            Book a demo
           </Link>
           <p className="mt-3 text-xs text-primary-300">No credit card required &middot; 14-day free trial</p>
         </div>

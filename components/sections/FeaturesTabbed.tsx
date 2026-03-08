@@ -613,10 +613,12 @@ function IntegrationsMockup() {
   ]
 
   const available = [
-    { name: 'Amazon Seller', icon: '📦' },
-    { name: 'Xero',          icon: '💼' },
-    { name: 'WooCommerce',   icon: '🛒' },
-    { name: 'FedEx',         icon: '✈️' },
+    { name: 'BigCommerce',  icon: '🛒' },
+    { name: 'Xero',         icon: '💼' },
+    { name: 'WooCommerce',  icon: '🛍️' },
+    { name: 'Faire',        icon: '🏷️' },
+    { name: 'SPS Commerce', icon: '📋' },
+    { name: 'Zapier',       icon: '⚡' },
   ]
 
   return (
@@ -645,7 +647,7 @@ function IntegrationsMockup() {
               </button>
             ))}
           </div>
-          <p className="text-[10px] text-slate-400 mt-3 text-center">50+ integrations available · API access included</p>
+          <p className="text-[10px] text-slate-400 mt-3 text-center">8 native integrations · 5,000+ via Zapier · API in beta</p>
         </div>
       ) : (
         <div className="p-4 space-y-1">
@@ -959,7 +961,7 @@ const features: {
     icon: '🔌',
     headline: 'Connect everything',
     description: 'Sync with the tools you already use. No more double-entry or copy-paste between systems.',
-    bullets: ['QuickBooks & Xero', 'Shopify & Amazon', 'ShipStation & 3PLs', '50+ native integrations'],
+    bullets: ['QuickBooks Online & Xero', 'Shopify, WooCommerce & BigCommerce', 'Faire & SPS Commerce', '5,000+ apps via Zapier'],
     learnMore: '/integrations',
   },
   {
@@ -977,7 +979,7 @@ const features: {
     icon: '📱',
     headline: 'Run the floor anywhere',
     description: 'Scan barcodes, receive inventory, and pick orders from any phone or tablet.',
-    bullets: ['Barcode scanning', 'Inventory receiving', 'Pick, pack & ship', 'Works offline'],
+    bullets: ['Barcode scanning', 'Inventory receiving', 'Pick, pack & ship', 'Real-time sync'],
     learnMore: '/features#mobile',
   },
 ]

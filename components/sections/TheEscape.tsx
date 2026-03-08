@@ -34,7 +34,7 @@ const pillars = [
     icon: <RocketIcon />,
     iconBg: 'bg-accent-500 text-white',
     headline: 'Live in weeks, not quarters',
-    body: 'Average implementation is 2–4 weeks with a dedicated manager. We migrate your data, train your team, and get you live fast.',
+    body: 'Average implementation is 3–6 weeks with a dedicated manager. We migrate your data, train your team, and get you live fast.',
   },
   {
     step: '03',
@@ -59,9 +59,9 @@ export default function TheEscape() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16 max-w-2xl mx-auto"
         >
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">The Brahmin Difference</span>
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">The Brahmin difference</span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
-            This Is What &ldquo;Just Right&rdquo; Looks Like
+            This is what &ldquo;just right&rdquo; looks like
           </h2>
           <p className="mt-5 text-lg text-slate-500 leading-relaxed">
             Powerful enough for complex manufacturing operations. Simple enough that your whole team will actually use it.

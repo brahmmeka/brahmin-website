@@ -12,7 +12,7 @@ type RowValue = string | boolean
 const quickStats = [
   { label: 'Deployment', brahmin: 'Cloud-native (browser + app)', fishbowl: 'On-premise server (cloud = legacy hosted)', brahminBetter: true },
   { label: 'Starting cost', brahmin: 'From $199/month', fishbowl: '$6,495+ one-time (Manufacturing)', brahminBetter: true },
-  { label: 'Implementation', brahmin: 'Dedicated manager, 2–6 weeks', fishbowl: '60–120 days + $2K–$10K setup fee', brahminBetter: true },
+  { label: 'Implementation', brahmin: 'Dedicated manager, 3–6 weeks', fishbowl: '60–120 days + $2K–$10K setup fee', brahminBetter: true },
   { label: 'Support response', brahmin: '<15 minutes', fishbowl: 'Voicemail, days to weeks', brahminBetter: true },
   { label: 'QuickBooks required', brahmin: false, fishbowl: true, brahminBetter: true },
 ]
@@ -104,9 +104,9 @@ const comparisonRows: { feature: string; brahmin: RowValue; fishbowl: RowValue; 
   // Integrations
   { feature: 'Shopify integration', brahmin: true, fishbowl: 'Third-party connector required' },
   { feature: 'ShipStation integration', brahmin: true, fishbowl: 'Limited' },
-  { feature: 'Native mobile warehouse app', brahmin: true, fishbowl: 'Paid add-on' },
+  { feature: 'Mobile warehouse app', brahmin: 'Browser-based (no install)', fishbowl: 'Paid add-on' },
   { feature: 'B2B wholesale portal', brahmin: true, fishbowl: false },
-  { feature: 'Open REST API', brahmin: true, fishbowl: false },
+  { feature: 'REST API', brahmin: 'Beta', fishbowl: false },
   { feature: 'Custom reports without paid dev', brahmin: true, fishbowl: false, note: 'Fishbowl reports require back-end coding to customize' },
 ]
 

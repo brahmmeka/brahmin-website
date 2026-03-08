@@ -4,10 +4,10 @@ import { m } from 'framer-motion'
 
 const metrics = [
   { value: '<15 min', label: 'Average support response', sub: 'Measured, not estimated', accent: 'text-accent-400', border: 'border-accent-500/30' },
-  { value: '2–4 weeks', label: 'Average implementation', sub: 'Not 6 months', accent: 'text-primary-400', border: 'border-primary-500/30' },
+  { value: '3–6 weeks', label: 'Average implementation', sub: 'Not 6 months', accent: 'text-primary-400', border: 'border-primary-500/30' },
   { value: 'Dedicated', label: 'Implementation manager', sub: 'Assigned to you personally', accent: 'text-violet-400', border: 'border-violet-500/30' },
   { value: 'Unlimited', label: 'Training calls included', sub: 'For every plan, forever', accent: 'text-accent-400', border: 'border-accent-500/30' },
-  { value: '6 countries', label: 'Support coverage', sub: 'US, Canada, MX, UK, AU, NZ', accent: 'text-primary-400', border: 'border-primary-500/30' },
+  { value: 'Most of the day', label: 'Support coverage', sub: 'Real humans in chat, Mon–Fri', accent: 'text-primary-400', border: 'border-primary-500/30' },
   { value: '2+ features', label: 'New releases per month', sub: 'Based on customer feedback', accent: 'text-violet-400', border: 'border-violet-500/30' },
 ]
 
@@ -45,7 +45,7 @@ export default function SupportOnboarding() {
             We don&apos;t disappear after the sale
           </h2>
           <p className="mt-5 text-lg text-slate-400 leading-relaxed">
-            Real support from real people — not a ticket queue, not a chatbot, not a help center article. A human who knows your account and picks up when you call.
+            Real support from real people — not a ticket queue, not a chatbot, not a help center article. A human who knows your account and replies in the chat.
           </p>
         </m.div>
 

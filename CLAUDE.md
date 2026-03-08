@@ -44,6 +44,8 @@ brahmin-website/
 │   ├── pricing/page.tsx        # Pricing page
 │   ├── integrations/page.tsx   # Integrations overview
 │   ├── demo/page.tsx           # Book demo page
+│   ├── contact/page.tsx        # Contact us page
+│   ├── roi-calculator/page.tsx # ROI Calculator
 │   ├── faq/page.tsx            # FAQ page
 │   ├── about/page.tsx          # About us page
 │   ├── customers/page.tsx      # Customer stories
@@ -79,9 +81,8 @@ brahmin-website/
 │
 ├── components/
 │   ├── layout/
-│   │   ├── Header.tsx
-│   │   ├── Footer.tsx
-│   │   └── Navigation.tsx
+│   │   ├── Header.tsx          # Katana-style mega-menu (all nav logic here)
+│   │   └── Footer.tsx          # Navigation.tsx does NOT exist — removed
 │   ├── ui/
 │   │   ├── Button.tsx
 │   │   ├── Card.tsx
@@ -100,6 +101,11 @@ brahmin-website/
 │   └── blog/
 │       ├── PostCard.tsx
 │       └── PostContent.tsx
+│   ├── contact/
+│   │   ├── ContactFAQ.tsx       # Client component — FAQ accordion for contact page
+│   │   └── ContactForm.tsx      # Client component — static placeholder form
+│   ├── roi-calculator/
+│   │   └── ROICalculator.tsx    # Client component — full 3-mode interactive calculator
 │   └── about/
 │       ├── AboutHero.tsx
 │       ├── TheGap.tsx
@@ -321,7 +327,7 @@ spacing: {
 |------|-------|
 | 300+ | Manufacturers |
 | Since 2015 | In business |
-| 50+ | Integrations |
+| 8 native | Integrations (+ 5,000+ via Zapier) |
 | <15 min | Support response |
 | 21 days | Avg. go-live |
 
@@ -393,7 +399,7 @@ Clean dashboard mockup showing:
 | Purchasing | 🛒 | Never run out of materials | Create purchase orders, track deliveries, and manage vendors — with automatic reorder points to keep production running smoothly. | Purchase order management, Vendor management, Auto reorder points, Receiving & inspection |
 | Production | 🏭 | Know what it costs | Build recipes, schedule production runs, and see true landed costs — including labor, overhead, and yield loss. | Multi-level BOMs, Work order management, Real-time cost visibility, Labor & overhead tracking |
 | Traceability | 🏷️ | Stay recall-ready | Track every ingredient from receiving to customer. Generate recall reports in minutes, not days. | Full lot genealogy, One-click recall reports, FDA & FSMA compliant, Supplier traceability |
-| Integrations | 🔌 | Connect everything | Sync with the tools you already use. No more double-entry or copy-paste between systems. | QuickBooks & Xero, Shopify & Amazon, ShipStation & 3PLs, 50+ native integrations |
+| Integrations | 🔌 | Connect everything | Sync with the tools you already use. No more double-entry or copy-paste between systems. | QuickBooks & Xero, Shopify & Faire, ShipStation & SPS Commerce, 8 native integrations |
 | B2B Portal | 👥 | Let customers order 24/7 | Give wholesale buyers their own login to place orders, view pricing, and track shipments. | Customer-specific pricing, Self-service ordering, Order history & reorder, Payment processing |
 | Mobile | 📱 | Run the floor anywhere | Scan barcodes, receive inventory, and pick orders from any phone or tablet. | Barcode scanning, Inventory receiving, Pick pack & ship, Works offline |
 
@@ -681,7 +687,7 @@ Clean dashboard mockup showing:
 
 ### Features
 - **Title:** MRP Software Features | Brahmin Solutions
-- **Description:** Inventory management, production tracking, batch traceability, B2B portal, and 50+ integrations. See all features of Brahmin Solutions MRP software.
+- **Description:** Inventory management, production tracking, batch traceability, B2B portal, and native integrations with QuickBooks, Shopify, and more. See all features of Brahmin Solutions MRP software.
 
 ### Pricing
 - **Title:** Pricing | Brahmin Solutions MRP Software
@@ -693,7 +699,7 @@ Clean dashboard mockup showing:
 
 ### About
 - **Title:** About Us | Brahmin Solutions
-- **Description:** Founded in 2015 by Brahm Meka. Brahmin Solutions helps 100+ small manufacturers move from spreadsheets to a single source of truth. Independently owned, customer-funded.
+- **Description:** Founded in 2015 by Brahm Meka. Brahmin Solutions helps 300+ small manufacturers move from spreadsheets to a single source of truth. Independently owned, customer-funded.
 - **Full Spec:** See ABOUT-PAGE-SPEC.md for complete page specification
 
 ---
@@ -708,7 +714,7 @@ Clean dashboard mockup showing:
 1. **Hero** — Brahm photo + "I built Brahmin because small manufacturers deserve enterprise-grade tools"
 2. **The Gap** — Enterprise vs SMB data gap (emotional hook)
 3. **Origin Story** — Enterprise WMS background → Family food business pain → Solution (2015)
-4. **By The Numbers** — 2015 founded | 100+ manufacturers | <15 min support | 0 VC investors
+4. **By The Numbers** — 2015 founded | 300+ manufacturers | <15 min support | 0 VC investors
 5. **How We're Different** — Built to last, Real humans real help, Made for manufacturers
 6. **The Team** — Brahm (featured) + 2-4 key team members
 7. **Values** — Build to last, Support like we mean it, Ship what matters, Stay lean

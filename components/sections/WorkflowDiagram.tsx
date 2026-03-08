@@ -54,11 +54,11 @@ const stages = [
     activeBg: 'bg-accent-100',
     activeBorder: 'border-accent-500',
     details: 'Orders, invoicing, B2B portal, channel sync',
-    subItems: ['Shopify', 'Amazon', 'B2B Portal'],
+    subItems: ['Shopify', 'Faire', 'B2B Portal'],
   },
 ]
 
-const integrations = ['QuickBooks', 'Xero', 'ShipStation', 'Shopify', 'WooCommerce', 'Amazon']
+const integrations = ['QuickBooks', 'Xero', 'ShipStation', 'Shopify', 'WooCommerce', 'Faire', 'SPS Commerce', 'BigCommerce']
 
 const proofPoints = [
   {
@@ -73,8 +73,8 @@ const proofPoints = [
   },
   {
     icon: Plug,
-    title: '50+ integrations',
-    body: 'QuickBooks, Shopify, ShipStation, and more. Your data stays in sync.',
+    title: 'Deep integrations',
+    body: 'QuickBooks, Shopify, ShipStation, Faire, SPS Commerce, and 5,000+ via Zapier.',
   },
 ]
 

@@ -5,7 +5,7 @@ import CTA from '@/components/sections/CTA'
 export const metadata: Metadata = {
   title: 'Mobile Inventory App | Brahmin Solutions',
   description:
-    'Receive, pick, and adjust inventory from your phone or tablet. Works online and offline.',
+    'Receive, pick, and adjust inventory from your phone or tablet. No app to install — just open a browser and go.',
 }
 
 const allFeatures = [
@@ -14,8 +14,7 @@ const allFeatures = [
   'Pick/pack/ship from any device',
   'Inventory adjustments on the go',
   'Cycle counts via mobile',
-  'Works offline (syncs when reconnected)',
-  'iOS and Android compatible',
+  'Works on any iOS or Android browser',
   'Works with Bluetooth barcode scanners',
   'Works with Zebra and Honeywell devices',
   'Auto lot code generation on receive',
@@ -152,7 +151,7 @@ export default function MobilePage() {
               Manage inventory from anywhere
             </h1>
             <p className="mt-6 text-xl text-slate-500 leading-relaxed max-w-2xl">
-              Receive inventory, pick orders, and make adjustments from any phone or tablet — with or without Wi-Fi. No separate app to install. Just open a browser and go.
+              Receive inventory, pick orders, and make adjustments from any phone or tablet. No app to install — open a browser, scan a barcode, and you&apos;re in.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link href="/demo" className="bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg shadow-accent-500/25 hover:-translate-y-0.5 text-center">
@@ -179,7 +178,7 @@ export default function MobilePage() {
                 Your whole operation, in your pocket
               </h2>
               <p className="mt-4 text-lg text-slate-500 leading-relaxed">
-                Brahmin works on any iOS or Android device — phone, tablet, or handheld scanner. Your team can receive inventory at the dock, pick orders in the warehouse, and update work orders on the shop floor — all from the same screen.
+                Brahmin&apos;s mobile app runs in any phone or tablet browser — no download required. Your team can receive inventory at the dock, pick orders in the warehouse, and update work orders on the shop floor — all from the same screen.
               </p>
               <ul className="mt-8 space-y-3">
                 {['Works on any phone, tablet, or handheld device', 'No app to install — opens in any mobile browser', 'Compatible with Zebra, Honeywell, and Bluetooth scanners', 'All data syncs in real time to desktop'].map((f) => (
@@ -209,47 +208,49 @@ export default function MobilePage() {
             </div>
           </div>
 
-          {/* Section 3: Offline */}
+          {/* Section 3: Real-time sync */}
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-slate-600 mb-4">Works offline</span>
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-slate-600 mb-4">Real-time sync</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
-                No Wi-Fi? No problem.
+                Every scan updates instantly — everywhere.
               </h2>
               <p className="mt-4 text-lg text-slate-500 leading-relaxed">
-                Brahmin works even when your warehouse Wi-Fi drops. Scan, pick, and adjust inventory offline — everything queues locally and syncs the moment you reconnect. Your team keeps working without interruption.
+                When your warehouse team scans a receipt or pick, the change appears in real time on every screen — desktop, mobile, and in your integrations. No end-of-day reconciliation. No wondering if the counts are current.
               </p>
               <ul className="mt-8 space-y-3">
-                {['Full scanning functionality in offline mode', 'Changes queue locally when disconnected', 'Auto-syncs when connection is restored', 'Conflict detection flags duplicate scans'].map((f) => (
+                {['Mobile scans sync instantly to desktop', 'Shopify, QuickBooks, and ShipStation update in real time', 'Multi-user — whole team sees the same live data', 'Works on any Wi-Fi or cellular network'].map((f) => (
                   <li key={f} className="flex items-start gap-3"><Check /><span className="text-slate-700">{f}</span></li>
                 ))}
               </ul>
             </div>
-            {/* Offline mode mockup */}
+            {/* Sync mockup */}
             <div className="bg-white rounded-2xl border border-slate-200 shadow-xl p-5">
-              <div className="flex items-center gap-2 mb-5 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3">
-                <div className="w-2 h-2 rounded-full bg-amber-500" />
-                <p className="text-sm font-medium text-amber-800">Working offline — changes will sync on reconnect</p>
+              <div className="flex items-center gap-2 mb-5 bg-emerald-50 border border-emerald-200 rounded-xl px-4 py-3">
+                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <p className="text-sm font-medium text-emerald-800">Live — all changes syncing in real time</p>
               </div>
-              <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">Queued actions (3 pending)</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">Recent activity</p>
               <div className="space-y-2 mb-4">
                 {[
-                  { action: 'Received LOT-2026-0345 · 200 lbs oats', time: '2:14pm' },
-                  { action: 'Picked SO-7291 · Bin A-03 · 24 units', time: '2:18pm' },
-                  { action: 'Adj. -5 lbs Maple Syrup · breakage', time: '2:22pm' },
+                  { action: 'Received LOT-2026-0345 · 200 lbs oats', time: 'Just now', user: 'JM' },
+                  { action: 'Picked SO-7291 · Bin A-03 · 24 units', time: '2 min ago', user: 'RP' },
+                  { action: 'Adj. -5 lbs Maple Syrup · breakage', time: '8 min ago', user: 'JM' },
                 ].map((a) => (
                   <div key={a.action} className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                    <div className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
+                    <div className="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center shrink-0">
+                      <span className="text-xs font-bold text-primary-700">{a.user}</span>
+                    </div>
                     <div className="flex-1">
                       <p className="text-xs font-medium text-slate-700">{a.action}</p>
                       <p className="text-xs text-slate-400">{a.time}</p>
                     </div>
-                    <span className="text-xs text-amber-600 font-semibold">Pending</span>
+                    <span className="text-xs text-emerald-600 font-semibold">Synced ✓</span>
                   </div>
                 ))}
               </div>
-              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-xs text-emerald-700 text-center font-medium">
-                ✓ Connected — syncing 3 queued actions...
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs text-slate-500 text-center">
+                Shopify inventory · QuickBooks · ShipStation — all updated automatically
               </div>
             </div>
           </div>

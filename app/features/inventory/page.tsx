@@ -174,7 +174,7 @@ export default function InventoryPage() {
                 Every sale, shipment, and production run updates your inventory count automatically — no manual entry, no spreadsheets, no end-of-day reconciliation. If something moves, Brahmin knows.
               </p>
               <ul className="mt-8 space-y-3">
-                {['Syncs with Shopify, WooCommerce, and Amazon orders', 'Updates on production completion and shipping', 'Tracks inventory across warehouses, 3PLs, and co-manufacturers', 'Color-coded stock alerts (OK / Low / Reorder)'].map((f) => (
+                {['Syncs with Shopify, WooCommerce, BigCommerce, and Faire orders', 'Updates on production completion and shipping', 'Tracks inventory across warehouses, 3PLs, and co-manufacturers', 'Color-coded stock alerts (OK / Low / Reorder)'].map((f) => (
                   <li key={f} className="flex items-start gap-3">
                     <Check />
                     <span className="text-slate-700">{f}</span>

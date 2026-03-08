@@ -329,7 +329,7 @@ const benefits = [
   'One source of truth for every team',
   'Real-time inventory across every location',
   'Orders, production, and costs all connected',
-  'Live in 2–4 weeks with a dedicated manager',
+  'Live in 3–6 weeks with a dedicated manager',
 ]
 
 // ─── Main section ──────────────────────────────────────────────────────────────

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import CTA from '@/components/sections/CTA'
+
 
 export const metadata: Metadata = {
   title: 'MRP Software Features | Brahmin Solutions',
   description:
-    'Inventory management, production tracking, batch traceability, B2B portal, and 50+ integrations. Built for small manufacturers.',
+    'Inventory management, production tracking, batch traceability, B2B portal, and native integrations with Shopify, QuickBooks, Faire, and more. Built for small manufacturers.',
 }
 
 const features = [
@@ -112,8 +112,8 @@ const features = [
       </svg>
     ),
     headline: 'Manage inventory from anywhere',
-    description: 'Receive inventory, pick orders, and make adjustments from any phone or tablet — with or without a Wi-Fi connection.',
-    bullets: ['Barcode scanning', 'Inventory receiving', 'Pick, pack & ship', 'Works offline'],
+    description: 'Receive inventory, pick orders, and make adjustments from any phone or tablet — no app to install, just open a browser and go.',
+    bullets: ['Barcode scanning', 'Inventory receiving', 'Pick, pack & ship', 'Real-time sync'],
   },
 ]
 
@@ -121,8 +121,8 @@ const extras = [
   'Demand forecasting', 'Purchase order management', 'Vendor management',
   'Cost accounting', 'Custom reporting', 'User permissions & roles',
   'Multi-currency support', 'Document management', 'Email notifications',
-  'Audit logs', 'API access', 'Data import/export',
-  'Certificate of analysis storage', 'Subcontract manufacturing', '50+ integrations',
+  'Audit logs', 'API access (beta)', 'Data import/export',
+  'Certificate of analysis storage', 'Subcontract manufacturing', 'Native integrations + Zapier',
 ]
 
 export default function FeaturesPage() {
@@ -224,9 +224,9 @@ export default function FeaturesPage() {
       {/* Pricing callout */}
       <section className="py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-6 max-w-3xl text-center">
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">All features. Transparent pricing.</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">Transparent pricing. No per-user fees.</h2>
           <p className="text-slate-500 mb-8">
-            Every feature above is included from $199/month. No per-user fees. No module add-ons. No surprises.
+            Core features start at $199/month with no per-user fees. Advanced features are available as add-ons — see the pricing page for full details.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/pricing" className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-xl font-semibold transition-colors">
@@ -239,7 +239,6 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      <CTA />
     </main>
   )
 }

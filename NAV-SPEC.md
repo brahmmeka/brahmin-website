@@ -1,321 +1,254 @@
 # BRAHMIN SOLUTIONS — NAVIGATION SPECIFICATION
 
-**Last Updated:** March 6, 2026  
-**Status:** ✅ Finalized
+**Last Updated:** March 7, 2026
+**Status:** ✅ Built — Katana-style mega-menu
 
 ---
 
 ## NAVIGATION OVERVIEW
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────┐
-│  [LOGO]   Features ▼   Industries ▼   Integrations   Resources ▼   Pricing         │
-│                                                                      Login  [Book a Demo] │
-└─────────────────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  [LOGO h-14]  Features ▼  Industries ▼  Integrations  Resources ▼  Pricing  │
+│                                                          Login  [Book a demo] │
+└──────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Top-Level Menu Items (5)
-| # | Menu Item | Type | URL |
-|---|-----------|------|-----|
-| 1 | Features | Dropdown | — |
-| 2 | Industries | Dropdown | — |
+**Header:** `sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200 h-16`
+**Container:** `container mx-auto px-6 max-w-7xl relative` (relative required for Resources dropdown positioning)
+**Nav wrappers:** `h-full flex items-center` — ensures `top-full` aligns to bottom of h-16 header
+**Hover behavior:** 120ms close delay via `useRef<ReturnType<typeof setTimeout>>`
+
+### Top-Level Items
+| # | Item | Type | URL |
+|---|------|------|-----|
+| 1 | Features | Mega-menu | — |
+| 2 | Industries | Mega-menu | — |
 | 3 | Integrations | Direct link | `/integrations` |
-| 4 | Resources | Dropdown | — |
+| 4 | Resources | Mega-menu | — |
 | 5 | Pricing | Direct link | `/pricing` |
 
-### Right Side
-| Element | Type | URL |
-|---------|------|-----|
-| Login | Text link | `/login` or external |
-| Book a Demo | Primary CTA (emerald-600) | `/demo` |
+### Right Side Actions
+| Element | Style | URL |
+|---------|-------|-----|
+| Login | Text link | `https://app.brahmin-solutions.com/login` |
+| Book a demo | `bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2 rounded-lg font-semibold` | `/demo` |
 
 ---
 
-## 1. FEATURES DROPDOWN
+## 1. FEATURES MEGA-MENU
 
-**Style:** Descriptions under each item (like Katana)
+**Width:** 860px | **Position:** `absolute top-full left-0 mt-1.5` (relative to Features nav wrapper)
 
-| Feature | Description | URL |
-|---------|-------------|-----|
-| Inventory Management | Real-time stock tracking across all locations | `/features/inventory` |
-| Production & Manufacturing | Plan, schedule, and track work orders from start to finish | `/features/production` |
-| Traceability & Compliance | Lot/batch tracking and instant recall reports | `/features/traceability` |
-| Purchasing | Automate reorders and manage vendor relationships | `/features/purchasing` |
-| MRP & Forecasting | Know what to make and buy before you run out | `/features/mrp` |
-| Warehouse Management | Bin locations, pick/pack, and multi-warehouse support | `/features/warehouse` |
-| B2B Portal | Let wholesale customers order 24/7 | `/features/b2b-portal` |
-| Mobile App | Receive, pick, and adjust inventory from anywhere | `/features/mobile` |
-| **See All Features →** | | `/features` |
+### Layout: 2-column feature groups + right callout panel
 
-**Total Feature Pages:** 9 (8 individual + 1 overview)
-
-### Dropdown Visual Layout
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  FEATURES                                                    │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Inventory Management                                        │
-│  Real-time stock tracking across all locations               │
-│                                                              │
-│  Production & Manufacturing                                  │
-│  Plan, schedule, and track work orders from start to finish │
-│                                                              │
-│  Traceability & Compliance                                   │
-│  Lot/batch tracking and instant recall reports              │
-│                                                              │
-│  Purchasing                                                  │
-│  Automate reorders and manage vendor relationships          │
-│                                                              │
-│  MRP & Forecasting                                           │
-│  Know what to make and buy before you run out               │
-│                                                              │
-│  Warehouse Management                                        │
-│  Bin locations, pick/pack, and multi-warehouse support      │
-│                                                              │
-│  B2B Portal                                                  │
-│  Let wholesale customers order 24/7                         │
-│                                                              │
-│  Mobile App                                                  │
-│  Receive, pick, and adjust inventory from anywhere          │
-│                                                              │
-├─────────────────────────────────────────────────────────────┤
-│  See All Features →                                          │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────┬──────────────┐
+│  INVENTORY & OPERATIONS   PRODUCTION & COMPLIANCE │ emerald-600  │
+│  ──────────────────────   ──────────────────────  │ panel        │
+│  📍 Inventory Mgmt        🏭 Production & Mfg     │              │
+│  🛒 Purchasing            🏷️ Traceability          │ Go live in   │
+│  📦 Warehouse Mgmt        📊 MRP & Forecasting     │ 3–6 weeks    │
+│  ─────────────────────────────────────────────    │              │
+│  👥 B2B Portal   📱 Mobile App   See all →        │ ★★★★★ quote  │
+│                                                   │ [Book demo]  │
+└───────────────────────────────────────────────────┴──────────────┘
 ```
+
+### Feature Groups
+**Group 1 — Inventory & operations:**
+| Icon | Label | Description | URL |
+|------|-------|-------------|-----|
+| 📍 | Inventory Management | Real-time stock across all locations | `/features/inventory` |
+| 🛒 | Purchasing | Automate reorders and manage vendors | `/features/purchasing` |
+| 📦 | Warehouse Management | Bin locations, pick/pack, and transfers | `/features/warehouse` |
+
+**Group 2 — Production & compliance:**
+| Icon | Label | Description | URL |
+|------|-------|-------------|-----|
+| 🏭 | Production & Manufacturing | BOMs, work orders, and true cost tracking | `/features/production` |
+| 🏷️ | Traceability & Compliance | Lot tracking and instant recall reports | `/features/traceability` |
+| 📊 | MRP & Forecasting | Know what to make before you run out | `/features/mrp` |
+
+**Extras row (bottom):**
+| Icon | Label | Description | URL |
+|------|-------|-------------|-----|
+| 👥 | B2B Portal | Let wholesale customers order 24/7 | `/features/b2b-portal` |
+| 📱 | Mobile App | Receive, pick, and ship from any device | `/features/mobile` |
+
+**Right callout panel (emerald-600 bg, w-52):**
+- Eyebrow: "Implementation"
+- Headline: "Go live in 3–6 weeks"
+- Body: "Dedicated implementation manager. Real humans on support."
+- 5-star quote: "Support responds in minutes, not days." — Tameer, Bakkar Sweets
+- CTA: White "Book a demo" button → `/demo`
 
 ---
 
-## 2. INDUSTRIES DROPDOWN
+## 2. INDUSTRIES MEGA-MENU
 
-**Style:** Descriptions under each item  
-**Display:** Top 6 in dropdown + "See All" link  
+**Width:** 680px | **Position:** `absolute top-full left-0 mt-1.5` (relative to Industries nav wrapper)
 
-### In Dropdown (6)
-| Industry | Description | URL |
-|----------|-------------|-----|
-| Food & Beverage | Batch tracking, expiration dates, and compliance | `/industries/food-beverage` |
-| Manufacturing (General) | Production planning for discrete manufacturers | `/industries/manufacturing` |
-| Wholesale Distribution | Multi-channel inventory and order management | `/industries/wholesale-distribution` |
-| Cosmetics & Beauty | Formula management and lot traceability | `/industries/cosmetics` |
-| Electronics | Component tracking and assembly management | `/industries/electronics` |
-| Apparel & Textiles | Size/color variants and seasonal inventory | `/industries/apparel` |
-| **See All Industries →** | | `/industries` |
+### Layout: 2-column grid of 6 industries
 
-### Hub Only (3)
-| Industry | URL |
-|----------|-----|
-| Supplements & Nutraceuticals | `/industries/supplements` |
-| Cannabis/CBD | `/industries/cannabis` |
-| Health & Wellness | `/industries/health-wellness` |
+```
+┌──────────────────────────────────────────┐
+│  🥫 Food & Beverage   💄 Cosmetics       │
+│  🏗️ Manufacturing     💊 Supplements     │
+│  🚚 Wholesale Dist.   👕 Apparel         │
+│  ──────────────────────────────────────  │
+│  See all industries →                    │
+└──────────────────────────────────────────┘
+```
 
-**Total Industry Pages:** 10 (9 individual + 1 overview)
+### Industries in Dropdown (6)
+| Icon | Label | Description | URL |
+|------|-------|-------------|-----|
+| 🥫 | Food & Beverage | Batch tracking, expiration dates, and compliance | `/industries/food-beverage` |
+| 🏗️ | Manufacturing | Production planning for discrete manufacturers | `/industries/manufacturing` |
+| 🚚 | Wholesale Distribution | Multi-channel inventory and order management | `/industries/wholesale-distribution` |
+| 💄 | Cosmetics & Beauty | Formula management and lot traceability | `/industries/cosmetics` |
+| 💊 | Supplements & Nutraceuticals | Compliance tracking and expiration management | `/industries/supplements` |
+| 👕 | Apparel & Textiles | Size/color variants and seasonal inventory | `/industries/apparel` |
+
+"See all industries →" → `/industries`
+
+### Hub Only (not in dropdown)
+- Electronics `/industries/electronics`
+- Cannabis/CBD `/industries/cannabis`
+- Health & Wellness `/industries/health-wellness`
 
 ---
 
 ## 3. INTEGRATIONS (Direct Link)
 
-**URL:** `/integrations`  
-**Type:** Hub page (individual integration pages can be added later)
+**URL:** `/integrations` | **Status:** ✅ Built (rewritten March 2026)
 
-### Current Integrations
-| Integration | Category | Status |
-|-------------|----------|--------|
-| QuickBooks | Accounting | ✅ Live |
-| Xero | Accounting | ✅ Live |
-| Shopify | E-commerce | ✅ Live |
-| ShipStation | Shipping | ✅ Live |
-| WooCommerce | E-commerce | ✅ Live |
-| BigCommerce | E-commerce | ✅ Live |
-| Others | Various | 📝 Add later |
+### Confirmed Native Integrations (8)
+| Integration | Category |
+|-------------|----------|
+| QuickBooks Online | Accounting |
+| Xero | Accounting |
+| Shopify | Ecommerce |
+| WooCommerce | Ecommerce |
+| BigCommerce | Ecommerce |
+| Faire | Wholesale & EDI |
+| SPS Commerce | Wholesale & EDI |
+| ShipStation | Shipping |
 
-**Total Integration Pages:** 1 (hub page for now)
+Plus: Zapier (5,000+ apps) | REST API in beta
 
 ---
 
-## 4. RESOURCES DROPDOWN
+## 4. RESOURCES MEGA-MENU
 
-**Style:** Multi-column layout with sections
+**Width:** 860px | **Position:** `absolute top-16 right-0 mt-1.5` (relative to `max-w-7xl` container — NOT the nav wrapper. Resources nav wrapper has NO `relative` class so the container is the positioning parent.)
 
-### Dropdown Visual Layout
+### Layout: 3 columns + right dark panel
+
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  RESOURCES                                                   │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  COMPARE                           LEARN                     │
-│  ────────                          ─────                     │
-│  vs Katana                         Blog                      │
-│  vs Fishbowl                       Customer Stories          │
-│  vs Cin7                           FAQ                       │
-│  vs MRPeasy                        Webinars                  │
-│  vs Wherefour                      Help Center               │
-│  vs NetSuite                       Free Tools & Templates    │
-│  See All Comparisons →                                       │
-│                                                              │
-│  TOOLS                             COMPANY                   │
-│  ─────                             ───────                   │
-│  ROI Calculator                    About                     │
-│                                    Contact Us                │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────┬──────────────┐
+│  LEARN ────────  COMPARE ──────────  COMPANY ──────  │ slate-900    │
+│  ✍️ Blog         vs Spreadsheets    🏢 About us      │ panel        │
+│  ❓ FAQ          vs Katana MRP      📞 Contact us    │              │
+│  🎓 Webinars     vs Fishbowl        📅 Book a demo   │ 300+ mfrs    │
+│  💡 Help center  vs NetSuite                         │ trust Brahmin│
+│  🛠️ Free tools   vs Cin7                             │              │
+│                  vs Wherefour                        │ ★★★★★ FLFF   │
+│                  See all →                           │ [Read stories]│
+│  ─────────────────────────────────────────────────   │              │
+│  🧮 Free  ROI Calculator — See how much you'd save → │              │
+└──────────────────────────────────────────────────────┴──────────────┘
 ```
 
-### Compare Section
-| Competitor | URL | In Dropdown? |
-|------------|-----|--------------|
-| Katana | `/compare/katana` | ✅ |
-| Fishbowl | `/compare/fishbowl` | ✅ |
-| Cin7 | `/compare/cin7` | ✅ |
-| MRPeasy | `/compare/mrpeasy` | ✅ |
-| Wherefour | `/compare/wherefour` | ✅ |
-| NetSuite | `/compare/netsuite` | ✅ |
-| DEAR Systems | `/compare/dear-systems` | Hub only |
-| SAP Business One | `/compare/sap-business-one` | Hub only |
-| Odoo | `/compare/odoo` | Hub only |
-| inFlow | `/compare/inflow` | Hub only |
-| CraftyBase | `/compare/craftybase` | Hub only |
-| Sortly | `/compare/sortly` | Hub only |
-| Spreadsheets | `/compare/spreadsheets` | Hub only |
-| **See All Comparisons →** | `/compare` | ✅ |
+### Column details
 
-### Learn Section
-| Resource | URL | Status |
-|----------|-----|--------|
-| Blog | `/blog` | Migrating from Webflow |
-| Customer Stories | `/customers` | Building |
-| FAQ | `/faq` | Building |
-| Webinars | `/webinars` | Building |
-| Help Center | `/help` | Building |
-| Free Tools & Templates | `/tools` | Building |
+**Learn column (blue-400 accent bar):**
+| Icon | Label | Icon bg | URL |
+|------|-------|---------|-----|
+| ✍️ | Blog | bg-blue-50 text-blue-600 | `/blog` |
+| ❓ | FAQ | bg-sky-50 text-sky-600 | `/faq` |
+| 🎓 | Webinars | bg-purple-50 text-purple-600 | `/webinars` |
+| 💡 | Help center | bg-slate-100 text-slate-600 | `https://support.brahmin-solutions.com/en/` (external, opens new tab) |
+| 🛠️ | Free tools & templates | bg-emerald-50 text-emerald-600 | `/tools` |
 
-### Tools Section
-| Tool | URL | Status |
-|------|-----|--------|
-| ROI Calculator | `/roi-calculator` | Building |
+Note: Customer Stories is NOT in this column — it lives in the right panel only.
 
-### Company Section
-| Page | URL | Status |
-|------|-----|--------|
-| About | `/about` | Spec ready (ABOUT-PAGE-SPEC.md) |
-| Contact Us | `/contact` | Building |
+**Compare column (violet-400 accent bar):**
+| Order | Label | URL |
+|-------|-------|-----|
+| 1 | vs Spreadsheets | `/compare/spreadsheets` |
+| 2 | vs Katana MRP | `/compare/katana` |
+| 3 | vs Fishbowl | `/compare/fishbowl` |
+| 4 | vs NetSuite | `/compare/netsuite` |
+| 5 | vs Cin7 | `/compare/cin7` |
+| 6 | vs Wherefour | `/compare/wherefour` |
+| — | See all comparisons → | `/compare` |
+
+Note: MRPeasy removed from dropdown (page still exists at `/compare/mrpeasy`).
+
+**Company column (emerald-400 accent bar):**
+| Icon | Label | Icon bg | URL |
+|------|-------|---------|-----|
+| 🏢 | About us | bg-primary-50 text-primary-600 | `/about` |
+| 📞 | Contact us | bg-orange-50 text-orange-600 | `/contact` |
+| 📅 | Book a demo | bg-emerald-50 text-emerald-600 | `/demo` |
+
+**Bottom featured strip:**
+- Gradient: `from-blue-50 via-violet-50 to-emerald-50`
+- "Free" pill badge + "ROI Calculator — See how much time and money you could save"
+- → `/roi-calculator`
+
+**Right callout panel (slate-900 bg, w-52):**
+- Eyebrow: "Customer stories"
+- Headline: "300+ manufacturers trust Brahmin"
+- Body: "See how food, cosmetics, and wholesale businesses replaced spreadsheets."
+- 5-star quote: "Full visibility from purchase order to manufacturing to sales." — Sheldon, FLFF
+- CTA: "Read customer stories" → `/customers`
 
 ---
 
 ## 5. PRICING (Direct Link)
 
-**URL:** `/pricing`  
-**Status:** ✅ Already built
-
----
-
-## TOTAL PAGE COUNT
-
-| Section | Individual Pages | Overview/Hub | Total |
-|---------|------------------|--------------|-------|
-| Features | 8 | 1 | 9 |
-| Industries | 9 | 1 | 10 |
-| Integrations | 0 (for now) | 1 | 1 |
-| Compare | 13 | 1 | 14 |
-| Resources (Learn) | 6 | 0 | 6 |
-| Resources (Tools) | 1 | 0 | 1 |
-| Resources (Company) | 2 | 0 | 2 |
-| Core Pages | 3 (Home, Pricing, Demo) | 0 | 3 |
-| **TOTAL** | | | **46** |
-
----
-
-## DESIGN SPECIFICATIONS
-
-### Dropdown Styling
-- **Background:** White (`#ffffff`)
-- **Border:** `1px solid slate-200`
-- **Shadow:** `shadow-lg`
-- **Border radius:** `rounded-xl`
-- **Padding:** `p-6`
-
-### Menu Item Styling
-- **Font:** Inter
-- **Active state:** `text-emerald-600` with underline
-- **Hover state:** `text-slate-900` with subtle background
-
-### CTA Button (Book a Demo)
-- **Background:** `bg-emerald-600`
-- **Hover:** `bg-emerald-700`
-- **Text:** White, medium weight
-- **Border radius:** `rounded-lg`
-- **Padding:** `px-4 py-2`
-
-### Login Link
-- **Style:** Text link, `text-slate-600`
-- **Hover:** `text-slate-900`
+**URL:** `/pricing` | **Status:** ✅ Built
 
 ---
 
 ## MOBILE NAVIGATION
 
-On mobile (< 768px), navigation collapses to hamburger menu:
+Hamburger toggle at < 768px. Full-screen drawer with accordion sections.
 
-1. All dropdowns become expandable accordions
-2. CTAs stack at bottom of mobile menu
-3. Logo stays top-left
-4. Hamburger icon top-right
+**Sections (accordion):**
+1. Features — lists all 8 features + extras
+2. Industries — lists all 6 dropdown industries
+3. Integrations — direct link
+4. Resources — 3 sub-sections: Learn, Compare (5 items + see all), Company
+5. Pricing — direct link
 
----
-
-## BUILD ORDER (Recommended)
-
-### Phase 1: Core Pages
-1. Homepage (update nav)
-2. Features overview (`/features`)
-3. Pricing (already built)
-4. About (`/about`)
-5. Contact (`/contact`)
-6. Demo (`/demo`)
-
-### Phase 2: Feature Pages
-7. Inventory Management
-8. Production & Manufacturing
-9. Traceability & Compliance
-10. Purchasing
-11. MRP & Forecasting
-12. Warehouse Management
-13. B2B Portal
-14. Mobile App
-
-### Phase 3: Industry Pages
-15. Industries overview
-16. Food & Beverage
-17. Manufacturing (General)
-18. Wholesale Distribution
-19. Cosmetics & Beauty
-20. Electronics
-21. Apparel & Textiles
-22. Supplements
-23. Cannabis/CBD
-24. Health & Wellness
-
-### Phase 4: Integrations
-25. Integrations hub
-
-### Phase 5: Compare Pages
-26. Compare hub
-27-39. Individual compare pages (13)
-
-### Phase 6: Resources
-40. Blog (migrate from Webflow)
-41. Customer Stories
-42. FAQ
-43. Webinars
-44. Help Center
-45. Free Tools & Templates
-46. ROI Calculator
+**Bottom CTAs:**
+- Login (bordered button)
+- Book a demo (emerald-600 filled button)
 
 ---
 
-## NOTES
+## KEY IMPLEMENTATION NOTES
 
-- All feature pages should include the FeaturesTabbed component or similar interactive elements
-- Industry pages should feature customer testimonials from that industry
-- Compare pages already exist (13 built) — verify they match new nav structure
-- Blog migration from Webflow is a separate project (see MIGRATION-Webflow-to-Sanity.md)
+- `Navigation.tsx` does NOT exist as a separate file — all nav logic is in `Header.tsx`
+- Close delay: 120ms timer prevents dropdown from closing when moving mouse between trigger and dropdown
+- `top-full` works correctly because nav wrappers have `h-full` spanning the full `h-16` header height
+- Resources uses container-relative positioning (`relative` on container div, no `relative` on Resources nav wrapper)
+- Features and Industries use button-relative positioning (`relative` on their nav wrapper divs, `left-0`)
+- Help center uses `<a target="_blank">` (external link), all other Learn/Company items use `<Link>` (internal)
+- Learn/Company items support `external: true` field in the data array to toggle rendering
+
+---
+
+## PLANNED PAGES (links are live in nav, pages to be built)
+
+| Page | URL | In Nav Section |
+|------|-----|----------------|
+| Webinars | `/webinars` | Resources → Learn |
+| Free tools & templates | `/tools` | Resources → Learn |
+| Customer stories | `/customers` | Resources → right panel CTA |
+| ROI Calculator | `/roi-calculator` | Resources → bottom strip |
+| Contact us | `/contact` | Resources → Company |

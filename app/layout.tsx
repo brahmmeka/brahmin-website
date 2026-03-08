@@ -18,6 +18,21 @@ export const metadata: Metadata = {
     'Cloud-based MRP and inventory software for small manufacturers. Production tracking, multi-location inventory, and support that responds in 15 minutes. Free trial.',
 }
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Brahmin Solutions',
+  url: 'https://www.brahmin-solutions.com',
+  logo: 'https://www.brahmin-solutions.com/images/logo.webp',
+  foundingDate: '2015',
+  description: 'Cloud-based MRP and inventory management software for small to mid-sized manufacturers.',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    availableLanguage: 'English',
+  },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,6 +41,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased bg-white text-slate-900`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <MotionProvider>
           <Header />
           {children}

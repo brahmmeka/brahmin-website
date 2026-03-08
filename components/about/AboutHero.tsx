@@ -22,7 +22,7 @@ export default function AboutHero() {
               {/* Floating badge */}
               <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-lg border border-slate-100 px-5 py-3">
                 <p className="text-xs font-bold text-accent-600 uppercase tracking-widest">Independently owned</p>
-                <p className="text-xs text-slate-400 mt-0.5">Since 2015 · 0 VC investors</p>
+                <p className="text-xs text-slate-400 mt-0.5">Serving customers since 2019 · 0 VC investors</p>
               </div>
             </div>
           </div>
@@ -30,7 +30,7 @@ export default function AboutHero() {
           {/* Text */}
           <div className="order-1 lg:order-2">
             <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-5">
-              Founded 2015 &middot; 100+ manufacturers &middot; Independently owned
+              Est. 2019 &middot; 300+ manufacturers &middot; Independently owned
             </p>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-[1.1]">
               I built Brahmin because small manufacturers deserve enterprise-grade tools — without the enterprise price or complexity.

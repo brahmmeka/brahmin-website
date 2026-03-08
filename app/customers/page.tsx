@@ -64,7 +64,7 @@ const featuredStories = [
 
 const miniTestimonials = [
   {
-    quote: 'Implementation was genuinely 21 days. I didn\'t believe it when they told me.',
+    quote: 'Implementation was genuinely about 3 weeks. I didn\'t believe it when they told me.',
     author: 'James P.',
     company: 'Pacific Foods',
   },
@@ -114,7 +114,7 @@ export default function CustomersPage() {
         </div>
         <div className="relative container mx-auto px-6 max-w-7xl text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">
-            Customer Stories
+            Customer stories
           </span>
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
             Real results from<br />

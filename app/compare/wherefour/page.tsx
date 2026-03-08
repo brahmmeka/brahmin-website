@@ -4,17 +4,17 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Brahmin Solutions vs Wherefour | Comparison',
   description:
-    'See how Brahmin Solutions compares to Wherefour. Transparent pricing from $199/month, native mobile app, <15 min support, and no hidden quote-based fees.',
+    'See how Brahmin Solutions compares to Wherefour. Transparent pricing from $199/month, mobile warehouse app (no download), <15 min support, and no hidden quote-based fees.',
 }
 
 type RowValue = string | boolean
 
 const quickStats = [
-  { label: 'Starting price', brahmin: 'From $199/mo (published)', katana: '$600+/mo (quote only)', brahminBetter: true },
-  { label: 'Pricing transparency', brahmin: 'Tiers published on website', katana: 'Must contact sales for any number', brahminBetter: true },
-  { label: 'Support response', brahmin: '<15 minutes', katana: '24 hrs via email', brahminBetter: true },
-  { label: 'Native mobile app', brahmin: 'iOS & Android', katana: 'Web-only (no native app)', brahminBetter: true },
-  { label: 'Implementation', brahmin: 'Dedicated manager, 21 days', katana: 'Self-guided, timeline unclear', brahminBetter: true },
+  { label: 'Starting price', brahmin: 'From $199/mo (published)', wherefour: '$600+/mo (quote only)', brahminBetter: true },
+  { label: 'Pricing transparency', brahmin: 'Tiers published on website', wherefour: 'Must contact sales for any number', brahminBetter: true },
+  { label: 'Support response', brahmin: '<15 minutes', wherefour: '24 hrs via email', brahminBetter: true },
+  { label: 'Mobile warehouse app', brahmin: 'Browser-based (no download)', wherefour: 'No dedicated mobile UX', brahminBetter: true },
+  { label: 'Implementation', brahmin: 'Dedicated manager, 3–6 weeks', wherefour: 'Self-guided, timeline unclear', brahminBetter: true },
 ]
 
 const wherefourShortfalls = [
@@ -32,8 +32,8 @@ const wherefourShortfalls = [
   },
   {
     icon: '📱',
-    headline: 'No native mobile app',
-    body: 'Wherefour is a web application that works on mobile browsers, but there is no native iOS or Android app in the App Store. For warehouse teams receiving inventory, doing cycle counts, or picking orders on a phone or tablet, a browser-based experience is a real step down from a purpose-built mobile app. Brahmin\'s mobile app was built for the warehouse floor — barcode scanning, offline mode, and a UI designed for gloves and fast action.',
+    headline: 'No purpose-built mobile experience',
+    body: 'Wherefour is a web application that works on mobile browsers, but there is no dedicated mobile interface purpose-built for warehouse teams. For staff receiving inventory, doing cycle counts, or picking orders on a phone or tablet, a standard web app is not designed for that context. Brahmin\'s mobile warehouse app is purpose-built for the floor — barcode scanning, large tap targets, and a UI designed for fast action in a warehouse environment.',
     quote: '"No mobile app in the App Store." — Wherefour customer review',
   },
   {
@@ -63,13 +63,13 @@ const brahminStrengths = [
   },
   {
     icon: '📱',
-    headline: 'A native mobile app built for the floor.',
-    body: 'Brahmin\'s mobile app runs natively on iOS and Android. Warehouse teams use it to receive inventory, run cycle counts, pick and pack orders, and scan barcodes — with offline mode for facilities with spotty connectivity. It\'s in the App Store, it works on gloves-on devices, and it was designed for manufacturing, not adapted from a web UI.',
+    headline: 'A purpose-built mobile warehouse app.',
+    body: 'Brahmin\'s mobile warehouse app runs in any phone or tablet browser — no download required. Warehouse teams use it to receive inventory, run cycle counts, pick and pack orders, and scan barcodes. It was purpose-built for the manufacturing floor: large touch targets, barcode scanning via camera or Bluetooth scanner, and a UI optimized for fast action — not a desktop web app adapted to mobile.',
   },
   {
     icon: '🚀',
-    headline: 'Dedicated implementation. Live in 21 days.',
-    body: 'Every new customer gets a dedicated implementation manager who stays with them through go-live and beyond. Average time to go-live is 21 days. Wherefour\'s self-guided setup has no comparable structured onboarding — you are largely on your own until you\'re up and running.',
+    headline: 'Dedicated implementation. Live in 3–6 weeks.',
+    body: 'Every new customer gets a dedicated implementation manager who stays with them through go-live and beyond. Average time to go-live is 3–6 weeks. Wherefour\'s self-guided setup has no comparable structured onboarding — you are largely on your own until you\'re up and running.',
   },
 ]
 
@@ -84,7 +84,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; wherefour: RowValue;
   { feature: 'Average support response time', brahmin: '<15 minutes', wherefour: '24 hours (email)', note: 'Email-only on documented plans' },
   { feature: 'Phone or chat support', brahmin: true, wherefour: false, note: 'Wherefour documented as email-only by customers' },
   { feature: 'Dedicated implementation manager', brahmin: true, wherefour: false },
-  { feature: 'Average time to go-live', brahmin: '21 days', wherefour: 'Not published' },
+  { feature: 'Average time to go-live', brahmin: '3–6 weeks', wherefour: 'Not published' },
   { feature: 'US business hours support', brahmin: true, wherefour: true },
   // Inventory & Production
   { feature: 'Real-time multi-location inventory', brahmin: true, wherefour: true },
@@ -101,8 +101,8 @@ const comparisonRows: { feature: string; brahmin: RowValue; wherefour: RowValue;
   { feature: 'FDA / FSMA audit trails', brahmin: 'Pro · Add-on on Starter/Growth', wherefour: true },
   { feature: 'Allergen management (native)', brahmin: true, wherefour: false, note: 'Wherefour handles allergens via custom fields workaround' },
   // Mobile & Warehouse
-  { feature: 'Native iOS / Android app', brahmin: true, wherefour: false, note: 'Wherefour is web-only; no App Store listing' },
-  { feature: 'Offline mode', brahmin: true, wherefour: false },
+  { feature: 'Purpose-built mobile warehouse app', brahmin: 'Browser-based (no install)', wherefour: false, note: 'Wherefour has no dedicated mobile warehouse UX' },
+  { feature: 'Works on any phone/tablet browser', brahmin: true, wherefour: true, note: 'Wherefour is web-only with no warehouse-optimized UI' },
   { feature: 'Barcode / QR scanning', brahmin: true, wherefour: true },
   { feature: 'Cycle counting from mobile', brahmin: true, wherefour: 'Browser only' },
   // Integrations
@@ -110,14 +110,14 @@ const comparisonRows: { feature: string; brahmin: RowValue; wherefour: RowValue;
   { feature: 'Xero integration', brahmin: true, wherefour: true },
   { feature: 'Shopify integration', brahmin: true, wherefour: true },
   { feature: 'ShipStation integration', brahmin: true, wherefour: true },
-  { feature: 'Number of native integrations', brahmin: '50+', wherefour: '~15 + Zapier bridge' },
+  { feature: 'Number of native integrations', brahmin: '8 native + 5,000+ via Zapier', wherefour: '~15 + Zapier bridge' },
   // Reporting
   { feature: 'Custom reports', brahmin: true, wherefour: 'Limited', note: 'Wherefour users report needing to export to spreadsheets' },
   { feature: 'Drill-down from order to lot', brahmin: true, wherefour: 'Limited' },
   { feature: 'Cost of goods (COGS) reporting', brahmin: true, wherefour: 'Limited' },
   // B2B & Other
   { feature: 'B2B wholesale customer portal', brahmin: true, wherefour: true },
-  { feature: 'Open REST API', brahmin: true, wherefour: true },
+  { feature: 'REST API', brahmin: 'Beta', wherefour: true },
   { feature: 'VC-backed / investor pressure', brahmin: false, wherefour: false, note: 'Both independently owned' },
 ]
 
@@ -135,12 +135,12 @@ const tableGroups = [
 const idealFor = [
   'You\'re getting a Wherefour quote and want to see what else is out there before committing',
   'You want to know the price before you have to talk to a sales rep',
-  'You need warehouse teams picking and scanning on a native mobile app — not a mobile browser',
+  'You need a purpose-built mobile warehouse app for picking and scanning — not a generic web UI on a phone',
   'Support that responds in under 15 minutes matters to your operation',
   'You need allergen management built in, not cobbled together with custom fields',
   'Your team does just-in-time manufacturing and needs planning tools that keep up',
   'You want detailed reporting without exporting to spreadsheets',
-  'You want a dedicated implementation manager who gets you live in 21 days',
+  'You want a dedicated implementation manager who gets you live in 3–6 weeks',
 ]
 
 function Cell({ value }: { value: RowValue }) {
@@ -185,7 +185,7 @@ export default function WherefourCompare() {
               '✓ Pricing published — no sales call needed',
               '✓ From $199/month',
               '✓ <15 min support response',
-              '✓ Native iOS & Android app',
+              '✓ Mobile warehouse app (no download)',
             ].map((pill) => (
               <span key={pill} className="bg-emerald-600/20 border border-emerald-500/30 text-emerald-300 text-sm px-4 py-1.5 rounded-full">
                 {pill}
@@ -226,7 +226,7 @@ export default function WherefourCompare() {
                 <div className={`px-6 py-4 text-sm font-semibold text-center ${row.brahminBetter ? 'text-emerald-700 bg-emerald-50' : 'text-slate-700'}`}>
                   {row.brahmin}
                 </div>
-                <div className="px-6 py-4 text-sm text-slate-500 text-center">{row.katana}</div>
+                <div className="px-6 py-4 text-sm text-slate-500 text-center">{row.wherefour}</div>
               </div>
             ))}
           </div>
@@ -268,7 +268,7 @@ export default function WherefourCompare() {
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-3">Where Brahmin excels</h2>
             <p className="text-slate-500 max-w-2xl mx-auto">
-              These aren&apos;t marketing claims — they&apos;re measurable, tracked, and visible on our pricing page.
+              Transparent pricing, faster implementation, and real humans on support — compared side by side with Wherefour.
             </p>
           </div>
 

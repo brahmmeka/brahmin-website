@@ -52,7 +52,7 @@ export default function Hero() {
         {/* Hero copy */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <m.p {...fadeUp(0)} className="text-green-400 font-medium mb-4 tracking-wide uppercase text-sm">
-            Trusted by 300+ manufacturers since 2015
+            Trusted by 300+ manufacturers since 2019
           </m.p>
 
           <m.h1 {...fadeUp(0.08)} className="text-5xl md:text-6xl font-bold text-white mb-6 leading-[1.07] tracking-tight">

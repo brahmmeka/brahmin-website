@@ -11,7 +11,7 @@ import AboutCTA from '@/components/about/AboutCTA'
 export const metadata: Metadata = {
   title: 'About Us | Brahmin Solutions',
   description:
-    'Founded in 2015 by Brahm Meka. Brahmin Solutions helps 100+ small manufacturers move from spreadsheets to a single source of truth. Independently owned, customer-funded.',
+    'Founded in 2015 by Brahm Meka. Brahmin Solutions helps 300+ small manufacturers move from spreadsheets to a single source of truth. Independently owned, customer-funded.',
 }
 
 export default function AboutPage() {

@@ -10,7 +10,7 @@ const faqCategories = [
     faqs: [
       {
         q: 'What is Brahmin Solutions?',
-        a: 'Brahmin Solutions is cloud-based MRP and inventory management software built for small to mid-sized manufacturers. Founded in 2015, we help 300+ manufacturing businesses track inventory, manage production, and sell across multiple channels—with support that actually picks up the phone.',
+        a: 'Brahmin Solutions is cloud-based MRP and inventory management software built for small to mid-sized manufacturers. We help 300+ manufacturing businesses track inventory, manage production, and sell across multiple channels—with support that actually picks up the phone.',
       },
       {
         q: 'Who is Brahmin Solutions built for?',
@@ -52,7 +52,7 @@ const faqCategories = [
     faqs: [
       {
         q: 'How long does implementation take?',
-        a: 'Average implementation is 2–6 weeks with a dedicated implementation manager. We handle data migration from spreadsheets or other systems and train your team — no 6-month enterprise rollouts.',
+        a: 'Average implementation is 3–6 weeks with a dedicated implementation manager. We handle data migration from spreadsheets or other systems and train your team — no 6-month enterprise rollouts.',
       },
       {
         q: 'Do I get a dedicated implementation manager?',
@@ -85,7 +85,7 @@ const faqCategories = [
       },
       {
         q: 'Does it work on mobile?',
-        a: 'Yes. Our mobile warehouse app works on iOS and Android. Warehouse staff can receive POs, pick orders, run cycle counts, and ship—all from a phone or tablet with barcode scanning.',
+        a: 'Yes. Our mobile app is browser-based and works on any iOS or Android device — no download required. Warehouse staff can receive POs, pick orders, run cycle counts, and ship—all from a phone or tablet with barcode scanning.',
       },
     ],
   },
@@ -94,7 +94,7 @@ const faqCategories = [
     faqs: [
       {
         q: 'What integrations does Brahmin Solutions support?',
-        a: 'Brahmin Solutions integrates with 50+ tools including QuickBooks, Xero, Shopify, WooCommerce, ShipStation, Amazon, eBay, and more. We also offer API access for custom integrations.',
+        a: 'Brahmin has native integrations with QuickBooks Online, Xero, Shopify, WooCommerce, BigCommerce, Faire, ShipStation, and SPS Commerce. For everything else, we connect via Zapier (5,000+ apps). Our REST API is also in beta for custom integrations.',
       },
       {
         q: 'Does it integrate with QuickBooks?',
@@ -106,7 +106,7 @@ const faqCategories = [
       },
       {
         q: 'Do you have an API?',
-        a: 'Yes. We offer a full REST API with documentation and sandbox access. You can build custom integrations or connect to tools not on our pre-built list.',
+        a: 'Our API is currently in beta. If you have a custom integration need, contact us and we\'ll work with you directly — we\'ve connected plenty of tools outside our pre-built list.',
       },
     ],
   },
@@ -155,6 +155,18 @@ function FAQItem({ q, a, isOpen, onToggle }: { q: string; a: string; isOpen: boo
   )
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqCategories.flatMap((cat) =>
+    cat.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    }))
+  ),
+}
+
 export default function FAQPage() {
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({})
 
@@ -164,6 +176,10 @@ export default function FAQPage() {
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-slate-50 to-white pt-20 pb-16">
         <div className="container mx-auto px-6 max-w-7xl text-center">
@@ -182,13 +198,13 @@ export default function FAQPage() {
               href="/demo"
               className="bg-accent-500 hover:bg-accent-600 text-white px-7 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-accent-500/25"
             >
-              Book a Demo
+              Book a demo
             </Link>
             <Link
               href="/pricing"
               className="border-2 border-primary-200 text-primary-600 hover:border-primary-300 hover:bg-primary-50 px-7 py-3.5 rounded-xl font-semibold transition-all"
             >
-              See Pricing
+              See pricing
             </Link>
           </div>
         </div>
@@ -240,7 +256,7 @@ export default function FAQPage() {
                   href="/demo"
                   className="bg-accent-500 hover:bg-accent-600 text-white px-8 py-3.5 rounded-xl font-semibold transition-all"
                 >
-                  Book a Demo
+                  Book a demo
                 </Link>
                 <Link
                   href="mailto:support@brahmin-solutions.com"

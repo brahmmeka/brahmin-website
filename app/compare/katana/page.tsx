@@ -111,7 +111,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; katana: RowValue; no
   { feature: 'Mobile warehouse app', brahmin: true, katana: false },
   { feature: 'MRP / demand planning', brahmin: true, katana: 'Basic' },
   { feature: 'Reporting and custom reports', brahmin: true, katana: 'Limited' },
-  { feature: 'Open REST API', brahmin: true, katana: true },
+  { feature: 'REST API', brahmin: 'Beta', katana: true },
   { feature: 'VC-backed / investor pressure', brahmin: false, katana: true, note: 'Katana raised $11M Series A' },
 ]
 

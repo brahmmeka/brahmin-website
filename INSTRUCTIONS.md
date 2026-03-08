@@ -135,7 +135,8 @@ Before finishing any task, verify:
 2. Read `HANDOFF.md` for current status
 3. Read `CLAUDE.md` for design system
 4. Read `SITEMAP-Complete.md` for page inventory
-5. Read `[PAGE]-SPEC.md` if working on specific page
+5. Read `AEO-SPEC.md` for schema markup and FAQ requirements
+6. Read `[PAGE]-SPEC.md` if working on specific page
 
 ---
 

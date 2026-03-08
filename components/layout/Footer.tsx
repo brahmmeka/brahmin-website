@@ -5,12 +5,12 @@ const footerLinks = {
     { label: 'Features', href: '/features' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'Integrations', href: '/integrations' },
-    { label: 'Book a Demo', href: '/demo' },
+    { label: 'Book a demo', href: '/demo' },
   ],
   Industries: [
-    { label: 'Manufacturing', href: '/manufacturing' },
-    { label: 'Food & Beverage', href: '/food-beverage' },
-    { label: 'Wholesale Distribution', href: '/wholesale-distribution' },
+    { label: 'Manufacturing', href: '/industries/manufacturing' },
+    { label: 'Food & Beverage', href: '/industries/food-beverage' },
+    { label: 'Wholesale Distribution', href: '/industries/wholesale-distribution' },
   ],
   Compare: [
     { label: 'vs Katana', href: '/compare/katana' },
@@ -47,7 +47,7 @@ export default function Footer() {
             </p>
             <div className="mt-5 space-y-1.5">
               <p className="text-xs text-slate-500">Starting at <span className="text-slate-300 font-semibold">$199/month</span></p>
-              <p className="text-xs text-slate-500">Founded <span className="text-slate-300">2015</span> &middot; 300+ customers</p>
+              <p className="text-xs text-slate-500">Est. <span className="text-slate-300">2019</span> &middot; 300+ customers</p>
             </div>
 
             {/* CTA */}
@@ -55,7 +55,7 @@ export default function Footer() {
               href="/demo"
               className="inline-block mt-6 bg-accent-500 hover:bg-accent-600 text-white text-sm px-5 py-2.5 rounded-lg font-semibold transition-colors"
             >
-              Book a Demo
+              Book a demo
             </Link>
           </div>
 

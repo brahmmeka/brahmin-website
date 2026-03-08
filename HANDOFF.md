@@ -14,9 +14,24 @@
 - Feature sub-pages (all 8): `/features/inventory`, `/features/production`, `/features/traceability`, `/features/purchasing`, `/features/mrp`, `/features/warehouse`, `/features/b2b-portal`, `/features/mobile`
 - Pricing (`/pricing`)
 - About (`/about`) — 8 sections per ABOUT-PAGE-SPEC.md
-- Comparison pages: `/compare/katana` ✅ (rebuilt March 2026), `/compare/wherefour` ✅ (March 2026), `/compare/fishbowl` ✅ (rebuilt March 2026), `/compare/cin7` ✅ (rebuilt March 2026), `/compare/mrpeasy` ✅ (March 2026), `/compare/netsuite` ✅ (March 2026), `/compare/spreadsheets` ✅
+- FAQ (`/faq`) ✅ — with FAQPage JSON-LD schema markup
+- Integrations (`/integrations`) ✅ — rewritten March 2026 (8 native integrations + Zapier)
+- Comparison pages: `/compare/katana` ✅, `/compare/wherefour` ✅, `/compare/fishbowl` ✅, `/compare/cin7` ✅, `/compare/mrpeasy` ✅, `/compare/netsuite` ✅, `/compare/spreadsheets` ✅
 - Comparison pages NOT yet built: dear-systems, sap-business-one, odoo, inflow, craftybase, sortly
-- Industry pages (`/manufacturing`, `/food-beverage`, `/wholesale-distribution`)
+- Industry pages (moved to `/industries/` prefix March 2026):
+  - `/industries` ✅ — hub page with 9-industry grid (built March 2026)
+  - `/industries/manufacturing` ✅ — updated March 2026 (added pain points, FAQ schema, breadcrumbs, CustomerQuote placeholder)
+  - `/industries/food-beverage` ✅ — updated March 2026 (added pain points, FAQ schema, breadcrumbs, CustomerQuote placeholder)
+  - `/industries/wholesale-distribution` ✅ — updated March 2026 (added pain points, FAQ schema, breadcrumbs, CustomerQuote placeholder)
+  - `/industries/cosmetics` ✅ — built March 2026
+  - `/industries/supplements` ✅ — built March 2026
+  - `/industries/apparel` ✅ — built March 2026
+  - `/industries/electronics` ✅ — built March 2026
+  - `/industries/cannabis` ✅ — built March 2026
+  - `/industries/health-wellness` ✅ — built March 2026
+
+- Contact (`/contact`) ✅ — 4 sections: hero, routing cards (demo/support/partnerships), general form (static placeholder), FAQ accordion
+- ROI Calculator (`/roi-calculator`) ✅ — 3-mode calculator (Quick/Medium/Detailed). McKinsey-style: shows all assumptions inline. Separate cost savings + growth upside panels. 3-year ROI view. Peers section (3 composite profiles). Anchored to real customer data (10–12 hrs/week saved, near-zero stockouts, 15–22% inventory reduction). Pricing: $199/mo (<$1M), $499/mo ($1M+).
 
 ### Pages NOT Built ❌
 - *(all planned pages are built)*
@@ -51,14 +66,15 @@
 - No per-transaction fees
 - Includes dedicated support
 
-### 4. Navigation Structure (Updated March 6, 2026)
-- **5 top-level items:** Features (dropdown), Industries (dropdown), Integrations (direct `/integrations`), Resources (mega-menu), Pricing (direct `/pricing`)
-- **Features dropdown:** 8 items with descriptions → `/features/[slug]` routes
-- **Industries dropdown:** 6 items → `/industries/[slug]` routes (NEW — previously root-level)
-- **Resources mega-menu:** 4 columns — Compare (6 links + see all), Learn (6 links), Tools (ROI Calculator), Company (About, Contact)
-- **Mobile:** Accordion expand per section
-- Comparison pages at `/compare/[competitor]`
-- Industry page URLs now use `/industries/` prefix per SITEMAP-Complete.md (existing root-level pages still exist)
+### 4. Navigation Structure (Updated March 7, 2026)
+- **5 top-level items:** Features (mega-menu), Industries (mega-menu), Integrations (direct `/integrations`), Resources (mega-menu), Pricing (direct `/pricing`)
+- **Features mega-menu:** 2 groups (Inventory & operations / Production & compliance), 3 items each with emoji + desc + right callout panel (emerald-600 bg, "Go live in 3–6 weeks", testimonial, Book demo button). Width: 860px.
+- **Industries mega-menu:** 6 industries in 2-col grid + "See all industries →". Width: 680px.
+- **Resources mega-menu:** 3 columns — Learn (6 links), Compare (6 links + see all), Company (4 links). Width: 640px.
+- **Mobile:** Accordion expand per section, Compare section included
+- Industry page URLs use `/industries/` prefix (moved from root March 2026)
+- Footer industry links also updated to `/industries/*`
+- Nav wrappers have `h-full flex items-center` so `top-full` dropdowns align to bottom of header bar
 
 ---
 
@@ -128,13 +144,14 @@
 
 | Industry | URL | Status |
 |----------|-----|--------|
-| Manufacturing | `/manufacturing` | ✅ Built |
-| Food & Beverage | `/food-beverage` | ✅ Built |
-| Cosmetics | `/cosmetics` | ❌ Not built |
-| Supplements | `/supplements` | ❌ Not built |
-| Wholesale/Distribution | `/wholesale-distribution` | ✅ Built |
+| Manufacturing | `/industries/manufacturing` | ✅ Built (moved Mar 2026) |
+| Food & Beverage | `/industries/food-beverage` | ✅ Built (moved Mar 2026) |
+| Cosmetics | `/industries/cosmetics` | ❌ Not built |
+| Supplements | `/industries/supplements` | ❌ Not built |
+| Apparel | `/industries/apparel` | ❌ Not built |
+| Wholesale/Distribution | `/industries/wholesale-distribution` | ✅ Built (moved Mar 2026) |
 
-> **Note:** Routes are at root level, not `/industries/` prefix.
+> **Note:** All industry pages now under `/industries/` prefix (moved from root March 2026).
 
 ---
 
@@ -151,6 +168,20 @@
 ### Pricing
 - **Title:** Pricing | Brahmin Solutions MRP Software
 - **Description:** Brahmin Solutions starts at $199/month. No per-transaction fees. Includes dedicated support and implementation. See all plans and pricing.
+
+---
+
+### 5. AEO / Schema Markup (Added March 7, 2026)
+- **AEO-SPEC.md** created — schema markup specs, FAQ targets, priority order
+- **Organization schema** added to `app/layout.tsx` (global, all pages)
+- **FAQPage schema** added to `app/faq/page.tsx` (auto-generated from faqCategories data)
+- CTA wave fixed: `fill-slate-900` → `fill-white` in `components/sections/CTA.tsx`
+- CTA removed from features and integrations pages (had inline CTAs already)
+
+### 6. Integrations Content Accuracy (March 7, 2026)
+- Confirmed native integrations: QuickBooks Online, Xero, Shopify, WooCommerce, BigCommerce, Faire, SPS Commerce, ShipStation
+- Removed all "50+ native integrations" and Amazon claims sitewide
+- Zapier section added to integrations page (5,000+ apps via Zapier)
 
 ---
 

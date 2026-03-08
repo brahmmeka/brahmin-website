@@ -8,7 +8,7 @@ export default function AboutCTA() {
           Ready to see the difference?
         </h2>
         <p className="mt-4 text-lg text-accent-50 max-w-lg mx-auto leading-relaxed">
-          Join 100+ manufacturers who've switched to Brahmin.
+          Join 300+ manufacturers who've switched to Brahmin.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <Link

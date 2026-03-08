@@ -16,7 +16,7 @@ export default function OriginStory() {
             Then I tried to help my family run their food production business. The tools I could recommend were either too expensive, too complex, or came with support that disappeared after the sale. Even after implementing the "best" solutions, we were still managing critical operations on spreadsheets. When I talked to other small manufacturers, the story was always the same.
           </p>
           <p>
-            In 2015, I founded Brahmin Solutions — first as a consultancy, then as a product. After two years of building alongside early customers, we launched our beta in 2018. Every single beta customer converted to a paying customer. Today, we've helped 100+ manufacturers move from operational chaos to a single source of truth.
+            In 2015, I founded Brahmin Solutions — first as a consultancy, then as a product. After two years of building alongside early customers, we launched our beta in 2018. Every single beta customer converted to a paying customer. Today, we've helped 300+ manufacturers move from operational chaos to a single source of truth.
           </p>
         </div>
       </div>

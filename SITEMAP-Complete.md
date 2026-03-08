@@ -12,8 +12,8 @@
 |---------|-------|--------|
 | Core | 4 | Mixed |
 | Features | 9 | ✅ Built |
-| Industries | 10 | To build |
-| Integrations | 1 | To build |
+| Industries | 10 | ✅ All built (Mar 2026) |
+| Integrations | 1 | ✅ Built |
 | Compare | 14 | Partial (katana/wherefour/fishbowl/cin7/mrpeasy/netsuite/spreadsheets ✅, dear-systems/sap/odoo/inflow/craftybase/sortly TBD) |
 | Resources | 8 | To build |
 | **TOTAL** | **46** | |
@@ -70,7 +70,7 @@ Description: See how Brahmin Solutions can streamline your inventory and product
 **Features Overview**
 ```
 Title: MRP Software Features | Brahmin Solutions
-Description: Inventory management, production tracking, batch traceability, B2B portal, and 50+ integrations. Built for small manufacturers.
+Description: Inventory management, production tracking, batch traceability, B2B portal, and native integrations with QuickBooks, Shopify, and more. Built for small manufacturers.
 ```
 
 **Inventory Management**
@@ -127,16 +127,16 @@ Description: Receive, pick, and adjust inventory from your phone or tablet. Work
 
 | Page | URL | H1 | In Nav? | Status |
 |------|-----|----|----|-----|
-| Industries Overview | `/industries` | Built for manufacturers like you | ✅ | To build |
-| Food & Beverage | `/industries/food-beverage` | Inventory software for food manufacturers | ✅ | To build |
-| Manufacturing (General) | `/industries/manufacturing` | MRP software for manufacturers | ✅ | To build |
-| Wholesale Distribution | `/industries/wholesale-distribution` | Inventory software for distributors | ✅ | To build |
-| Cosmetics & Beauty | `/industries/cosmetics` | Inventory software for cosmetics manufacturers | ✅ | To build |
-| Electronics | `/industries/electronics` | Inventory software for electronics manufacturers | ✅ | To build |
-| Apparel & Textiles | `/industries/apparel` | Inventory software for apparel manufacturers | ✅ | To build |
-| Supplements | `/industries/supplements` | Inventory software for supplement manufacturers | Hub | To build |
-| Cannabis/CBD | `/industries/cannabis` | Inventory software for cannabis manufacturers | Hub | To build |
-| Health & Wellness | `/industries/health-wellness` | Inventory software for health products | Hub | To build |
+| Industries Overview | `/industries` | Built for manufacturers like you | ✅ | ✅ Built (Mar 2026) |
+| Food & Beverage | `/industries/food-beverage` | Inventory software for food manufacturers | ✅ | ✅ Built (updated Mar 2026) |
+| Manufacturing (General) | `/industries/manufacturing` | MRP software for manufacturers | ✅ | ✅ Built (updated Mar 2026) |
+| Wholesale Distribution | `/industries/wholesale-distribution` | Inventory software for distributors | ✅ | ✅ Built (updated Mar 2026) |
+| Cosmetics & Beauty | `/industries/cosmetics` | Inventory software for cosmetics manufacturers | ✅ | ✅ Built (Mar 2026) |
+| Electronics | `/industries/electronics` | Inventory software for electronics manufacturers | ✅ | ✅ Built (Mar 2026) |
+| Apparel & Textiles | `/industries/apparel` | Inventory software for apparel manufacturers | ✅ | ✅ Built (Mar 2026) |
+| Supplements | `/industries/supplements` | Inventory software for supplement manufacturers | Hub | ✅ Built (Mar 2026) |
+| Cannabis/CBD | `/industries/cannabis` | Inventory software for cannabis manufacturers | Hub | ✅ Built (Mar 2026) |
+| Health & Wellness | `/industries/health-wellness` | Inventory software for health products | Hub | ✅ Built (Mar 2026) |
 
 ### Meta Tags
 
@@ -206,24 +206,28 @@ Description: Production planning and inventory management for health and wellnes
 
 | Page | URL | H1 | Status |
 |------|-----|----|----|
-| Integrations Hub | `/integrations` | Connect your favorite tools | To build |
+| Integrations Hub | `/integrations` | Connect your favorite tools | ✅ Built (rewritten Mar 2026) |
 
-### Current Integrations
+### Current Integrations (8 native)
 | Integration | Category |
 |-------------|----------|
-| QuickBooks | Accounting |
+| QuickBooks Online | Accounting |
 | Xero | Accounting |
 | Shopify | E-commerce |
-| ShipStation | Shipping |
 | WooCommerce | E-commerce |
 | BigCommerce | E-commerce |
+| Faire | Wholesale & EDI |
+| SPS Commerce | Wholesale & EDI |
+| ShipStation | Shipping |
+
+Plus: Zapier (5,000+ apps) | REST API in beta
 
 ### Meta Tags
 
 **Integrations Hub**
 ```
 Title: Integrations | Brahmin Solutions
-Description: Connect Brahmin Solutions with QuickBooks, Xero, Shopify, ShipStation, and more. Native integrations for accounting, e-commerce, and shipping.
+Description: Connect Brahmin with QuickBooks, Xero, Shopify, WooCommerce, BigCommerce, Faire, ShipStation, and more. 8 native integrations plus 5,000+ apps via Zapier.
 ```
 
 ---
@@ -265,7 +269,7 @@ Description: See how Brahmin compares to Katana, Fishbowl, Cin7, NetSuite, and o
 |------|-----|----|----|
 | Blog | `/blog` | Blog | Migrating from Webflow |
 | Customer Stories | `/customers` | Customer Stories | To build |
-| FAQ | `/faq` | Frequently Asked Questions | To build |
+| FAQ | `/faq` | Frequently Asked Questions | ✅ Built — FAQPage schema markup |
 | Webinars | `/webinars` | Webinars | To build |
 | Help Center | `/help` | Help Center | To build |
 | Free Tools & Templates | `/tools` | Free Tools & Templates | To build |
@@ -274,14 +278,14 @@ Description: See how Brahmin compares to Katana, Fishbowl, Cin7, NetSuite, and o
 
 | Page | URL | H1 | Status |
 |------|-----|----|----|
-| ROI Calculator | `/roi-calculator` | Calculate Your ROI | To build |
+| ROI Calculator | `/roi-calculator` | See what switching to Brahmin could save you | ✅ Built (March 2026) |
 
 ### Company Section
 
 | Page | URL | H1 | Status |
 |------|-----|----|----|
 | About | `/about` | Built by a manufacturer, for manufacturers | Spec ready |
-| Contact Us | `/contact` | Contact Us | To build |
+| Contact Us | `/contact` | We're here — reach out anytime | ✅ Built (March 2026) |
 
 ### Meta Tags
 
@@ -324,19 +328,19 @@ Description: Free inventory templates, calculators, and resources for small manu
 **ROI Calculator**
 ```
 Title: ROI Calculator | Brahmin Solutions
-Description: Calculate how much time and money you could save with Brahmin Solutions. Free ROI calculator for manufacturers.
+Description: See how much you could save by switching from spreadsheets to Brahmin. Calculate your annual savings, hours recovered, and payback period in under 30 seconds.
 ```
 
 **About**
 ```
 Title: About Us | Brahmin Solutions
-Description: Founded in 2015 by Brahm Meka. Helps 100+ small manufacturers. Independently owned, customer-funded.
+Description: Founded in 2015 by Brahm Meka. Brahmin Solutions helps 300+ small manufacturers move from spreadsheets to a single source of truth. Independently owned, customer-funded.
 ```
 
 **Contact Us**
 ```
 Title: Contact Us | Brahmin Solutions
-Description: Get in touch with the Brahmin Solutions team. We're here to help with questions about our inventory and MRP software.
+Description: Get in touch with Brahmin Solutions. Book a demo, get support, or explore partnership opportunities. We respond in under 15 minutes.
 ```
 
 ---

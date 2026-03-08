@@ -10,7 +10,7 @@ const stats = [
     ),
   },
   {
-    number: '2–6 weeks',
+    number: '3–6 weeks',
     label: 'Average implementation',
     sub: 'Not 6 months. Not "it depends."',
     icon: (
@@ -48,7 +48,7 @@ export default function SupportStats() {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">
-            Our Commitment
+            Our commitment
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight max-w-3xl mx-auto leading-tight">
             Support that doesn&apos;t make you want to throw your laptop
@@ -98,7 +98,7 @@ export default function SupportStats() {
             href="/demo"
             className="shrink-0 bg-white text-primary-700 hover:bg-primary-50 px-7 py-3 rounded-xl font-semibold text-sm transition-colors shadow-sm"
           >
-            Book a Demo
+            Book a demo
           </a>
         </div>
       </div>

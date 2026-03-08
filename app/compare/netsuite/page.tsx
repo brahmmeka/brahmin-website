@@ -13,7 +13,7 @@ const quickStats = [
   { label: 'Starting price', brahmin: 'From $199/mo', netsuite: '$999/mo base only', brahminBetter: true },
   { label: 'Per-user fees', brahmin: 'None', netsuite: '$129/user/mo additional', brahminBetter: true },
   { label: 'Implementation cost', brahmin: 'Included (dedicated manager)', netsuite: '$25,000–$150,000+ consultant fees', brahminBetter: true },
-  { label: 'Time to go-live', brahmin: '21 days average', netsuite: '4–6 months typical', brahminBetter: true },
+  { label: 'Time to go-live', brahmin: '3–6 weeks average', netsuite: '4–6 months typical', brahminBetter: true },
   { label: 'Year-one cost (10 users)', brahmin: '~$2,400–$4,800', netsuite: '$52,000–$91,000+', brahminBetter: true },
 ]
 
@@ -58,8 +58,8 @@ const brahminStrengths = [
   },
   {
     icon: '🚀',
-    headline: 'Live in 21 days. Not 6 months.',
-    body: 'Brahmin\'s average go-live is 21 days. You don\'t need a certified NetSuite administrator or months of consultant hours. Your dedicated implementation manager handles data migration, configuration, and training — and you are live and running before a typical NetSuite discovery phase is complete.',
+    headline: 'Live in 3–6 weeks. Not 6 months.',
+    body: 'Brahmin\'s average go-live is 3–6 weeks. You don\'t need a certified NetSuite administrator or months of consultant hours. Your dedicated implementation manager handles data migration, configuration, and training — and you are live and running before a typical NetSuite discovery phase is complete.',
   },
   {
     icon: '🏭',
@@ -69,7 +69,7 @@ const brahminStrengths = [
   {
     icon: '📊',
     headline: 'Stable pricing. No renewal surprises.',
-    body: 'Brahmin is independently owned with no investor pressure to maximize revenue at renewal. Pricing is published on our website and has been stable since 2015. No auto-renewal clauses with hidden uplift percentages. No module creep. What you see on the pricing page is what you pay.',
+    body: 'Brahmin is independently owned with no investor pressure to maximize revenue at renewal. Pricing is published on our website with no hidden uplift clauses. No auto-renewal surprises. No module creep. What you see on the pricing page is what you pay.',
   },
 ]
 
@@ -81,7 +81,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; netsuite: RowValue; 
   { feature: 'Annual price increase', brahmin: 'Stable', netsuite: '7–30%+ uplift clauses', note: 'NetSuite contracts include auto-renewal uplift provisions' },
   { feature: 'Pricing published on website', brahmin: true, netsuite: false, note: 'NetSuite pricing requires a sales call' },
   // Support & implementation
-  { feature: 'Average time to go-live', brahmin: '21 days', netsuite: '4–6 months' },
+  { feature: 'Average time to go-live', brahmin: '3–6 weeks', netsuite: '4–6 months' },
   { feature: 'Dedicated implementation manager', brahmin: true, netsuite: false, note: 'NetSuite implementations require paid external consultants' },
   { feature: 'Support response time', brahmin: '<15 minutes', netsuite: 'Days (tiered, small accounts deprioritized)' },
   { feature: 'Unlimited training calls', brahmin: true, netsuite: false, note: 'NetSuite training is a paid add-on or formal program' },
@@ -102,7 +102,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; netsuite: RowValue; 
   // Integrations
   { feature: 'Shopify integration', brahmin: true, netsuite: true, note: 'NetSuite requires SuiteCommerce or third-party connector' },
   { feature: 'QuickBooks integration', brahmin: true, netsuite: false, note: 'NetSuite replaces QuickBooks — migration required' },
-  { feature: 'Native mobile app', brahmin: true, netsuite: 'Limited mobile experience' },
+  { feature: 'Mobile warehouse app', brahmin: 'Browser-based (no install)', netsuite: 'Limited mobile experience' },
   { feature: 'B2B wholesale portal', brahmin: true, netsuite: 'SuiteCommerce add-on (extra cost)' },
   // Platform
   { feature: 'Built for <$50M manufacturers', brahmin: true, netsuite: false, note: 'NetSuite analysts recommend $3M+ revenue minimum' },
@@ -161,7 +161,7 @@ export default function NetSuiteCompare() {
             NetSuite starts at $999/month — before per-user fees, modules, and $25,000–$150,000 in mandatory implementation costs. Year one for a small manufacturer often exceeds $50,000. Brahmin was built for the $1M–$50M manufacturer who needs enterprise-grade tools without the enterprise price or complexity.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {['✓ From $199/month — all-in', '✓ Live in 21 days, not 6 months', '✓ No consultant required', '✓ Built for manufacturers, not adapted'].map((pill) => (
+            {['✓ From $199/month — no per-user fees', '✓ Live in 3–6 weeks, not 6 months', '✓ No consultant required', '✓ Built for manufacturers, not adapted'].map((pill) => (
               <span key={pill} className="bg-emerald-600/20 border border-emerald-500/30 text-emerald-300 text-sm px-4 py-1.5 rounded-full">{pill}</span>
             ))}
           </div>

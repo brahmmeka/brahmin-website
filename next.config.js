@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    // ESLint runs separately — don't block builds on lint warnings
+    ignoreDuringBuilds: true,
+  },
   compress: true,
   images: {
     // Serve modern formats automatically (WebP/AVIF ~30-50% smaller than PNG/JPG)

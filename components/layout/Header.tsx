@@ -51,13 +51,13 @@ const learnLinks = [
   { icon: '❓', label: 'FAQ', href: '/faq', iconBg: 'bg-sky-50 text-sky-600' },
   { icon: '🎓', label: 'Webinars', href: '/webinars', iconBg: 'bg-purple-50 text-purple-600' },
   { icon: '💡', label: 'Help center', href: 'https://support.brahmin-solutions.com/en/', iconBg: 'bg-slate-100 text-slate-600', external: true },
-  { icon: '🛠️', label: 'Free tools & templates', href: '/tools', iconBg: 'bg-emerald-50 text-emerald-600' },
+  { icon: '🛠️', label: 'Free tools & templates', href: '/tools', iconBg: 'bg-emerald-50 text-emerald-700' },
 ]
 
 const companyLinks = [
   { icon: '🏢', label: 'About us', href: '/about', iconBg: 'bg-primary-50 text-primary-600' },
   { icon: '📞', label: 'Contact us', href: '/contact', iconBg: 'bg-orange-50 text-orange-600' },
-  { icon: '📅', label: 'Book a demo', href: '/demo', iconBg: 'bg-emerald-50 text-emerald-600' },
+  { icon: '📅', label: 'Book a demo', href: '/demo', iconBg: 'bg-emerald-50 text-emerald-700' },
 ]
 
 type OpenMenu = 'features' | 'industries' | 'resources' | null
@@ -194,7 +194,7 @@ export default function Header() {
                           <Link
                             href="/features"
                             onClick={closeAll}
-                            className="ml-auto text-xs font-semibold text-emerald-600 hover:text-emerald-700 whitespace-nowrap transition-colors px-2"
+                            className="ml-auto text-xs font-semibold text-emerald-700 hover:text-emerald-700 whitespace-nowrap transition-colors px-2"
                           >
                             See all features →
                           </Link>
@@ -283,7 +283,7 @@ export default function Header() {
                     <Link
                       href="/industries"
                       onClick={closeAll}
-                      className="text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors"
+                      className="text-sm font-semibold text-emerald-700 hover:text-emerald-700 transition-colors"
                     >
                       See all industries →
                     </Link>
@@ -533,7 +533,7 @@ export default function Header() {
                       {f.label}
                     </Link>
                   ))}
-                  <Link href="/features" onClick={closeAll} className="block pl-3 py-1.5 text-sm font-semibold text-emerald-600">
+                  <Link href="/features" onClick={closeAll} className="block pl-3 py-1.5 text-sm font-semibold text-emerald-700">
                     See all features →
                   </Link>
                 </div>

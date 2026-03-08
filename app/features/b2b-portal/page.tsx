@@ -64,7 +64,7 @@ function PortalMockup() {
                 <p className="text-sm font-medium text-slate-900 truncate">{item.name}</p>
                 <div className="flex items-center gap-2 mt-0.5">
                   <span className="text-xs text-slate-400">{item.sku}</span>
-                  <span className={`text-xs font-medium ${item.inStock ? 'text-emerald-600' : 'text-red-500'}`}>
+                  <span className={`text-xs font-medium ${item.inStock ? 'text-emerald-700' : 'text-red-500'}`}>
                     {item.inStock ? '● In stock' : '○ Out of stock'}
                   </span>
                 </div>

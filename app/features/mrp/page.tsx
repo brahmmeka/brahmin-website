@@ -120,7 +120,7 @@ export default function MRPPage() {
             <div className="flex items-center gap-2 mb-4">
               <Link href="/features" className="text-xs text-slate-400 hover:text-slate-600 transition-colors">Features</Link>
               <span className="text-slate-300">/</span>
-              <span className="text-xs font-semibold text-emerald-600">MRP & Forecasting</span>
+              <span className="text-xs font-semibold text-emerald-700">MRP & Forecasting</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
               Know what to make before you run out
@@ -148,7 +148,7 @@ export default function MRPPage() {
           {/* Section 1 */}
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-emerald-600 mb-4">One-click MRP</span>
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-emerald-700 mb-4">One-click MRP</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
                 Run your MRP in one click
               </h2>
@@ -168,7 +168,7 @@ export default function MRPPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ShortagesMockup />
             <div>
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-emerald-600 mb-4">Shortage alerts</span>
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-emerald-700 mb-4">Shortage alerts</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
                 See shortages before they stop production
               </h2>
@@ -186,7 +186,7 @@ export default function MRPPage() {
           {/* Section 3: Forecasting */}
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-emerald-600 mb-4">Forecasting</span>
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-emerald-700 mb-4">Forecasting</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
                 Plan ahead with scenario modeling
               </h2>

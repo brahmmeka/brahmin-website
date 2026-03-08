@@ -140,7 +140,7 @@ const FeaturesTabbed = () => {
         <div className="px-4 py-3 border-b border-slate-200">
           <div className="flex items-center gap-2">
             <span className="font-semibold text-slate-800">Organic Maple Granola</span>
-            <span className="text-xs bg-emerald-100 text-emerald-600 px-2 py-0.5 rounded-full font-medium">In Stock</span>
+            <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-medium">In Stock</span>
           </div>
           <div className="text-xs text-slate-400 mt-0.5">SKU: GRN-MAPLE-12OZ</div>
         </div>
@@ -265,7 +265,7 @@ const FeaturesTabbed = () => {
               onClick={() => setActiveView(tab)}
               className={`flex-1 py-2 text-xs font-medium transition-all ${
                 activeView === tab
-                  ? 'text-emerald-600 border-b-2 border-emerald-600 bg-emerald-50'
+                  ? 'text-emerald-700 border-b-2 border-emerald-600 bg-emerald-50'
                   : 'text-slate-500 hover:text-slate-700 hover:bg-slate-50'
               }`}
             >
@@ -357,7 +357,7 @@ const FeaturesTabbed = () => {
                   </div>
                 </div>
               ))}
-              <button className="w-full mt-2 text-emerald-600 text-xs font-medium py-2 hover:bg-emerald-50 rounded-lg transition">
+              <button className="w-full mt-2 text-emerald-700 text-xs font-medium py-2 hover:bg-emerald-50 rounded-lg transition">
                 + Add Vendor
               </button>
             </>
@@ -386,7 +386,7 @@ const FeaturesTabbed = () => {
               onClick={() => setActiveProductionTab(tab)}
               className={`flex-1 py-2 text-xs font-medium transition-all ${
                 activeProductionTab === tab
-                  ? 'text-emerald-600 border-b-2 border-emerald-600 bg-emerald-50'
+                  ? 'text-emerald-700 border-b-2 border-emerald-600 bg-emerald-50'
                   : 'text-slate-500 hover:text-slate-700 hover:bg-slate-50'
               }`}
             >
@@ -443,11 +443,11 @@ const FeaturesTabbed = () => {
               <div className="border-t border-slate-200 pt-2 mt-2">
                 <div className="flex justify-between text-sm">
                   <span className="font-semibold text-slate-700">Total Cost</span>
-                  <span className="font-bold text-emerald-600">$1,445.00</span>
+                  <span className="font-bold text-emerald-700">$1,445.00</span>
                 </div>
                 <div className="flex justify-between text-xs mt-1">
                   <span className="text-slate-500">Cost per lb</span>
-                  <span className="font-semibold text-emerald-600">$2.89</span>
+                  <span className="font-semibold text-emerald-700">$2.89</span>
                 </div>
               </div>
             </div>
@@ -514,7 +514,7 @@ const FeaturesTabbed = () => {
                   <div className="flex items-center gap-2">
                     <span className="font-semibold text-slate-700">{item.step}</span>
                     <span className="text-slate-400">{item.time}</span>
-                    <span className="text-[10px] text-emerald-600">{activeStep === i ? '▼' : '▶'}</span>
+                    <span className="text-[10px] text-emerald-700">{activeStep === i ? '▼' : '▶'}</span>
                   </div>
                   <div className="text-slate-500">{item.detail}</div>
                   
@@ -531,7 +531,7 @@ const FeaturesTabbed = () => {
                         <div className="text-[10px]">
                           <span className="text-slate-400">Tests:</span>
                           {item.tests.map((test, j) => (
-                            <span key={j} className="ml-1 text-emerald-600">✓ {test}</span>
+                            <span key={j} className="ml-1 text-emerald-700">✓ {test}</span>
                           ))}
                         </div>
                       )}
@@ -645,7 +645,7 @@ const FeaturesTabbed = () => {
           <div className="border-t border-slate-100 pt-2 mt-2">
             <button 
               onClick={() => setShowAddModal(!showAddModal)}
-              className="w-full text-emerald-600 text-xs font-medium py-2 hover:bg-emerald-50 rounded-lg transition"
+              className="w-full text-emerald-700 text-xs font-medium py-2 hover:bg-emerald-50 rounded-lg transition"
             >
               + Add Integration
             </button>
@@ -742,7 +742,7 @@ const FeaturesTabbed = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-400">In Stock</span>
-                    <span className="text-emerald-600">✓ Available</span>
+                    <span className="text-emerald-700">✓ Available</span>
                   </div>
                 </div>
               )}
@@ -753,7 +753,7 @@ const FeaturesTabbed = () => {
           {!cart.find(p => p.id === 3) && (
             <button 
               onClick={addProduct}
-              className="w-full p-2 border-2 border-dashed border-slate-200 rounded-lg text-xs text-slate-500 hover:border-emerald-300 hover:text-emerald-600 transition"
+              className="w-full p-2 border-2 border-dashed border-slate-200 rounded-lg text-xs text-slate-500 hover:border-emerald-300 hover:text-emerald-700 transition"
             >
               + Add Product
             </button>
@@ -782,7 +782,7 @@ const FeaturesTabbed = () => {
             <div className="bg-emerald-100 border border-emerald-300 rounded-lg p-3 text-center">
               <div className="text-emerald-700 text-lg mb-1">✓</div>
               <div className="text-sm font-medium text-emerald-800">Order Submitted!</div>
-              <div className="text-xs text-emerald-600">Confirmation sent to your email</div>
+              <div className="text-xs text-emerald-700">Confirmation sent to your email</div>
               <button 
                 onClick={() => setShowOrderConfirm(false)}
                 className="mt-2 text-xs text-emerald-700 hover:underline"
@@ -823,7 +823,7 @@ const FeaturesTabbed = () => {
           <div className="border border-slate-200 rounded-lg p-3">
             <div className="text-xs text-slate-500 mb-2">RECENT RECEIVES</div>
             <div className="text-sm text-slate-700">PO #4521 - 12 items</div>
-            <div className="text-xs text-emerald-600">✓ Completed 10:30 AM</div>
+            <div className="text-xs text-emerald-700">✓ Completed 10:30 AM</div>
           </div>
         </div>
       ),
@@ -992,7 +992,7 @@ const FeaturesTabbed = () => {
                 {activeFeature.bullets.map((bullet, i) => (
                   <li key={i} className="flex items-center gap-3 text-slate-700">
                     <span className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-3 h-3 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
@@ -1000,7 +1000,7 @@ const FeaturesTabbed = () => {
                   </li>
                 ))}
               </ul>
-              <a href="/features" className="inline-flex items-center text-emerald-600 font-medium hover:text-emerald-700 transition">
+              <a href="/features" className="inline-flex items-center text-emerald-700 font-medium hover:text-emerald-700 transition">
                 Learn more
                 <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -1017,7 +1017,7 @@ const FeaturesTabbed = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-10">
-          <a href="/features" className="inline-flex items-center text-slate-600 hover:text-emerald-600 font-medium transition">
+          <a href="/features" className="inline-flex items-center text-slate-600 hover:text-emerald-700 font-medium transition">
             See all features
             <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

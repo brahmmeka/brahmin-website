@@ -170,7 +170,7 @@ Plus: Zapier (5,000+ apps) | REST API in beta
 | ❓ | FAQ | bg-sky-50 text-sky-600 | `/faq` |
 | 🎓 | Webinars | bg-purple-50 text-purple-600 | `/webinars` |
 | 💡 | Help center | bg-slate-100 text-slate-600 | `https://support.brahmin-solutions.com/en/` (external, opens new tab) |
-| 🛠️ | Free tools & templates | bg-emerald-50 text-emerald-600 | `/tools` |
+| 🛠️ | Free tools & templates | bg-emerald-50 text-emerald-700 | `/tools` |
 
 Note: Customer Stories is NOT in this column — it lives in the right panel only.
 
@@ -192,7 +192,7 @@ Note: MRPeasy removed from dropdown (page still exists at `/compare/mrpeasy`).
 |------|-------|---------|-----|
 | 🏢 | About us | bg-primary-50 text-primary-600 | `/about` |
 | 📞 | Contact us | bg-orange-50 text-orange-600 | `/contact` |
-| 📅 | Book a demo | bg-emerald-50 text-emerald-600 | `/demo` |
+| 📅 | Book a demo | bg-emerald-50 text-emerald-700 | `/demo` |
 
 **Bottom featured strip:**
 - Gradient: `from-blue-50 via-violet-50 to-emerald-50`

@@ -76,6 +76,7 @@ export default function Hero() {
             <Link
               href="/features"
               className="border-2 border-slate-500 hover:border-slate-300 text-white hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all hover:bg-white/5"
+              aria-label="See how Brahmin Solutions features work"
             >
               See how it works
             </Link>

@@ -41,7 +41,7 @@ function InventoryMockup({
 
   const colorClasses: Record<StatColor, { bg: string; border: string; text: string }> = {
     blue:   { bg: 'bg-blue-50',   border: 'border-blue-400',   text: 'text-blue-600'   },
-    amber:  { bg: 'bg-amber-50',  border: 'border-amber-300',  text: 'text-amber-600'  },
+    amber:  { bg: 'bg-amber-50',  border: 'border-amber-300',  text: 'text-amber-700'  },
     purple: { bg: 'bg-purple-50', border: 'border-purple-300', text: 'text-purple-600' },
     red:    { bg: 'bg-red-50',    border: 'border-red-300',    text: 'text-red-600'    },
   }
@@ -52,9 +52,9 @@ function InventoryMockup({
       <div className="px-4 py-3 border-b border-slate-200">
         <div className="flex items-center gap-2">
           <span className="font-semibold text-slate-800">Organic Maple Granola</span>
-          <span className="text-xs bg-emerald-100 text-emerald-600 px-2 py-0.5 rounded-full font-medium">In Stock</span>
+          <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-medium">In Stock</span>
         </div>
-        <div className="text-xs text-slate-400 mt-0.5">SKU: GRN-MAPLE-12OZ</div>
+        <div className="text-xs text-slate-500 mt-0.5">SKU: GRN-MAPLE-12OZ</div>
       </div>
 
       {/* Stat cards */}
@@ -69,9 +69,9 @@ function InventoryMockup({
                 : 'bg-white border border-slate-200 hover:border-slate-300'
             }`}
           >
-            <div className="text-[10px] text-slate-500 uppercase">{card.label}</div>
+            <div className="text-[10px] text-slate-600 uppercase">{card.label}</div>
             <div className={`text-lg font-bold ${colorClasses[card.color].text}`}>{card.value}</div>
-            <div className="text-[9px] text-slate-400">{card.sublabel}</div>
+            <div className="text-[9px] text-slate-500">{card.sublabel}</div>
           </button>
         ))}
       </div>
@@ -80,7 +80,7 @@ function InventoryMockup({
       <div className="px-3 pb-3">
         {activeCard === 0 && (
           <div className="border border-slate-200 rounded-lg overflow-hidden">
-            <div className="bg-slate-50 px-3 py-2 text-[10px] font-medium text-slate-500 grid grid-cols-3">
+            <div className="bg-slate-50 px-3 py-2 text-[10px] font-medium text-slate-600 grid grid-cols-3">
               <span>Warehouse</span><span>Location</span><span className="text-right">Quantity</span>
             </div>
             {warehouseData.map((row, i) => (
@@ -95,7 +95,7 @@ function InventoryMockup({
 
         {activeCard === 1 && (
           <div className="border border-slate-200 rounded-lg overflow-hidden">
-            <div className="bg-slate-50 px-3 py-1.5 text-[10px] font-medium text-slate-500 grid grid-cols-6 gap-1">
+            <div className="bg-slate-50 px-3 py-1.5 text-[10px] font-medium text-slate-600 grid grid-cols-6 gap-1">
               <span>Order #</span><span>Date</span><span>Customer</span>
               <span className="text-right">Qty</span><span className="text-center">Inv</span><span className="text-center">Status</span>
             </div>
@@ -395,7 +395,7 @@ function ProductionMockup() {
             onClick={() => setTab(t.id)}
             className={`flex-1 py-2 text-xs font-medium transition-colors ${
               tab === t.id
-                ? 'text-emerald-600 border-b-2 border-emerald-500 -mb-px'
+                ? 'text-emerald-700 border-b-2 border-emerald-500 -mb-px'
                 : 'text-slate-500 hover:text-slate-700'
             }`}
           >
@@ -434,11 +434,11 @@ function ProductionMockup() {
             <div className="border-t border-slate-200 pt-2 mt-2 space-y-1">
               <div className="flex justify-between text-sm font-semibold">
                 <span className="text-slate-700">Total Cost</span>
-                <span className="text-emerald-600">$1,445.00</span>
+                <span className="text-emerald-700">$1,445.00</span>
               </div>
               <div className="flex justify-between text-xs">
                 <span className="text-slate-400">Cost per lb</span>
-                <span className="font-semibold text-emerald-600">$2.89</span>
+                <span className="font-semibold text-emerald-700">$2.89</span>
               </div>
               <div className="flex justify-between text-xs">
                 <span className="text-slate-400">Margin at $5.50/lb</span>
@@ -684,7 +684,7 @@ function IntegrationsMockup() {
           <div className="border-t border-slate-100 pt-2">
             <button
               onClick={() => setShowAddModal(true)}
-              className="w-full text-emerald-600 text-xs font-medium py-2 hover:bg-emerald-50 rounded-lg transition"
+              className="w-full text-emerald-700 text-xs font-medium py-2 hover:bg-emerald-50 rounded-lg transition"
             >
               + Add Integration
             </button>
@@ -806,7 +806,7 @@ function MobileMockup({ screen, setScreen }: { screen: MobileScreen; setScreen: 
         <div className="border border-slate-200 rounded-lg p-3">
           <div className="text-xs text-slate-500 mb-1 uppercase">Recent Receives</div>
           <div className="text-sm text-slate-700">PO #4521 – 12 items</div>
-          <div className="text-xs text-emerald-600">✓ Completed 10:30 AM</div>
+          <div className="text-xs text-emerald-700">✓ Completed 10:30 AM</div>
         </div>
       </div>
     ),
@@ -1054,14 +1054,14 @@ export default function FeaturesTabbed() {
               <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight">
                 {active.headline}
               </h3>
-              <p className="text-slate-500 mb-6 leading-relaxed">
+              <p className="text-slate-600 mb-6 leading-relaxed">
                 {active.description}
               </p>
               <ul className="space-y-3 mb-8">
                 {active.bullets.map((b) => (
                   <li key={b} className="flex items-center gap-3 text-slate-700">
                     <span className="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
-                      <svg className="w-3 h-3 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <svg className="w-3 h-3 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
@@ -1071,7 +1071,7 @@ export default function FeaturesTabbed() {
               </ul>
               <Link
                 href={active.learnMore}
-                className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-700 hover:text-emerald-700 transition-colors"
               >
                 Learn more
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -1091,7 +1091,7 @@ export default function FeaturesTabbed() {
         <div className="text-center mt-6">
           <Link
             href="/features"
-            className="inline-flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-emerald-600 transition-colors"
+            className="inline-flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-emerald-700 transition-colors"
           >
             See all features
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

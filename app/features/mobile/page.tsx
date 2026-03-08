@@ -245,7 +245,7 @@ export default function MobilePage() {
                       <p className="text-xs font-medium text-slate-700">{a.action}</p>
                       <p className="text-xs text-slate-400">{a.time}</p>
                     </div>
-                    <span className="text-xs text-emerald-600 font-semibold">Synced ✓</span>
+                    <span className="text-xs text-emerald-700 font-semibold">Synced ✓</span>
                   </div>
                 ))}
               </div>

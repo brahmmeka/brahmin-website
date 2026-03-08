@@ -46,8 +46,8 @@ export default function Footer() {
               Cloud-based MRP and inventory management for small to mid-sized manufacturers.
             </p>
             <div className="mt-5 space-y-1.5">
-              <p className="text-xs text-slate-500">Starting at <span className="text-slate-300 font-semibold">$199/month</span></p>
-              <p className="text-xs text-slate-500">Est. <span className="text-slate-300">2019</span> &middot; 300+ customers</p>
+              <p className="text-xs text-slate-400">Starting at <span className="text-slate-300 font-semibold">$199/month</span></p>
+              <p className="text-xs text-slate-400">Est. <span className="text-slate-300">2019</span> &middot; 300+ customers</p>
             </div>
 
             {/* CTA */}
@@ -86,17 +86,17 @@ export default function Footer() {
 
         {/* Bottom section */}
         <div className="py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-slate-400">
             © {new Date().getFullYear()} Brahmin Solutions, Inc. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+            <Link href="/privacy" className="text-xs text-slate-400 hover:text-slate-300 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+            <Link href="/terms" className="text-xs text-slate-400 hover:text-slate-300 transition-colors">
               Terms of Service
             </Link>
-            <Link href="/security" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">
+            <Link href="/security" className="text-xs text-slate-400 hover:text-slate-300 transition-colors">
               Security
             </Link>
           </div>

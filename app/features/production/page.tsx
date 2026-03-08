@@ -114,7 +114,7 @@ function CostMockup() {
       </div>
       <div className="mt-2 flex justify-between text-sm">
         <span className="text-slate-500">Cost per lb</span>
-        <span className="font-semibold text-emerald-600">$2.89/lb</span>
+        <span className="font-semibold text-emerald-700">$2.89/lb</span>
       </div>
     </div>
   )
@@ -229,7 +229,7 @@ export default function ProductionPage() {
                 <div className="pt-2">
                   <div className="flex justify-between text-sm mb-1.5">
                     <span className="text-slate-600">Yield rate</span>
-                    <span className="font-bold text-emerald-600">97.4%</span>
+                    <span className="font-bold text-emerald-700">97.4%</span>
                   </div>
                   <div className="w-full bg-slate-100 rounded-full h-2">
                     <div className="bg-emerald-500 h-2 rounded-full" style={{ width: '97.4%' }} />

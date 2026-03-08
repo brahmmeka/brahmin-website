@@ -189,6 +189,11 @@
 - Mike Chang, Owner, Nefaire → Already on wholesale-distribution page
 **Files Updated:** `components/sections/SocialProof.tsx`, `app/compare/katana/page.tsx`, `app/compare/spreadsheets/page.tsx`
 
+### 8. Emerald Text Color Darkened for Accessibility (March 8, 2026)
+**Context:** Page insights flagged `text-emerald-600` as insufficient contrast
+**Decision:** Changed all `text-emerald-600` to `text-emerald-700` sitewide for better readability
+**Files Updated:** `app/contact/page.tsx`, `app/features/b2b-portal/page.tsx`, `app/features/mobile/page.tsx`, `app/features/mrp/page.tsx`, `app/features/page.tsx`, `app/features/production/page.tsx`, `app/industries/cannabis/page.tsx`, `components/layout/Header.tsx`, `components/roi-calculator/ROICalculator.tsx`, `components/sections/FeaturesTabbed.tsx`, `FeaturesTabbed.jsx`, `ABOUT-PAGE-SPEC.md`, `NAV-SPEC.md`
+
 ### 6. Integrations Content Accuracy (March 7, 2026)
 - Confirmed native integrations: QuickBooks Online, Xero, Shopify, WooCommerce, BigCommerce, Faire, SPS Commerce, ShipStation
 - Removed all "50+ native integrations" and Amazon claims sitewide

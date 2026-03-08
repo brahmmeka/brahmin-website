@@ -52,6 +52,7 @@ export default function FinalCTA() {
             <Link
               href="/features"
               className="inline-flex items-center gap-2 text-primary-100 hover:text-white border border-primary-400/50 hover:border-primary-300 px-8 py-4 rounded-xl font-semibold text-base transition-all hover:bg-white/5"
+              aria-label="Explore all Brahmin Solutions features"
             >
               See how it works
             </Link>

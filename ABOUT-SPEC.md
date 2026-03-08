@@ -39,9 +39,9 @@ All components live in `components/about/`.
 - Placeholder: initials "BM" in `bg-slate-100`
 - **TODO:** Replace with `<Image src="/images/brahm-meka.jpg" ... />`
 
-**Floating badge** (bottom-right of photo): "Independently owned / Since 2015 · 0 VC investors"
+**Floating badge** (bottom-right of photo): "Independently owned / Serving customers since 2019 · 0 VC investors"
 
-**Pre-headline:** "Founded 2015 · 100+ manufacturers · Independently owned" (slate-400, uppercase, tracking-widest)
+**Pre-headline:** "Est. 2019 · 300+ manufacturers · Independently owned" (slate-400, uppercase, tracking-widest)
 
 **H1:** "I built Brahmin because small manufacturers deserve enterprise-grade tools — without the enterprise price or complexity."
 
@@ -83,7 +83,7 @@ All components live in `components/about/`.
 
 2. *"Then I tried to help my family run their food production business. The tools I could recommend were either too expensive, too complex, or came with support that disappeared after the sale. Even after implementing the "best" solutions, we were still managing critical operations on spreadsheets. When I talked to other small manufacturers, the story was always the same."*
 
-3. *"In 2015, I founded Brahmin Solutions — first as a consultancy, then as a product. After two years of building alongside early customers, we launched our beta in 2018. Every single beta customer converted to a paying customer. Today, we've helped 100+ manufacturers move from operational chaos to a single source of truth."*
+3. *"In 2015, I founded Brahmin Solutions — first as a consultancy, then as a product. After two years of building alongside early customers, we launched our beta in 2018. Every single beta customer converted to a paying customer. Today, we've helped 300+ manufacturers move from operational chaos to a single source of truth."*
 
 ---
 

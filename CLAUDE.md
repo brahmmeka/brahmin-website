@@ -326,7 +326,7 @@ spacing: {
 | Stat | Label |
 |------|-------|
 | 300+ | Manufacturers |
-| Since 2015 | In business |
+| Since 2019 | In business |
 | 8 native | Integrations (+ 5,000+ via Zapier) |
 | <15 min | Support response |
 | 21 days | Avg. go-live |

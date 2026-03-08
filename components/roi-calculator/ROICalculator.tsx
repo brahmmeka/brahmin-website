@@ -326,7 +326,7 @@ function ResultsPanel({
               )}
               <div className="border-t border-slate-200 pt-2 flex justify-between font-bold">
                 <span className="text-slate-800">Net year 1 gain</span>
-                <span className="text-emerald-600">
+                <span className="text-emerald-700">
                   {formatCurrency(results.savings.total - results.yearOneCost)}
                 </span>
               </div>
@@ -380,10 +380,10 @@ function ResultsPanel({
       <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5">
         <div className="flex items-start justify-between mb-4">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-emerald-600">
+            <p className="text-xs font-bold uppercase tracking-widest text-emerald-700">
               Growth potential
             </p>
-            <p className="text-xs text-emerald-600/70 mt-0.5">Not included in savings above</p>
+            <p className="text-xs text-emerald-700/70 mt-0.5">Not included in savings above</p>
           </div>
           <span className="text-xs text-emerald-700 bg-emerald-100 px-2 py-1 rounded-full font-semibold">
             {formatCurrency(results.growth.totalLow)}–{formatCurrency(results.growth.totalHigh)}/yr

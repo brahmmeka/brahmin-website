@@ -158,7 +158,7 @@ In 2015, I founded Brahmin Solutions — first as a consultancy, then as a produ
 | **0** | VC investors | Independently owned, customer-funded |
 
 ### Design Specs
-- Stats: `text-4xl font-bold text-emerald-600`
+- Stats: `text-4xl font-bold text-emerald-700`
 - Labels: `text-sm font-semibold text-slate-900 uppercase tracking-wide`
 - Subtext: `text-sm text-slate-500`
 - Cards: `bg-slate-50 rounded-xl p-6` or borderless with dividers

@@ -91,7 +91,7 @@ Each card: `bg-slate-50 hover:bg-white rounded-2xl p-6 border border-transparent
 - 21 days / Average go-live / "Not 6 months."
 - 1:1 / Implementation manager / "Your own human."
 - 15 min / Support response / "After you're live too."
-- 300+ / Manufacturers / "Since 2015."
+- 300+ / Manufacturers / "Independently owned."
 
 ---
 

@@ -372,9 +372,9 @@ export default function VsSpreadsheetsPage() {
           {/* Testimonial */}
           <div className="bg-primary-50 rounded-2xl border border-primary-100 p-8 text-center">
             <blockquote className="text-lg font-medium text-slate-800 mb-4 max-w-3xl mx-auto leading-relaxed">
-              &ldquo;Moving from spreadsheets was less painful than I expected. They handled the migration, and we were live in under a month. I don&apos;t know why I waited so long.&rdquo;
+              &ldquo;This was my first time using inventory software, and I didn&apos;t know anything. They walked me through each workflow. By the time we went live, I felt like an expert.&rdquo;
             </blockquote>
-            <cite className="text-sm text-slate-500 not-italic">— Operations lead, mid-size food manufacturer (name withheld — real customer)</cite>
+            <cite className="text-sm text-slate-500 not-italic">— Jeremy Wixson, Purchasing and Logistics Manager, PSE</cite>
           </div>
         </div>
       </section>

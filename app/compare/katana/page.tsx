@@ -348,13 +348,13 @@ export default function VsKatanaPage() {
               ))}
             </div>
             <blockquote className="text-xl font-medium text-slate-900 leading-relaxed max-w-2xl mx-auto mb-6">
-              &ldquo;Full visibility from purchase order to manufacturing to sales — plus accurate cost of goods. And the support is exceptional. I switched and wish I had done it sooner.&rdquo;
+              &ldquo;I&apos;m really happy with how fast we were able to set up Brahmin Solutions. It took us three months to get started with Katana, but Brahmin Solutions was ready in a week.&rdquo;
             </blockquote>
             <div className="flex items-center justify-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-700 font-bold text-sm">SH</div>
+              <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-700 font-bold text-sm">AM</div>
               <div className="text-left">
-                <p className="font-semibold text-slate-900">Sheldon</p>
-                <p className="text-sm text-slate-500">FLFF</p>
+                <p className="font-semibold text-slate-900">Adam McFarlin</p>
+                <p className="text-sm text-slate-500">Kalamazoo Candle Company</p>
               </div>
             </div>
           </div>

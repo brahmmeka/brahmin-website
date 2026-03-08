@@ -31,6 +31,25 @@ const testimonials = {
     company: "Sfoglini Pasta",
     logo: "/images/logos/sfoglini.png",
   },
+  kalamazoo: {
+    quote: "I'm really happy with how fast we were able to set up Brahmin Solutions. It took us three months to get started with Katana, but Brahmin Solutions was ready in a week.",
+    name: "Adam McFarlin",
+    company: "Kalamazoo Candle Company",
+    logo: "/images/logos/kalamazoo-candle.png",
+  },
+  crate61: {
+    quote: "Starting a new system before our busiest season was intimidating, but the Brahmin Solutions team was incredibly supportive. Thanks to them, everything went smoothly.",
+    name: "Raphael Littleton",
+    title: "Operations",
+    company: "Crate 61",
+  },
+  pse: {
+    quote: "This was my first time using inventory software, and I didn't know anything. They walked me through each workflow. By the time we went live, I felt like an expert.",
+    name: "Jeremy Wixson",
+    title: "Purchasing and Logistics Manager",
+    company: "PSE",
+    logo: "/images/logos/pse.png",
+  },
 }
 
 const logos = [
@@ -207,7 +226,98 @@ export default function SocialProof() {
             </div>
           </m.div>
 
-          {/* Card 5 — Logo wall (12 logos, grayscale → color on hover) */}
+          {/* Card 5 — Adam McFarlin, Kalamazoo Candle */}
+          <m.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+          >
+            <div>
+              <div className="flex gap-0.5 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <p className="text-slate-700 leading-relaxed">
+                &ldquo;{testimonials.kalamazoo.quote}&rdquo;
+              </p>
+            </div>
+            <div className="flex items-center gap-3 mt-5 pt-4 border-t border-slate-100">
+              <div className="relative w-16 h-8 shrink-0">
+                <Image
+                  src={testimonials.kalamazoo.logo!}
+                  alt={testimonials.kalamazoo.company}
+                  fill
+                  className="object-contain object-left"
+                  sizes="64px"
+                />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-slate-900">{testimonials.kalamazoo.name}</p>
+                <p className="text-xs text-slate-500">{testimonials.kalamazoo.company}</p>
+              </div>
+            </div>
+          </m.div>
+
+          {/* Card 6 — Raphael Littleton, Crate 61 */}
+          <m.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="bg-gradient-to-br from-primary-50 to-blue-50 rounded-2xl p-6 border border-primary-100 flex flex-col justify-between hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+          >
+            <div>
+              <div className="flex gap-0.5 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <p className="text-slate-700 text-sm leading-relaxed">
+                &ldquo;{testimonials.crate61.quote}&rdquo;
+              </p>
+            </div>
+            <div className="mt-5 pt-4 border-t border-primary-100">
+              <p className="text-sm font-bold text-slate-900">{testimonials.crate61.name}</p>
+              <p className="text-xs text-slate-500">{testimonials.crate61.title}, {testimonials.crate61.company}</p>
+            </div>
+          </m.div>
+
+          {/* Card 7 — Jeremy Wixson, PSE */}
+          <m.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+          >
+            <div>
+              <div className="flex gap-0.5 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <p className="text-slate-700 leading-relaxed">
+                &ldquo;{testimonials.pse.quote}&rdquo;
+              </p>
+            </div>
+            <div className="flex items-center gap-3 mt-5 pt-4 border-t border-slate-100">
+              <div className="relative w-16 h-8 shrink-0">
+                <Image
+                  src={testimonials.pse.logo!}
+                  alt={testimonials.pse.company}
+                  fill
+                  className="object-contain object-left"
+                  sizes="64px"
+                />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-slate-900">{testimonials.pse.name}</p>
+                <p className="text-xs text-slate-500">{testimonials.pse.title}, {testimonials.pse.company}</p>
+              </div>
+            </div>
+          </m.div>
+
+          {/* Card 8 — Logo wall (12 logos, grayscale → color on hover) */}
           <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}

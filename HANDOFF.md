@@ -88,7 +88,7 @@
 1. **AboutHero** — Brahm photo placeholder + founder quote + "independently owned" badge
 2. **TheGap** — Enterprise vs SMB comparison cards + 3-paragraph emotional hook
 3. **OriginStory** — Kuehne+Nagel → Lenoir Tech → family food business → 2015 founding
-4. **ByTheNumbers** — 2015 · 100+ · <15 min · 0 VC
+4. **ByTheNumbers** — 2019 (serving customers) · 300+ · <15 min · 0 VC
 5. **HowWereDifferent** — Built to last / Real humans / Made for manufacturers
 6. **TheTeam** — Brahm featured + 4 team placeholders (needs real names/photos)
 7. **Values** — Build to last · Support like we mean it · Ship what matters · Stay lean
@@ -96,7 +96,8 @@
 
 ### Pending:
 - [ ] Drop `brahm-meka.jpg` into `/public/images/`
-- [ ] Update `TheTeam.tsx` with real team names, titles, and photos
+- [ ] Drop team photos into `/public/images/team/[name].jpg` to wire up TheTeam.tsx
+- [x] Real team names/titles updated (Nirav Gandhi, Devarsh Gadani, Hardik Doshi, Paragm Jagani, Matt Lyn)
 
 ---
 
@@ -163,7 +164,7 @@
 
 ### About
 - **Title:** About Us | Brahmin Solutions
-- **Description:** Founded in 2015 by Brahm Meka. Brahmin Solutions helps 100+ small manufacturers move from spreadsheets to a single source of truth. Independently owned, customer-funded.
+- **Description:** Founded by Brahm Meka. Brahmin Solutions helps 300+ small manufacturers move from spreadsheets to a single source of truth. Serving customers since 2019. Independently owned.
 
 ### Pricing
 - **Title:** Pricing | Brahmin Solutions MRP Software
@@ -177,6 +178,16 @@
 - **FAQPage schema** added to `app/faq/page.tsx` (auto-generated from faqCategories data)
 - CTA wave fixed: `fill-slate-900` → `fill-white` in `components/sections/CTA.tsx`
 - CTA removed from features and integrations pages (had inline CTAs already)
+
+### 7. New Customer Testimonials Added (March 8, 2026)
+**Context:** User provided 4 new verified customer quotes
+**Decision:** Added to SocialProof homepage bento grid (3 new cards) + targeted compare pages
+**Testimonials added:**
+- Adam McFarlin, Kalamazoo Candle Company → SocialProof + Katana compare page (mentions Katana by name)
+- Raphael Littleton, Operations, Crate 61 → SocialProof (busy season / implementation support)
+- Jeremy Wixson, Purchasing & Logistics Manager, PSE → SocialProof + Spreadsheets compare page (first-time user)
+- Mike Chang, Owner, Nefaire → Already on wholesale-distribution page
+**Files Updated:** `components/sections/SocialProof.tsx`, `app/compare/katana/page.tsx`, `app/compare/spreadsheets/page.tsx`
 
 ### 6. Integrations Content Accuracy (March 7, 2026)
 - Confirmed native integrations: QuickBooks Online, Xero, Shopify, WooCommerce, BigCommerce, Faire, SPS Commerce, ShipStation

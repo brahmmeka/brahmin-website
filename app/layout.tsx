@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import MotionProvider from '@/components/MotionProvider'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -52,6 +53,7 @@ export default function RootLayout({
           <Footer />
         </MotionProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )

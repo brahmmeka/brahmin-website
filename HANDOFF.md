@@ -28,6 +28,7 @@
   - `/industries/apparel` ✅ — built March 2026
   - `/industries/electronics` ✅ — built March 2026
   - `/industries/cannabis` ✅ — built March 2026
+  - `/industries/medical-devices` ✅ — built March 2026
   - `/industries/health-wellness` ✅ — built March 2026
 
 - Contact (`/contact`) ✅ — 4 sections: hero, routing cards (demo/support/partnerships), general form (static placeholder), FAQ accordion

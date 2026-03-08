@@ -123,7 +123,7 @@ Description: Receive, pick, and adjust inventory from your phone or tablet. Work
 
 ---
 
-## INDUSTRIES (10 Pages)
+## INDUSTRIES (11 Pages)
 
 | Page | URL | H1 | In Nav? | Status |
 |------|-----|----|----|-----|
@@ -136,6 +136,7 @@ Description: Receive, pick, and adjust inventory from your phone or tablet. Work
 | Apparel & Textiles | `/industries/apparel` | Inventory software for apparel manufacturers | ✅ | ✅ Built (Mar 2026) |
 | Supplements | `/industries/supplements` | Inventory software for supplement manufacturers | Hub | ✅ Built (Mar 2026) |
 | Cannabis/CBD | `/industries/cannabis` | Inventory software for cannabis manufacturers | Hub | ✅ Built (Mar 2026) |
+| Medical Devices | `/industries/medical-devices` | Medical device manufacturing software | Hub | ✅ Built (Mar 2026) |
 | Health & Wellness | `/industries/health-wellness` | Inventory software for health products | Hub | ✅ Built (Mar 2026) |
 
 ### Meta Tags
@@ -192,6 +193,12 @@ Description: Lot tracking, expiration management, and FDA compliance for supplem
 ```
 Title: Cannabis & CBD Inventory Software | Brahmin Solutions
 Description: Seed-to-sale tracking, compliance reporting, and batch traceability for cannabis and CBD manufacturers.
+```
+
+**Medical Devices**
+```
+Title: Medical Device Manufacturing Software | Brahmin Solutions
+Description: FDA-compliant inventory and production management for medical device manufacturers. Serial and lot traceability, device history records, and audit-ready documentation from $199/month.
 ```
 
 **Health & Wellness**
@@ -367,6 +374,7 @@ Description: Get in touch with Brahmin Solutions. Book a demo, get support, or e
 │   ├── /industries/apparel
 │   ├── /industries/supplements
 │   ├── /industries/cannabis
+│   ├── /industries/medical-devices
 │   └── /industries/health-wellness
 ├── /integrations                   # Integrations hub
 ├── /compare                        # Compare hub

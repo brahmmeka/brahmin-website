@@ -55,7 +55,8 @@ brahmin-website/
 │   │   ├── food-beverage/page.tsx
 │   │   ├── cosmetics/page.tsx
 │   │   ├── supplements/page.tsx
-│   │   └── wholesale-distribution/page.tsx
+│   │   ├── medical-devices/page.tsx
+│   └── wholesale-distribution/page.tsx
 │   │
 │   ├── compare/                # Competitor comparison pages
 │   │   ├── page.tsx            # Comparison hub/overview

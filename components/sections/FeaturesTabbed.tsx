@@ -71,7 +71,7 @@ function InventoryMockup({
           >
             <div className="text-[10px] text-slate-600 uppercase">{card.label}</div>
             <div className={`text-lg font-bold ${colorClasses[card.color].text}`}>{card.value}</div>
-            <div className="text-[9px] text-slate-500">{card.sublabel}</div>
+            <div className="text-[9px] text-slate-600">{card.sublabel}</div>
           </button>
         ))}
       </div>
@@ -1035,7 +1035,7 @@ export default function FeaturesTabbed() {
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 activeTab === i
                   ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-200'
-                  : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'
+                  : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
               }`}
             >
               <span className="mr-1.5">{f.icon}</span>

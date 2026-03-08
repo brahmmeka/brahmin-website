@@ -53,7 +53,7 @@ export default function Footer() {
             {/* CTA */}
             <Link
               href="/demo"
-              className="inline-block mt-6 bg-accent-500 hover:bg-accent-600 text-white text-sm px-5 py-2.5 rounded-lg font-semibold transition-colors"
+              className="inline-block mt-6 bg-accent-600 hover:bg-accent-700 text-white text-sm px-5 py-2.5 rounded-lg font-semibold transition-colors"
             >
               Book a demo
             </Link>

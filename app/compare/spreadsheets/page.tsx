@@ -415,7 +415,6 @@ export default function VsSpreadsheetsPage() {
                 { label: 'vs MRPeasy', href: '/compare/mrpeasy' },
                 { label: 'vs NetSuite', href: '/compare/netsuite' },
                 { label: 'vs Wherefour', href: '/compare/wherefour' },
-                { label: 'See all comparisons', href: '/compare' },
               ].map((link) => (
                 <Link
                   key={link.href}

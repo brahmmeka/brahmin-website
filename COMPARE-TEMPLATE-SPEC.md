@@ -3,7 +3,7 @@
 > **Last Updated:** March 2026
 > **Route pattern:** `/compare/[competitor]`
 > **Built pages:** katana ✅, wherefour ✅, fishbowl ✅, cin7 ✅, mrpeasy ✅, netsuite ✅, spreadsheets ✅
-> **Not yet built:** dear-systems, sap-business-one, odoo, inflow, craftybase, sortly
+> **Not yet built:** dear-systems, sap-business-one, odoo, inflow, craftybase
 
 ---
 

@@ -58,8 +58,7 @@ brahmin-website/
 │   │   ├── medical-devices/page.tsx
 │   └── wholesale-distribution/page.tsx
 │   │
-│   ├── compare/                # Competitor comparison pages
-│   │   ├── page.tsx            # Comparison hub/overview
+│   ├── compare/                # Competitor comparison pages (no hub page)
 │   │   ├── katana/page.tsx
 │   │   ├── wherefour/page.tsx
 │   │   ├── mrpeasy/page.tsx
@@ -71,9 +70,9 @@ brahmin-website/
 │   │   ├── odoo/page.tsx
 │   │   ├── inflow/page.tsx
 │   │   ├── craftybase/page.tsx
-│   │   ├── sortly/page.tsx
 │   │   └── spreadsheets/page.tsx
 │   │
+│   ├── mrp-software/page.tsx    # MRP Software pillar page
 │   ├── blog/
 │   │   ├── page.tsx            # Blog listing
 │   │   └── [slug]/page.tsx     # Individual post

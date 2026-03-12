@@ -16,8 +16,8 @@
 - About (`/about`) — 8 sections per ABOUT-PAGE-SPEC.md
 - FAQ (`/faq`) ✅ — with FAQPage JSON-LD schema markup
 - Integrations (`/integrations`) ✅ — rewritten March 2026 (8 native integrations + Zapier)
-- Comparison pages: `/compare/katana` ✅, `/compare/wherefour` ✅, `/compare/fishbowl` ✅, `/compare/cin7` ✅, `/compare/mrpeasy` ✅, `/compare/netsuite` ✅, `/compare/spreadsheets` ✅
-- Comparison pages NOT yet built: dear-systems, sap-business-one, odoo, inflow, craftybase, sortly
+- Comparison pages: `/compare/katana` ✅, `/compare/wherefour` ✅, `/compare/fishbowl` ✅, `/compare/cin7` ✅, `/compare/mrpeasy` ✅, `/compare/netsuite` ✅, `/compare/spreadsheets` ✅, `/compare/inflow` ✅, `/compare/sap-business-one` ✅, `/compare/odoo` ✅, `/compare/craftybase` ✅
+- Comparison pages NOT yet built: dear-systems (skipped — same as Cin7)
 - Industry pages (moved to `/industries/` prefix March 2026):
   - `/industries` ✅ — hub page with 9-industry grid (built March 2026)
   - `/industries/manufacturing` ✅ — updated March 2026 (added pain points, FAQ schema, breadcrumbs, CustomerQuote placeholder)
@@ -33,6 +33,7 @@
 
 - Contact (`/contact`) ✅ — 4 sections: hero, routing cards (demo/support/partnerships), general form (static placeholder), FAQ accordion
 - ROI Calculator (`/roi-calculator`) ✅ — 3-mode calculator (Quick/Medium/Detailed). McKinsey-style: shows all assumptions inline. Separate cost savings + growth upside panels. 3-year ROI view. Peers section (3 composite profiles). Anchored to real customer data (10–12 hrs/week saved, near-zero stockouts, 15–22% inventory reduction). Pricing: $199/mo (<$1M), $499/mo ($1M+).
+- MRP Software pillar page (`/mrp-software`) ✅ — 3,000+ word SEO pillar page. Stripe-inspired design: dark gradient hero with glow orbs, gradient icons, colored card borders, animated hover arrows. 13 sections: breadcrumb, hero, key takeaways, what is MRP, spreadsheet signs (accordion), mid-page CTA, 6 feature cards, 5 industry cards, implementation comparison, buyer evaluation guide, testimonials, 10 FAQs, final CTA. Schema: FAQPage + BreadcrumbList + SoftwareApplication JSON-LD. Go-live: 3–6 weeks. Built March 2026.
 
 ### Pages NOT Built ❌
 - *(all planned pages are built)*
@@ -137,7 +138,6 @@
 | Odoo | `/compare/odoo` | Works out of box |
 | inFlow | `/compare/inflow` | Full manufacturing |
 | Craftybase | `/compare/craftybase` | Scales with growth |
-| Sortly | `/compare/sortly` | Real MRP features |
 | Spreadsheets | `/compare/spreadsheets` | Real-time, no errors |
 
 ---

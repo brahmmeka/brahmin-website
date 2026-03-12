@@ -183,9 +183,13 @@ Note: Customer Stories is NOT in this column — it lives in the right panel onl
 | 4 | vs NetSuite | `/compare/netsuite` |
 | 5 | vs Cin7 | `/compare/cin7` |
 | 6 | vs Wherefour | `/compare/wherefour` |
-| — | See all comparisons → | `/compare` |
+| 7 | vs MRPeasy | `/compare/mrpeasy` |
+| 8 | vs inFlow | `/compare/inflow` |
+| 9 | vs SAP Business One | `/compare/sap-business-one` |
+| 10 | vs Odoo | `/compare/odoo` |
+| 11 | vs CraftyBase | `/compare/craftybase` |
 
-Note: MRPeasy removed from dropdown (page still exists at `/compare/mrpeasy`).
+Note: No compare hub page — all 12 compare pages linked directly from nav and footer.
 
 **Company column (emerald-400 accent bar):**
 | Icon | Label | Icon bg | URL |

@@ -347,7 +347,6 @@ External redirect to app — no page needed
 | 33 | vs Unleashed | `/compare/unleashed` | Search "Unleashed software alternatives" |
 | 34 | vs inFlow | `/compare/inflow` | Search "inFlow inventory alternatives" |
 | 35 | vs Craftybase | `/compare/craftybase` | Search "Craftybase alternatives" |
-| 36 | vs Sortly | `/compare/sortly` | Search "Sortly alternatives" |
 | 37 | vs Spreadsheets | `/compare/spreadsheets` | Common pain points messaging |
 | 38 | vs QuickBooks | `/compare/quickbooks` | "QuickBooks inventory limitations" |
 

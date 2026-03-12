@@ -272,7 +272,7 @@ export default function ProductionPage() {
             "Full visibility from purchase order to manufacturing to sales — plus accurate cost of goods. We finally know what our products actually cost to make."
           </p>
           <div>
-            <p className="font-semibold text-slate-900">Sheldon</p>
+            <p className="font-semibold text-slate-900">Sheldon Ratuski</p>
             <p className="text-sm text-slate-500">FLFF</p>
           </div>
         </div>

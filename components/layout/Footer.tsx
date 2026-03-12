@@ -13,10 +13,17 @@ const footerLinks = {
     { label: 'Wholesale Distribution', href: '/industries/wholesale-distribution' },
   ],
   Compare: [
+    { label: 'vs Spreadsheets', href: '/compare/spreadsheets' },
     { label: 'vs Katana', href: '/compare/katana' },
     { label: 'vs Fishbowl', href: '/compare/fishbowl' },
     { label: 'vs Cin7', href: '/compare/cin7' },
-    { label: 'vs Spreadsheets', href: '/compare/spreadsheets' },
+    { label: 'vs NetSuite', href: '/compare/netsuite' },
+    { label: 'vs Wherefour', href: '/compare/wherefour' },
+    { label: 'vs MRPeasy', href: '/compare/mrpeasy' },
+    { label: 'vs inFlow', href: '/compare/inflow' },
+    { label: 'vs SAP Business One', href: '/compare/sap-business-one' },
+    { label: 'vs Odoo', href: '/compare/odoo' },
+    { label: 'vs CraftyBase', href: '/compare/craftybase' },
   ],
   Company: [
     { label: 'About', href: '/about' },
@@ -31,7 +38,7 @@ export default function Footer() {
     <footer className="bg-slate-900">
       <div className="container mx-auto px-6 max-w-7xl">
         {/* Top section */}
-        <div className="py-14 grid grid-cols-2 md:grid-cols-6 gap-x-8 gap-y-10">
+        <div className="py-14 grid grid-cols-2 md:grid-cols-7 gap-x-8 gap-y-10">
           {/* Brand col */}
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2">
@@ -61,11 +68,11 @@ export default function Footer() {
 
           {/* Link columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
+            <div key={category} className={category === 'Compare' ? 'col-span-2' : ''}>
               <h3 className="text-xs font-semibold text-white uppercase tracking-widest mb-4">
                 {category}
               </h3>
-              <ul className="space-y-2.5">
+              <ul className={category === 'Compare' ? 'grid grid-cols-2 gap-x-6 gap-y-2.5' : 'space-y-2.5'}>
                 {links.map((link) => (
                   <li key={link.href}>
                     <Link

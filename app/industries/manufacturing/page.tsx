@@ -63,7 +63,7 @@ const reviewSchema = {
     name: 'Brahmin Solutions',
     applicationCategory: 'BusinessApplication',
   },
-  author: { '@type': 'Person', name: 'Sheldon' },
+  author: { '@type': 'Person', name: 'Sheldon Ratuski' },
   reviewBody:
     'Full visibility from purchase order to manufacturing to sales — plus accurate cost of goods. And the support is exceptional.',
   reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
@@ -343,7 +343,7 @@ export default function ManufacturingPage() {
                   <div className="mt-6 flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-slate-300 font-bold text-sm">SF</div>
                     <div>
-                      <div className="text-white font-semibold text-sm">Sheldon</div>
+                      <div className="text-white font-semibold text-sm">Sheldon Ratuski</div>
                       <div className="text-slate-400 text-xs">FLFF</div>
                     </div>
                   </div>

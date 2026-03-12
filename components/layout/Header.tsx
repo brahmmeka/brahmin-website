@@ -44,6 +44,11 @@ const compareLinks = [
   { label: 'vs NetSuite', href: '/compare/netsuite' },
   { label: 'vs Cin7', href: '/compare/cin7' },
   { label: 'vs Wherefour', href: '/compare/wherefour' },
+  { label: 'vs MRPeasy', href: '/compare/mrpeasy' },
+  { label: 'vs inFlow', href: '/compare/inflow' },
+  { label: 'vs SAP Business One', href: '/compare/sap-business-one' },
+  { label: 'vs Odoo', href: '/compare/odoo' },
+  { label: 'vs CraftyBase', href: '/compare/craftybase' },
 ]
 
 const learnLinks = [
@@ -368,14 +373,6 @@ export default function Header() {
                                 {link.label}
                               </Link>
                             ))}
-                            <Link
-                              href="/compare"
-                              onClick={closeAll}
-                              className="flex items-center gap-1.5 px-2 py-1.5 text-sm font-semibold text-violet-600 hover:text-violet-700 transition-colors mt-1"
-                            >
-                              See all comparisons
-                              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
-                            </Link>
                           </div>
                         </div>
 
@@ -446,7 +443,7 @@ export default function Header() {
                         <p className="text-slate-300 text-xs italic leading-relaxed">
                           &ldquo;Full visibility from purchase order to manufacturing to sales.&rdquo;
                         </p>
-                        <p className="text-slate-500 text-[10px] mt-1">— Sheldon, FLFF</p>
+                        <p className="text-slate-500 text-[10px] mt-1">— Sheldon Ratuski, FLFF</p>
                         <Link
                           href="/customers"
                           onClick={closeAll}
@@ -599,7 +596,11 @@ export default function Header() {
                     <Link href="/compare/netsuite" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">vs NetSuite</Link>
                     <Link href="/compare/cin7" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">vs Cin7</Link>
                     <Link href="/compare/wherefour" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">vs Wherefour</Link>
-                    <Link href="/compare" onClick={closeAll} className="block pl-3 py-1.5 text-sm font-semibold text-primary-600">See all →</Link>
+                    <Link href="/compare/mrpeasy" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">vs MRPeasy</Link>
+                    <Link href="/compare/inflow" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">vs inFlow</Link>
+                    <Link href="/compare/sap-business-one" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">vs SAP Business One</Link>
+                    <Link href="/compare/odoo" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">vs Odoo</Link>
+                    <Link href="/compare/craftybase" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">vs CraftyBase</Link>
                   </div>
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Company</p>

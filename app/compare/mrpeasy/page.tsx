@@ -342,7 +342,6 @@ export default function MRPeasyCompare() {
                 { label: 'vs Fishbowl', href: '/compare/fishbowl' },
                 { label: 'vs Wherefour', href: '/compare/wherefour' },
                 { label: 'vs NetSuite', href: '/compare/netsuite' },
-                { label: 'See all comparisons', href: '/compare' },
               ].map((link) => (
                 <Link key={link.href} href={link.href} className="text-sm text-slate-400 hover:text-white border border-slate-700 hover:border-slate-500 px-4 py-1.5 rounded-full transition-colors">{link.label}</Link>
               ))}

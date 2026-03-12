@@ -1,7 +1,7 @@
 # BRAHMIN SOLUTIONS — COMPLETE SITEMAP
 
 **Last Updated:** March 6, 2026  
-**Total Pages:** 46  
+**Total Pages:** 45
 **Status:** Planning complete, ready for build
 
 ---
@@ -14,9 +14,9 @@
 | Features | 9 | ✅ Built |
 | Industries | 10 | ✅ All built (Mar 2026) |
 | Integrations | 1 | ✅ Built |
-| Compare | 14 | Partial (katana/wherefour/fishbowl/cin7/mrpeasy/netsuite/spreadsheets ✅, dear-systems/sap/odoo/inflow/craftybase/sortly TBD) |
+| Compare | 13 | ✅ All built (Mar 2026) except DEAR Systems (skipped — same as Cin7). No hub page. |
 | Resources | 8 | To build |
-| **TOTAL** | **46** | |
+| **TOTAL** | **45** | |
 
 ---
 
@@ -239,23 +239,21 @@ Description: Connect Brahmin with QuickBooks, Xero, Shopify, WooCommerce, BigCom
 
 ---
 
-## COMPARE (14 Pages)
+## COMPARE (13 Pages — no hub page)
 
 | Page | URL | H1 | In Nav? | Status |
 |------|-----|----|----|-----|
-| Compare Hub | `/compare` | See how Brahmin compares | ✅ | ✅ Built |
 | vs Katana | `/compare/katana` | Brahmin Solutions vs Katana | ✅ | ✅ Built (rebuilt March 2026) |
 | vs Fishbowl | `/compare/fishbowl` | Brahmin Solutions vs Fishbowl | ✅ | ✅ Built |
 | vs Cin7 | `/compare/cin7` | Brahmin Solutions vs Cin7 | ✅ | ✅ Built |
 | vs MRPeasy | `/compare/mrpeasy` | Brahmin Solutions vs MRPeasy | ✅ | ✅ Built (March 2026) |
 | vs Wherefour | `/compare/wherefour` | Brahmin Solutions vs Wherefour | ✅ | ✅ Built (March 2026) |
 | vs NetSuite | `/compare/netsuite` | Brahmin Solutions vs NetSuite | ✅ | ✅ Built (March 2026) |
-| vs DEAR Systems | `/compare/dear-systems` | Brahmin Solutions vs DEAR | Hub | ❌ Not built yet |
-| vs SAP Business One | `/compare/sap-business-one` | Brahmin Solutions vs SAP | Hub | ❌ Not built yet |
-| vs Odoo | `/compare/odoo` | Brahmin Solutions vs Odoo | Hub | ❌ Not built yet |
-| vs inFlow | `/compare/inflow` | Brahmin Solutions vs inFlow | Hub | ❌ Not built yet |
-| vs CraftyBase | `/compare/craftybase` | Brahmin Solutions vs CraftyBase | Hub | ❌ Not built yet |
-| vs Sortly | `/compare/sortly` | Brahmin Solutions vs Sortly | Hub | ❌ Not built yet |
+| vs DEAR Systems | `/compare/dear-systems` | Brahmin Solutions vs DEAR | Hub | ⏭️ Skipped (same as Cin7) |
+| vs SAP Business One | `/compare/sap-business-one` | Brahmin Solutions vs SAP | Hub | ✅ Built (March 2026) |
+| vs Odoo | `/compare/odoo` | Brahmin Solutions vs Odoo | Hub | ✅ Built (March 2026) |
+| vs inFlow | `/compare/inflow` | Brahmin Solutions vs inFlow | Hub | ✅ Built (March 2026) |
+| vs CraftyBase | `/compare/craftybase` | Brahmin Solutions vs CraftyBase | Hub | ✅ Built (March 2026) |
 | vs Spreadsheets | `/compare/spreadsheets` | Brahmin Solutions vs Spreadsheets | Hub | ✅ Built |
 
 ### Meta Tags
@@ -264,6 +262,22 @@ Description: Connect Brahmin with QuickBooks, Xero, Shopify, WooCommerce, BigCom
 ```
 Title: Compare Brahmin to Other MRP Software | Brahmin Solutions
 Description: See how Brahmin compares to Katana, Fishbowl, Cin7, NetSuite, and other inventory and MRP software.
+```
+
+---
+
+## PILLAR PAGES (1 Page)
+
+| Page | URL | H1 | Status |
+|------|-----|----|----|
+| MRP Software | `/mrp-software` | MRP software for small manufacturers | ✅ Built (March 2026) |
+
+### Meta Tags
+
+**MRP Software**
+```
+Title: MRP Software for Small Manufacturers | Brahmin Solutions
+Description: MRP software that helps small manufacturers plan production, manage materials, and stay on schedule. $199/month, no per-user fees. Go live in weeks.
 ```
 
 ---
@@ -377,7 +391,7 @@ Description: Get in touch with Brahmin Solutions. Book a demo, get support, or e
 │   ├── /industries/medical-devices
 │   └── /industries/health-wellness
 ├── /integrations                   # Integrations hub
-├── /compare                        # Compare hub
+├── /compare/                       # Compare pages (no hub — linked from nav)
 │   ├── /compare/katana
 │   ├── /compare/fishbowl
 │   ├── /compare/cin7
@@ -389,8 +403,8 @@ Description: Get in touch with Brahmin Solutions. Book a demo, get support, or e
 │   ├── /compare/odoo
 │   ├── /compare/inflow
 │   ├── /compare/craftybase
-│   ├── /compare/sortly
 │   └── /compare/spreadsheets
+├── /mrp-software                   # MRP Software pillar page
 ├── /pricing                        # Pricing
 ├── /demo                           # Book a demo
 ├── /blog                           # Blog (from Webflow)

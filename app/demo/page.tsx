@@ -87,10 +87,10 @@ export default function DemoPage() {
                   &ldquo;Within the first 30 minutes of the demo, I knew this was the right fit. They knew exactly what questions to ask and didn&apos;t waste our time.&rdquo;
                 </blockquote>
                 <div className="mt-4 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary-200 flex items-center justify-center text-primary-700 text-xs font-bold">SF</div>
+                  <div className="w-8 h-8 rounded-full bg-primary-200 flex items-center justify-center text-primary-700 text-xs font-bold">AR</div>
                   <div>
-                    <div className="text-sm font-semibold text-slate-900">Sarah F.</div>
-                    <div className="text-xs text-slate-500">Operations Manager, Sfoglini Pasta</div>
+                    <div className="text-sm font-semibold text-slate-900">Andrea R.</div>
+                    <div className="text-xs text-slate-500">Office Manager, Sfoglini Pasta</div>
                   </div>
                 </div>
               </div>

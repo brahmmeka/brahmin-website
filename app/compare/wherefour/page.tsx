@@ -398,7 +398,7 @@ export default function WherefourCompare() {
             <blockquote className="text-lg font-medium text-slate-800 mb-4 max-w-3xl mx-auto leading-relaxed">
               &ldquo;Full visibility from purchase order to manufacturing to sales — plus accurate cost of goods. And the support is exceptional.&rdquo;
             </blockquote>
-            <cite className="text-sm text-slate-500 not-italic">— Sheldon, FLFF</cite>
+            <cite className="text-sm text-slate-500 not-italic">— Sheldon Ratuski, FLFF</cite>
           </div>
         </div>
       </section>
@@ -438,7 +438,6 @@ export default function WherefourCompare() {
                 { label: 'vs Cin7', href: '/compare/cin7' },
                 { label: 'vs MRPeasy', href: '/compare/mrpeasy' },
                 { label: 'vs NetSuite', href: '/compare/netsuite' },
-                { label: 'See all comparisons', href: '/compare' },
               ].map((link) => (
                 <Link
                   key={link.href}

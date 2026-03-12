@@ -321,7 +321,7 @@ export default function Cin7Compare() {
             <blockquote className="text-lg font-medium text-slate-800 mb-4 max-w-3xl mx-auto leading-relaxed">
               &ldquo;Full visibility from purchase order to manufacturing to sales — plus accurate cost of goods. And the support is exceptional.&rdquo;
             </blockquote>
-            <cite className="text-sm text-slate-500 not-italic">— Sheldon, FLFF</cite>
+            <cite className="text-sm text-slate-500 not-italic">— Sheldon Ratuski, FLFF</cite>
           </div>
         </div>
       </section>
@@ -345,7 +345,6 @@ export default function Cin7Compare() {
                 { label: 'vs Wherefour', href: '/compare/wherefour' },
                 { label: 'vs MRPeasy', href: '/compare/mrpeasy' },
                 { label: 'vs NetSuite', href: '/compare/netsuite' },
-                { label: 'See all comparisons', href: '/compare' },
               ].map((link) => (
                 <Link key={link.href} href={link.href} className="text-sm text-slate-400 hover:text-white border border-slate-700 hover:border-slate-500 px-4 py-1.5 rounded-full transition-colors">{link.label}</Link>
               ))}

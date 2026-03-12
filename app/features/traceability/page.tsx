@@ -266,8 +266,8 @@ export default function TraceabilityPage() {
             "We have yearly inspections which include mock recalls and mass balance exercises, and both went the smoothest they ever have after using Brahmin Solutions."
           </p>
           <div>
-            <p className="font-semibold text-slate-900">Sfoglini Pasta</p>
-            <p className="text-sm text-slate-500">Food manufacturer</p>
+            <p className="font-semibold text-slate-900">Andrea Rodstand</p>
+            <p className="text-sm text-slate-500">Sfoglini Pasta</p>
           </div>
         </div>
       </section>

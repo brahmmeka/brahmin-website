@@ -22,12 +22,13 @@ const testimonials = {
   },
   flff: {
     quote: "Full visibility from purchase order to manufacturing to sales — plus accurate cost of goods. And the support is exceptional.",
-    name: "Sheldon",
+    name: "Sheldon Ratuski",
     company: "FLFF",
     logo: "/images/logos/FLFF.png",
   },
   sfoglini: {
     quote: "We have yearly inspections which include mock recalls and mass balance exercises, and both went the smoothest they ever have after using Brahmin Solutions. The time savings and reduced errors alone have been invaluable.",
+    name: "Andrea Rodstand",
     company: "Sfoglini Pasta",
     logo: "/images/logos/sfoglini.png",
   },

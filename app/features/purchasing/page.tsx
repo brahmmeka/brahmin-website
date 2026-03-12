@@ -100,7 +100,7 @@ function ReceivingMockup() {
         ].map((r) => (
           <div key={r.item} className="border border-slate-200 rounded-xl p-3">
             <p className="text-sm font-medium text-slate-900 mb-2">{r.item}</p>
-            <div className="grid grid-cols-2 gap-2 text-xs">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               <div><span className="text-slate-400">Ordered</span><p className="font-semibold text-slate-700">{r.ordered}</p></div>
               <div><span className="text-slate-400">Received</span><p className="font-semibold text-slate-700">{r.received}</p></div>
             </div>
@@ -130,7 +130,7 @@ export default function PurchasingPage() {
               <span className="text-slate-300">/</span>
               <span className="text-xs font-semibold text-amber-600">Purchasing</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
               Smarter purchasing and reordering
             </h1>
             <p className="mt-6 text-xl text-slate-500 leading-relaxed max-w-2xl">
@@ -154,7 +154,7 @@ export default function PurchasingPage() {
         <div className="container mx-auto px-6 max-w-7xl space-y-28">
 
           {/* Section 1 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-600 mb-4">Purchase orders</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
@@ -173,7 +173,7 @@ export default function PurchasingPage() {
           </div>
 
           {/* Section 2 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <ReceivingMockup />
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-600 mb-4">Receiving</span>
@@ -192,7 +192,7 @@ export default function PurchasingPage() {
           </div>
 
           {/* Section 3: Vendor management */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-600 mb-4">Vendor management</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
@@ -210,7 +210,7 @@ export default function PurchasingPage() {
             {/* Vendor mockup */}
             <div className="bg-white rounded-2xl border border-slate-200 shadow-xl p-5">
               <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Vendor — Grain Mill Co.</p>
-              <div className="grid grid-cols-2 gap-4 mb-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
                 {[
                   { label: 'Lead time', value: '7 days' },
                   { label: 'Open POs', value: '2' },

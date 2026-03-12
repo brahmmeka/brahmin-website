@@ -686,7 +686,8 @@ export default function PricingPageClient() {
         <div className="container mx-auto px-6 max-w-6xl">
           <h2 className="text-3xl font-bold text-slate-900 text-center mb-10 tracking-tight">Compare plans</h2>
           <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden">
-            <table className="w-full text-sm">
+          <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
+            <table className="w-full min-w-[640px] text-sm">
               <thead>
                 <tr className="border-b border-slate-200">
                   <th className="text-left px-6 py-4 text-slate-400 font-semibold w-[35%]">Feature</th>
@@ -721,6 +722,7 @@ export default function PricingPageClient() {
                 ))}
               </tbody>
             </table>
+          </div>
           </div>
           <p className="text-center text-xs text-slate-400 mt-4">All plans include Growth Kickstart onboarding, no per-transaction fees, no per-seat charges, and no contracts.</p>
         </div>

@@ -98,7 +98,7 @@ const faqCategories = [
       },
       {
         q: 'Does it integrate with QuickBooks?',
-        a: 'Yes. We support both QuickBooks Online and QuickBooks Desktop with two-way sync for invoices, purchase orders, payments, and COGS.',
+        a: 'Yes. We support both QuickBooks Online and QuickBooks Desktop. Brahmin syncs invoices, purchase orders, payments, and COGS into your accounting platform automatically.',
       },
       {
         q: 'Does it integrate with Shopify?',

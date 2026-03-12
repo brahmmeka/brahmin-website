@@ -194,7 +194,7 @@ export default function ManufacturingPage() {
                 </svg>
                 Manufacturing
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
                 Manufacturing inventory and production software
               </h1>
               <p className="mt-6 text-xl text-slate-500 leading-relaxed max-w-2xl">
@@ -285,7 +285,7 @@ export default function ManufacturingPage() {
         {/* Implementation */}
         <section className="py-section bg-slate-50">
           <div className="container mx-auto px-6 max-w-7xl">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <div>
                 <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">Implementation</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">

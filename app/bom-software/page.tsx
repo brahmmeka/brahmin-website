@@ -2,36 +2,37 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'MRP Software for Small Manufacturers | Brahmin Solutions',
+  title: 'Bill of Materials Software | BOM Management | Brahmin Solutions',
   description:
-    'MRP software that helps growing manufacturers plan production, manage inventory, and know their true costs. Starting from $199/month. Go live in weeks, not months.',
+    'Bill of materials software for manufacturers. Build multi-level BOMs, track real-time material costs, and price products based on actual data. Starting at $199/month. Go live in 3–6 weeks.',
   keywords: [
-    'mrp software',
-    'manufacturing software',
-    'material requirements planning',
-    'production planning software',
-    'mrp for small business',
-    'mrp system',
-    'manufacturing resource planning',
-    'cloud mrp software',
-    'mrp software for small manufacturers',
+    'bill of materials software',
+    'bom software',
+    'bom management software',
+    'bill of materials management',
+    'manufacturing bom software',
+    'bom costing software',
+    'multi-level bom',
+    'recipe management software',
+    'product costing software',
+    'bom for small manufacturers',
   ],
   alternates: {
-    canonical: 'https://brahminsolutions.com/mrp-software',
+    canonical: 'https://brahminsolutions.com/bom-software',
   },
   openGraph: {
-    title: 'MRP Software for Growing Manufacturers',
+    title: 'Bill of Materials Software for Manufacturers',
     description:
-      'Plan production, manage materials, and finally know your true costs — without enterprise complexity.',
-    url: 'https://brahminsolutions.com/mrp-software',
+      'Build single-level or multi-level BOMs, track material costs in real time, and price products based on actual data — not guesswork.',
+    url: 'https://brahminsolutions.com/bom-software',
     type: 'website',
     siteName: 'Brahmin Solutions',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MRP Software for Small Manufacturers | Brahmin Solutions',
+    title: 'Bill of Materials Software | BOM Management | Brahmin Solutions',
     description:
-      'Plan production, manage inventory, and know your true costs. Starting from $199/month. Go live in 3–6 weeks.',
+      'Build multi-level BOMs, track real-time material costs, and price products based on actual data. Starting at $199/month.',
   },
 }
 
@@ -39,26 +40,26 @@ const features = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
       </svg>
     ),
-    title: 'Bill of Materials (BOM)',
+    title: 'Multi-level BOMs',
     href: '/features/production',
     color: 'from-blue-500 to-indigo-600',
     description:
-      'Create recipes, formulas, and multi-level assemblies with accurate costing at every level. Define sub-assemblies, set yield percentages, and track material costs as supplier prices change. Always know what goes into every product — and what it actually costs to make.',
+      'Build recipes, formulas, and assemblies with unlimited nesting. Define sub-assemblies as their own BOMs, then reference them inside parent products. Changes to a sub-assembly automatically cascade through every product that uses it — no manual updates across dozens of spreadsheets.',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: 'Production scheduling',
+    title: 'Real-time cost rollup',
     href: '/features/production',
-    color: 'from-violet-500 to-purple-600',
+    color: 'from-cyan-500 to-blue-600',
     description:
-      'Schedule work orders, allocate resources, and spot bottlenecks before they cause delays. See which jobs are running, which are queued, and which are waiting on materials — so your whole team stays aligned without morning standup meetings.',
+      'See the true cost of every product the moment a supplier price changes. Brahmin recalculates material costs, labor, and overhead across every BOM that uses that ingredient or component — so you always know your actual margins, not last quarter\'s estimates.',
   },
   {
     icon: (
@@ -66,11 +67,23 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
       </svg>
     ),
-    title: 'Inventory tracking',
+    title: 'Material availability',
     href: '/features/inventory',
-    color: 'from-cyan-500 to-blue-600',
+    color: 'from-amber-500 to-orange-600',
     description:
-      'Real-time visibility into raw materials, work-in-progress, and finished goods across every warehouse, 3PL, and co-manufacturer. Track stock levels as orders ship, production runs complete, and shipments arrive — no more guessing what you have or where it is.',
+      'Before you start a production run, know exactly which materials are in stock, which are allocated to other orders, and which need to be purchased. Brahmin checks your BOM against real-time inventory so you never discover a shortage after production has already started.',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+      </svg>
+    ),
+    title: 'Sub-assembly management',
+    href: '/features/production',
+    color: 'from-rose-500 to-pink-600',
+    description:
+      'Break complex products into reusable sub-assemblies. A sauce, a dough base, a circuit board — define it once and use it across multiple finished goods. Track sub-assembly costs and inventory independently, then roll them up into the parent BOM automatically.',
   },
   {
     icon: (
@@ -78,11 +91,11 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
       </svg>
     ),
-    title: 'Purchase orders',
+    title: 'Integration with purchasing',
     href: '/features/purchasing',
-    color: 'from-amber-500 to-orange-600',
+    color: 'from-violet-500 to-purple-600',
     description:
-      'Auto-generate purchase orders when inventory hits reorder points. Track supplier lead times, compare vendor pricing, and manage receiving — so materials arrive before production needs them, not after.',
+      'When a BOM shows you need materials you don\'t have, create a purchase order directly from the shortage list. Brahmin connects your BOMs to purchasing so reorder points, lead times, and vendor pricing are always factored into material planning — no switching between systems.',
   },
   {
     icon: (
@@ -91,56 +104,44 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
       </svg>
     ),
-    title: 'Lot & batch tracking',
+    title: 'Lot tracking per BOM',
     href: '/features/traceability',
-    color: 'from-rose-500 to-pink-600',
-    description:
-      'Track lot numbers, expiration dates, and maintain full forward and backward traceability from raw materials to finished products. Generate recall reports in minutes instead of days. Essential for FDA-regulated industries like food, supplements, and cosmetics.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-      </svg>
-    ),
-    title: 'Costing & reporting',
-    href: '/features/production',
     color: 'from-emerald-500 to-teal-600',
     description:
-      'See your true production costs — materials, labor, overhead, and yield loss per unit. Stop guessing at margins and start pricing products based on real data. Identify your most profitable lines and the SKUs that are quietly losing money.',
+      'Track which lot numbers went into every production run. When a supplier issues a recall or an audit requires traceability, pull a complete lot genealogy in minutes — from raw material receipt through finished goods shipment. Essential for FDA-regulated manufacturers.',
   },
 ]
 
-const spreadsheetSigns = [
+const signs = [
   {
-    title: 'Multiple versions of the same spreadsheet',
+    title: 'You don\'t actually know what it costs to make each product',
     description:
-      'Inventory_FINAL_v3_updated.xlsx sounds familiar? When multiple people maintain their own copies, nobody knows which file has the right numbers. One wrong cell — a mistyped quantity, a deleted row, a formula that didn\'t copy correctly — can cascade errors across purchasing, production, and fulfillment. The time spent reconciling versions is time you\'ll never get back.',
+      'If your product costs are based on estimates from when you first launched — or rough calculations that haven\'t been updated since your last supplier price increase — you\'re making pricing decisions on outdated data. BOM software calculates costs in real time using actual material prices, labor rates, and overhead allocations. Many manufacturers discover that 10–20% of their SKUs are underpriced once they see accurate numbers.',
   },
   {
-    title: 'Stockouts that catch you off guard',
+    title: 'Multiple versions of the same BOM exist in different spreadsheets',
     description:
-      'Spreadsheets don\'t update themselves. If a stockout has ever surprised you because the count didn\'t match reality, you\'re making purchasing decisions on stale data. Real-time inventory tracking eliminates the gap between what your spreadsheet says and what\'s actually on the shelf — so you reorder based on facts, not guesswork.',
+      'Recipe_v3_FINAL_updated_JAN.xlsx sounds familiar? When your production team uses one version, purchasing uses another, and the owner has a third in their email, nobody knows which is correct. One wrong quantity — a mistyped unit conversion, a deleted row, a formula that broke when someone added a column — cascades errors into purchasing, production, and costing. BOM software gives you one source of truth that everyone works from.',
   },
   {
-    title: 'Can\'t tell a customer when their order will ship',
+    title: 'You discover you\'re missing materials after production starts',
     description:
-      'You shouldn\'t need to check three files and ask two people to answer a simple customer question. If you can\'t confirm an order status in under a minute, your system is costing you customer trust. Connected MRP ties orders to production schedules and inventory in one view, so the answer is always at your fingertips.',
+      'Nothing kills production efficiency like starting a batch and realizing halfway through that you\'re short on a key ingredient. Spreadsheets can\'t check BOMs against live inventory. BOM software cross-references every material requirement against what\'s actually on the shelf, what\'s allocated to other orders, and what\'s on order from suppliers — before you start the run.',
   },
   {
-    title: 'No idea what it actually costs to make each product',
+    title: 'Pricing is based on estimates from months or years ago',
     description:
-      'Material costs, labor, overhead, yield loss — if you\'re estimating instead of tracking, you might be losing money on products you think are profitable. Many manufacturers discover after implementing MRP that 10–20% of their SKUs are underpriced. Accurate costing doesn\'t just protect your margins — it changes which products you prioritize.',
+      'Raw material costs change constantly. If your selling prices are still based on cost estimates from six months ago, your margins may have eroded without you knowing it. BOM software recalculates product costs automatically when supplier prices change, so you can adjust pricing proactively instead of discovering margin compression at the end of the quarter.',
   },
   {
-    title: 'Month-end counts don\'t match your records',
+    title: 'Sub-assemblies make your BOMs impossible to manage',
     description:
-      'If your physical count regularly differs from your spreadsheet by more than a few percent, every purchasing and production decision you\'ve made that month was based on bad data. The variance compounds: you over-order some materials, run short on others, and spend days untangling the discrepancies instead of running production.',
+      'When a finished product contains sub-assemblies — a sauce that goes into three different products, a pre-mixed compound used across an entire product line — managing this in spreadsheets becomes exponentially complex. Change one sub-assembly and you need to update every parent BOM manually. BOM software handles multi-level structures natively: update the sub-assembly once, and every product that references it updates automatically.',
   },
   {
-    title: 'Hours spent on data entry instead of production',
+    title: 'You can\'t quickly see the cost impact when a supplier raises prices',
     description:
-      'Copying data between spreadsheets, emailing the warehouse for stock counts, manually creating purchase orders, re-keying the same information into QuickBooks — this busywork can consume 10–15 hours per week across a small team. That\'s time your people could spend on work that actually grows the business: improving production processes, building customer relationships, or developing new products.',
+      'A supplier emails you that their price is going up 12%. In a spreadsheet world, you\'d need to find every BOM that uses that material, recalculate costs, and figure out which finished goods are affected. With BOM software, you update the material cost once and instantly see the margin impact across every product — so you can decide which prices to adjust before the increase takes effect.',
   },
 ]
 
@@ -148,70 +149,98 @@ const industries = [
   {
     href: '/industries/food-beverage',
     title: 'Food & Beverage',
-    tag: 'Lot tracking & recalls',
+    tag: 'Recipe & lot tracking',
     color: 'from-orange-400 to-red-500',
-    description: 'Expiration dates, recipe management, and recall readiness.',
+    description: 'Recipe-based BOMs with yield tracking, allergen management, and FDA-compliant lot traceability.',
   },
   {
     href: '/industries/cosmetics',
     title: 'Cosmetics & Beauty',
-    tag: 'FDA compliance',
+    tag: 'Formula management',
     color: 'from-pink-400 to-rose-500',
-    description: 'Formula management, batch tracking, and compliance support.',
+    description: 'Formula BOMs with percentage-based ingredients, batch scaling, and regulatory compliance support.',
   },
   {
     href: '/industries/supplements',
     title: 'Supplements',
     tag: 'cGMP ready',
     color: 'from-green-400 to-emerald-500',
-    description: 'Lot traceability, CoA management, and quality control.',
+    description: 'Multi-level BOMs with CoA tracking, potency management, and full ingredient traceability.',
   },
   {
-    href: '/industries/electronics',
-    title: 'Electronics',
-    tag: 'Serial tracking',
+    href: '/industries/medical-devices',
+    title: 'Medical devices',
+    tag: 'FDA compliance',
     color: 'from-blue-400 to-indigo-500',
-    description: 'Serial numbers, multi-level BOMs, and component management.',
+    description: 'Component-level BOMs with serial tracking, revision control, and audit-ready documentation.',
   },
   {
     href: '/industries/manufacturing',
     title: 'General manufacturing',
-    tag: 'Full MRP',
+    tag: 'Full BOM management',
     color: 'from-violet-400 to-purple-500',
-    description: 'Production scheduling, inventory control, and shop floor management.',
+    description: 'Assembly BOMs, sub-assembly management, and real-time cost rollup for discrete manufacturers.',
   },
 ]
 
 const buyerQuestions = [
   {
-    question: 'How long will implementation take?',
+    question: 'Does the software support multi-level BOMs with sub-assemblies?',
     guidance:
-      'If the answer is measured in months, ask why. Modern cloud MRP systems go live in 3–6 weeks with a dedicated implementation manager guiding you through data migration, workflow setup, and team training. Long implementations usually mean the system is more complex than you need — or the vendor is understaffed on support.',
+      'If your products contain sub-assemblies or intermediate components, your BOM software needs to handle nesting natively. Ask whether sub-assemblies can be defined independently and referenced across multiple parent BOMs — and whether cost changes cascade automatically. Flat, single-level BOM tools won\'t scale as your products become more complex.',
   },
   {
-    question: 'What\'s the true total cost?',
+    question: 'How does it handle cost updates when supplier prices change?',
     guidance:
-      'Watch for per-user fees that punish you for growing, implementation fees that double the first-year cost, and mandatory consultant charges for basic configuration. A transparent vendor gives you one monthly price that covers your whole team — no surprises when you add a warehouse worker or a new admin.',
+      'The whole point of BOM software is accurate costing. Ask how quickly cost changes propagate: does updating a material price immediately recalculate every affected product, or do you need to run a manual update? Real-time cost rollup is the feature that separates useful BOM software from a glorified spreadsheet.',
   },
   {
-    question: 'Can my team use it without weeks of training?',
+    question: 'Can I check material availability before starting production?',
     guidance:
-      'Request a hands-on demo with your actual products, not just a polished sales presentation. Have your warehouse staff and production leads sit in. If the interface feels overwhelming in a demo environment, imagine what it\'s like at 7 AM on a busy production day when someone needs to receive a shipment.',
+      'Your BOM software should cross-reference material requirements against live inventory and open purchase orders before you commit to a production run. If you still need to check inventory manually before scheduling production, the software isn\'t doing its job.',
   },
   {
-    question: 'Does it integrate with my accounting software?',
+    question: 'Does it integrate with my accounting and inventory systems?',
     guidance:
-      'Native integration with QuickBooks or Xero is table stakes. The sync should push purchase orders, sales orders, invoices, and inventory values into your accounting software automatically. If syncing requires Zapier or a third-party connector, that\'s a yellow flag for reliability and data accuracy.',
+      'BOM software that exists in isolation creates the same data silos you\'re trying to eliminate. Look for native integration with QuickBooks or Xero for cost accounting, and make sure inventory levels sync automatically so BOM availability checks reflect reality — not yesterday\'s data.',
   },
   {
-    question: 'What support is included — and what costs extra?',
+    question: 'What lot tracking and traceability features are included?',
     guidance:
-      'Ask specifically: if I have a problem at 2 PM on a Tuesday, how quickly will a real person help me? Not a chatbot, not a ticket queue, not a help center article. The best MRP vendors include unlimited support and training in every plan — not as an upsell tier you have to negotiate for.',
+      'If you\'re in a regulated industry — food, supplements, cosmetics, medical devices — your BOM software needs to track which lots went into every production run. Ask about forward and backward traceability, recall report generation, and whether traceability is built in or requires a separate module at additional cost.',
   },
   {
-    question: 'Is this built for companies my size?',
+    question: 'How long will implementation take, and what support is included?',
     guidance:
-      'Enterprise software forced onto small manufacturers rarely works. You end up paying for features you\'ll never use — advanced HR modules, multi-currency treasury management, custom workflow engines — and fighting an interface designed for 500-person companies with dedicated IT departments. Look for a system purpose-built for manufacturers in the $500K–$50M revenue range.',
+      'BOM software should be operational in weeks, not months. Ask about data migration support, whether you get a dedicated implementation manager, and what happens after go-live. The best vendors include unlimited training and responsive human support in every plan — not as an upsell.',
+  },
+]
+
+const steps = [
+  {
+    title: 'Audit your current BOMs',
+    description:
+      'Gather every recipe, formula, and assembly list from every spreadsheet, binder, and team member\'s head. Document what you\'re making, what goes into it, and what it should cost. This is the foundation everything else builds on.',
+  },
+  {
+    title: 'Clean and standardize your data',
+    description:
+      'Standardize ingredient names, verify unit conversions, and reconcile quantities. If your spreadsheet says "flour" in three different rows with three different units, fix that before importing.',
+  },
+  {
+    title: 'Build your BOMs in the system',
+    description:
+      'Start with your highest-volume products. Define sub-assemblies first, then build them into parent BOMs. Your implementation manager will help structure multi-level BOMs for maximum accuracy.',
+  },
+  {
+    title: 'Connect your integrations',
+    description:
+      'Link your accounting software, e-commerce platform, and shipping tools. This ensures material costs, inventory levels, and sales data all flow into your BOM calculations.',
+  },
+  {
+    title: 'Go live and refine',
+    description:
+      'Start running production with your new BOMs. Compare calculated costs to actuals, adjust yield percentages, and fine-tune overhead allocations. Most manufacturers see accurate costing within the first two production cycles.',
   },
 ]
 
@@ -234,102 +263,64 @@ const testimonials = [
   },
   {
     quote:
-      'I\'m really happy with how fast we were able to set up Brahmin Solutions. It took us three months to get started with Katana, but Brahmin Solutions was ready in a week.',
-    name: 'Adam McFarlin',
-    company: 'Kalamazoo Candle Company',
-    highlight: 'Live in days, not months',
+      'Brahmin syncs to all our systems and handles batch tracking, order capture, and fulfillment — everything we need in one place.',
+    name: 'Ryan',
+    company: 'Chugach Chocolates',
+    highlight: 'Everything connected',
     color: 'from-blue-500 to-cyan-500',
-  },
-]
-
-const steps = [
-  {
-    title: 'Assess your needs',
-    description:
-      'Document what\'s working and what\'s broken. Your must-haves vs. nice-to-haves. This clarity helps you avoid paying for features you\'ll never use.',
-  },
-  {
-    title: 'Clean your data',
-    description:
-      'Clean up your product list, verify BOMs, reconcile inventory counts. Your MRP is only as good as the data in it.',
-  },
-  {
-    title: 'Configure and import',
-    description:
-      'Set up products, BOMs, warehouses, and integrations. If this requires a consultant, that\'s a red flag for ongoing complexity.',
-  },
-  {
-    title: 'Train your team',
-    description:
-      'Focus on daily workflows, not every feature. Most users only need 20% of the system to do 80% of their work.',
-  },
-  {
-    title: 'Go live and iterate',
-    description:
-      'Start with real orders. Edge cases will appear — that\'s normal. A good vendor helps you work through them quickly.',
   },
 ]
 
 const faqs = [
   {
-    question: 'What is MRP software?',
+    question: 'What is bill of materials (BOM) software?',
     answer:
-      'MRP (Material Requirements Planning) software helps manufacturers plan what materials they need, when to order them, and how to schedule production. It uses bills of materials and production schedules to calculate material requirements automatically, replacing manual spreadsheet calculations.',
+      'Bill of materials software helps manufacturers define, manage, and cost the list of raw materials, components, and sub-assemblies needed to produce a finished product. Instead of maintaining BOMs in spreadsheets, dedicated BOM software provides real-time cost rollup, material availability checks, version control, and integration with inventory, purchasing, and production systems.',
   },
   {
-    question: 'What\'s the difference between MRP and ERP?',
+    question: 'What is the difference between a single-level and multi-level BOM?',
     answer:
-      'MRP focuses on production planning and inventory management. ERP (Enterprise Resource Planning) is broader — it includes MRP functionality plus modules for accounting, HR, CRM, and more. For most growing manufacturers, a focused MRP system with integrations to existing tools is more practical and affordable than a full ERP.',
+      'A single-level BOM lists only the direct materials and components needed to make a product — one level deep. A multi-level BOM includes sub-assemblies that have their own BOMs, creating a nested structure. For example, a granola bar might have a single-level BOM, but a frozen meal with a separately prepared sauce would use a multi-level BOM where the sauce is a sub-assembly with its own ingredient list.',
   },
   {
-    question: 'How much does MRP software cost?',
+    question: 'How does BOM software calculate product costs?',
     answer:
-      'MRP software pricing varies widely. Enterprise systems can cost $50,000–$500,000+ for implementation plus ongoing fees. Modern cloud MRP systems designed for small and mid-sized manufacturers typically range from $300–$1,000/month or more depending on features, user count, and order volume. Brahmin Solutions starts at $199/month with no per-user fees.',
+      'BOM software calculates product costs by multiplying each material\'s quantity by its current purchase price, then adding labor and overhead allocations. When a supplier price changes, the system automatically recalculates the cost of every product that uses that material. This gives you real-time margin visibility instead of relying on estimates.',
   },
   {
-    question: 'How long does MRP implementation take?',
+    question: 'Can BOM software handle recipes and formulas?',
     answer:
-      'Enterprise MRP/ERP systems often take 6–18 months to implement. Cloud-based MRP systems built for small and mid-sized manufacturers can be implemented in 3–6 weeks. The key factors are data quality, system complexity, and the level of vendor support you receive.',
+      'Yes. In manufacturing, a "recipe" or "formula" is simply a BOM expressed differently — often using percentages, weights, or volumes instead of discrete unit counts. Brahmin Solutions supports recipe-based BOMs with yield tracking, batch scaling, and percentage-based formulations used in food, cosmetics, and supplement manufacturing.',
   },
   {
-    question: 'Do small manufacturers need MRP software?',
+    question: 'How is BOM software different from MRP software?',
     answer:
-      'If you\'re manufacturing products and managing inventory with spreadsheets, you\'ll likely benefit from MRP software. Common signs you\'ve outgrown spreadsheets include frequent stockouts, too much time spent on data entry, unclear production costs, and difficulty scaling operations. Most manufacturers see clear ROI within 2–3 months.',
+      'BOM management is one component of MRP (Material Requirements Planning) software. MRP goes further by using your BOMs along with sales orders and production schedules to calculate what materials you need to purchase and when. Think of BOM software as defining "what goes into each product," while MRP answers "what do I need to buy and make this week?" Brahmin Solutions includes both BOM management and full MRP functionality.',
   },
   {
-    question: 'What features should I look for in MRP software?',
+    question: 'Do I need BOM software if I only have simple products?',
     answer:
-      'Essential features include BOM management, inventory tracking, production scheduling, purchase order management, and reporting. Depending on your industry, you may also need lot and batch tracking, serial numbers, or specific compliance features. Prioritize ease of use — the best features are worthless if your team won\'t use them.',
+      'Even simple products benefit from BOM software if you want accurate costing. A candle with three ingredients still needs cost tracking as wax and fragrance prices change. The real question is whether you\'re confident in your product costs and margins. If the answer is no, BOM software pays for itself quickly — regardless of product complexity.',
   },
   {
-    question: 'Can MRP software integrate with QuickBooks?',
+    question: 'How much does BOM software cost?',
     answer:
-      'Most modern MRP systems integrate with QuickBooks Online and/or QuickBooks Desktop. This integration syncs purchase orders, sales orders, invoices, and inventory values between systems automatically. Brahmin Solutions offers native QuickBooks integration included in every plan.',
+      'Standalone BOM tools range from free (basic spreadsheet alternatives) to hundreds per month. Enterprise ERP systems with BOM modules can cost $50,000–$500,000+ to implement. Brahmin Solutions starts at $199/month with BOM management, inventory tracking, production scheduling, and purchasing included — no per-user fees, no implementation charges.',
   },
   {
-    question: 'Is cloud-based MRP better than on-premise?',
+    question: 'How long does it take to set up BOMs in the system?',
     answer:
-      'For most growing manufacturers, cloud-based MRP is the better choice. Benefits include no IT infrastructure to maintain, automatic updates, access from anywhere, lower upfront costs, and faster implementation. On-premise solutions may make sense for very large enterprises with specific security or customization requirements.',
+      'Most manufacturers have their core BOMs built and operational within the first two weeks of implementation. The full go-live process — including data migration, integration setup, and team training — typically takes 3–6 weeks with a dedicated implementation manager guiding you through each step.',
   },
   {
-    question: 'What industries use MRP software?',
+    question: 'Can BOM software track lot numbers for traceability?',
     answer:
-      'MRP software is used across manufacturing industries including food and beverage, cosmetics, supplements, electronics, apparel, and general manufacturing. Any business that transforms raw materials into finished products — and needs to manage that process — can benefit from MRP.',
+      'Yes. Brahmin Solutions tracks which lot numbers of each raw material went into every production run, providing full forward and backward traceability. This is essential for FDA-regulated industries like food, supplements, cosmetics, and medical devices, where you need to generate recall reports quickly during audits or quality events.',
   },
   {
-    question: 'How do I know if I\'ve outgrown spreadsheets?',
+    question: 'Does Brahmin Solutions integrate with QuickBooks?',
     answer:
-      'Common signs include managing multiple spreadsheet versions, experiencing unexpected stockouts, not knowing your true production costs, spending hours on data entry, and month-end inventory counts that don\'t match your records. If any of these sound familiar, it\'s time to evaluate MRP software.',
-  },
-  {
-    question: 'What is the best MRP software for small manufacturers?',
-    answer:
-      'The best MRP software for small manufacturers is one that covers core needs — inventory tracking, BOM management, production scheduling, and purchasing — without enterprise complexity. Look for fast implementation (weeks, not months), flat pricing without per-user fees, native integrations with QuickBooks and Shopify, and responsive human support. Brahmin Solutions is purpose-built for manufacturers with $500K–$50M in revenue and goes live in 3–6 weeks starting at $199/month.',
-  },
-  {
-    question: 'What is the difference between MRP and inventory management software?',
-    answer:
-      'Inventory management software tracks what you have in stock and where it is. MRP software goes further: it connects inventory to your bills of materials and production schedules to calculate what you need to buy and make — and when. MRP answers forward-looking questions like "do I have enough materials to fulfill next week\'s orders?" while basic inventory software only tells you what\'s on the shelf right now.',
+      'Yes. Brahmin Solutions offers native integration with QuickBooks Online. The integration syncs purchase orders, sales orders, invoices, and inventory values from Brahmin into your accounting software automatically — eliminating manual data entry and keeping your books accurate without extra work.',
   },
 ]
 
@@ -338,7 +329,7 @@ const softwareSchema = {
   '@type': 'SoftwareApplication',
   name: 'Brahmin Solutions',
   applicationCategory: 'BusinessApplication',
-  applicationSubCategory: 'Manufacturing Resource Planning (MRP)',
+  applicationSubCategory: 'Bill of Materials Software',
   operatingSystem: 'Web browser (any OS)',
   offers: {
     '@type': 'Offer',
@@ -350,14 +341,14 @@ const softwareSchema = {
     },
   },
   featureList: [
-    'Inventory management',
-    'Production tracking',
-    'Bill of materials (BOM)',
+    'Multi-level bill of materials',
+    'Real-time cost rollup',
+    'Material availability checking',
+    'Sub-assembly management',
     'Lot and batch traceability',
-    'B2B wholesale portal',
     'QuickBooks and Xero integration',
-    'Shopify integration',
-    'Mobile warehouse app',
+    'Production scheduling',
+    'Purchase order management',
   ],
   audience: {
     '@type': 'Audience',
@@ -369,8 +360,8 @@ const softwareSchema = {
   ],
   about: {
     '@type': 'Thing',
-    name: 'Material requirements planning',
-    sameAs: 'https://en.wikipedia.org/wiki/Material_requirements_planning',
+    name: 'Bill of materials',
+    sameAs: 'https://en.wikipedia.org/wiki/Bill_of_materials',
   },
 }
 
@@ -400,13 +391,13 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'MRP Software',
-      item: 'https://brahminsolutions.com/mrp-software',
+      name: 'Bill of materials software',
+      item: 'https://brahminsolutions.com/bom-software',
     },
   ],
 }
 
-export default function MRPSoftwarePage() {
+export default function BOMSoftwarePage() {
   return (
     <>
       <script
@@ -435,7 +426,7 @@ export default function MRPSoftwarePage() {
               </svg>
             </li>
             <li>
-              <span className="text-slate-700 font-medium">MRP Software</span>
+              <span className="text-slate-700 font-medium">Bill of materials software</span>
             </li>
           </ol>
         </div>
@@ -456,7 +447,7 @@ export default function MRPSoftwarePage() {
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-              MRP software for growing{' '}
+              Bill of materials software for{' '}
             </span>
             <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
               manufacturers
@@ -464,8 +455,9 @@ export default function MRPSoftwarePage() {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            You&apos;ve outgrown spreadsheets but you don&apos;t need a six-figure ERP system.
-            Plan production, manage materials, and finally know your true costs.
+            Know exactly what goes into every product — and what it costs. Build single-level
+            or multi-level BOMs, track material costs in real time, and price products based
+            on actual data, not guesswork.
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
@@ -506,10 +498,10 @@ export default function MRPSoftwarePage() {
             </h2>
             <ul className="space-y-3 text-slate-600">
               {[
-                'MRP software replaces spreadsheet guesswork with real-time material planning, production scheduling, and inventory tracking',
-                'The most important features for growing manufacturers: BOM management, production scheduling, inventory tracking, and accurate costing',
-                'Prioritize ease of use and fast implementation over feature count — the best system is the one your team actually uses',
-                'Modern cloud MRP goes live in 3–6 weeks starting from $199/month, vs. 6–18 months and six figures for enterprise systems',
+                'BOM software replaces spreadsheet-based recipes and formulas with a structured, version-controlled system that the whole team works from',
+                'The key differentiator: true cost visibility — finally know what every product actually costs to make, updated in real time as material prices change',
+                'Multi-level BOMs with sub-assemblies let you define a component once and reuse it across products, with automatic cost rollup',
+                'Modern cloud BOM software goes live in 3–6 weeks starting from $199/month, with no per-user fees and dedicated implementation support',
               ].map((item) => (
                 <li key={item} className="flex gap-3">
                   <span className="mt-1 flex-shrink-0">
@@ -527,25 +519,27 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 3: What is MRP software? ── */}
+      {/* ── Section 3: What is BOM software? ── */}
       <section className="py-section">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            What is MRP software?
+            What is bill of materials software?
           </h2>
 
           <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-            MRP (Material Requirements Planning) software helps manufacturers figure out
-            what materials they need, how much to order, and when to order — all based
-            on production schedules and customer demand.
+            A bill of materials (BOM) is the complete list of raw materials, components,
+            sub-assemblies, and quantities needed to manufacture a finished product. BOM
+            software is the system that manages these lists — and more importantly, connects
+            them to your inventory, purchasing, production, and costing data so everything
+            stays accurate and up to date.
           </p>
 
-          {/* Visual: 3 questions MRP answers */}
+          {/* Visual: BOM components */}
           <div className="grid sm:grid-cols-3 gap-4 my-10">
             {[
-              { gradient: 'from-blue-500 to-cyan-500', icon: '📦', text: 'What materials do I need?' },
-              { gradient: 'from-violet-500 to-purple-500', icon: '📊', text: 'Do I have enough in stock?' },
-              { gradient: 'from-amber-500 to-orange-500', icon: '🛒', text: 'When do I need to reorder?' },
+              { gradient: 'from-blue-500 to-cyan-500', icon: '📋', text: 'What goes into each product?' },
+              { gradient: 'from-violet-500 to-purple-500', icon: '💰', text: 'What does it actually cost?' },
+              { gradient: 'from-amber-500 to-orange-500', icon: '📦', text: 'Do I have the materials?' },
             ].map((item) => (
               <div key={item.text} className="relative group">
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity`} />
@@ -558,39 +552,39 @@ export default function MRPSoftwarePage() {
           </div>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            Instead of manually calculating requirements in spreadsheets, MRP software
-            does it automatically using your bills of materials and current inventory levels.
-            When these three questions are answered accurately and in real time, stockouts
-            drop, excess inventory shrinks, and your team stops spending hours on manual
-            calculations.
+            At its simplest, a BOM is a recipe. A food manufacturer lists ingredients and
+            quantities. A cosmetics company defines a formula with percentages. A hardware
+            manufacturer specifies components and sub-assemblies. The format varies by
+            industry, but the purpose is the same: define exactly what goes into a product
+            so you can make it consistently, cost it accurately, and purchase materials
+            intelligently.
           </p>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            Here&apos;s how it works in practice: you define your products using bills of
-            materials — the list of raw materials, components, and quantities needed to
-            make each finished good. When a sales order comes in or you schedule a
-            production run, the MRP engine checks your current inventory, factors in
-            what&apos;s already on order from suppliers, and calculates exactly what you need
-            to buy and when. It accounts for lead times, minimum order quantities, and
-            safety stock levels so you&apos;re never caught off guard.
+            BOM software takes this concept and makes it operational. Instead of a static
+            list in a spreadsheet, your BOMs become dynamic documents connected to live data.
+            When a supplier raises prices, your product costs update automatically. When you
+            receive a shipment, material availability recalculates across every BOM. When
+            you schedule a production run, the system checks whether you have enough of every
+            ingredient before you start — and tells you exactly what to order if you don&apos;t.
           </p>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            The concept originated in the 1960s when manufacturers first used computers
-            to calculate material requirements. By the 1980s, MRP II expanded to include
-            production scheduling and capacity planning. Today, modern cloud-based MRP
-            integrates with e-commerce, accounting, and shipping systems — giving growing
-            manufacturers capabilities that used to require enterprise-scale budgets.
+            For growing manufacturers, this shift from static to dynamic is transformative.
+            Instead of one person manually updating spreadsheets after every price change,
+            every production run, and every inventory adjustment, the system does it
+            continuously. Production managers see accurate costs. Purchasing knows what to
+            reorder. The owner can check margins on any product in seconds — without asking
+            anyone to pull numbers from three different files.
           </p>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            For small and mid-sized manufacturers, the shift from spreadsheets to MRP
-            software is transformative. Instead of one person holding all the knowledge
-            in their head — which raw materials are running low, which orders are behind
-            schedule, what each product actually costs to make — that information lives
-            in a shared system that the whole team can access. Production managers see
-            what&apos;s scheduled. Purchasing knows what to reorder. The owner can check
-            margins without asking five people for five spreadsheets.
+            The most powerful feature of modern BOM software is multi-level structure. A
+            finished product can reference sub-assemblies that have their own BOMs, which in
+            turn reference their own components. A frozen meal contains a sauce, which
+            contains a spice blend, which contains individual spices. Each level has its own
+            cost, yield percentage, and material requirements — and the system rolls
+            everything up into a single, accurate product cost automatically.
           </p>
 
           {/* Callout */}
@@ -603,56 +597,62 @@ export default function MRPSoftwarePage() {
                 </svg>
               </div>
               <p className="text-slate-700 font-medium text-sm leading-relaxed">
-                For manufacturers still on spreadsheets, the results are immediate:
-                fewer stockouts, less excess inventory, better scheduling, accurate
-                costing, and <strong>10–20 fewer hours per week</strong> on data entry.
+                True cost visibility is the BOM advantage. Manufacturers who switch from
+                spreadsheet BOMs to dedicated software typically discover that{' '}
+                <strong>10–20% of their products are priced below actual cost</strong> —
+                margin leaks they couldn&apos;t see without real-time cost rollup.
               </p>
             </div>
           </div>
 
           <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">
-            MRP vs. ERP: what&apos;s the difference?
+            Why spreadsheet BOMs don&apos;t scale
           </h3>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            <strong className="text-slate-900">MRP</strong> focuses on production planning
-            and inventory management — the core challenges on the shop floor.{' '}
-            <strong className="text-slate-900">ERP</strong> (Enterprise Resource Planning)
-            is broader: it includes MRP plus accounting, HR, CRM, and more.
+            Spreadsheets work fine when you have five products and stable material costs.
+            But as your product catalog grows, as supplier prices change, and as you add
+            sub-assemblies, the spreadsheet approach breaks down in predictable ways.
+            Formulas get overwritten. Versions diverge. Nobody trusts the numbers.
           </p>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            For most growing manufacturers, a focused MRP system is the better choice.
-            Full ERP systems are designed for large enterprises with dedicated IT teams
-            and six-figure budgets. They bundle dozens of modules — HR, payroll, CRM,
-            project management — that most small manufacturers will never configure, let
-            alone use. You end up paying for complexity that slows down your team instead
-            of helping them.
+            The core problem is that spreadsheets are disconnected from your other systems.
+            Your BOM spreadsheet doesn&apos;t know when inventory levels change, when a purchase
+            order arrives, or when a supplier updates their pricing. Every one of those
+            changes requires someone to manually update the spreadsheet — and every manual
+            update is an opportunity for error. Multiply that by dozens of products and
+            hundreds of materials, and you&apos;re spending hours on data entry that BOM
+            software handles automatically.
           </p>
 
           <p className="text-slate-600 leading-relaxed">
-            Modern MRP takes the opposite approach: it gives you the production planning,
-            inventory management, and purchasing features you actually need, with native
-            integrations to the tools you already use — QuickBooks for accounting, Shopify
-            for e-commerce, ShipStation for fulfillment. You keep what works and replace
-            only what&apos;s broken, without forcing a rip-and-replace of your entire tech stack.
+            The transition from spreadsheets to BOM software is often the first step in a
+            larger move toward{' '}
+            <Link href="/mrp-software" className="text-primary-600 hover:text-primary-700 font-medium">
+              MRP software
+            </Link>
+            {' '}— connecting your BOMs to production scheduling, inventory tracking, and
+            purchasing in a single system. But even on its own, accurate BOM management
+            delivers immediate ROI through better costing, fewer material shortages, and
+            less time spent reconciling spreadsheets.
           </p>
         </div>
       </section>
 
-      {/* ── Section 4: Signs you've outgrown spreadsheets ── */}
+      {/* ── Section 4: 6 signs you need BOM software ── */}
       <section className="py-section bg-slate-50">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            6 signs you&apos;ve outgrown spreadsheets
+            6 signs you need BOM software
           </h2>
           <p className="text-slate-600 mb-8 leading-relaxed">
-            Spreadsheets are a great starting point — they&apos;re flexible, familiar, and free.
-            But there&apos;s a point where they cost you more than they save.
+            Spreadsheet BOMs are a great starting point. But there&apos;s a point where
+            they cost you more in errors and lost time than dedicated software would cost per month.
           </p>
 
           <div className="space-y-3">
-            {spreadsheetSigns.map((sign, index) => (
+            {signs.map((sign, index) => (
               <details
                 key={sign.title}
                 className="bg-white rounded-2xl p-5 border border-slate-200 group hover:shadow-sm transition-shadow"
@@ -681,10 +681,10 @@ export default function MRPSoftwarePage() {
           </div>
 
           <p className="text-slate-600 mt-6 leading-relaxed">
-            Sound familiar? If three or more apply, MRP software would likely pay for
-            itself within a few months.{' '}
+            If three or more of these sound familiar, BOM software would likely pay for
+            itself within the first few months.{' '}
             <Link href="/compare/spreadsheets" className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center gap-1 group">
-              See the full comparison
+              See spreadsheets vs. Brahmin
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
@@ -700,10 +700,10 @@ export default function MRPSoftwarePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="text-2xl font-bold text-white mb-2">
-                Ready to ditch the spreadsheets?
+                Ready to know your true product costs?
               </h2>
               <p className="text-blue-100">
-                See how Brahmin works with your products in a 30-minute demo.
+                See how Brahmin builds BOMs with your actual products in a 30-minute demo.
               </p>
             </div>
             <Link
@@ -736,11 +736,11 @@ export default function MRPSoftwarePage() {
       <section className="py-section">
         <div className="container mx-auto px-6 max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
-            Key features to look for
+            Key features to look for in BOM software
           </h2>
           <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-            Not all MRP systems are equal. These are the features that matter most
-            for growing manufacturers.
+            Not all BOM tools are equal. These are the features that separate useful
+            software from a glorified spreadsheet.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -775,7 +775,7 @@ export default function MRPSoftwarePage() {
               </svg>
             </div>
             <div className="flex-1 text-center sm:text-left">
-              <p className="text-slate-900 font-semibold">Your MRP should connect to the tools you already use</p>
+              <p className="text-slate-900 font-semibold">Your BOMs should connect to the tools you already use</p>
               <p className="text-slate-500 text-sm">
                 QuickBooks, Xero, Shopify, WooCommerce, ShipStation, and more — natively integrated.
               </p>
@@ -790,15 +790,78 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 6: MRP by industry — colored top borders ── */}
+      {/* ── Section 6: How BOMs connect to everything ── */}
       <section className="py-section bg-slate-50">
-        <div className="container mx-auto px-6 max-w-5xl">
+        <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
-            MRP software for your industry
+            How BOMs connect to everything
           </h2>
           <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-            Whether you need FDA lot tracking for food production or serial numbers
-            for electronics, the right MRP software adapts to your workflow.
+            A BOM isn&apos;t just a recipe — it&apos;s the thread that ties your entire
+            manufacturing operation together.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: 'BOM + Inventory',
+                gradient: 'from-blue-500 to-cyan-500',
+                description:
+                  'Your BOM defines what materials each product needs. Connected to live inventory, it tells you whether you can fulfill an order right now — or what you\'re short on. No more starting production and discovering you\'re missing a key ingredient.',
+                link: '/features/inventory',
+                linkText: 'Inventory management',
+              },
+              {
+                title: 'BOM + Purchasing',
+                gradient: 'from-amber-500 to-orange-500',
+                description:
+                  'When a BOM reveals material shortages, purchasing should know immediately. Connected BOM and purchasing systems auto-generate purchase orders based on BOM requirements, lead times, and reorder points — so materials arrive before production needs them.',
+                link: '/features/purchasing',
+                linkText: 'Purchasing features',
+              },
+              {
+                title: 'BOM + Production',
+                gradient: 'from-violet-500 to-purple-500',
+                description:
+                  'Work orders pull directly from your BOMs. When you schedule a production run, the system allocates materials, calculates expected output based on yield percentages, and tracks actual vs. planned consumption — giving you data to improve efficiency over time.',
+                link: '/features/production',
+                linkText: 'Production tracking',
+              },
+              {
+                title: 'BOM + Costing',
+                gradient: 'from-emerald-500 to-teal-500',
+                description:
+                  'Every BOM is a cost equation. Material quantities multiplied by current prices, plus labor and overhead, equals your true product cost. When any input changes — a supplier price increase, a new labor rate — product costs recalculate automatically across every affected SKU.',
+                link: '/features/production',
+                linkText: 'Cost tracking',
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow">
+                <div className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-4 bg-gradient-to-r ${item.gradient} text-white`}>
+                  {item.title}
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">{item.description}</p>
+                <Link href={item.link} className="text-primary-600 text-sm font-medium inline-flex items-center gap-1 group">
+                  {item.linkText}
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 7: BOM software by industry ── */}
+      <section className="py-section">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
+            BOM software for your industry
+          </h2>
+          <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
+            Whether you manage recipes, formulas, or assemblies — the right BOM software
+            adapts to your product structure and compliance requirements.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -830,7 +893,75 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 7: Implementation comparison ── */}
+      {/* ── Section 8: Accurate costing — before/after ── */}
+      <section className="py-section bg-slate-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
+            Accurate costing: the BOM advantage
+          </h2>
+          <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
+            The difference between guessing your margins and knowing them comes
+            down to how you manage your BOMs.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Before */}
+            <div className="bg-white rounded-2xl p-8 border border-slate-200">
+              <div className="inline-block bg-red-50 text-red-600 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
+                Spreadsheet BOMs
+              </div>
+              <ul className="space-y-4">
+                {[
+                  { bold: 'Costs updated', rest: 'quarterly — if someone remembers' },
+                  { bold: 'Sub-assembly costs', rest: 'calculated manually in separate tabs' },
+                  { bold: 'Supplier price changes', rest: 'take weeks to propagate' },
+                  { bold: 'Margin visibility', rest: 'requires pulling data from multiple files' },
+                  { bold: 'Pricing decisions', rest: 'based on estimates, not actuals' },
+                ].map((item) => (
+                  <li key={item.bold} className="flex gap-3 text-slate-500">
+                    <span className="flex-shrink-0 w-5 h-5 bg-red-50 rounded-full flex items-center justify-center mt-0.5">
+                      <svg className="w-3 h-3 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </span>
+                    <span><strong className="text-slate-700">{item.bold}</strong> {item.rest}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* After */}
+            <div className="relative bg-white rounded-2xl overflow-hidden border-2 border-blue-200">
+              <div className="h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500" />
+              <div className="p-8">
+                <div className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
+                  Brahmin BOM software
+                </div>
+                <ul className="space-y-4">
+                  {[
+                    { bold: 'Costs update instantly', rest: 'when any material price changes' },
+                    { bold: 'Sub-assembly costs', rest: 'roll up automatically through every level' },
+                    { bold: 'Supplier price changes', rest: 'propagate across all BOMs immediately' },
+                    { bold: 'Margin visibility', rest: 'available per product in real time' },
+                    { bold: 'Pricing decisions', rest: 'based on actual, current production costs' },
+                  ].map((item) => (
+                    <li key={item.bold} className="flex gap-3 text-slate-500">
+                      <span className="flex-shrink-0 w-5 h-5 bg-emerald-50 rounded-full flex items-center justify-center mt-0.5">
+                        <svg className="w-3 h-3 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+                      </span>
+                      <span><strong className="text-slate-700">{item.bold}</strong> {item.rest}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 9: Implementation comparison ── */}
       <section className="py-section">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
@@ -838,16 +969,15 @@ export default function MRPSoftwarePage() {
           </h2>
           <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
             Implementation is where many manufacturers get burned. Enterprise vendors
-            quote 6–18 months, charge five or six figures for consultants, and leave you
-            with a system so complex your team avoids using it. Modern cloud MRP flips
-            that model entirely.
+            quote months, charge five or six figures for consultants, and leave you
+            with a system your team avoids using.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Enterprise */}
             <div className="bg-white rounded-2xl p-8 border border-slate-200">
               <div className="inline-block bg-slate-100 text-slate-500 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
-                Enterprise MRP / ERP
+                Enterprise ERP
               </div>
               <ul className="space-y-4">
                 {[
@@ -869,12 +999,12 @@ export default function MRPSoftwarePage() {
               </ul>
             </div>
 
-            {/* Modern cloud MRP */}
+            {/* Modern cloud */}
             <div className="relative bg-white rounded-2xl overflow-hidden border-2 border-blue-200">
               <div className="h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500" />
               <div className="p-8">
                 <div className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
-                  Modern cloud MRP
+                  Modern cloud BOM software
                 </div>
                 <ul className="space-y-4">
                   {[
@@ -927,69 +1057,16 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 7b: Common MRP implementation mistakes ── */}
+      {/* ── Section 10: How to evaluate BOM software ── */}
       <section className="py-section bg-slate-50">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            Common MRP implementation mistakes
+            How to evaluate BOM software
           </h2>
           <p className="text-slate-600 mb-8 leading-relaxed">
-            Most failed MRP implementations aren&apos;t caused by bad software — they&apos;re
-            caused by bad process. Here are the mistakes we see most often, and how to avoid them.
-          </p>
-
-          <div className="space-y-5">
-            {[
-              {
-                mistake: 'Buying more system than you need',
-                detail:
-                  'It\'s tempting to pick the MRP with the longest feature list. But every unused module adds complexity, slows adoption, and increases cost. Start with the features your team will use in the first 90 days — BOM management, inventory tracking, purchasing — and expand from there. The right system grows with you instead of overwhelming you on day one.',
-              },
-              {
-                mistake: 'Skipping data cleanup before migration',
-                detail:
-                  'Migrating messy spreadsheet data into a new system just gives you organized mess. Before going live, audit your item master: remove discontinued SKUs, verify unit conversions, reconcile on-hand quantities, and standardize naming conventions. Two days of cleanup saves two months of headaches.',
-              },
-              {
-                mistake: 'Not involving your floor team in the decision',
-                detail:
-                  'Owners and operations managers often select software without input from the people who\'ll use it daily — warehouse staff, production leads, purchasing coordinators. If the system feels unintuitive to them, adoption stalls. Include your floor team in demos and pilot testing. Their buy-in determines whether the software actually gets used.',
-              },
-              {
-                mistake: 'Underestimating the importance of support',
-                detail:
-                  'During evaluation, every vendor promises great support. After the contract is signed, some disappear behind ticket queues and chatbots. Ask for references from current customers in your industry. Ask how quickly a real person responds. The first six months after go-live are when you need support most — and when bad support costs you the most.',
-              },
-            ].map((item) => (
-              <div
-                key={item.mistake}
-                className="bg-white rounded-2xl p-5 border border-slate-200 hover:shadow-sm transition-shadow"
-              >
-                <h3 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
-                  <span className="flex-shrink-0 w-7 h-7 bg-red-50 rounded-lg flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                    </svg>
-                  </span>
-                  {item.mistake}
-                </h3>
-                <p className="text-slate-500 text-sm leading-relaxed ml-10">{item.detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Section 8: How to evaluate MRP software ── */}
-      <section className="py-section">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            How to evaluate MRP software
-          </h2>
-          <p className="text-slate-600 mb-8 leading-relaxed">
-            Choosing the wrong MRP system is expensive — not just in dollars, but in the
-            months your team spends fighting software instead of running production.
-            Ask every vendor these six questions.
+            Choosing the wrong tool is expensive — not just in dollars, but in the months
+            your team spends fighting software instead of running production. Ask every
+            vendor these six questions.
           </p>
 
           <div className="space-y-3">
@@ -1011,7 +1088,7 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 9: Testimonials — colored gradient accents ── */}
+      {/* ── Section 11: Testimonials ── */}
       <section className="py-section">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
@@ -1022,6 +1099,7 @@ export default function MRPSoftwarePage() {
             outdated systems to Brahmin.
           </p>
 
+          {/* TODO: Replace with BOM-specific testimonials when available */}
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial) => (
               <div
@@ -1060,7 +1138,7 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 10: FAQ ── */}
+      {/* ── Section 12: FAQ ── */}
       <section className="py-section bg-slate-50">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-12">
@@ -1094,7 +1172,7 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 11: Final CTA — dark gradient ── */}
+      {/* ── Section 13: Final CTA — dark gradient ── */}
       <section className="relative overflow-hidden bg-slate-900 py-24">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-violet-500/15 rounded-full blur-3xl" />
@@ -1102,12 +1180,13 @@ export default function MRPSoftwarePage() {
         <div className="relative max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Ready to see what MRP software can do for you?
+              Ready to know what your products actually cost?
             </span>
           </h2>
           <p className="text-lg text-slate-400 mb-10 leading-relaxed">
-            Join 300+ growing manufacturers who&apos;ve simplified their operations with
-            Brahmin. Starting from $199/month, no per-user fees, go live in weeks.
+            Join 300+ growing manufacturers who&apos;ve replaced spreadsheet BOMs with
+            real-time cost visibility. Starting from $199/month, no per-user fees,
+            go live in weeks.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link

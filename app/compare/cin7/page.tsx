@@ -105,7 +105,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; cin7: RowValue; note
   { feature: 'QuickBooks integration', brahmin: true, cin7: true },
   { feature: 'Shopify integration', brahmin: true, cin7: true, note: 'Cin7 Shopify sync has documented reliability issues' },
   { feature: 'ShipStation integration', brahmin: true, cin7: true },
-  { feature: 'Number of native integrations', brahmin: '8 native + 5,000+ via Zapier', cin7: '700+ (many gated by plan tier)', note: 'Brahmin native integrations are all two-way and included on every plan' },
+  { feature: 'Number of native integrations', brahmin: '8 native + 5,000+ via Zapier', cin7: '700+ (many gated by plan tier)', note: 'Brahmin native integrations are included on every plan' },
   // Platform
   { feature: 'B2B wholesale customer portal', brahmin: true, cin7: 'Add-on cost' },
   { feature: 'Mobile warehouse app', brahmin: 'Browser-based (no install)', cin7: true },
@@ -245,29 +245,31 @@ export default function Cin7Compare() {
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-3">Feature-by-feature breakdown</h2>
           </div>
+          <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
           <div className="rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-            <div className="grid grid-cols-[1fr_160px_160px] bg-slate-800 text-white text-sm font-semibold">
-              <div className="px-6 py-4">Feature</div>
-              <div className="px-6 py-4 text-center bg-emerald-700">Brahmin Solutions</div>
-              <div className="px-6 py-4 text-center">Cin7 Core</div>
+            <div className="grid grid-cols-[1fr_100px_100px] md:grid-cols-[1fr_160px_160px] bg-slate-800 text-white text-sm font-semibold">
+              <div className="px-3 md:px-6 py-4">Feature</div>
+              <div className="px-3 md:px-6 py-4 text-center bg-emerald-700">Brahmin Solutions</div>
+              <div className="px-3 md:px-6 py-4 text-center">Cin7 Core</div>
             </div>
             {tableGroups.map((group) => (
               <div key={group.label}>
-                <div className="px-6 py-3 bg-slate-100 border-y border-slate-200">
+                <div className="px-3 md:px-6 py-3 bg-slate-100 border-y border-slate-200">
                   <span className="text-xs font-semibold uppercase tracking-widest text-slate-500">{group.label}</span>
                 </div>
                 {group.rows.map((row) => (
-                  <div key={row.feature} className="grid grid-cols-[1fr_160px_160px] border-b border-slate-100 last:border-0 items-center hover:bg-slate-50 transition-colors">
-                    <div className="px-6 py-3.5">
+                  <div key={row.feature} className="grid grid-cols-[1fr_100px_100px] md:grid-cols-[1fr_160px_160px] border-b border-slate-100 last:border-0 items-center hover:bg-slate-50 transition-colors">
+                    <div className="px-3 md:px-6 py-3.5">
                       <span className="text-sm text-slate-700">{row.feature}</span>
                       {row.note && <p className="text-xs text-slate-400 mt-0.5">{row.note}</p>}
                     </div>
-                    <div className="px-6 py-3.5 bg-emerald-50/50 flex items-center justify-center"><Cell value={row.brahmin} /></div>
-                    <div className="px-6 py-3.5 flex items-center justify-center"><Cell value={row.cin7} /></div>
+                    <div className="px-3 md:px-6 py-3.5 bg-emerald-50/50 flex items-center justify-center"><Cell value={row.brahmin} /></div>
+                    <div className="px-3 md:px-6 py-3.5 flex items-center justify-center"><Cell value={row.cin7} /></div>
                   </div>
                 ))}
               </div>
             ))}
+          </div>
           </div>
           <p className="text-xs text-slate-400 mt-4 text-center">Cin7 data sourced from Capterra, G2, and cin7.com. Last updated March 2026.</p>
         </div>

@@ -7,10 +7,20 @@ const footerLinks = {
     { label: 'Integrations', href: '/integrations' },
     { label: 'Book a demo', href: '/demo' },
   ],
+  Solutions: [
+    { label: 'MRP software', href: '/mrp-software' },
+    { label: 'Inventory management', href: '/inventory-management-software' },
+    { label: 'Production planning', href: '/production-planning-software' },
+    { label: 'Manufacturing ERP', href: '/manufacturing-erp' },
+    { label: 'Lot tracking', href: '/lot-tracking-software' },
+    { label: 'Bill of materials', href: '/bom-software' },
+  ],
   Industries: [
     { label: 'Manufacturing', href: '/industries/manufacturing' },
     { label: 'Food & Beverage', href: '/industries/food-beverage' },
     { label: 'Wholesale Distribution', href: '/industries/wholesale-distribution' },
+    { label: 'Cosmetics & Beauty', href: '/industries/cosmetics' },
+    { label: 'Supplements', href: '/industries/supplements' },
   ],
   Compare: [
     { label: 'vs Spreadsheets', href: '/compare/spreadsheets' },
@@ -38,7 +48,7 @@ export default function Footer() {
     <footer className="bg-slate-900">
       <div className="container mx-auto px-6 max-w-7xl">
         {/* Top section */}
-        <div className="py-14 grid grid-cols-2 md:grid-cols-7 gap-x-8 gap-y-10">
+        <div className="py-14 grid grid-cols-2 md:grid-cols-8 gap-x-8 gap-y-10">
           {/* Brand col */}
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2">
@@ -50,7 +60,7 @@ export default function Footer() {
               <span className="text-base font-bold text-white">Brahmin Solutions</span>
             </Link>
             <p className="mt-4 text-sm text-slate-400 leading-relaxed max-w-xs">
-              Cloud-based MRP and inventory management for small to mid-sized manufacturers.
+              Cloud-based MRP and inventory management for growing manufacturers.
             </p>
             <div className="mt-5 space-y-1.5">
               <p className="text-xs text-slate-400">Starting at <span className="text-slate-300 font-semibold">$199/month</span></p>
@@ -72,7 +82,7 @@ export default function Footer() {
               <h3 className="text-xs font-semibold text-white uppercase tracking-widest mb-4">
                 {category}
               </h3>
-              <ul className={category === 'Compare' ? 'grid grid-cols-2 gap-x-6 gap-y-2.5' : 'space-y-2.5'}>
+              <ul className={category === 'Compare' ? 'grid grid-cols-2 gap-x-6 gap-y-2.5' : 'space-y-3'}>
                 {links.map((link) => (
                   <li key={link.href}>
                     <Link
@@ -96,7 +106,7 @@ export default function Footer() {
           <p className="text-xs text-slate-400">
             © {new Date().getFullYear()} Brahmin Solutions, Inc. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-6">
             <Link href="/privacy" className="text-xs text-slate-400 hover:text-slate-300 transition-colors">
               Privacy Policy
             </Link>

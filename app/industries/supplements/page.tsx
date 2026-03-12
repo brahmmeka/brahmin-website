@@ -110,7 +110,7 @@ export default function SupplementsPage() {
                 </svg>
                 Supplements &amp; Nutraceuticals
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
                 Supplement and nutraceutical manufacturing software
               </h1>
               <p className="mt-6 text-xl text-slate-500 leading-relaxed max-w-2xl">

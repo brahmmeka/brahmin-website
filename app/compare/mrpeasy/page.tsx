@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Brahmin Solutions vs MRPeasy | Comparison',
   description:
-    'See how Brahmin Solutions compares to MRPeasy. From $199/month with unlimited users vs $49/user — 5 users on MRPeasy Professional costs $345/month. Plus modern UI, native integrations with two-way sync, and real humans on support.',
+    'See how Brahmin Solutions compares to MRPeasy. From $199/month with unlimited users vs $49/user — 5 users on MRPeasy Professional costs $345/month. Plus modern UI, native integrations, and real humans on support.',
 }
 
 type RowValue = string | boolean
@@ -45,7 +45,7 @@ const mrpeasyShortfalls = [
   {
     icon: '🔌',
     headline: 'Limited integrations with one-way syncs',
-    body: 'MRPeasy offers roughly 14 native integrations, all with varying levels of sync quality. Brahmin has 8 deep, two-way native integrations — QuickBooks Online, Xero, Shopify, WooCommerce, BigCommerce, Faire, ShipStation, and SPS Commerce — plus 5,000+ apps via Zapier. The MRPeasy ShipStation integration is documented as one-way only, which creates data gaps manufacturers have to reconcile manually.',
+    body: 'MRPeasy offers roughly 14 native integrations, all with varying levels of sync quality. Brahmin has 8 deep native integrations — QuickBooks Online, Xero, Shopify, WooCommerce, BigCommerce, Faire, ShipStation, and SPS Commerce — plus 5,000+ apps via Zapier. Brahmin syncs data from your MRP into your accounting and sales platforms automatically. The MRPeasy ShipStation integration is documented as one-way only, which creates data gaps manufacturers have to reconcile manually.',
     quote: '"This works only okay as the information is one-way and if the condition is ever undone, that information cannot be pulled back from ShipStation." — MRPeasy customer, verified review',
   },
 ]
@@ -63,8 +63,8 @@ const brahminStrengths = [
   },
   {
     icon: '🔌',
-    headline: 'Native integrations with two-way sync.',
-    body: 'Brahmin connects natively to QuickBooks Online, Xero, Shopify, WooCommerce, BigCommerce, Faire, ShipStation, and SPS Commerce. All major integrations are two-way — changes flow in both directions without manual intervention. Plus 5,000+ apps via Zapier.',
+    headline: 'Native integrations that just work.',
+    body: 'Brahmin connects natively to QuickBooks Online, Xero, Shopify, WooCommerce, BigCommerce, Faire, ShipStation, and SPS Commerce. Data syncs from Brahmin into your accounting and sales platforms automatically — no manual intervention. Plus 5,000+ apps via Zapier.',
   },
   {
     icon: '📊',
@@ -101,7 +101,7 @@ const comparisonRows: { feature: string; brahmin: RowValue; mrpeasy: RowValue; n
   // Integrations
   { feature: 'QuickBooks integration', brahmin: true, mrpeasy: true },
   { feature: 'Shopify integration', brahmin: true, mrpeasy: true },
-  { feature: 'ShipStation integration (two-way)', brahmin: true, mrpeasy: false, note: 'MRPeasy ShipStation sync is one-way only' },
+  { feature: 'ShipStation integration', brahmin: true, mrpeasy: false, note: 'MRPeasy ShipStation sync is one-way only' },
   { feature: 'Number of native integrations', brahmin: '8 (+ 5,000+ via Zapier)', mrpeasy: '~14 (limited sync quality)' },
   // Platform
   { feature: 'Daily production dashboard', brahmin: true, mrpeasy: false, note: 'MRPeasy reviewers flag missing daily dashboard' },
@@ -123,7 +123,7 @@ const tableGroups = [
 const idealFor = [
   'You have 5+ users — Brahmin\'s per-tier pricing saves money immediately',
   'You want live phone support and a dedicated implementation manager',
-  'You need reliable two-way sync (not 14 limited, one-way connectors)',
+  'You need reliable native integrations (not 14 limited, one-way connectors)',
   'You want a modern UI your team will actually use without training sessions',
   'You need a real-time production dashboard, not reports you export to spreadsheets',
   'You need a B2B wholesale portal for your buyers',
@@ -161,7 +161,7 @@ export default function MRPeasyCompare() {
             MRPeasy charges $49–$149 per user per month. At 5 users on the Professional plan, that&apos;s $345/month — 72% more than Brahmin Starter with unlimited users. Here&apos;s the full comparison.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {['✓ Unlimited users from $199/mo', '✓ Native two-way integrations + Zapier', '✓ Live phone support', '✓ Dedicated implementation manager'].map((pill) => (
+            {['✓ Unlimited users from $199/mo', '✓ 8 native integrations + Zapier', '✓ Live phone support', '✓ Dedicated implementation manager'].map((pill) => (
               <span key={pill} className="bg-emerald-600/20 border border-emerald-500/30 text-emerald-300 text-sm px-4 py-1.5 rounded-full">{pill}</span>
             ))}
           </div>
@@ -222,7 +222,7 @@ export default function MRPeasyCompare() {
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-3">Where Brahmin excels</h2>
-            <p className="text-slate-500 max-w-2xl mx-auto">Flat pricing, real humans on support, two-way integrations, and a UI your team will actually use.</p>
+            <p className="text-slate-500 max-w-2xl mx-auto">Flat pricing, real humans on support, native integrations, and a UI your team will actually use.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {brahminStrengths.map((card) => (
@@ -242,29 +242,31 @@ export default function MRPeasyCompare() {
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-3">Feature-by-feature breakdown</h2>
           </div>
+          <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
           <div className="rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-            <div className="grid grid-cols-[1fr_160px_160px] bg-slate-800 text-white text-sm font-semibold">
-              <div className="px-6 py-4">Feature</div>
-              <div className="px-6 py-4 text-center bg-emerald-700">Brahmin Solutions</div>
-              <div className="px-6 py-4 text-center">MRPeasy</div>
+            <div className="grid grid-cols-[1fr_100px_100px] md:grid-cols-[1fr_160px_160px] bg-slate-800 text-white text-sm font-semibold">
+              <div className="px-3 md:px-6 py-4">Feature</div>
+              <div className="px-3 md:px-6 py-4 text-center bg-emerald-700">Brahmin Solutions</div>
+              <div className="px-3 md:px-6 py-4 text-center">MRPeasy</div>
             </div>
             {tableGroups.map((group) => (
               <div key={group.label}>
-                <div className="px-6 py-3 bg-slate-100 border-y border-slate-200">
+                <div className="px-3 md:px-6 py-3 bg-slate-100 border-y border-slate-200">
                   <span className="text-xs font-semibold uppercase tracking-widest text-slate-500">{group.label}</span>
                 </div>
                 {group.rows.map((row) => (
-                  <div key={row.feature} className="grid grid-cols-[1fr_160px_160px] border-b border-slate-100 last:border-0 items-center hover:bg-slate-50 transition-colors">
-                    <div className="px-6 py-3.5">
+                  <div key={row.feature} className="grid grid-cols-[1fr_100px_100px] md:grid-cols-[1fr_160px_160px] border-b border-slate-100 last:border-0 items-center hover:bg-slate-50 transition-colors">
+                    <div className="px-3 md:px-6 py-3.5">
                       <span className="text-sm text-slate-700">{row.feature}</span>
                       {row.note && <p className="text-xs text-slate-400 mt-0.5">{row.note}</p>}
                     </div>
-                    <div className="px-6 py-3.5 bg-emerald-50/50 flex items-center justify-center"><Cell value={row.brahmin} /></div>
-                    <div className="px-6 py-3.5 flex items-center justify-center"><Cell value={row.mrpeasy} /></div>
+                    <div className="px-3 md:px-6 py-3.5 bg-emerald-50/50 flex items-center justify-center"><Cell value={row.brahmin} /></div>
+                    <div className="px-3 md:px-6 py-3.5 flex items-center justify-center"><Cell value={row.mrpeasy} /></div>
                   </div>
                 ))}
               </div>
             ))}
+          </div>
           </div>
           <p className="text-xs text-slate-400 mt-4 text-center">MRPeasy data sourced from mrpeasy.com, Capterra, G2, and Software Advice. Last updated March 2026.</p>
         </div>

@@ -72,7 +72,7 @@ export default function DemoPage() {
               </ul>
 
               {/* Stats */}
-              <div className="mt-12 grid grid-cols-3 gap-4">
+              <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {stats.map((s) => (
                   <div key={s.l} className="bg-white rounded-2xl border border-slate-200 p-4 text-center shadow-sm">
                     <div className="text-2xl font-bold text-slate-900">{s.n}</div>
@@ -122,7 +122,7 @@ export default function DemoPage() {
                   <p className="text-sm text-slate-500 mb-8">No credit card required. We&apos;ll reach out within 1 business day.</p>
 
                   <form onSubmit={handleSubmit} className="space-y-5">
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 mb-1.5">
                           First name <span className="text-rose-500">*</span>
@@ -187,7 +187,7 @@ export default function DemoPage() {
                       />
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1.5">
                           Phone

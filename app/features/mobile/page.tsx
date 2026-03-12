@@ -125,7 +125,7 @@ function ScanMockup() {
             <p className="text-xs font-semibold text-emerald-700">Last scanned</p>
           </div>
           <p className="text-sm font-semibold text-slate-900">Organic Rolled Oats</p>
-          <div className="grid grid-cols-2 gap-2 mt-2 text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 text-xs">
             <div><span className="text-slate-400">Lot assigned</span><p className="font-semibold text-slate-700">LOT-2026-0342</p></div>
             <div><span className="text-slate-400">Quantity</span><p className="font-semibold text-slate-700">500 lbs</p></div>
           </div>
@@ -147,7 +147,7 @@ export default function MobilePage() {
               <span className="text-slate-300">/</span>
               <span className="text-xs font-semibold text-slate-600">Mobile App</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
               Manage inventory from anywhere
             </h1>
             <p className="mt-6 text-xl text-slate-500 leading-relaxed max-w-2xl">
@@ -171,7 +171,7 @@ export default function MobilePage() {
         <div className="container mx-auto px-6 max-w-7xl space-y-28">
 
           {/* Section 1 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-slate-600 mb-4">Shop floor & warehouse</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
@@ -190,7 +190,7 @@ export default function MobilePage() {
           </div>
 
           {/* Section 2 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <ScanMockup />
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-slate-600 mb-4">Scan to receive</span>
@@ -209,7 +209,7 @@ export default function MobilePage() {
           </div>
 
           {/* Section 3: Real-time sync */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-slate-600 mb-4">Real-time sync</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">

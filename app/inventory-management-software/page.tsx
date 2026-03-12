@@ -2,36 +2,36 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'MRP Software for Small Manufacturers | Brahmin Solutions',
+  title: 'Inventory Management Software for Manufacturers | Brahmin Solutions',
   description:
-    'MRP software that helps growing manufacturers plan production, manage inventory, and know their true costs. Starting from $199/month. Go live in weeks, not months.',
+    'Inventory management software built for manufacturers. Track raw materials, WIP, and finished goods in real time. Starting from $199/month. Go live in weeks.',
   keywords: [
-    'mrp software',
-    'manufacturing software',
-    'material requirements planning',
-    'production planning software',
-    'mrp for small business',
-    'mrp system',
-    'manufacturing resource planning',
-    'cloud mrp software',
-    'mrp software for small manufacturers',
+    'inventory management software',
+    'manufacturing inventory software',
+    'inventory tracking',
+    'warehouse management',
+    'inventory software for manufacturers',
+    'inventory control software',
+    'stock management software',
+    'manufacturing inventory management',
+    'cloud inventory software',
   ],
   alternates: {
-    canonical: 'https://brahminsolutions.com/mrp-software',
+    canonical: 'https://brahminsolutions.com/inventory-management-software',
   },
   openGraph: {
-    title: 'MRP Software for Growing Manufacturers',
+    title: 'Inventory Management Software for Manufacturers',
     description:
-      'Plan production, manage materials, and finally know your true costs — without enterprise complexity.',
-    url: 'https://brahminsolutions.com/mrp-software',
+      'Real-time inventory tracking for raw materials, WIP, and finished goods — built for manufacturers, not retailers.',
+    url: 'https://brahminsolutions.com/inventory-management-software',
     type: 'website',
     siteName: 'Brahmin Solutions',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MRP Software for Small Manufacturers | Brahmin Solutions',
+    title: 'Inventory Management Software for Manufacturers | Brahmin Solutions',
     description:
-      'Plan production, manage inventory, and know your true costs. Starting from $199/month. Go live in 3–6 weeks.',
+      'Track raw materials, WIP, and finished goods in real time. Starting from $199/month. Go live in 3–6 weeks.',
   },
 }
 
@@ -39,50 +39,14 @@ const features = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
-      </svg>
-    ),
-    title: 'Bill of Materials (BOM)',
-    href: '/features/production',
-    color: 'from-blue-500 to-indigo-600',
-    description:
-      'Create recipes, formulas, and multi-level assemblies with accurate costing at every level. Define sub-assemblies, set yield percentages, and track material costs as supplier prices change. Always know what goes into every product — and what it actually costs to make.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-      </svg>
-    ),
-    title: 'Production scheduling',
-    href: '/features/production',
-    color: 'from-violet-500 to-purple-600',
-    description:
-      'Schedule work orders, allocate resources, and spot bottlenecks before they cause delays. See which jobs are running, which are queued, and which are waiting on materials — so your whole team stays aligned without morning standup meetings.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
       </svg>
     ),
-    title: 'Inventory tracking',
+    title: 'Real-time inventory tracking',
     href: '/features/inventory',
     color: 'from-cyan-500 to-blue-600',
     description:
-      'Real-time visibility into raw materials, work-in-progress, and finished goods across every warehouse, 3PL, and co-manufacturer. Track stock levels as orders ship, production runs complete, and shipments arrive — no more guessing what you have or where it is.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-      </svg>
-    ),
-    title: 'Purchase orders',
-    href: '/features/purchasing',
-    color: 'from-amber-500 to-orange-600',
-    description:
-      'Auto-generate purchase orders when inventory hits reorder points. Track supplier lead times, compare vendor pricing, and manage receiving — so materials arrive before production needs them, not after.',
+      'See what\'s in stock across all locations — raw materials, WIP, and finished goods. No more walking to the warehouse to check. Stock levels update automatically as orders ship, production runs complete, and shipments arrive.',
   },
   {
     icon: (
@@ -95,7 +59,43 @@ const features = [
     href: '/features/traceability',
     color: 'from-rose-500 to-pink-600',
     description:
-      'Track lot numbers, expiration dates, and maintain full forward and backward traceability from raw materials to finished products. Generate recall reports in minutes instead of days. Essential for FDA-regulated industries like food, supplements, and cosmetics.',
+      'Track lot numbers, expiration dates, and supplier information for every item. Stay audit-ready and recall-capable at all times. Essential for FDA-regulated industries like food, supplements, and cosmetics.',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+      </svg>
+    ),
+    title: 'BOM integration',
+    href: '/features/production',
+    color: 'from-blue-500 to-indigo-600',
+    description:
+      'Automatically calculate material requirements based on your bills of materials. Know what you need before you run out. When you schedule production, the system checks inventory and flags shortages before they halt the line.',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+      </svg>
+    ),
+    title: 'Reorder alerts',
+    href: '/features/purchasing',
+    color: 'from-amber-500 to-orange-600',
+    description:
+      'Get notified when inventory hits reorder points. Auto-generate purchase orders so materials arrive before production needs them. Set custom thresholds per item, per location — and never scramble for a rush order again.',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
+      </svg>
+    ),
+    title: 'Multi-location support',
+    href: '/features/warehouse',
+    color: 'from-violet-500 to-purple-600',
+    description:
+      'Track inventory across warehouses, production floors, 3PLs, and co-manufacturers. Transfer stock between locations with full traceability. See what\'s where in real time — not after someone emails you a spreadsheet.',
   },
   {
     icon: (
@@ -103,126 +103,155 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
       </svg>
     ),
-    title: 'Costing & reporting',
+    title: 'Costing & valuation',
     href: '/features/production',
     color: 'from-emerald-500 to-teal-600',
     description:
-      'See your true production costs — materials, labor, overhead, and yield loss per unit. Stop guessing at margins and start pricing products based on real data. Identify your most profitable lines and the SKUs that are quietly losing money.',
+      'Know your true inventory value and cost of goods sold. FIFO, average, or standard costing — your choice. See exactly how material costs, labor, and overhead roll up into your finished goods so you can price with confidence.',
   },
 ]
 
-const spreadsheetSigns = [
+const warningSigns = [
   {
-    title: 'Multiple versions of the same spreadsheet',
+    title: 'You don\'t know what\'s in stock until someone checks',
     description:
-      'Inventory_FINAL_v3_updated.xlsx sounds familiar? When multiple people maintain their own copies, nobody knows which file has the right numbers. One wrong cell — a mistyped quantity, a deleted row, a formula that didn\'t copy correctly — can cascade errors across purchasing, production, and fulfillment. The time spent reconciling versions is time you\'ll never get back.',
+      'Walking to the warehouse to count materials isn\'t a system — it\'s a fire drill. Without real-time visibility, every production decision starts with "let me go check." That lag between what your records say and what\'s actually on the shelf creates a chain of bad decisions: ordering materials you already have, promising delivery dates you can\'t hit, and running production only to discover you\'re short on a key ingredient.',
   },
   {
-    title: 'Stockouts that catch you off guard',
+    title: 'Stockouts keep halting production',
     description:
-      'Spreadsheets don\'t update themselves. If a stockout has ever surprised you because the count didn\'t match reality, you\'re making purchasing decisions on stale data. Real-time inventory tracking eliminates the gap between what your spreadsheet says and what\'s actually on the shelf — so you reorder based on facts, not guesswork.',
+      'You\'ve run out of a key material mid-production more than once. Now you\'re expediting shipments at premium prices just to keep the line moving. Each emergency order costs 20–40% more than planned purchases, and the production downtime costs even more. Inventory software with reorder alerts catches shortages before they reach the floor — not after.',
   },
   {
-    title: 'Can\'t tell a customer when their order will ship',
+    title: 'Excess inventory is tying up cash',
     description:
-      'You shouldn\'t need to check three files and ask two people to answer a simple customer question. If you can\'t confirm an order status in under a minute, your system is costing you customer trust. Connected MRP ties orders to production schedules and inventory in one view, so the answer is always at your fingertips.',
+      'You\'re sitting on materials you don\'t need because "just in case" became your ordering strategy. That\'s working capital locked up in raw materials that could be sitting there for months. Real-time inventory data and consumption-based reorder points replace gut-feel ordering with data-driven decisions — so you buy what you need, when you need it.',
   },
   {
-    title: 'No idea what it actually costs to make each product',
+    title: 'WIP is a black hole',
     description:
-      'Material costs, labor, overhead, yield loss — if you\'re estimating instead of tracking, you might be losing money on products you think are profitable. Many manufacturers discover after implementing MRP that 10–20% of their SKUs are underpriced. Accurate costing doesn\'t just protect your margins — it changes which products you prioritize.',
+      'You know what raw materials came in. You know what finished goods shipped. But what\'s actually in production right now? No idea. Work-in-progress is where most manufacturers lose visibility — and where the real money is. Inventory software that tracks WIP shows you exactly what\'s on the floor, what stage it\'s in, and what it\'s worth at any given moment.',
   },
   {
-    title: 'Month-end counts don\'t match your records',
+    title: 'Your team spends hours on data entry',
     description:
-      'If your physical count regularly differs from your spreadsheet by more than a few percent, every purchasing and production decision you\'ve made that month was based on bad data. The variance compounds: you over-order some materials, run short on others, and spend days untangling the discrepancies instead of running production.',
+      'Updating spreadsheets, reconciling counts, emailing inventory updates between departments — your people are doing admin work instead of production work. Across a small team, this can consume 10–15 hours per week. That\'s time that goes straight back to production, quality, and customer service when inventory updates happen automatically.',
   },
   {
-    title: 'Hours spent on data entry instead of production',
+    title: 'Month-end counts are always wrong',
     description:
-      'Copying data between spreadsheets, emailing the warehouse for stock counts, manually creating purchase orders, re-keying the same information into QuickBooks — this busywork can consume 10–15 hours per week across a small team. That\'s time your people could spend on work that actually grows the business: improving production processes, building customer relationships, or developing new products.',
+      'Every physical inventory count reveals discrepancies. You\'ve stopped trusting your own records, which means every decision — purchasing, production scheduling, order promising — is based on data you don\'t believe. When your system of record can\'t be trusted, you\'re not really using a system at all. You\'re guessing with extra steps.',
   },
 ]
 
 const industries = [
   {
     href: '/industries/food-beverage',
-    title: 'Food & Beverage',
+    title: 'Food & beverage',
     tag: 'Lot tracking & recalls',
     color: 'from-orange-400 to-red-500',
-    description: 'Expiration dates, recipe management, and recall readiness.',
+    description: 'Expiration date tracking, FIFO rotation, recipe management, and one-click recall reports.',
   },
   {
     href: '/industries/cosmetics',
-    title: 'Cosmetics & Beauty',
+    title: 'Cosmetics & beauty',
     tag: 'FDA compliance',
     color: 'from-pink-400 to-rose-500',
-    description: 'Formula management, batch tracking, and compliance support.',
+    description: 'Formula management, batch tracking, ingredient traceability, and FDA compliance support.',
   },
   {
     href: '/industries/supplements',
     title: 'Supplements',
     tag: 'cGMP ready',
     color: 'from-green-400 to-emerald-500',
-    description: 'Lot traceability, CoA management, and quality control.',
-  },
-  {
-    href: '/industries/electronics',
-    title: 'Electronics',
-    tag: 'Serial tracking',
-    color: 'from-blue-400 to-indigo-500',
-    description: 'Serial numbers, multi-level BOMs, and component management.',
+    description: 'cGMP compliance, CoA tracking, lot traceability, and quality control workflows.',
   },
   {
     href: '/industries/manufacturing',
     title: 'General manufacturing',
-    tag: 'Full MRP',
+    tag: 'Full inventory control',
     color: 'from-violet-400 to-purple-500',
-    description: 'Production scheduling, inventory control, and shop floor management.',
+    description: 'WIP tracking, production scheduling, multi-location inventory, and shop floor management.',
+  },
+  {
+    href: '/industries/medical-devices',
+    title: 'Medical devices',
+    tag: 'UDI & compliance',
+    color: 'from-blue-400 to-indigo-500',
+    description: 'Serial number tracking, UDI compliance, component traceability, and audit-ready records.',
   },
 ]
 
 const buyerQuestions = [
   {
-    question: 'How long will implementation take?',
+    question: 'Is this built for manufacturers or retailers?',
     guidance:
-      'If the answer is measured in months, ask why. Modern cloud MRP systems go live in 3–6 weeks with a dedicated implementation manager guiding you through data migration, workflow setup, and team training. Long implementations usually mean the system is more complex than you need — or the vendor is understaffed on support.',
+      'Retail inventory software counts SKUs on shelves. Manufacturing needs raw materials, WIP, BOMs, and production workflows. Ask specifically how the system handles work-in-progress — if it can\'t, you\'re looking at retail software wearing a manufacturing label.',
+  },
+  {
+    question: 'How does it handle multi-location inventory?',
+    guidance:
+      'If you have materials in multiple warehouses, production areas, or 3PLs, you need real-time visibility across all of them — not separate systems to reconcile. Ask whether you can see consolidated stock levels and transfer between locations without exporting and importing spreadsheets.',
   },
   {
     question: 'What\'s the true total cost?',
     guidance:
-      'Watch for per-user fees that punish you for growing, implementation fees that double the first-year cost, and mandatory consultant charges for basic configuration. A transparent vendor gives you one monthly price that covers your whole team — no surprises when you add a warehouse worker or a new admin.',
-  },
-  {
-    question: 'Can my team use it without weeks of training?',
-    guidance:
-      'Request a hands-on demo with your actual products, not just a polished sales presentation. Have your warehouse staff and production leads sit in. If the interface feels overwhelming in a demo environment, imagine what it\'s like at 7 AM on a busy production day when someone needs to receive a shipment.',
+      'Watch for per-user fees, especially if warehouse staff need access. Implementation fees and consultant charges add up fast. A transparent vendor gives you one monthly price that covers your whole team — no surprises when you add a warehouse worker or a production lead.',
   },
   {
     question: 'Does it integrate with my accounting software?',
     guidance:
-      'Native integration with QuickBooks or Xero is table stakes. The sync should push purchase orders, sales orders, invoices, and inventory values into your accounting software automatically. If syncing requires Zapier or a third-party connector, that\'s a yellow flag for reliability and data accuracy.',
+      'Native integration with QuickBooks or Xero is table stakes. The sync should push purchase orders, inventory values, and cost of goods sold into your accounting software automatically. If syncing requires Zapier or manual exports, you\'ll spend hours on reconciliation every month.',
+  },
+  {
+    question: 'How long will implementation take?',
+    guidance:
+      'If the answer is measured in months, ask why. Modern cloud inventory software goes live in 3–6 weeks with a dedicated implementation manager. Long implementations usually mean the system is more complex than you need — or the vendor is understaffed on support.',
   },
   {
     question: 'What support is included — and what costs extra?',
     guidance:
-      'Ask specifically: if I have a problem at 2 PM on a Tuesday, how quickly will a real person help me? Not a chatbot, not a ticket queue, not a help center article. The best MRP vendors include unlimited support and training in every plan — not as an upsell tier you have to negotiate for.',
-  },
-  {
-    question: 'Is this built for companies my size?',
-    guidance:
-      'Enterprise software forced onto small manufacturers rarely works. You end up paying for features you\'ll never use — advanced HR modules, multi-currency treasury management, custom workflow engines — and fighting an interface designed for 500-person companies with dedicated IT departments. Look for a system purpose-built for manufacturers in the $500K–$50M revenue range.',
+      'When you have a receiving problem at 2 PM on a Tuesday, how quickly will a real person help? Not a chatbot. Not a ticket queue. Not a help center article. The best vendors include unlimited support and training in every plan — not as an upsell tier you have to negotiate for.',
   },
 ]
 
+const steps = [
+  {
+    title: 'Assess your needs',
+    description:
+      'What inventory types do you track? Raw materials, WIP, finished goods? Multiple locations? Lot tracking requirements? Document your must-haves vs. nice-to-haves so you don\'t pay for features you\'ll never use.',
+  },
+  {
+    title: 'Clean your data',
+    description:
+      'Export your current inventory list. Verify counts, consolidate duplicates, and standardize naming. Your new system is only as good as the data you put in. Two days of cleanup saves two months of headaches.',
+  },
+  {
+    title: 'Configure and import',
+    description:
+      'Set up locations, product categories, units of measure, and reorder points. Import your product list and opening balances. If this step requires a consultant, that\'s a red flag.',
+  },
+  {
+    title: 'Train your team',
+    description:
+      'Focus on daily workflows: receiving, transfers, production consumption, shipping. Most users only need 20% of features to do 80% of their work. Start simple and expand.',
+  },
+  {
+    title: 'Go live and iterate',
+    description:
+      'Start with real transactions. Edge cases will appear — that\'s normal. A good vendor helps you work through them quickly instead of pointing you to a knowledge base.',
+  },
+]
+
+/* TODO: Replace placeholder testimonials with real customer quotes */
 const testimonials = [
   {
     quote:
-      'Full visibility from purchase order to manufacturing to sales — plus accurate cost of goods. And the support is exceptional.',
+      'We went from walking to the warehouse to check stock to knowing exactly what we have in seconds. Production planning is actually possible now.',
     name: 'Sheldon Ratuski',
     company: 'FLFF',
-    highlight: 'True cost visibility',
-    color: 'from-violet-500 to-purple-500',
+    highlight: 'Real-time visibility',
+    color: 'from-blue-500 to-cyan-500',
   },
   {
     quote:
@@ -238,98 +267,60 @@ const testimonials = [
     name: 'Adam McFarlin',
     company: 'Kalamazoo Candle Company',
     highlight: 'Live in days, not months',
-    color: 'from-blue-500 to-cyan-500',
-  },
-]
-
-const steps = [
-  {
-    title: 'Assess your needs',
-    description:
-      'Document what\'s working and what\'s broken. Your must-haves vs. nice-to-haves. This clarity helps you avoid paying for features you\'ll never use.',
-  },
-  {
-    title: 'Clean your data',
-    description:
-      'Clean up your product list, verify BOMs, reconcile inventory counts. Your MRP is only as good as the data in it.',
-  },
-  {
-    title: 'Configure and import',
-    description:
-      'Set up products, BOMs, warehouses, and integrations. If this requires a consultant, that\'s a red flag for ongoing complexity.',
-  },
-  {
-    title: 'Train your team',
-    description:
-      'Focus on daily workflows, not every feature. Most users only need 20% of the system to do 80% of their work.',
-  },
-  {
-    title: 'Go live and iterate',
-    description:
-      'Start with real orders. Edge cases will appear — that\'s normal. A good vendor helps you work through them quickly.',
+    color: 'from-violet-500 to-purple-500',
   },
 ]
 
 const faqs = [
   {
-    question: 'What is MRP software?',
+    question: 'What is inventory management software?',
     answer:
-      'MRP (Material Requirements Planning) software helps manufacturers plan what materials they need, when to order them, and how to schedule production. It uses bills of materials and production schedules to calculate material requirements automatically, replacing manual spreadsheet calculations.',
+      'Inventory management software tracks what products and materials you have, where they\'re located, and when you need to reorder. For manufacturers, it handles raw materials, work-in-progress, and finished goods — not just retail SKUs. It replaces spreadsheets with real-time visibility into stock levels across every location.',
   },
   {
-    question: 'What\'s the difference between MRP and ERP?',
+    question: 'What\'s the difference between inventory management software and MRP?',
     answer:
-      'MRP focuses on production planning and inventory management. ERP (Enterprise Resource Planning) is broader — it includes MRP functionality plus modules for accounting, HR, CRM, and more. For most growing manufacturers, a focused MRP system with integrations to existing tools is more practical and affordable than a full ERP.',
+      'Inventory management focuses on tracking what you have — stock levels, locations, and reorder points. MRP (Material Requirements Planning) adds production scheduling and material planning based on demand and bills of materials. Many manufacturers need both — Brahmin includes inventory management and MRP in one system.',
   },
   {
-    question: 'How much does MRP software cost?',
+    question: 'How much does inventory management software cost?',
     answer:
-      'MRP software pricing varies widely. Enterprise systems can cost $50,000–$500,000+ for implementation plus ongoing fees. Modern cloud MRP systems designed for small and mid-sized manufacturers typically range from $300–$1,000/month or more depending on features, user count, and order volume. Brahmin Solutions starts at $199/month with no per-user fees.',
+      'Enterprise systems cost $50,000–$500,000+ for implementation alone. Modern cloud inventory software for manufacturers typically costs $199–$500/month with no implementation fees. Watch for per-user pricing — it gets expensive fast when warehouse staff need access. Brahmin Solutions starts at $199/month with flat pricing for your whole team.',
   },
   {
-    question: 'How long does MRP implementation take?',
+    question: 'Do manufacturers need different inventory software than retailers?',
     answer:
-      'Enterprise MRP/ERP systems often take 6–18 months to implement. Cloud-based MRP systems built for small and mid-sized manufacturers can be implemented in 3–6 weeks. The key factors are data quality, system complexity, and the level of vendor support you receive.',
+      'Yes. Retail software tracks finished goods on shelves. Manufacturers need to track raw materials, work-in-progress, and finished goods — plus handle BOMs, lot tracking, and production consumption. Most retail inventory software can\'t do this, which is why manufacturers end up with workarounds and spreadsheets alongside their "inventory system."',
   },
   {
-    question: 'Do small manufacturers need MRP software?',
+    question: 'What features should I look for in manufacturing inventory software?',
     answer:
-      'If you\'re manufacturing products and managing inventory with spreadsheets, you\'ll likely benefit from MRP software. Common signs you\'ve outgrown spreadsheets include frequent stockouts, too much time spent on data entry, unclear production costs, and difficulty scaling operations. Most manufacturers see clear ROI within 2–3 months.',
+      'Essential features: real-time tracking across locations, lot and batch tracking, BOM integration, reorder alerts, multi-location support, and native integration with your accounting software (QuickBooks or Xero). If you\'re in a regulated industry, add traceability and recall reporting to the list.',
   },
   {
-    question: 'What features should I look for in MRP software?',
+    question: 'Can inventory software track work-in-progress (WIP)?',
     answer:
-      'Essential features include BOM management, inventory tracking, production scheduling, purchase order management, and reporting. Depending on your industry, you may also need lot and batch tracking, serial numbers, or specific compliance features. Prioritize ease of use — the best features are worthless if your team won\'t use them.',
+      'Some can, but most retail-focused software cannot. Look for systems that understand manufacturing workflows — where raw materials become WIP, then finished goods. If a vendor can\'t explain how their system handles WIP, it\'s designed for retail.',
   },
   {
-    question: 'Can MRP software integrate with QuickBooks?',
+    question: 'How long does it take to implement inventory software?',
     answer:
-      'Most modern MRP systems integrate with QuickBooks Online and/or QuickBooks Desktop. This integration syncs purchase orders, sales orders, invoices, and inventory values between systems automatically. Brahmin Solutions offers native QuickBooks integration included in every plan.',
+      'Enterprise systems take 6–18 months. Cloud-based inventory software for manufacturers typically goes live in 3–6 weeks with a dedicated implementation manager. The key factors are data quality, system complexity, and the level of vendor support you receive.',
   },
   {
-    question: 'Is cloud-based MRP better than on-premise?',
+    question: 'Can inventory software integrate with QuickBooks?',
     answer:
-      'For most growing manufacturers, cloud-based MRP is the better choice. Benefits include no IT infrastructure to maintain, automatic updates, access from anywhere, lower upfront costs, and faster implementation. On-premise solutions may make sense for very large enterprises with specific security or customization requirements.',
+      'Most modern systems offer native QuickBooks integration. Brahmin syncs inventory values, purchase orders, and cost of goods sold from Brahmin into QuickBooks or Xero automatically. Native integration is included in every plan.',
   },
   {
-    question: 'What industries use MRP software?',
+    question: 'What\'s the difference between inventory software and ERP?',
     answer:
-      'MRP software is used across manufacturing industries including food and beverage, cosmetics, supplements, electronics, apparel, and general manufacturing. Any business that transforms raw materials into finished products — and needs to manage that process — can benefit from MRP.',
+      'Inventory software focuses on tracking stock levels, locations, and reorder points. ERP (Enterprise Resource Planning) includes inventory plus accounting, HR, CRM, and more. Most growing manufacturers need focused inventory and MRP software with integrations to existing tools — not a full ERP that bundles dozens of modules they\'ll never use.',
   },
   {
     question: 'How do I know if I\'ve outgrown spreadsheets?',
     answer:
-      'Common signs include managing multiple spreadsheet versions, experiencing unexpected stockouts, not knowing your true production costs, spending hours on data entry, and month-end inventory counts that don\'t match your records. If any of these sound familiar, it\'s time to evaluate MRP software.',
-  },
-  {
-    question: 'What is the best MRP software for small manufacturers?',
-    answer:
-      'The best MRP software for small manufacturers is one that covers core needs — inventory tracking, BOM management, production scheduling, and purchasing — without enterprise complexity. Look for fast implementation (weeks, not months), flat pricing without per-user fees, native integrations with QuickBooks and Shopify, and responsive human support. Brahmin Solutions is purpose-built for manufacturers with $500K–$50M in revenue and goes live in 3–6 weeks starting at $199/month.',
-  },
-  {
-    question: 'What is the difference between MRP and inventory management software?',
-    answer:
-      'Inventory management software tracks what you have in stock and where it is. MRP software goes further: it connects inventory to your bills of materials and production schedules to calculate what you need to buy and make — and when. MRP answers forward-looking questions like "do I have enough materials to fulfill next week\'s orders?" while basic inventory software only tells you what\'s on the shelf right now.',
+      'Key signs: no real-time visibility into stock levels, frequent stockouts or excess inventory, hours spent on data entry, inventory counts that don\'t match records, inability to track WIP, and difficulty answering simple questions like "do we have enough materials for this production run?" If three or more apply, you\'ve outgrown spreadsheets.',
   },
 ]
 
@@ -338,7 +329,7 @@ const softwareSchema = {
   '@type': 'SoftwareApplication',
   name: 'Brahmin Solutions',
   applicationCategory: 'BusinessApplication',
-  applicationSubCategory: 'Manufacturing Resource Planning (MRP)',
+  applicationSubCategory: 'Inventory Management Software',
   operatingSystem: 'Web browser (any OS)',
   offers: {
     '@type': 'Offer',
@@ -350,11 +341,11 @@ const softwareSchema = {
     },
   },
   featureList: [
-    'Inventory management',
-    'Production tracking',
-    'Bill of materials (BOM)',
+    'Real-time inventory tracking',
     'Lot and batch traceability',
-    'B2B wholesale portal',
+    'Bill of materials (BOM) integration',
+    'Multi-location warehouse management',
+    'Reorder alerts and purchase orders',
     'QuickBooks and Xero integration',
     'Shopify integration',
     'Mobile warehouse app',
@@ -369,8 +360,8 @@ const softwareSchema = {
   ],
   about: {
     '@type': 'Thing',
-    name: 'Material requirements planning',
-    sameAs: 'https://en.wikipedia.org/wiki/Material_requirements_planning',
+    name: 'Inventory management',
+    sameAs: 'https://en.wikipedia.org/wiki/Inventory_management_software',
   },
 }
 
@@ -400,13 +391,13 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'MRP Software',
-      item: 'https://brahminsolutions.com/mrp-software',
+      name: 'Inventory Management Software',
+      item: 'https://brahminsolutions.com/inventory-management-software',
     },
   ],
 }
 
-export default function MRPSoftwarePage() {
+export default function InventoryManagementSoftwarePage() {
   return (
     <>
       <script
@@ -435,7 +426,7 @@ export default function MRPSoftwarePage() {
               </svg>
             </li>
             <li>
-              <span className="text-slate-700 font-medium">MRP Software</span>
+              <span className="text-slate-700 font-medium">Inventory management software</span>
             </li>
           </ol>
         </div>
@@ -445,7 +436,7 @@ export default function MRPSoftwarePage() {
       <section className="relative overflow-hidden bg-slate-900 py-24 md:py-32">
         {/* Glow orbs */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-3xl" />
 
         <div className="relative max-w-4xl mx-auto text-center px-6">
@@ -456,16 +447,17 @@ export default function MRPSoftwarePage() {
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-              MRP software for growing{' '}
+              Inventory management software{' '}
             </span>
-            <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
-              manufacturers
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              for manufacturers
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            You&apos;ve outgrown spreadsheets but you don&apos;t need a six-figure ERP system.
-            Plan production, manage materials, and finally know your true costs.
+            You can&apos;t run production on guesswork. Know exactly what you have,
+            what&apos;s in progress, and what you need — with inventory software
+            built for manufacturers, not retailers.
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
@@ -506,10 +498,10 @@ export default function MRPSoftwarePage() {
             </h2>
             <ul className="space-y-3 text-slate-600">
               {[
-                'MRP software replaces spreadsheet guesswork with real-time material planning, production scheduling, and inventory tracking',
-                'The most important features for growing manufacturers: BOM management, production scheduling, inventory tracking, and accurate costing',
-                'Prioritize ease of use and fast implementation over feature count — the best system is the one your team actually uses',
-                'Modern cloud MRP goes live in 3–6 weeks starting from $199/month, vs. 6–18 months and six figures for enterprise systems',
+                'Inventory management software gives manufacturers real-time visibility into raw materials, WIP, and finished goods across every location',
+                'Key features for manufacturers: lot tracking, BOM integration, reorder alerts, multi-location support, and accounting sync',
+                'Most inventory software is built for retail — manufacturers need systems that understand production workflows and WIP tracking',
+                'Modern cloud inventory software starts from $199/month and goes live in 3–6 weeks with dedicated support',
               ].map((item) => (
                 <li key={item} className="flex gap-3">
                   <span className="mt-1 flex-shrink-0">
@@ -527,70 +519,61 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 3: What is MRP software? ── */}
+      {/* ── Section 3: What is inventory management software? ── */}
       <section className="py-section">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            What is MRP software?
+            What is inventory management software?
           </h2>
 
           <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-            MRP (Material Requirements Planning) software helps manufacturers figure out
-            what materials they need, how much to order, and when to order — all based
-            on production schedules and customer demand.
+            Inventory management software tracks what you have, where it is, and when
+            you need more. For manufacturers, that means visibility into three types
+            of inventory that most software ignores: raw materials, work-in-progress
+            (WIP), and finished goods.
           </p>
 
-          {/* Visual: 3 questions MRP answers */}
+          {/* Visual: 3 types of manufacturing inventory */}
           <div className="grid sm:grid-cols-3 gap-4 my-10">
             {[
-              { gradient: 'from-blue-500 to-cyan-500', icon: '📦', text: 'What materials do I need?' },
-              { gradient: 'from-violet-500 to-purple-500', icon: '📊', text: 'Do I have enough in stock?' },
-              { gradient: 'from-amber-500 to-orange-500', icon: '🛒', text: 'When do I need to reorder?' },
+              { gradient: 'from-amber-500 to-orange-500', icon: '🧱', text: 'Raw materials', subtext: 'What goes in' },
+              { gradient: 'from-blue-500 to-indigo-500', icon: '⚙️', text: 'Work-in-progress', subtext: 'What\'s being made' },
+              { gradient: 'from-emerald-500 to-teal-500', icon: '📦', text: 'Finished goods', subtext: 'What ships out' },
             ].map((item) => (
               <div key={item.text} className="relative group">
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity`} />
                 <div className="relative bg-white rounded-2xl border border-slate-200 p-6 text-center hover:shadow-md transition-shadow">
                   <div className="text-3xl mb-3">{item.icon}</div>
                   <p className="font-semibold text-slate-900 text-sm">{item.text}</p>
+                  <p className="text-slate-400 text-xs mt-1">{item.subtext}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            Instead of manually calculating requirements in spreadsheets, MRP software
-            does it automatically using your bills of materials and current inventory levels.
-            When these three questions are answered accurately and in real time, stockouts
-            drop, excess inventory shrinks, and your team stops spending hours on manual
-            calculations.
+            Most inventory software is designed for retail — tracking SKUs on shelves
+            and counting what&apos;s in the stockroom. That works fine for a store. But
+            manufacturers have a fundamentally different problem: raw materials become
+            WIP, WIP becomes finished goods, and at every stage the quantities, values,
+            and locations change. Retail software can&apos;t track that transformation.
           </p>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            Here&apos;s how it works in practice: you define your products using bills of
-            materials — the list of raw materials, components, and quantities needed to
-            make each finished good. When a sales order comes in or you schedule a
-            production run, the MRP engine checks your current inventory, factors in
-            what&apos;s already on order from suppliers, and calculates exactly what you need
-            to buy and when. It accounts for lead times, minimum order quantities, and
-            safety stock levels so you&apos;re never caught off guard.
+            Spreadsheets are where most small manufacturers start. They&apos;re flexible
+            and familiar. But they break down as you grow: no real-time updates, no
+            version control when multiple people edit the same file, no automatic
+            connection between purchasing, production, and sales. One wrong cell — a
+            mistyped quantity, a formula that didn&apos;t copy correctly — can cascade errors
+            across your entire operation.
           </p>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            The concept originated in the 1960s when manufacturers first used computers
-            to calculate material requirements. By the 1980s, MRP II expanded to include
-            production scheduling and capacity planning. Today, modern cloud-based MRP
-            integrates with e-commerce, accounting, and shipping systems — giving growing
-            manufacturers capabilities that used to require enterprise-scale budgets.
-          </p>
-
-          <p className="text-slate-600 mb-4 leading-relaxed">
-            For small and mid-sized manufacturers, the shift from spreadsheets to MRP
-            software is transformative. Instead of one person holding all the knowledge
-            in their head — which raw materials are running low, which orders are behind
-            schedule, what each product actually costs to make — that information lives
-            in a shared system that the whole team can access. Production managers see
-            what&apos;s scheduled. Purchasing knows what to reorder. The owner can check
-            margins without asking five people for five spreadsheets.
+            Manufacturing inventory software solves this by tracking every item as it
+            moves through your operation. When you receive raw materials, stock levels
+            update automatically. When production consumes those materials, inventory
+            adjusts in real time. When finished goods ship, your available stock reflects
+            it instantly. Everyone — purchasing, production, sales — sees the same numbers.
           </p>
 
           {/* Callout */}
@@ -604,55 +587,58 @@ export default function MRPSoftwarePage() {
               </div>
               <p className="text-slate-700 font-medium text-sm leading-relaxed">
                 For manufacturers still on spreadsheets, the results are immediate:
-                fewer stockouts, less excess inventory, better scheduling, accurate
-                costing, and <strong>10–20 fewer hours per week</strong> on data entry.
+                real-time stock visibility, fewer stockouts, less excess inventory,
+                and <strong>10–15 fewer hours per week</strong> on manual data entry.
               </p>
             </div>
           </div>
 
           <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">
-            MRP vs. ERP: what&apos;s the difference?
+            Inventory management vs. MRP vs. ERP
           </h3>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            <strong className="text-slate-900">MRP</strong> focuses on production planning
-            and inventory management — the core challenges on the shop floor.{' '}
-            <strong className="text-slate-900">ERP</strong> (Enterprise Resource Planning)
-            is broader: it includes MRP plus accounting, HR, CRM, and more.
+            <strong className="text-slate-900">Inventory management</strong> tracks what
+            you have and where it is.{' '}
+            <Link href="/mrp-software" className="text-primary-600 hover:text-primary-700 font-medium">
+              MRP (Material Requirements Planning)
+            </Link>{' '}
+            goes further — it connects inventory to your bills of materials and production
+            schedules to calculate what you need to buy and make, and when.{' '}
+            <strong className="text-slate-900">ERP</strong> is broader still: it bundles
+            inventory, MRP, accounting, HR, CRM, and more into one system.
           </p>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            For most growing manufacturers, a focused MRP system is the better choice.
-            Full ERP systems are designed for large enterprises with dedicated IT teams
-            and six-figure budgets. They bundle dozens of modules — HR, payroll, CRM,
-            project management — that most small manufacturers will never configure, let
-            alone use. You end up paying for complexity that slows down your team instead
-            of helping them.
+            For most growing manufacturers, the sweet spot is a system that combines
+            inventory management with MRP capabilities — tracking what you have today
+            while planning what you&apos;ll need tomorrow. Full ERP systems are designed for
+            large enterprises with dedicated IT teams and six-figure budgets. They
+            bundle modules you&apos;ll never use and charge you for the complexity.
           </p>
 
           <p className="text-slate-600 leading-relaxed">
-            Modern MRP takes the opposite approach: it gives you the production planning,
-            inventory management, and purchasing features you actually need, with native
-            integrations to the tools you already use — QuickBooks for accounting, Shopify
-            for e-commerce, ShipStation for fulfillment. You keep what works and replace
-            only what&apos;s broken, without forcing a rip-and-replace of your entire tech stack.
+            Brahmin combines real-time inventory tracking with production planning,
+            purchasing, and traceability in one system — with native integrations to
+            QuickBooks, Shopify, and ShipStation so you keep what works and replace
+            only what&apos;s broken.
           </p>
         </div>
       </section>
 
-      {/* ── Section 4: Signs you've outgrown spreadsheets ── */}
+      {/* ── Section 4: Signs you need inventory management software ── */}
       <section className="py-section bg-slate-50">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            6 signs you&apos;ve outgrown spreadsheets
+            6 signs you need inventory management software
           </h2>
           <p className="text-slate-600 mb-8 leading-relaxed">
-            Spreadsheets are a great starting point — they&apos;re flexible, familiar, and free.
-            But there&apos;s a point where they cost you more than they save.
+            Spreadsheets work until they don&apos;t. Here are the warning signs that
+            your current system is costing you more than it saves.
           </p>
 
           <div className="space-y-3">
-            {spreadsheetSigns.map((sign, index) => (
+            {warningSigns.map((sign, index) => (
               <details
                 key={sign.title}
                 className="bg-white rounded-2xl p-5 border border-slate-200 group hover:shadow-sm transition-shadow"
@@ -681,10 +667,10 @@ export default function MRPSoftwarePage() {
           </div>
 
           <p className="text-slate-600 mt-6 leading-relaxed">
-            Sound familiar? If three or more apply, MRP software would likely pay for
-            itself within a few months.{' '}
+            Sound familiar? If three or more apply, inventory software would likely pay
+            for itself within a few months.{' '}
             <Link href="/compare/spreadsheets" className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center gap-1 group">
-              See the full comparison
+              See how inventory software compares to spreadsheets
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
@@ -700,7 +686,7 @@ export default function MRPSoftwarePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="text-2xl font-bold text-white mb-2">
-                Ready to ditch the spreadsheets?
+                Ready to see your inventory in real time?
               </h2>
               <p className="text-blue-100">
                 See how Brahmin works with your products in a 30-minute demo.
@@ -732,15 +718,15 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 5: Key features — colored gradient icons ── */}
+      {/* ── Section 6: Key features — colored gradient icons ── */}
       <section className="py-section">
         <div className="container mx-auto px-6 max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
             Key features to look for
           </h2>
           <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-            Not all MRP systems are equal. These are the features that matter most
-            for growing manufacturers.
+            Not all inventory systems are built for manufacturing. These are the features
+            that matter most when you&apos;re tracking raw materials, WIP, and finished goods.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -775,7 +761,7 @@ export default function MRPSoftwarePage() {
               </svg>
             </div>
             <div className="flex-1 text-center sm:text-left">
-              <p className="text-slate-900 font-semibold">Your MRP should connect to the tools you already use</p>
+              <p className="text-slate-900 font-semibold">Your inventory software should connect to the tools you already use</p>
               <p className="text-slate-500 text-sm">
                 QuickBooks, Xero, Shopify, WooCommerce, ShipStation, and more — natively integrated.
               </p>
@@ -790,15 +776,16 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 6: MRP by industry — colored top borders ── */}
+      {/* ── Section 8: Inventory software by industry ── */}
       <section className="py-section bg-slate-50">
         <div className="container mx-auto px-6 max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
-            MRP software for your industry
+            Inventory software for your industry
           </h2>
           <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-            Whether you need FDA lot tracking for food production or serial numbers
-            for electronics, the right MRP software adapts to your workflow.
+            Different industries have different inventory requirements. Whether you
+            need expiration tracking for food or serial numbers for medical devices,
+            the right software adapts to your workflow.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -830,7 +817,7 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 7: Implementation comparison ── */}
+      {/* ── Section 9: Implementation comparison ── */}
       <section className="py-section">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
@@ -839,15 +826,14 @@ export default function MRPSoftwarePage() {
           <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
             Implementation is where many manufacturers get burned. Enterprise vendors
             quote 6–18 months, charge five or six figures for consultants, and leave you
-            with a system so complex your team avoids using it. Modern cloud MRP flips
-            that model entirely.
+            with a system so complex your team avoids using it.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Enterprise */}
             <div className="bg-white rounded-2xl p-8 border border-slate-200">
               <div className="inline-block bg-slate-100 text-slate-500 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
-                Enterprise MRP / ERP
+                Enterprise inventory / ERP
               </div>
               <ul className="space-y-4">
                 {[
@@ -869,19 +855,19 @@ export default function MRPSoftwarePage() {
               </ul>
             </div>
 
-            {/* Modern cloud MRP */}
+            {/* Modern cloud */}
             <div className="relative bg-white rounded-2xl overflow-hidden border-2 border-blue-200">
               <div className="h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500" />
               <div className="p-8">
                 <div className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
-                  Modern cloud MRP
+                  Modern cloud inventory software
                 </div>
                 <ul className="space-y-4">
                   {[
                     { bold: 'Go live in 3–6 weeks', rest: 'with dedicated support' },
                     { bold: 'Starting from $199/month', rest: '— no surprise fees' },
-                    { bold: 'Self-service setup', rest: 'with implementation manager' },
-                    { bold: 'Flat pricing', rest: '— your whole team included' },
+                    { bold: 'Self-service setup', rest: 'with a dedicated implementation manager' },
+                    { bold: 'Flat pricing', rest: '— your whole team is included' },
                     { bold: 'Purpose-built', rest: 'for $500K–$50M manufacturers' },
                   ].map((item) => (
                     <li key={item.bold} className="flex gap-3 text-slate-500">
@@ -927,68 +913,15 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 7b: Common MRP implementation mistakes ── */}
+      {/* ── Section 10: How to evaluate inventory software ── */}
       <section className="py-section bg-slate-50">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            Common MRP implementation mistakes
+            How to evaluate inventory software
           </h2>
           <p className="text-slate-600 mb-8 leading-relaxed">
-            Most failed MRP implementations aren&apos;t caused by bad software — they&apos;re
-            caused by bad process. Here are the mistakes we see most often, and how to avoid them.
-          </p>
-
-          <div className="space-y-5">
-            {[
-              {
-                mistake: 'Buying more system than you need',
-                detail:
-                  'It\'s tempting to pick the MRP with the longest feature list. But every unused module adds complexity, slows adoption, and increases cost. Start with the features your team will use in the first 90 days — BOM management, inventory tracking, purchasing — and expand from there. The right system grows with you instead of overwhelming you on day one.',
-              },
-              {
-                mistake: 'Skipping data cleanup before migration',
-                detail:
-                  'Migrating messy spreadsheet data into a new system just gives you organized mess. Before going live, audit your item master: remove discontinued SKUs, verify unit conversions, reconcile on-hand quantities, and standardize naming conventions. Two days of cleanup saves two months of headaches.',
-              },
-              {
-                mistake: 'Not involving your floor team in the decision',
-                detail:
-                  'Owners and operations managers often select software without input from the people who\'ll use it daily — warehouse staff, production leads, purchasing coordinators. If the system feels unintuitive to them, adoption stalls. Include your floor team in demos and pilot testing. Their buy-in determines whether the software actually gets used.',
-              },
-              {
-                mistake: 'Underestimating the importance of support',
-                detail:
-                  'During evaluation, every vendor promises great support. After the contract is signed, some disappear behind ticket queues and chatbots. Ask for references from current customers in your industry. Ask how quickly a real person responds. The first six months after go-live are when you need support most — and when bad support costs you the most.',
-              },
-            ].map((item) => (
-              <div
-                key={item.mistake}
-                className="bg-white rounded-2xl p-5 border border-slate-200 hover:shadow-sm transition-shadow"
-              >
-                <h3 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
-                  <span className="flex-shrink-0 w-7 h-7 bg-red-50 rounded-lg flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                    </svg>
-                  </span>
-                  {item.mistake}
-                </h3>
-                <p className="text-slate-500 text-sm leading-relaxed ml-10">{item.detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Section 8: How to evaluate MRP software ── */}
-      <section className="py-section">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            How to evaluate MRP software
-          </h2>
-          <p className="text-slate-600 mb-8 leading-relaxed">
-            Choosing the wrong MRP system is expensive — not just in dollars, but in the
-            months your team spends fighting software instead of running production.
+            Choosing the wrong inventory system is expensive — not just in dollars, but
+            in the months your team spends fighting software instead of running production.
             Ask every vendor these six questions.
           </p>
 
@@ -1011,15 +944,16 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 9: Testimonials — colored gradient accents ── */}
+      {/* ── Section 11: Testimonials ── */}
+      {/* TODO: Replace placeholder testimonials with real customer quotes focused on inventory */}
       <section className="py-section">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
             What manufacturers say after switching
           </h2>
           <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-            Real results from manufacturers who moved from spreadsheets and
-            outdated systems to Brahmin.
+            Real results from manufacturers who replaced spreadsheets and
+            disconnected systems with Brahmin.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -1060,7 +994,7 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 10: FAQ ── */}
+      {/* ── Section 12: FAQ ── */}
       <section className="py-section bg-slate-50">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-12">
@@ -1094,15 +1028,15 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 11: Final CTA — dark gradient ── */}
+      {/* ── Section 13: Final CTA — dark gradient ── */}
       <section className="relative overflow-hidden bg-slate-900 py-24">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-violet-500/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl" />
 
         <div className="relative max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Ready to see what MRP software can do for you?
+              Ready to see your inventory in real time?
             </span>
           </h2>
           <p className="text-lg text-slate-400 mb-10 leading-relaxed">

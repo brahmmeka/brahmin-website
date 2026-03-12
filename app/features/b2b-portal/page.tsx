@@ -131,7 +131,7 @@ export default function B2BPortalPage() {
               <span className="text-slate-300">/</span>
               <span className="text-xs font-semibold text-indigo-600">B2B Portal</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
               24/7 wholesale ordering portal
             </h1>
             <p className="mt-6 text-xl text-slate-500 leading-relaxed max-w-2xl">
@@ -155,7 +155,7 @@ export default function B2BPortalPage() {
         <div className="container mx-auto px-6 max-w-7xl space-y-28">
 
           {/* Section 1 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-indigo-600 mb-4">Self-service ordering</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
@@ -174,7 +174,7 @@ export default function B2BPortalPage() {
           </div>
 
           {/* Section 2 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <PricingMockup />
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-indigo-600 mb-4">Custom pricing</span>
@@ -193,7 +193,7 @@ export default function B2BPortalPage() {
           </div>
 
           {/* Section 3 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-indigo-600 mb-4">Order management</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">

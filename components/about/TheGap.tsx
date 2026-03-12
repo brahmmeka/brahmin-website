@@ -21,7 +21,7 @@ export default function TheGap() {
         </div>
 
         {/* Visual divider — enterprise vs SMB */}
-        <div className="mt-14 grid grid-cols-2 gap-4 text-sm">
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
           <div className="bg-white rounded-2xl border border-slate-200 p-6 text-left">
             <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Enterprise (Fortune 1000)</p>
             <ul className="space-y-2.5">

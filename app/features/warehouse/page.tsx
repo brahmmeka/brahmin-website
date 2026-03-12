@@ -95,7 +95,7 @@ function BinMockup() {
   return (
     <div className="bg-white rounded-2xl border border-slate-200 shadow-xl p-5">
       <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">Warehouse 1 — bin view</p>
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {bins.map((bin) => (
           <div key={bin.id} className={`rounded-xl border p-3 ${bin.color}`}>
             <p className="text-xs font-bold text-slate-500 mb-1">{bin.id}</p>
@@ -124,7 +124,7 @@ export default function WarehousePage() {
               <span className="text-slate-300">/</span>
               <span className="text-xs font-semibold text-teal-600">Warehouse Management</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
               Multi-location warehouse management
             </h1>
             <p className="mt-6 text-xl text-slate-500 leading-relaxed max-w-2xl">
@@ -148,7 +148,7 @@ export default function WarehousePage() {
         <div className="container mx-auto px-6 max-w-7xl space-y-28">
 
           {/* Section 1 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-600 mb-4">Pick/pack/ship</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
@@ -167,7 +167,7 @@ export default function WarehousePage() {
           </div>
 
           {/* Section 2 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <BinMockup />
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-600 mb-4">Bin locations</span>
@@ -186,7 +186,7 @@ export default function WarehousePage() {
           </div>
 
           {/* Section 3 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-600 mb-4">Cycle counts</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">

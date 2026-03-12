@@ -98,7 +98,7 @@ function ShortagesMockup() {
               <span className="text-sm font-semibold text-slate-900">{s.item}</span>
               <span className={`text-xs font-bold ${s.severity === 'critical' ? 'text-red-600' : 'text-amber-600'}`}>{s.gap}</span>
             </div>
-            <div className="grid grid-cols-3 gap-2 text-xs">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
               <div><span className="text-slate-400">Have</span><p className="font-semibold text-slate-700">{s.have}</p></div>
               <div><span className="text-slate-400">Need</span><p className="font-semibold text-slate-700">{s.need}</p></div>
               <div><span className="text-slate-400">Need by</span><p className="font-semibold text-slate-700">{s.needBy}</p></div>
@@ -122,7 +122,7 @@ export default function MRPPage() {
               <span className="text-slate-300">/</span>
               <span className="text-xs font-semibold text-emerald-700">MRP & Forecasting</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
               Know what to make before you run out
             </h1>
             <p className="mt-6 text-xl text-slate-500 leading-relaxed max-w-2xl">
@@ -146,7 +146,7 @@ export default function MRPPage() {
         <div className="container mx-auto px-6 max-w-7xl space-y-28">
 
           {/* Section 1 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-emerald-700 mb-4">One-click MRP</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
@@ -165,7 +165,7 @@ export default function MRPPage() {
           </div>
 
           {/* Section 2 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <ShortagesMockup />
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-emerald-700 mb-4">Shortage alerts</span>
@@ -184,7 +184,7 @@ export default function MRPPage() {
           </div>
 
           {/* Section 3: Forecasting */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-emerald-700 mb-4">Forecasting</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">

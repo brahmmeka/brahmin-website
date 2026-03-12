@@ -252,33 +252,35 @@ export default function VsKatanaPage() {
           <div className="text-center mb-10">
             <h2 className="text-2xl font-bold text-slate-900 mb-3">Feature-by-feature breakdown</h2>
           </div>
+          <div className="overflow-x-auto -mx-6 px-6 md:mx-0 md:px-0">
           <div className="rounded-2xl border border-slate-200 overflow-hidden shadow-sm bg-white">
-            <div className="grid grid-cols-[1fr_160px_160px] bg-slate-800 text-white text-sm font-semibold">
-              <div className="px-6 py-4">Feature</div>
-              <div className="px-6 py-4 text-center bg-emerald-700">Brahmin Solutions</div>
-              <div className="px-6 py-4 text-center">Katana MRP</div>
+            <div className="grid grid-cols-[1fr_100px_100px] md:grid-cols-[1fr_160px_160px] bg-slate-800 text-white text-sm font-semibold">
+              <div className="px-3 md:px-6 py-4">Feature</div>
+              <div className="px-3 md:px-6 py-4 text-center bg-emerald-700">Brahmin Solutions</div>
+              <div className="px-3 md:px-6 py-4 text-center">Katana MRP</div>
             </div>
             {tableGroups.map((group) => (
               <div key={group.label}>
-                <div className="px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-50/80 border-b border-slate-100">
+                <div className="px-3 md:px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-50/80 border-b border-slate-100">
                   {group.label}
                 </div>
                 {group.rows.map((row, i) => (
-                  <div key={row.feature} className={`grid grid-cols-[1fr_160px_160px] border-b border-slate-100 ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50/30'}`}>
-                    <div className="px-6 py-4">
+                  <div key={row.feature} className={`grid grid-cols-[1fr_100px_100px] md:grid-cols-[1fr_160px_160px] border-b border-slate-100 ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50/30'}`}>
+                    <div className="px-3 md:px-6 py-4">
                       <p className="text-sm font-medium text-slate-700">{row.feature}</p>
                       {row.note && <p className="text-xs text-slate-400 mt-0.5">{row.note}</p>}
                     </div>
-                    <div className="px-4 py-4 flex items-center justify-center border-l border-slate-100 bg-emerald-900/5">
+                    <div className="px-2 md:px-4 py-4 flex items-center justify-center border-l border-slate-100 bg-emerald-900/5">
                       <Cell value={row.brahmin} />
                     </div>
-                    <div className="px-4 py-4 flex items-center justify-center border-l border-slate-100">
+                    <div className="px-2 md:px-4 py-4 flex items-center justify-center border-l border-slate-100">
                       <Cell value={row.katana} />
                     </div>
                   </div>
                 ))}
               </div>
             ))}
+          </div>
           </div>
           <p className="mt-4 text-xs text-slate-400 text-center">
             Katana pricing and features based on publicly available information as of March 2026. Features and pricing subject to change.

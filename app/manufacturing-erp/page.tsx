@@ -2,36 +2,37 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'MRP Software for Small Manufacturers | Brahmin Solutions',
+  title: 'Manufacturing ERP for Small Business | Brahmin Solutions',
   description:
-    'MRP software that helps growing manufacturers plan production, manage inventory, and know their true costs. Starting from $199/month. Go live in weeks, not months.',
+    'Manufacturing ERP software sized for growing businesses. Production, inventory, purchasing, and traceability — connected in one system. Starting from $199/month. Go live in 3–6 weeks.',
   keywords: [
-    'mrp software',
-    'manufacturing software',
-    'material requirements planning',
-    'production planning software',
-    'mrp for small business',
-    'mrp system',
-    'manufacturing resource planning',
-    'cloud mrp software',
-    'mrp software for small manufacturers',
+    'manufacturing erp small business',
+    'manufacturing erp software',
+    'erp for small manufacturers',
+    'small business manufacturing software',
+    'erp for manufacturing companies',
+    'cloud manufacturing erp',
+    'erp software for small business',
+    'manufacturing erp system',
+    'affordable manufacturing erp',
+    'erp for growing manufacturers',
   ],
   alternates: {
-    canonical: 'https://brahminsolutions.com/mrp-software',
+    canonical: 'https://brahminsolutions.com/manufacturing-erp',
   },
   openGraph: {
-    title: 'MRP Software for Growing Manufacturers',
+    title: 'Manufacturing ERP for growing businesses',
     description:
-      'Plan production, manage materials, and finally know your true costs — without enterprise complexity.',
-    url: 'https://brahminsolutions.com/mrp-software',
+      'All the capabilities of an ERP — production, inventory, purchasing — without 18 months of implementation or a six-figure budget.',
+    url: 'https://brahminsolutions.com/manufacturing-erp',
     type: 'website',
     siteName: 'Brahmin Solutions',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MRP Software for Small Manufacturers | Brahmin Solutions',
+    title: 'Manufacturing ERP for Small Business | Brahmin Solutions',
     description:
-      'Plan production, manage inventory, and know your true costs. Starting from $199/month. Go live in 3–6 weeks.',
+      'Production, inventory, purchasing, and traceability — all connected. Starting from $199/month. Go live in 3–6 weeks.',
   },
 }
 
@@ -39,26 +40,14 @@ const features = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.44-3.63A2.25 2.25 0 014.5 9.68V5.25A2.25 2.25 0 016.75 3h10.5a2.25 2.25 0 012.25 2.25v4.43a2.25 2.25 0 01-1.48 1.86l-5.44 3.63a2.25 2.25 0 01-2.16 0z" />
       </svg>
     ),
-    title: 'Bill of Materials (BOM)',
+    title: 'Production management',
     href: '/features/production',
     color: 'from-blue-500 to-indigo-600',
     description:
-      'Create recipes, formulas, and multi-level assemblies with accurate costing at every level. Define sub-assemblies, set yield percentages, and track material costs as supplier prices change. Always know what goes into every product — and what it actually costs to make.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-      </svg>
-    ),
-    title: 'Production scheduling',
-    href: '/features/production',
-    color: 'from-violet-500 to-purple-600',
-    description:
-      'Schedule work orders, allocate resources, and spot bottlenecks before they cause delays. See which jobs are running, which are queued, and which are waiting on materials — so your whole team stays aligned without morning standup meetings.',
+      'Build multi-level BOMs, schedule work orders, and track real-time production costs — materials, labor, overhead, and yield loss. Know exactly what every product costs to make, not what you estimated six months ago.',
   },
   {
     icon: (
@@ -66,7 +55,7 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
       </svg>
     ),
-    title: 'Inventory tracking',
+    title: 'Inventory control',
     href: '/features/inventory',
     color: 'from-cyan-500 to-blue-600',
     description:
@@ -78,7 +67,7 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
       </svg>
     ),
-    title: 'Purchase orders',
+    title: 'Purchasing & procurement',
     href: '/features/purchasing',
     color: 'from-amber-500 to-orange-600',
     description:
@@ -91,56 +80,68 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
       </svg>
     ),
-    title: 'Lot & batch tracking',
+    title: 'Traceability & compliance',
     href: '/features/traceability',
     color: 'from-rose-500 to-pink-600',
     description:
-      'Track lot numbers, expiration dates, and maintain full forward and backward traceability from raw materials to finished products. Generate recall reports in minutes instead of days. Essential for FDA-regulated industries like food, supplements, and cosmetics.',
+      'Track every lot from receiving through production to the customer. Generate recall reports in minutes instead of days. Full forward and backward traceability for FDA, FSMA, and cGMP compliance.',
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
       </svg>
     ),
-    title: 'Costing & reporting',
-    href: '/features/production',
+    title: 'Warehouse management',
+    href: '/features/warehouse',
+    color: 'from-violet-500 to-purple-600',
+    description:
+      'Manage multiple warehouses, bin locations, and transfers from a single system. Barcode scanning for receiving, picking, packing, and cycle counts — all accessible from any phone or tablet.',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+      </svg>
+    ),
+    title: 'Native integrations',
+    href: '/integrations',
     color: 'from-emerald-500 to-teal-600',
     description:
-      'See your true production costs — materials, labor, overhead, and yield loss per unit. Stop guessing at margins and start pricing products based on real data. Identify your most profitable lines and the SKUs that are quietly losing money.',
+      'Sync data from Brahmin to QuickBooks, Xero, Shopify, WooCommerce, ShipStation, and more. No more copying data between systems. Native integrations push purchase orders, sales orders, invoices, and inventory values into your accounting and sales platforms automatically.',
   },
 ]
 
-const spreadsheetSigns = [
+const signs = [
   {
-    title: 'Multiple versions of the same spreadsheet',
+    title: 'Your systems don\'t talk to each other',
     description:
-      'Inventory_FINAL_v3_updated.xlsx sounds familiar? When multiple people maintain their own copies, nobody knows which file has the right numbers. One wrong cell — a mistyped quantity, a deleted row, a formula that didn\'t copy correctly — can cascade errors across purchasing, production, and fulfillment. The time spent reconciling versions is time you\'ll never get back.',
+      'You\'re entering the same data into your accounting software, your spreadsheet, and your e-commerce platform. A sale on Shopify means someone needs to manually update inventory, create a pick list, and eventually key the invoice into QuickBooks. Every handoff is a chance for errors, and every error takes time to find and fix.',
   },
   {
-    title: 'Stockouts that catch you off guard',
+    title: 'You can\'t answer basic questions without digging',
     description:
-      'Spreadsheets don\'t update themselves. If a stockout has ever surprised you because the count didn\'t match reality, you\'re making purchasing decisions on stale data. Real-time inventory tracking eliminates the gap between what your spreadsheet says and what\'s actually on the shelf — so you reorder based on facts, not guesswork.',
+      'How many units of your top product can you ship this week? What\'s your true margin on that wholesale order? When will the materials for next week\'s production run arrive? If answering any of these requires checking multiple systems or asking multiple people, your operations have outgrown your tools.',
   },
   {
-    title: 'Can\'t tell a customer when their order will ship',
+    title: 'Month-end close takes days instead of hours',
     description:
-      'You shouldn\'t need to check three files and ask two people to answer a simple customer question. If you can\'t confirm an order status in under a minute, your system is costing you customer trust. Connected MRP ties orders to production schedules and inventory in one view, so the answer is always at your fingertips.',
+      'Reconciling inventory, matching purchase orders to invoices, calculating cost of goods sold — if your month-end process feels like an archaeology dig, it\'s because your data lives in too many places. A connected system closes the gap between what happened on the floor and what shows up in your books.',
   },
   {
-    title: 'No idea what it actually costs to make each product',
+    title: 'Growth is creating chaos instead of profit',
     description:
-      'Material costs, labor, overhead, yield loss — if you\'re estimating instead of tracking, you might be losing money on products you think are profitable. Many manufacturers discover after implementing MRP that 10–20% of their SKUs are underpriced. Accurate costing doesn\'t just protect your margins — it changes which products you prioritize.',
+      'More orders should mean more revenue and more margin. But if every new customer, new SKU, or new sales channel adds complexity faster than it adds profit, the problem isn\'t growth — it\'s infrastructure. The manual processes that worked at $500K in revenue start breaking at $2M.',
   },
   {
-    title: 'Month-end counts don\'t match your records',
+    title: 'You\'re making decisions on outdated data',
     description:
-      'If your physical count regularly differs from your spreadsheet by more than a few percent, every purchasing and production decision you\'ve made that month was based on bad data. The variance compounds: you over-order some materials, run short on others, and spend days untangling the discrepancies instead of running production.',
+      'By the time your spreadsheet is updated, the information is already stale. You ordered materials based on last week\'s inventory count, scheduled production based on yesterday\'s sales numbers, and quoted a lead time based on a capacity estimate from memory. Real-time data doesn\'t just save time — it changes the quality of every decision.',
   },
   {
-    title: 'Hours spent on data entry instead of production',
+    title: 'Compliance and traceability feel like a fire drill',
     description:
-      'Copying data between spreadsheets, emailing the warehouse for stock counts, manually creating purchase orders, re-keying the same information into QuickBooks — this busywork can consume 10–15 hours per week across a small team. That\'s time your people could spend on work that actually grows the business: improving production processes, building customer relationships, or developing new products.',
+      'When an auditor asks for a recall report, a lot trace, or a supplier certificate, how long does it take? If the answer involves digging through filing cabinets, searching email threads, or calling your co-manufacturer, you\'re one bad audit away from losing a customer — or worse, a failed inspection.',
   },
 ]
 
@@ -150,78 +151,107 @@ const industries = [
     title: 'Food & Beverage',
     tag: 'Lot tracking & recalls',
     color: 'from-orange-400 to-red-500',
-    description: 'Expiration dates, recipe management, and recall readiness.',
+    description: 'Expiration dates, recipe management, allergen tracking, and recall readiness for FDA and FSMA compliance.',
   },
   {
     href: '/industries/cosmetics',
     title: 'Cosmetics & Beauty',
     tag: 'FDA compliance',
     color: 'from-pink-400 to-rose-500',
-    description: 'Formula management, batch tracking, and compliance support.',
+    description: 'Formula management, batch tracking, ingredient traceability, and compliance documentation.',
   },
   {
     href: '/industries/supplements',
-    title: 'Supplements',
+    title: 'Supplements & Nutraceuticals',
     tag: 'cGMP ready',
     color: 'from-green-400 to-emerald-500',
-    description: 'Lot traceability, CoA management, and quality control.',
+    description: 'Lot traceability, certificate of analysis management, potency tracking, and quality control workflows.',
   },
   {
-    href: '/industries/electronics',
-    title: 'Electronics',
-    tag: 'Serial tracking',
+    href: '/industries/medical-devices',
+    title: 'Medical devices',
+    tag: 'Device traceability',
     color: 'from-blue-400 to-indigo-500',
-    description: 'Serial numbers, multi-level BOMs, and component management.',
+    description: 'Serial and lot tracking, device history records, and documentation for FDA 21 CFR Part 820.',
   },
   {
     href: '/industries/manufacturing',
     title: 'General manufacturing',
-    tag: 'Full MRP',
+    tag: 'Full production management',
     color: 'from-violet-400 to-purple-500',
-    description: 'Production scheduling, inventory control, and shop floor management.',
+    description: 'Production scheduling, multi-level BOMs, inventory control, and shop floor management.',
   },
 ]
 
 const buyerQuestions = [
   {
-    question: 'How long will implementation take?',
+    question: 'What does the system actually replace?',
     guidance:
-      'If the answer is measured in months, ask why. Modern cloud MRP systems go live in 3–6 weeks with a dedicated implementation manager guiding you through data migration, workflow setup, and team training. Long implementations usually mean the system is more complex than you need — or the vendor is understaffed on support.',
+      'Be specific about which tools you\'re consolidating. A manufacturing ERP should replace your inventory spreadsheets, production tracking documents, and manual purchasing workflows. It should integrate with — not replace — your accounting software (QuickBooks, Xero) and your sales channels (Shopify, Amazon). If a vendor wants to replace everything including your accounting system, you\'re probably looking at more system than you need.',
   },
   {
-    question: 'What\'s the true total cost?',
+    question: 'How long will implementation take, and who manages it?',
+    guidance:
+      'If the answer is measured in quarters, ask why. Modern cloud systems go live in 3–6 weeks with a dedicated implementation manager guiding you through data migration, workflow setup, and team training. Long implementations usually mean the system is more complex than you need — or the vendor is understaffed on support.',
+  },
+  {
+    question: 'What\'s the true total cost — including hidden fees?',
     guidance:
       'Watch for per-user fees that punish you for growing, implementation fees that double the first-year cost, and mandatory consultant charges for basic configuration. A transparent vendor gives you one monthly price that covers your whole team — no surprises when you add a warehouse worker or a new admin.',
   },
   {
-    question: 'Can my team use it without weeks of training?',
-    guidance:
-      'Request a hands-on demo with your actual products, not just a polished sales presentation. Have your warehouse staff and production leads sit in. If the interface feels overwhelming in a demo environment, imagine what it\'s like at 7 AM on a busy production day when someone needs to receive a shipment.',
-  },
-  {
-    question: 'Does it integrate with my accounting software?',
+    question: 'How does your system connect to my accounting software?',
     guidance:
       'Native integration with QuickBooks or Xero is table stakes. The sync should push purchase orders, sales orders, invoices, and inventory values into your accounting software automatically. If syncing requires Zapier or a third-party connector, that\'s a yellow flag for reliability and data accuracy.',
   },
   {
     question: 'What support is included — and what costs extra?',
     guidance:
-      'Ask specifically: if I have a problem at 2 PM on a Tuesday, how quickly will a real person help me? Not a chatbot, not a ticket queue, not a help center article. The best MRP vendors include unlimited support and training in every plan — not as an upsell tier you have to negotiate for.',
+      'Ask specifically: if I have a problem at 2 PM on a Tuesday, how quickly will a real person help me? Not a chatbot, not a ticket queue, not a help center article. The best vendors include unlimited support and training in every plan — not as an upsell tier you have to negotiate for.',
   },
   {
-    question: 'Is this built for companies my size?',
+    question: 'Is this built for companies my size — or am I paying for enterprise features I\'ll never use?',
     guidance:
-      'Enterprise software forced onto small manufacturers rarely works. You end up paying for features you\'ll never use — advanced HR modules, multi-currency treasury management, custom workflow engines — and fighting an interface designed for 500-person companies with dedicated IT departments. Look for a system purpose-built for manufacturers in the $500K–$50M revenue range.',
+      'Enterprise software forced onto small manufacturers rarely works. You end up paying for modules you\'ll never configure — advanced HR, multi-currency treasury management, custom workflow engines — and fighting an interface designed for 500-person companies with dedicated IT departments. Look for a system purpose-built for manufacturers in the $500K–$50M revenue range.',
   },
 ]
 
+const steps = [
+  {
+    title: 'Map your current workflow',
+    description:
+      'Document what\'s working and what\'s broken across production, inventory, purchasing, and fulfillment. Identify where data gets re-entered, where mistakes happen, and where you lose visibility. This clarity helps you choose the right system — and avoid paying for features you\'ll never use.',
+  },
+  {
+    title: 'Clean and organize your data',
+    description:
+      'Audit your item master, verify BOMs, reconcile inventory counts, and standardize naming conventions. Two days of data cleanup before migration saves two months of headaches after go-live.',
+  },
+  {
+    title: 'Configure and connect',
+    description:
+      'Set up products, BOMs, warehouses, vendors, and integrations with your accounting and sales platforms. A dedicated implementation manager walks you through every step — no consultants required.',
+  },
+  {
+    title: 'Train your team on daily workflows',
+    description:
+      'Focus on the tasks each role performs daily — receiving, production, picking, purchasing — not every feature in the system. Most users only need 20% of the software to do 80% of their work.',
+  },
+  {
+    title: 'Go live and iterate',
+    description:
+      'Start processing real orders. Edge cases will surface — that\'s expected. A good vendor helps you work through them quickly, with support response times measured in minutes, not days.',
+  },
+]
+
+// TODO: Replace testimonials with manufacturing ERP-specific customer quotes when available
 const testimonials = [
   {
     quote:
       'Full visibility from purchase order to manufacturing to sales — plus accurate cost of goods. And the support is exceptional.',
     name: 'Sheldon Ratuski',
     company: 'FLFF',
-    highlight: 'True cost visibility',
+    highlight: 'End-to-end visibility',
     color: 'from-violet-500 to-purple-500',
   },
   {
@@ -242,94 +272,56 @@ const testimonials = [
   },
 ]
 
-const steps = [
-  {
-    title: 'Assess your needs',
-    description:
-      'Document what\'s working and what\'s broken. Your must-haves vs. nice-to-haves. This clarity helps you avoid paying for features you\'ll never use.',
-  },
-  {
-    title: 'Clean your data',
-    description:
-      'Clean up your product list, verify BOMs, reconcile inventory counts. Your MRP is only as good as the data in it.',
-  },
-  {
-    title: 'Configure and import',
-    description:
-      'Set up products, BOMs, warehouses, and integrations. If this requires a consultant, that\'s a red flag for ongoing complexity.',
-  },
-  {
-    title: 'Train your team',
-    description:
-      'Focus on daily workflows, not every feature. Most users only need 20% of the system to do 80% of their work.',
-  },
-  {
-    title: 'Go live and iterate',
-    description:
-      'Start with real orders. Edge cases will appear — that\'s normal. A good vendor helps you work through them quickly.',
-  },
-]
-
 const faqs = [
   {
-    question: 'What is MRP software?',
+    question: 'What is manufacturing ERP?',
     answer:
-      'MRP (Material Requirements Planning) software helps manufacturers plan what materials they need, when to order them, and how to schedule production. It uses bills of materials and production schedules to calculate material requirements automatically, replacing manual spreadsheet calculations.',
+      'Manufacturing ERP (Enterprise Resource Planning) is software that connects production, inventory, purchasing, and order management into a single system. Instead of managing each function in separate tools or spreadsheets, manufacturing ERP gives you one source of truth for your entire operation — from raw materials in the warehouse to finished goods shipped to customers.',
   },
   {
-    question: 'What\'s the difference between MRP and ERP?',
+    question: 'Do I need ERP or MRP software?',
     answer:
-      'MRP focuses on production planning and inventory management. ERP (Enterprise Resource Planning) is broader — it includes MRP functionality plus modules for accounting, HR, CRM, and more. For most growing manufacturers, a focused MRP system with integrations to existing tools is more practical and affordable than a full ERP.',
+      'Most growing manufacturers need MRP capabilities — production planning, inventory management, and purchasing — rather than a full ERP with HR, CRM, payroll, and finance modules bundled in. If your main challenge is coordinating production with inventory and purchasing, a focused MRP system with native integrations to your existing accounting software is typically the better fit. You get the connected workflow without the enterprise complexity.',
   },
   {
-    question: 'How much does MRP software cost?',
+    question: 'How much does manufacturing ERP cost for a small business?',
     answer:
-      'MRP software pricing varies widely. Enterprise systems can cost $50,000–$500,000+ for implementation plus ongoing fees. Modern cloud MRP systems designed for small and mid-sized manufacturers typically range from $300–$1,000/month or more depending on features, user count, and order volume. Brahmin Solutions starts at $199/month with no per-user fees.',
+      'Enterprise ERP systems can cost $50,000–$500,000+ for implementation plus ongoing per-user fees. Modern cloud-based systems built for small and mid-sized manufacturers range from $199–$1,000+/month depending on features and order volume. Brahmin Solutions starts at $199/month with flat pricing — no per-user fees, no implementation charges, unlimited users included.',
   },
   {
-    question: 'How long does MRP implementation take?',
+    question: 'How long does ERP implementation take?',
     answer:
-      'Enterprise MRP/ERP systems often take 6–18 months to implement. Cloud-based MRP systems built for small and mid-sized manufacturers can be implemented in 3–6 weeks. The key factors are data quality, system complexity, and the level of vendor support you receive.',
+      'Traditional enterprise ERP implementations take 6–18 months and often require dedicated consultants. Cloud-based manufacturing systems designed for SMBs go live in 3–6 weeks. The key factors are data quality, system complexity, and the level of vendor support you receive. Every Brahmin customer gets a dedicated implementation manager.',
   },
   {
-    question: 'Do small manufacturers need MRP software?',
+    question: 'Can manufacturing ERP integrate with QuickBooks?',
     answer:
-      'If you\'re manufacturing products and managing inventory with spreadsheets, you\'ll likely benefit from MRP software. Common signs you\'ve outgrown spreadsheets include frequent stockouts, too much time spent on data entry, unclear production costs, and difficulty scaling operations. Most manufacturers see clear ROI within 2–3 months.',
+      'Yes. Modern manufacturing ERP systems integrate natively with QuickBooks Online and QuickBooks Desktop. The integration pushes purchase orders, sales orders, invoices, and inventory values from the manufacturing system into QuickBooks automatically — eliminating manual double-entry. Brahmin Solutions includes native QuickBooks integration in every plan.',
   },
   {
-    question: 'What features should I look for in MRP software?',
+    question: 'What\'s the difference between ERP and MRP?',
     answer:
-      'Essential features include BOM management, inventory tracking, production scheduling, purchase order management, and reporting. Depending on your industry, you may also need lot and batch tracking, serial numbers, or specific compliance features. Prioritize ease of use — the best features are worthless if your team won\'t use them.',
+      'MRP (Material Requirements Planning) focuses on production planning, inventory management, and purchasing — the core operational challenges for manufacturers. ERP is broader: it includes MRP functionality plus modules for accounting, HR, CRM, project management, and more. For most manufacturers under $50M in revenue, a focused MRP system with integrations to existing tools is more practical and more affordable than a full ERP suite.',
   },
   {
-    question: 'Can MRP software integrate with QuickBooks?',
+    question: 'Is cloud-based ERP better than on-premise for small manufacturers?',
     answer:
-      'Most modern MRP systems integrate with QuickBooks Online and/or QuickBooks Desktop. This integration syncs purchase orders, sales orders, invoices, and inventory values between systems automatically. Brahmin Solutions offers native QuickBooks integration included in every plan.',
+      'For most small and mid-sized manufacturers, cloud-based is the clear choice. No IT infrastructure to maintain, automatic updates, access from anywhere, lower upfront costs, and faster implementation. On-premise solutions may make sense for very large enterprises with dedicated IT teams and specific security or customization requirements — but that\'s rarely the case for manufacturers under $50M.',
   },
   {
-    question: 'Is cloud-based MRP better than on-premise?',
+    question: 'What should I look for in a manufacturing ERP for my size company?',
     answer:
-      'For most growing manufacturers, cloud-based MRP is the better choice. Benefits include no IT infrastructure to maintain, automatic updates, access from anywhere, lower upfront costs, and faster implementation. On-premise solutions may make sense for very large enterprises with specific security or customization requirements.',
+      'Focus on four things: (1) Core capabilities — production management, inventory tracking, purchasing, and traceability. (2) Native integrations with your existing accounting and sales tools. (3) Fast implementation — weeks, not months. (4) Responsive human support included in every plan. Avoid systems that require dedicated IT staff, expensive consultants, or months of configuration before you see value.',
   },
   {
-    question: 'What industries use MRP software?',
+    question: 'How is Brahmin Solutions different from NetSuite or SAP Business One?',
     answer:
-      'MRP software is used across manufacturing industries including food and beverage, cosmetics, supplements, electronics, apparel, and general manufacturing. Any business that transforms raw materials into finished products — and needs to manage that process — can benefit from MRP.',
+      'NetSuite and SAP Business One are enterprise ERP systems designed for larger companies with dedicated IT teams and budgets to match. They include modules for HR, CRM, financial consolidation, and advanced analytics that most small manufacturers never configure. Brahmin Solutions is purpose-built for manufacturers doing $500K–$50M in revenue. It focuses on what matters most — production, inventory, purchasing, and traceability — with fast implementation, flat pricing, and support that responds in under 15 minutes.',
   },
   {
-    question: 'How do I know if I\'ve outgrown spreadsheets?',
+    question: 'What industries use manufacturing ERP software?',
     answer:
-      'Common signs include managing multiple spreadsheet versions, experiencing unexpected stockouts, not knowing your true production costs, spending hours on data entry, and month-end inventory counts that don\'t match your records. If any of these sound familiar, it\'s time to evaluate MRP software.',
-  },
-  {
-    question: 'What is the best MRP software for small manufacturers?',
-    answer:
-      'The best MRP software for small manufacturers is one that covers core needs — inventory tracking, BOM management, production scheduling, and purchasing — without enterprise complexity. Look for fast implementation (weeks, not months), flat pricing without per-user fees, native integrations with QuickBooks and Shopify, and responsive human support. Brahmin Solutions is purpose-built for manufacturers with $500K–$50M in revenue and goes live in 3–6 weeks starting at $199/month.',
-  },
-  {
-    question: 'What is the difference between MRP and inventory management software?',
-    answer:
-      'Inventory management software tracks what you have in stock and where it is. MRP software goes further: it connects inventory to your bills of materials and production schedules to calculate what you need to buy and make — and when. MRP answers forward-looking questions like "do I have enough materials to fulfill next week\'s orders?" while basic inventory software only tells you what\'s on the shelf right now.',
+      'Manufacturing ERP is used across industries including food and beverage, cosmetics, supplements, medical devices, consumer products, and general manufacturing. Any business that transforms raw materials into finished products — and needs to coordinate production, inventory, and purchasing — benefits from a connected manufacturing system.',
   },
 ]
 
@@ -338,7 +330,7 @@ const softwareSchema = {
   '@type': 'SoftwareApplication',
   name: 'Brahmin Solutions',
   applicationCategory: 'BusinessApplication',
-  applicationSubCategory: 'Manufacturing Resource Planning (MRP)',
+  applicationSubCategory: 'Manufacturing ERP Software',
   operatingSystem: 'Web browser (any OS)',
   offers: {
     '@type': 'Offer',
@@ -350,11 +342,12 @@ const softwareSchema = {
     },
   },
   featureList: [
-    'Inventory management',
-    'Production tracking',
+    'Production management',
+    'Inventory control',
     'Bill of materials (BOM)',
     'Lot and batch traceability',
-    'B2B wholesale portal',
+    'Purchasing and procurement',
+    'Warehouse management',
     'QuickBooks and Xero integration',
     'Shopify integration',
     'Mobile warehouse app',
@@ -369,8 +362,8 @@ const softwareSchema = {
   ],
   about: {
     '@type': 'Thing',
-    name: 'Material requirements planning',
-    sameAs: 'https://en.wikipedia.org/wiki/Material_requirements_planning',
+    name: 'Enterprise resource planning for manufacturing',
+    sameAs: 'https://en.wikipedia.org/wiki/Enterprise_resource_planning',
   },
 }
 
@@ -400,13 +393,13 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'MRP Software',
-      item: 'https://brahminsolutions.com/mrp-software',
+      name: 'Manufacturing ERP',
+      item: 'https://brahminsolutions.com/manufacturing-erp',
     },
   ],
 }
 
-export default function MRPSoftwarePage() {
+export default function ManufacturingERPPage() {
   return (
     <>
       <script
@@ -435,7 +428,7 @@ export default function MRPSoftwarePage() {
               </svg>
             </li>
             <li>
-              <span className="text-slate-700 font-medium">MRP Software</span>
+              <span className="text-slate-700 font-medium">Manufacturing ERP</span>
             </li>
           </ol>
         </div>
@@ -451,21 +444,22 @@ export default function MRPSoftwarePage() {
         <div className="relative max-w-4xl mx-auto text-center px-6">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-8">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-            <span className="text-sm text-slate-300">Trusted by 300+ manufacturers</span>
+            <span className="text-sm text-slate-300">Trusted by 300+ manufacturers since 2019</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-              MRP software for growing{' '}
+              Manufacturing ERP for growing{' '}
             </span>
             <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
-              manufacturers
+              businesses
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            You&apos;ve outgrown spreadsheets but you don&apos;t need a six-figure ERP system.
-            Plan production, manage materials, and finally know your true costs.
+          <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+            You need the capabilities of an ERP — production, inventory, purchasing, all connected.
+            But you don&apos;t need 18 months of implementation or a six-figure budget. Get the
+            integration you need, sized for manufacturers doing $500K–$50M.
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
@@ -487,7 +481,7 @@ export default function MRPSoftwarePage() {
           </div>
 
           <p className="text-slate-500 text-sm mt-6">
-            Starting from $199/month. No per-user fees. Go live in weeks.
+            Starting from $199/month. No per-user fees. Go live in 3–6 weeks.
           </p>
         </div>
       </section>
@@ -506,10 +500,10 @@ export default function MRPSoftwarePage() {
             </h2>
             <ul className="space-y-3 text-slate-600">
               {[
-                'MRP software replaces spreadsheet guesswork with real-time material planning, production scheduling, and inventory tracking',
-                'The most important features for growing manufacturers: BOM management, production scheduling, inventory tracking, and accurate costing',
-                'Prioritize ease of use and fast implementation over feature count — the best system is the one your team actually uses',
-                'Modern cloud MRP goes live in 3–6 weeks starting from $199/month, vs. 6–18 months and six figures for enterprise systems',
+                'Most growing manufacturers need MRP capabilities (production, inventory, purchasing) — not a full ERP with HR, CRM, and finance modules',
+                'The right manufacturing ERP connects your operations into one system while integrating with tools you already use like QuickBooks and Shopify',
+                'Cloud-based manufacturing ERP goes live in 3–6 weeks starting from $199/month — vs. 6–18 months and six figures for enterprise systems',
+                'Prioritize ease of use, fast implementation, and responsive support over feature count — the best system is the one your team actually uses',
               ].map((item) => (
                 <li key={item} className="flex gap-3">
                   <span className="mt-1 flex-shrink-0">
@@ -527,25 +521,27 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 3: What is MRP software? ── */}
+      {/* ── Section 3: What is manufacturing ERP? ── */}
       <section className="py-section">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            What is MRP software?
+            What is manufacturing ERP?
           </h2>
 
           <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-            MRP (Material Requirements Planning) software helps manufacturers figure out
-            what materials they need, how much to order, and when to order — all based
-            on production schedules and customer demand.
+            Manufacturing ERP is software that connects the core functions of a manufacturing
+            business — production, inventory, purchasing, and order management — into a single
+            system. Instead of running each department on its own spreadsheet or standalone tool,
+            everything shares the same data, updates in real time, and flows together without
+            manual handoffs.
           </p>
 
-          {/* Visual: 3 questions MRP answers */}
+          {/* Visual: 3 core problems ERP solves */}
           <div className="grid sm:grid-cols-3 gap-4 my-10">
             {[
-              { gradient: 'from-blue-500 to-cyan-500', icon: '📦', text: 'What materials do I need?' },
-              { gradient: 'from-violet-500 to-purple-500', icon: '📊', text: 'Do I have enough in stock?' },
-              { gradient: 'from-amber-500 to-orange-500', icon: '🛒', text: 'When do I need to reorder?' },
+              { gradient: 'from-blue-500 to-cyan-500', icon: '🔗', text: 'Are my systems connected?' },
+              { gradient: 'from-violet-500 to-purple-500', icon: '📊', text: 'Can I see everything in one place?' },
+              { gradient: 'from-amber-500 to-orange-500', icon: '⚡', text: 'Does data flow automatically?' },
             ].map((item) => (
               <div key={item.text} className="relative group">
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity`} />
@@ -558,39 +554,39 @@ export default function MRPSoftwarePage() {
           </div>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            Instead of manually calculating requirements in spreadsheets, MRP software
-            does it automatically using your bills of materials and current inventory levels.
-            When these three questions are answered accurately and in real time, stockouts
-            drop, excess inventory shrinks, and your team stops spending hours on manual
-            calculations.
+            The term &ldquo;ERP&rdquo; — Enterprise Resource Planning — originated in the early 1990s
+            as manufacturing software expanded beyond material requirements planning (MRP) to encompass
+            accounting, human resources, and customer relationship management. The promise was
+            appealing: one system to run your entire business. The reality, for most small
+            manufacturers, has been less rosy. Enterprise ERP systems like SAP, Oracle, and NetSuite
+            were designed for companies with hundreds of employees, dedicated IT departments, and
+            budgets measured in hundreds of thousands of dollars.
           </p>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            Here&apos;s how it works in practice: you define your products using bills of
-            materials — the list of raw materials, components, and quantities needed to
-            make each finished good. When a sales order comes in or you schedule a
-            production run, the MRP engine checks your current inventory, factors in
-            what&apos;s already on order from suppliers, and calculates exactly what you need
-            to buy and when. It accounts for lead times, minimum order quantities, and
-            safety stock levels so you&apos;re never caught off guard.
+            Here is what matters for a growing manufacturer: when a sales order comes in, your
+            inventory should update automatically. When inventory hits a reorder point, a purchase
+            order should be ready to send. When a production run completes, costs should calculate
+            in real time — materials, labor, overhead — and flow into your accounting software
+            without someone re-entering numbers. That connected workflow is the core value of
+            manufacturing ERP. Everything else is optional.
           </p>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            The concept originated in the 1960s when manufacturers first used computers
-            to calculate material requirements. By the 1980s, MRP II expanded to include
-            production scheduling and capacity planning. Today, modern cloud-based MRP
-            integrates with e-commerce, accounting, and shipping systems — giving growing
-            manufacturers capabilities that used to require enterprise-scale budgets.
+            The good news is that cloud technology has made this level of integration accessible
+            to manufacturers who would never consider a traditional ERP implementation. Modern
+            manufacturing systems give you the connected workflow — production tied to inventory
+            tied to purchasing tied to sales — without forcing you to adopt modules for HR, CRM,
+            financial consolidation, and other functions you already handle with existing tools.
+            You keep QuickBooks for accounting, Shopify for e-commerce, and your manufacturing
+            system handles the operations layer in between.
           </p>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            For small and mid-sized manufacturers, the shift from spreadsheets to MRP
-            software is transformative. Instead of one person holding all the knowledge
-            in their head — which raw materials are running low, which orders are behind
-            schedule, what each product actually costs to make — that information lives
-            in a shared system that the whole team can access. Production managers see
-            what&apos;s scheduled. Purchasing knows what to reorder. The owner can check
-            margins without asking five people for five spreadsheets.
+            For small and mid-sized manufacturers — businesses doing $500K to $50M in
+            revenue — the question isn&apos;t whether you need connected operations. You do.
+            The question is whether you need enterprise ERP or a focused manufacturing system
+            that delivers the same integration at a fraction of the cost and complexity.
           </p>
 
           {/* Callout */}
@@ -603,56 +599,136 @@ export default function MRPSoftwarePage() {
                 </svg>
               </div>
               <p className="text-slate-700 font-medium text-sm leading-relaxed">
-                For manufacturers still on spreadsheets, the results are immediate:
-                fewer stockouts, less excess inventory, better scheduling, accurate
-                costing, and <strong>10–20 fewer hours per week</strong> on data entry.
+                Most manufacturers who think they need ERP actually need connected MRP — production,
+                inventory, and purchasing in one system, with native integrations to accounting and
+                sales tools. That gives you <strong>90% of the value at 10% of the cost</strong>.
               </p>
             </div>
           </div>
 
           <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">
-            MRP vs. ERP: what&apos;s the difference?
+            ERP vs. MRP: what growing manufacturers actually need
           </h3>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            <strong className="text-slate-900">MRP</strong> focuses on production planning
-            and inventory management — the core challenges on the shop floor.{' '}
-            <strong className="text-slate-900">ERP</strong> (Enterprise Resource Planning)
-            is broader: it includes MRP plus accounting, HR, CRM, and more.
+            <strong className="text-slate-900">MRP</strong> focuses on the operational core —
+            production planning, inventory management, and purchasing. It answers the daily
+            questions your team faces: what do we need to make, what materials do we have, and
+            what do we need to order?{' '}
+            <Link href="/mrp-software" className="text-primary-600 hover:text-primary-700 font-medium">
+              Learn more about MRP software
+            </Link>.
           </p>
 
           <p className="text-slate-600 mb-4 leading-relaxed">
-            For most growing manufacturers, a focused MRP system is the better choice.
-            Full ERP systems are designed for large enterprises with dedicated IT teams
-            and six-figure budgets. They bundle dozens of modules — HR, payroll, CRM,
-            project management — that most small manufacturers will never configure, let
-            alone use. You end up paying for complexity that slows down your team instead
-            of helping them.
+            <strong className="text-slate-900">ERP</strong> wraps MRP with additional modules —
+            accounting, HR, CRM, project management, business intelligence — creating an
+            all-in-one suite. For a 500-person company with a $200K software budget and a
+            dedicated IT team, that makes sense. For a 15-person manufacturer already using
+            QuickBooks and Shopify, it means paying for and configuring dozens of modules
+            you will never open.
           </p>
 
           <p className="text-slate-600 leading-relaxed">
-            Modern MRP takes the opposite approach: it gives you the production planning,
-            inventory management, and purchasing features you actually need, with native
-            integrations to the tools you already use — QuickBooks for accounting, Shopify
-            for e-commerce, ShipStation for fulfillment. You keep what works and replace
-            only what&apos;s broken, without forcing a rip-and-replace of your entire tech stack.
+            The modern approach for growing manufacturers: use a focused manufacturing system
+            for what you do on the floor — production, inventory, purchasing, traceability —
+            and connect it natively to the specialized tools you already trust for accounting
+            and sales. You get the integration benefit of ERP without the implementation timeline,
+            the complexity, or the price tag.
           </p>
         </div>
       </section>
 
-      {/* ── Section 4: Signs you've outgrown spreadsheets ── */}
+      {/* ── Section 4: When you actually need ERP vs MRP ── */}
       <section className="py-section bg-slate-50">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            6 signs you&apos;ve outgrown spreadsheets
+            When you actually need ERP vs. MRP
           </h2>
           <p className="text-slate-600 mb-8 leading-relaxed">
-            Spreadsheets are a great starting point — they&apos;re flexible, familiar, and free.
-            But there&apos;s a point where they cost you more than they save.
+            The honest answer: most small and mid-sized manufacturers don&apos;t need full ERP.
+            Here is how to tell where you fall.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* You need full ERP if... */}
+            <div className="bg-white rounded-2xl p-8 border border-slate-200">
+              <div className="inline-block bg-slate-100 text-slate-500 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
+                You may need full ERP if...
+              </div>
+              <ul className="space-y-4">
+                {[
+                  'You have 200+ employees across multiple business units',
+                  'You need consolidated financial reporting across subsidiaries',
+                  'You have a dedicated IT team to manage and customize the system',
+                  'Your budget supports $100K+ in implementation costs',
+                  'You\'ve outgrown mid-market tools and need advanced analytics',
+                ].map((item) => (
+                  <li key={item} className="flex gap-3 text-slate-600 text-sm">
+                    <span className="flex-shrink-0 w-5 h-5 bg-slate-100 rounded-full flex items-center justify-center mt-0.5">
+                      <svg className="w-3 h-3 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-slate-500 text-xs mt-6 leading-relaxed">
+                If this describes your business, look at{' '}
+                <Link href="/compare/netsuite" className="text-primary-600 hover:text-primary-700 font-medium">NetSuite</Link>
+                {' '}or{' '}
+                <Link href="/compare/sap-business-one" className="text-primary-600 hover:text-primary-700 font-medium">SAP Business One</Link>.
+              </p>
+            </div>
+
+            {/* You need MRP with integrations */}
+            <div className="relative bg-white rounded-2xl overflow-hidden border-2 border-blue-200">
+              <div className="h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500" />
+              <div className="p-8">
+                <div className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
+                  You need connected MRP if...
+                </div>
+                <ul className="space-y-4">
+                  {[
+                    'You have 5–100 employees and are actively growing',
+                    'Your main pain is disconnected production, inventory, and purchasing',
+                    'You already use QuickBooks/Xero for accounting and want to keep it',
+                    'You want to go live in weeks, not months or quarters',
+                    'You need traceability, costing, and real-time inventory visibility',
+                  ].map((item) => (
+                    <li key={item} className="flex gap-3 text-slate-600 text-sm">
+                      <span className="flex-shrink-0 w-5 h-5 bg-emerald-50 rounded-full flex items-center justify-center mt-0.5">
+                        <svg className="w-3 h-3 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-slate-500 text-xs mt-6 leading-relaxed">
+                  This is where Brahmin Solutions fits — purpose-built for manufacturers doing $500K–$50M in revenue.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Section 5: 6 signs you need manufacturing ERP ── */}
+      <section className="py-section">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+            6 signs you need a manufacturing ERP
+          </h2>
+          <p className="text-slate-600 mb-8 leading-relaxed">
+            Spreadsheets and standalone tools work until they don&apos;t. These are the signals
+            that your operations have outgrown your current setup.
           </p>
 
           <div className="space-y-3">
-            {spreadsheetSigns.map((sign, index) => (
+            {signs.map((sign, index) => (
               <details
                 key={sign.title}
                 className="bg-white rounded-2xl p-5 border border-slate-200 group hover:shadow-sm transition-shadow"
@@ -681,10 +757,10 @@ export default function MRPSoftwarePage() {
           </div>
 
           <p className="text-slate-600 mt-6 leading-relaxed">
-            Sound familiar? If three or more apply, MRP software would likely pay for
-            itself within a few months.{' '}
+            Sound familiar? If three or more apply, a connected manufacturing system would likely
+            pay for itself within a few months.{' '}
             <Link href="/compare/spreadsheets" className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center gap-1 group">
-              See the full comparison
+              See Brahmin vs. spreadsheets
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
@@ -700,10 +776,10 @@ export default function MRPSoftwarePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="text-2xl font-bold text-white mb-2">
-                Ready to ditch the spreadsheets?
+                See how it works with your products
               </h2>
               <p className="text-blue-100">
-                See how Brahmin works with your products in a 30-minute demo.
+                Book a 30-minute demo and we&apos;ll walk through your actual workflows.
               </p>
             </div>
             <Link
@@ -732,15 +808,15 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 5: Key features — colored gradient icons ── */}
+      {/* ── Section 6: Key features — colored gradient icons ── */}
       <section className="py-section">
         <div className="container mx-auto px-6 max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
-            Key features to look for
+            What a manufacturing ERP should include
           </h2>
           <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-            Not all MRP systems are equal. These are the features that matter most
-            for growing manufacturers.
+            These are the capabilities that matter most for growing manufacturers — the
+            operational core that connects your floor to your front office.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -775,13 +851,13 @@ export default function MRPSoftwarePage() {
               </svg>
             </div>
             <div className="flex-1 text-center sm:text-left">
-              <p className="text-slate-900 font-semibold">Your MRP should connect to the tools you already use</p>
+              <p className="text-slate-900 font-semibold">Your manufacturing system should connect to the tools you already use</p>
               <p className="text-slate-500 text-sm">
-                QuickBooks, Xero, Shopify, WooCommerce, ShipStation, and more — natively integrated.
+                QuickBooks, Xero, Shopify, WooCommerce, ShipStation, and more — natively integrated, not bolted on.
               </p>
             </div>
             <Link href="/integrations" className="group text-primary-600 font-medium text-sm flex-shrink-0 inline-flex items-center gap-1">
-              See integrations
+              See all integrations
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
@@ -790,15 +866,15 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 6: MRP by industry — colored top borders ── */}
+      {/* ── Section 7: Industry section — colored top borders ── */}
       <section className="py-section bg-slate-50">
         <div className="container mx-auto px-6 max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
-            MRP software for your industry
+            Manufacturing ERP for your industry
           </h2>
           <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-            Whether you need FDA lot tracking for food production or serial numbers
-            for electronics, the right MRP software adapts to your workflow.
+            Whether you need FDA lot tracking for food production or device traceability for
+            medical devices, the right system adapts to your compliance requirements and workflows.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -830,24 +906,23 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 7: Implementation comparison ── */}
+      {/* ── Section 8: Implementation comparison ── */}
       <section className="py-section">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
-            What implementation actually looks like
+            Enterprise ERP vs. modern cloud manufacturing software
           </h2>
           <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-            Implementation is where many manufacturers get burned. Enterprise vendors
-            quote 6–18 months, charge five or six figures for consultants, and leave you
-            with a system so complex your team avoids using it. Modern cloud MRP flips
-            that model entirely.
+            Implementation is where many manufacturers get burned. Enterprise vendors quote
+            6–18 months, charge five or six figures for consultants, and leave you with a system
+            so complex your team avoids using it. There is a better path.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* Enterprise */}
             <div className="bg-white rounded-2xl p-8 border border-slate-200">
               <div className="inline-block bg-slate-100 text-slate-500 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
-                Enterprise MRP / ERP
+                Enterprise ERP
               </div>
               <ul className="space-y-4">
                 {[
@@ -855,7 +930,7 @@ export default function MRPSoftwarePage() {
                   { bold: '$50,000–$500,000+', rest: 'upfront costs' },
                   { bold: 'Requires', rest: 'dedicated implementation consultants' },
                   { bold: 'Per-user fees', rest: 'that grow with your team' },
-                  { bold: 'Designed for', rest: '$100M+ companies' },
+                  { bold: 'Designed for', rest: '$100M+ companies with IT departments' },
                 ].map((item) => (
                   <li key={item.bold} className="flex gap-3 text-slate-500">
                     <span className="flex-shrink-0 w-5 h-5 bg-red-50 rounded-full flex items-center justify-center mt-0.5">
@@ -869,19 +944,19 @@ export default function MRPSoftwarePage() {
               </ul>
             </div>
 
-            {/* Modern cloud MRP */}
+            {/* Modern cloud */}
             <div className="relative bg-white rounded-2xl overflow-hidden border-2 border-blue-200">
               <div className="h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500" />
               <div className="p-8">
                 <div className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
-                  Modern cloud MRP
+                  Modern cloud manufacturing software
                 </div>
                 <ul className="space-y-4">
                   {[
                     { bold: 'Go live in 3–6 weeks', rest: 'with dedicated support' },
                     { bold: 'Starting from $199/month', rest: '— no surprise fees' },
                     { bold: 'Self-service setup', rest: 'with implementation manager' },
-                    { bold: 'Flat pricing', rest: '— your whole team included' },
+                    { bold: 'Flat pricing', rest: '— unlimited users included' },
                     { bold: 'Purpose-built', rest: 'for $500K–$50M manufacturers' },
                   ].map((item) => (
                     <li key={item.bold} className="flex gap-3 text-slate-500">
@@ -927,69 +1002,16 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 7b: Common MRP implementation mistakes ── */}
+      {/* ── Section 9: Evaluation questions ── */}
       <section className="py-section bg-slate-50">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            Common MRP implementation mistakes
+            6 questions to ask every vendor
           </h2>
           <p className="text-slate-600 mb-8 leading-relaxed">
-            Most failed MRP implementations aren&apos;t caused by bad software — they&apos;re
-            caused by bad process. Here are the mistakes we see most often, and how to avoid them.
-          </p>
-
-          <div className="space-y-5">
-            {[
-              {
-                mistake: 'Buying more system than you need',
-                detail:
-                  'It\'s tempting to pick the MRP with the longest feature list. But every unused module adds complexity, slows adoption, and increases cost. Start with the features your team will use in the first 90 days — BOM management, inventory tracking, purchasing — and expand from there. The right system grows with you instead of overwhelming you on day one.',
-              },
-              {
-                mistake: 'Skipping data cleanup before migration',
-                detail:
-                  'Migrating messy spreadsheet data into a new system just gives you organized mess. Before going live, audit your item master: remove discontinued SKUs, verify unit conversions, reconcile on-hand quantities, and standardize naming conventions. Two days of cleanup saves two months of headaches.',
-              },
-              {
-                mistake: 'Not involving your floor team in the decision',
-                detail:
-                  'Owners and operations managers often select software without input from the people who\'ll use it daily — warehouse staff, production leads, purchasing coordinators. If the system feels unintuitive to them, adoption stalls. Include your floor team in demos and pilot testing. Their buy-in determines whether the software actually gets used.',
-              },
-              {
-                mistake: 'Underestimating the importance of support',
-                detail:
-                  'During evaluation, every vendor promises great support. After the contract is signed, some disappear behind ticket queues and chatbots. Ask for references from current customers in your industry. Ask how quickly a real person responds. The first six months after go-live are when you need support most — and when bad support costs you the most.',
-              },
-            ].map((item) => (
-              <div
-                key={item.mistake}
-                className="bg-white rounded-2xl p-5 border border-slate-200 hover:shadow-sm transition-shadow"
-              >
-                <h3 className="font-bold text-slate-900 mb-2 flex items-start gap-3">
-                  <span className="flex-shrink-0 w-7 h-7 bg-red-50 rounded-lg flex items-center justify-center mt-0.5">
-                    <svg className="w-4 h-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                    </svg>
-                  </span>
-                  {item.mistake}
-                </h3>
-                <p className="text-slate-500 text-sm leading-relaxed ml-10">{item.detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Section 8: How to evaluate MRP software ── */}
-      <section className="py-section">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-            How to evaluate MRP software
-          </h2>
-          <p className="text-slate-600 mb-8 leading-relaxed">
-            Choosing the wrong MRP system is expensive — not just in dollars, but in the
-            months your team spends fighting software instead of running production.
-            Ask every vendor these six questions.
+            Choosing the wrong manufacturing system is expensive — not just in dollars, but in
+            the months your team spends fighting software instead of running production.
+            Ask every vendor on your shortlist these questions.
           </p>
 
           <div className="space-y-3">
@@ -1011,15 +1033,16 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 9: Testimonials — colored gradient accents ── */}
+      {/* ── Section 10: Testimonials — colored gradient accents ── */}
+      {/* TODO: Replace testimonials with manufacturing ERP-specific customer quotes when available */}
       <section className="py-section">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-3">
             What manufacturers say after switching
           </h2>
           <p className="text-slate-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-            Real results from manufacturers who moved from spreadsheets and
-            outdated systems to Brahmin.
+            Real results from manufacturers who moved from spreadsheets, disconnected tools,
+            and enterprise systems to Brahmin.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -1060,7 +1083,7 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 10: FAQ ── */}
+      {/* ── Section 11: FAQ ── */}
       <section className="py-section bg-slate-50">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-12">
@@ -1094,7 +1117,7 @@ export default function MRPSoftwarePage() {
         </div>
       </section>
 
-      {/* ── Section 11: Final CTA — dark gradient ── */}
+      {/* ── Section 12: Final CTA — dark gradient ── */}
       <section className="relative overflow-hidden bg-slate-900 py-24">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-violet-500/15 rounded-full blur-3xl" />
@@ -1102,12 +1125,12 @@ export default function MRPSoftwarePage() {
         <div className="relative max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Ready to see what MRP software can do for you?
+              Ready to connect your manufacturing operations?
             </span>
           </h2>
           <p className="text-lg text-slate-400 mb-10 leading-relaxed">
-            Join 300+ growing manufacturers who&apos;ve simplified their operations with
-            Brahmin. Starting from $199/month, no per-user fees, go live in weeks.
+            Join 300+ growing manufacturers who simplified their operations with Brahmin.
+            Starting from $199/month, no per-user fees, go live in 3–6 weeks.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link

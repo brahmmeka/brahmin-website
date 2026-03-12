@@ -161,7 +161,7 @@ export default function IntegrationsPage() {
               Built-in connections, zero setup headaches
             </h2>
             <p className="mt-4 text-lg text-slate-500 max-w-xl mx-auto">
-              These integrations are native — meaning they&apos;re maintained by our team, two-way where it matters, and work out of the box.
+              These integrations are native — meaning they&apos;re maintained by our team, syncing data from Brahmin into your existing tools, and work out of the box.
             </p>
           </div>
 

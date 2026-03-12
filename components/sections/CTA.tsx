@@ -42,7 +42,7 @@ export default function CTA() {
           <div className="mt-10 flex justify-center">
             <Link
               href="/demo"
-              className="relative inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-400 text-white px-10 py-5 rounded-xl font-bold text-lg transition-all shadow-2xl shadow-accent-500/40 hover:shadow-accent-400/60 hover:-translate-y-1 active:translate-y-0"
+              className="relative inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-400 text-white px-6 py-3 md:px-10 md:py-5 rounded-xl font-bold text-lg transition-all shadow-2xl shadow-accent-500/40 hover:shadow-accent-400/60 hover:-translate-y-1 active:translate-y-0"
             >
               {/* Pulsing ring */}
               <span className="absolute inset-0 rounded-xl animate-ping bg-accent-400 opacity-20" />
@@ -58,7 +58,7 @@ export default function CTA() {
           </p>
 
           {/* Trust signals */}
-          <div className="mt-12 pt-8 border-t border-primary-500/40 flex flex-wrap justify-center gap-8">
+          <div className="mt-12 pt-8 border-t border-primary-500/40 flex flex-wrap justify-center gap-4 md:gap-8">
             {[
               { n: '300+', l: 'Manufacturers' },
               { n: '3–6 weeks', l: 'Avg. go-live' },

@@ -135,7 +135,7 @@ export default function FeaturesPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-primary-600 mb-4">
             Features
           </span>
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08] max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08] max-w-4xl mx-auto">
             Everything you need to run your operation
           </h1>
           <p className="mt-6 text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">

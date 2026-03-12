@@ -208,7 +208,7 @@ export default function WholesaleDistributionPage() {
                 </svg>
                 Wholesale &amp; Distribution
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-[1.08]">
                 Wholesale distribution inventory software
               </h1>
               <p className="mt-6 text-xl text-slate-500 leading-relaxed max-w-2xl">
@@ -251,7 +251,7 @@ export default function WholesaleDistributionPage() {
         {/* B2B portal highlight */}
         <section className="py-section bg-white">
           <div className="container mx-auto px-6 max-w-7xl">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <div>
                 <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent-600 mb-4">B2B Portal</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-tight">

@@ -159,7 +159,7 @@ export default function CustomersPage() {
             {featuredStories.map((story, i) => (
               <div
                 key={story.company}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+                className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
               >
                 {/* Card */}
                 <div className={`bg-gradient-to-br ${story.color} rounded-3xl border border-slate-200 p-8 ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -168,7 +168,7 @@ export default function CustomersPage() {
                   </span>
                   <div className="text-4xl font-bold text-slate-900 mb-2">{story.result}</div>
                   <p className="text-slate-500 mb-8">{story.context}</p>
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {story.stats.map((s) => (
                       <div key={s.l} className="bg-white rounded-xl border border-slate-200 p-4 text-center shadow-sm">
                         <div className="text-xl font-bold text-slate-900">{s.n}</div>

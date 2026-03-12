@@ -12,8 +12,13 @@ import {
   formatDate,
   categoryLabels,
   type Post,
+  type PostSummary,
 } from '@/lib/sanity'
 import { SAMPLE_POSTS, SAMPLE_POST_FULL } from '@/lib/sanity.sample'
+import TableOfContents from '@/components/blog/TableOfContents'
+import AuthorBox from '@/components/blog/AuthorBox'
+import RelatedPosts from '@/components/blog/RelatedPosts'
+import BlogCTA from '@/components/blog/BlogCTA'
 
 export const revalidate = 60
 
@@ -85,13 +90,62 @@ async function getPost(slug: string): Promise<Post | null> {
   }
 }
 
+async function getRelatedPosts(slug: string): Promise<PostSummary[]> {
+  if (!isSanityConfigured()) {
+    return SAMPLE_POSTS.filter((p) => p.slug.current !== slug).slice(0, 3)
+  }
+  try {
+    const query = `*[_type == "post" && slug.current != $slug] | order(publishedAt desc)[0...3] {
+      _id, title, slug, excerpt, publishedAt, categories, featuredImage, author
+    }`
+    return await client.fetch<PostSummary[]>(query, { slug })
+  } catch {
+    return SAMPLE_POSTS.filter((p) => p.slug.current !== slug).slice(0, 3)
+  }
+}
+
+// ─── Heading extraction for TOC ────────────────────────────────────────────────
+
+function extractHeadings(body: any[]): { id: string; text: string; level: 2 | 3 }[] {
+  if (!body) return []
+  return body
+    .filter((block: any) => block._type === 'block' && ['h2', 'h3'].includes(block.style))
+    .map((block: any) => ({
+      id:
+        block._key ||
+        block.children
+          ?.map((c: any) => c.text)
+          .join('')
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[^\w-]/g, '') ||
+        '',
+      text: block.children?.map((c: any) => c.text).join('') || '',
+      level: block.style === 'h2' ? (2 as const) : (3 as const),
+    }))
+}
+
 // ─── PortableText components ───────────────────────────────────────────────────
 
 const portableTextComponents: PortableTextComponents = {
   block: {
     normal: ({ children }) => <p className="mb-5 text-slate-700 leading-relaxed text-lg">{children}</p>,
-    h2: ({ children }) => <h2 className="mt-12 mb-4 text-3xl font-bold text-slate-900 tracking-tight">{children}</h2>,
-    h3: ({ children }) => <h3 className="mt-8 mb-3 text-2xl font-bold text-slate-900">{children}</h3>,
+    h2: ({ children, value }) => {
+      const id = value?._key || ''
+      return (
+        <h2 id={id} className="mt-12 mb-4 text-3xl font-bold text-slate-900 tracking-tight scroll-mt-24">
+          {children}
+        </h2>
+      )
+    },
+    h3: ({ children, value }) => {
+      const id = value?._key || ''
+      return (
+        <h3 id={id} className="mt-8 mb-3 text-2xl font-bold text-slate-900 scroll-mt-24">
+          {children}
+        </h3>
+      )
+    },
     h4: ({ children }) => <h4 className="mt-6 mb-2 text-xl font-bold text-slate-900">{children}</h4>,
     blockquote: ({ children }) => (
       <blockquote className="my-8 border-l-4 border-primary-400 pl-6 italic text-xl text-slate-600 leading-relaxed">
@@ -170,61 +224,96 @@ const portableTextComponents: PortableTextComponents = {
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const post = await getPost(slug)
+  const [post, relatedPosts] = await Promise.all([getPost(slug), getRelatedPosts(slug)])
 
   if (!post) notFound()
+
+  const headings = extractHeadings(post.body)
 
   const estimatedReadTime = post.body
     ? Math.max(1, Math.ceil(JSON.stringify(post.body).split(' ').length / 200))
     : 3
 
+  // Split body roughly in half for mid-article CTA insertion
+  const bodyLength = post.body?.length ?? 0
+  const midPoint = Math.floor(bodyLength / 2)
+  const bodyFirstHalf = post.body?.slice(0, midPoint)
+  const bodySecondHalf = post.body?.slice(midPoint)
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    datePublished: post.publishedAt,
+    author: {
+      '@type': 'Person',
+      name: post.author?.name ?? 'Brahmin Solutions',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Brahmin Solutions',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://brahminsolutions.com/images/logo.webp',
+      },
+    },
+  }
+
   return (
     <main>
+      {/* JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Header */}
       <section className="bg-gradient-to-b from-slate-50 to-white pt-16 pb-10">
-        <div className="container mx-auto px-6 max-w-3xl">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8">
-            <Link href="/blog" className="hover:text-primary-600 transition-colors">Blog</Link>
-            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-            <span className="text-slate-600 truncate max-w-xs">{post.title}</span>
-          </nav>
+        <div className="container mx-auto px-6 max-w-5xl">
+          <div className="max-w-3xl lg:ml-[calc(200px+3rem)]">
+            {/* Breadcrumb */}
+            <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8">
+              <Link href="/blog" className="hover:text-primary-600 transition-colors">Blog</Link>
+              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+              <span className="text-slate-600 truncate max-w-xs">{post.title}</span>
+            </nav>
 
-          {/* Categories */}
-          {post.categories?.length ? (
-            <div className="flex flex-wrap gap-2 mb-5">
-              {post.categories.map((c) => (
-                <span key={c} className="inline-block px-2.5 py-0.5 bg-primary-50 text-primary-700 border border-primary-200 rounded-full text-xs font-semibold">
-                  {categoryLabels[c] ?? c}
-                </span>
-              ))}
-            </div>
-          ) : null}
-
-          {/* Title */}
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-[1.1]">
-            {post.title}
-          </h1>
-
-          {/* Meta */}
-          <div className="mt-6 flex items-center gap-4 flex-wrap">
-            {post.author && (
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 text-xs font-bold">
-                  {post.author.name.charAt(0)}
-                </div>
-                <div>
-                  <div className="text-sm font-semibold text-slate-800">{post.author.name}</div>
-                  {post.author.role && <div className="text-xs text-slate-400">{post.author.role}</div>}
-                </div>
+            {/* Categories */}
+            {post.categories?.length ? (
+              <div className="flex flex-wrap gap-2 mb-5">
+                {post.categories.map((c) => (
+                  <span key={c} className="inline-block px-2.5 py-0.5 bg-primary-50 text-primary-700 border border-primary-200 rounded-full text-xs font-semibold">
+                    {categoryLabels[c] ?? c}
+                  </span>
+                ))}
               </div>
-            )}
-            <span className="text-slate-200">·</span>
-            <span className="text-sm text-slate-500">{formatDate(post.publishedAt)}</span>
-            <span className="text-slate-200">·</span>
-            <span className="text-sm text-slate-400">{estimatedReadTime} min read</span>
+            ) : null}
+
+            {/* Title */}
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-[1.1]">
+              {post.title}
+            </h1>
+
+            {/* Meta */}
+            <div className="mt-6 flex items-center gap-4 flex-wrap">
+              {post.author && (
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 text-xs font-bold">
+                    {post.author.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-slate-800">{post.author.name}</div>
+                    {post.author.role && <div className="text-xs text-slate-400">{post.author.role}</div>}
+                  </div>
+                </div>
+              )}
+              <span className="text-slate-200">&middot;</span>
+              <span className="text-sm text-slate-500">{formatDate(post.publishedAt)}</span>
+              <span className="text-slate-200">&middot;</span>
+              <span className="text-sm text-slate-400">{estimatedReadTime} min read</span>
+            </div>
           </div>
         </div>
       </section>
@@ -244,32 +333,66 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       )}
 
-      {/* Body */}
-      <article className="container mx-auto px-6 max-w-3xl pb-section">
-        {post.body && <PortableText value={post.body} components={portableTextComponents} />}
+      {/* Two-column layout: TOC sidebar + content */}
+      <div className="container mx-auto px-6 max-w-5xl pb-section">
+        <div className="lg:grid lg:grid-cols-[200px_1fr] lg:gap-12">
+          {/* TOC sidebar — desktop only */}
+          <aside className="hidden lg:block">
+            <TableOfContents headings={headings} />
+          </aside>
 
-        {/* CTA */}
-        <div className="mt-16 bg-primary-600 rounded-3xl p-8 md:p-10 text-center">
-          <h2 className="text-2xl font-bold text-white mb-2">See how Brahmin works for your operation</h2>
-          <p className="text-primary-200 mb-6">Book a 30-minute personalized demo with your actual products and workflows.</p>
-          <Link
-            href="/demo"
-            className="inline-block bg-accent-500 hover:bg-accent-600 text-white px-8 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-accent-500/30"
-          >
-            Book a demo
-          </Link>
-          <p className="mt-3 text-xs text-primary-300">No credit card required &middot; 14-day free trial</p>
+          {/* Main content */}
+          <article className="max-w-3xl">
+            {/* Mobile TOC */}
+            {headings.length > 0 && (
+              <div className="lg:hidden mb-8">
+                <TableOfContents headings={headings} />
+              </div>
+            )}
+
+            {/* Body content with optional mid-article CTA */}
+            {bodyLength > 4 ? (
+              <>
+                <PortableText value={bodyFirstHalf!} components={portableTextComponents} />
+                <BlogCTA />
+                <PortableText value={bodySecondHalf!} components={portableTextComponents} />
+              </>
+            ) : post.body && bodyLength > 0 ? (
+              <>
+                <PortableText value={post.body} components={portableTextComponents} />
+                <BlogCTA />
+              </>
+            ) : null}
+
+            {/* Author box */}
+            {post.author && <AuthorBox author={post.author} />}
+
+            {/* Related posts */}
+            <RelatedPosts posts={relatedPosts} />
+
+            {/* Final CTA */}
+            <div className="bg-slate-900 text-white rounded-xl p-8 md:p-12 text-center mt-16">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">See Brahmin in action</h2>
+              <p className="text-slate-400 mb-6">Book a personalized demo with our team</p>
+              <Link
+                href="/demo"
+                className="inline-block bg-accent-500 hover:bg-accent-600 text-white px-8 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-accent-500/30"
+              >
+                Book a demo
+              </Link>
+            </div>
+
+            {/* Back to blog */}
+            <div className="mt-12">
+              <Link href="/blog" className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold text-sm transition-colors">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+                Back to Blog
+              </Link>
+            </div>
+          </article>
         </div>
-      </article>
-
-      {/* Back to blog */}
-      <div className="container mx-auto px-6 max-w-3xl pb-16">
-        <Link href="/blog" className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold text-sm transition-colors">
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-          </svg>
-          Back to Blog
-        </Link>
       </div>
     </main>
   )

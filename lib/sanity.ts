@@ -8,14 +8,20 @@ export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production'
 export const apiVersion = '2024-01-01'
 
 // Lazy client — only instantiated when projectId is available
+let _client: ReturnType<typeof createClient> | null = null
+
 function getClient() {
   if (!projectId) throw new Error('NEXT_PUBLIC_SANITY_PROJECT_ID is not set')
-  return createClient({ projectId, dataset, apiVersion, useCdn: true })
+  if (!_client) _client = createClient({ projectId, dataset, apiVersion, useCdn: true })
+  return _client
 }
 
 export const client = new Proxy({} as ReturnType<typeof createClient>, {
   get(_target, prop) {
-    return getClient()[prop as keyof ReturnType<typeof createClient>]
+    const c = getClient()
+    const value = c[prop as keyof typeof c]
+    if (typeof value === 'function') return value.bind(c)
+    return value
   },
 })
 

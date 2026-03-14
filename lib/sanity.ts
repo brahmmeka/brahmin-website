@@ -115,4 +115,5 @@ export const categoryLabels: Record<string, string> = {
   'integrations': 'Integrations',
   'customer-stories': 'Customer Stories',
   'industry-tips': 'Industry Tips',
+  'learning-center': 'Learning Center',
 }

@@ -29,10 +29,12 @@ function PostCard({ post }: { post: PostSummary }) {
       <div className="relative aspect-[16/9] bg-gradient-to-br from-slate-100 to-slate-50 overflow-hidden">
         {post.featuredImage?.asset ? (
           <Image
-            src={`https://cdn.sanity.io/images/${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}/production/${post.featuredImage.asset._ref.replace('image-', '').replace('-jpg', '.jpg').replace('-png', '.png').replace('-webp', '.webp')}`}
+            src={`https://cdn.sanity.io/images/${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}/production/${post.featuredImage.asset._ref.replace('image-', '').replace('-jpg', '.jpg').replace('-png', '.png').replace('-webp', '.webp')}?w=600&h=338&fit=crop&auto=format`}
             alt={post.featuredImage.alt ?? post.title}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            loading="lazy"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">

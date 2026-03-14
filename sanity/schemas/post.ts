@@ -70,6 +70,7 @@ export const postSchema = defineType({
           { title: 'Integrations', value: 'integrations' },
           { title: 'Customer Stories', value: 'customer-stories' },
           { title: 'Industry Tips', value: 'industry-tips' },
+          { title: 'Learning Center', value: 'learning-center' },
         ],
       },
     }),

@@ -16,7 +16,6 @@ import {
 } from '@/lib/sanity'
 import { SAMPLE_POSTS, SAMPLE_POST_FULL } from '@/lib/sanity.sample'
 import TableOfContents from '@/components/blog/TableOfContents'
-import AuthorBox from '@/components/blog/AuthorBox'
 import RelatedPosts from '@/components/blog/RelatedPosts'
 import BlogCTA from '@/components/blog/BlogCTA'
 
@@ -62,7 +61,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 // ─── Data fetching ─────────────────────────────────────────────────────────────
 
 async function getPost(slug: string): Promise<Post | null> {
-  // Sample data fallback
   if (!isSanityConfigured()) {
     if (slug === SAMPLE_POST_FULL.slug.current) return SAMPLE_POST_FULL
     const found = SAMPLE_POSTS.find((p) => p.slug.current === slug)
@@ -129,11 +127,13 @@ function extractHeadings(body: any[]): { id: string; text: string; level: 2 | 3 
 
 const portableTextComponents: PortableTextComponents = {
   block: {
-    normal: ({ children }) => <p className="mb-5 text-slate-700 leading-relaxed text-lg">{children}</p>,
+    normal: ({ children }) => (
+      <p className="mb-6 text-slate-600 leading-[1.8] text-base md:text-[17px]">{children}</p>
+    ),
     h2: ({ children, value }) => {
       const id = value?._key || ''
       return (
-        <h2 id={id} className="mt-12 mb-4 text-3xl font-bold text-slate-900 tracking-tight scroll-mt-24">
+        <h2 id={id} className="mt-14 mb-5 text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 leading-tight scroll-mt-24">
           {children}
         </h2>
       )
@@ -141,20 +141,22 @@ const portableTextComponents: PortableTextComponents = {
     h3: ({ children, value }) => {
       const id = value?._key || ''
       return (
-        <h3 id={id} className="mt-8 mb-3 text-2xl font-bold text-slate-900 scroll-mt-24">
+        <h3 id={id} className="mt-10 mb-4 text-lg sm:text-xl md:text-2xl font-bold text-slate-900 leading-tight scroll-mt-24">
           {children}
         </h3>
       )
     },
-    h4: ({ children }) => <h4 className="mt-6 mb-2 text-xl font-bold text-slate-900">{children}</h4>,
+    h4: ({ children }) => (
+      <h4 className="mt-8 mb-3 text-base sm:text-lg font-bold text-slate-900">{children}</h4>
+    ),
     blockquote: ({ children }) => (
-      <blockquote className="my-8 border-l-4 border-primary-400 pl-6 italic text-xl text-slate-600 leading-relaxed">
+      <blockquote className="my-10 border-l-4 border-primary-500 pl-6 py-1 italic text-base md:text-lg text-slate-600 leading-relaxed bg-slate-50 rounded-r-xl pr-6">
         {children}
       </blockquote>
     ),
   },
   marks: {
-    strong: ({ children }) => <strong className="font-bold text-slate-900">{children}</strong>,
+    strong: ({ children }) => <strong className="font-semibold text-slate-900">{children}</strong>,
     em: ({ children }) => <em className="italic">{children}</em>,
     code: ({ children }) => (
       <code className="bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded text-sm font-mono">{children}</code>
@@ -164,7 +166,7 @@ const portableTextComponents: PortableTextComponents = {
         href={value?.href}
         target={value?.blank ? '_blank' : undefined}
         rel={value?.blank ? 'noopener noreferrer' : undefined}
-        className="text-primary-600 hover:text-primary-700 underline underline-offset-2"
+        className="text-primary-600 hover:text-primary-700 underline decoration-primary-300 underline-offset-2 transition-colors"
       >
         {children}
       </a>
@@ -175,16 +177,18 @@ const portableTextComponents: PortableTextComponents = {
       if (!value?.asset) return null
       return (
         <figure className="my-10">
-          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-slate-100">
+          <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-100">
             <Image
-              src={urlFor(value).width(1200).url()}
+              src={urlFor(value).width(1200).auto('format').url()}
               alt={value.alt ?? ''}
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 720px"
+              loading="lazy"
             />
           </div>
           {value.caption && (
-            <figcaption className="mt-2 text-center text-sm text-slate-400">{value.caption}</figcaption>
+            <figcaption className="mt-3 text-center text-sm text-slate-400 italic">{value.caption}</figcaption>
           )}
         </figure>
       )
@@ -197,26 +201,26 @@ const portableTextComponents: PortableTextComponents = {
       }
       const style = styles[value?.type ?? 'info'] ?? styles.info
       return (
-        <div className={`my-8 rounded-2xl border p-6 ${style}`}>
-          <p className="text-base leading-relaxed">{value?.text}</p>
+        <div className={`my-8 rounded-xl border p-6 ${style}`}>
+          <p className="text-sm md:text-base leading-relaxed">{value?.text}</p>
         </div>
       )
     },
   },
   list: {
-    bullet: ({ children }) => <ul className="my-5 space-y-2 list-none pl-0">{children}</ul>,
-    number: ({ children }) => <ol className="my-5 space-y-2 list-decimal pl-6">{children}</ol>,
+    bullet: ({ children }) => <ul className="my-6 space-y-3 list-none pl-0">{children}</ul>,
+    number: ({ children }) => <ol className="my-6 space-y-3 list-decimal pl-6 marker:text-slate-400 marker:font-semibold">{children}</ol>,
   },
   listItem: {
     bullet: ({ children }) => (
-      <li className="flex items-start gap-3 text-slate-700 text-lg">
-        <svg className="w-5 h-5 text-accent-500 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-        </svg>
+      <li className="flex items-start gap-3 text-slate-600 text-base md:text-[17px] leading-[1.7]">
+        <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-primary-500 shrink-0" />
         <span>{children}</span>
       </li>
     ),
-    number: ({ children }) => <li className="text-slate-700 text-lg leading-relaxed">{children}</li>,
+    number: ({ children }) => (
+      <li className="text-slate-600 text-base md:text-[17px] leading-[1.7]">{children}</li>
+    ),
   },
 }
 
@@ -260,97 +264,109 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   return (
-    <main>
+    <main className="bg-white">
       {/* JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Header */}
-      <section className="bg-gradient-to-b from-slate-50 to-white pt-16 pb-10">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <div className="max-w-3xl lg:ml-[calc(200px+3rem)]">
-            {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8">
-              <Link href="/blog" className="hover:text-primary-600 transition-colors">Blog</Link>
-              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-              <span className="text-slate-600 truncate max-w-xs">{post.title}</span>
-            </nav>
+      {/* ── Full-width header area ── */}
+      <section className="bg-white border-b border-slate-100">
+        <div className="container mx-auto px-6 max-w-7xl pt-8 sm:pt-10 pb-10 sm:pb-12">
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-1.5 text-sm text-slate-400 mb-6 sm:mb-8">
+            <Link href="/" className="hover:text-primary-600 transition-colors">Home</Link>
+            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+            <Link href="/blog" className="hover:text-primary-600 transition-colors">Blog</Link>
+          </nav>
 
-            {/* Categories */}
-            {post.categories?.length ? (
-              <div className="flex flex-wrap gap-2 mb-5">
-                {post.categories.map((c) => (
-                  <span key={c} className="inline-block px-2.5 py-0.5 bg-primary-50 text-primary-700 border border-primary-200 rounded-full text-xs font-semibold">
-                    {categoryLabels[c] ?? c}
-                  </span>
-                ))}
-              </div>
-            ) : null}
+          {/* Categories */}
+          {post.categories?.length ? (
+            <div className="flex flex-wrap gap-2 mb-6">
+              {post.categories.map((c) => (
+                <span key={c} className="inline-block px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-semibold tracking-wide">
+                  {categoryLabels[c] ?? c}
+                </span>
+              ))}
+            </div>
+          ) : null}
 
-            {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-[1.1]">
-              {post.title}
-            </h1>
+          {/* Title — full width, large */}
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-[3.25rem] font-bold text-slate-900 tracking-tight leading-[1.12] max-w-4xl">
+            {post.title}
+          </h1>
 
-            {/* Meta */}
-            <div className="mt-6 flex items-center gap-4 flex-wrap">
-              {post.author && (
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 text-xs font-bold">
-                    {post.author.name.charAt(0)}
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-slate-800">{post.author.name}</div>
-                    {post.author.role && <div className="text-xs text-slate-400">{post.author.role}</div>}
-                  </div>
+          {/* Excerpt */}
+          {post.excerpt && (
+            <p className="mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-slate-500 leading-relaxed max-w-3xl">
+              {post.excerpt}
+            </p>
+          )}
+
+          {/* Author + meta row */}
+          <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-4 sm:gap-6">
+            {post.author && (
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 text-sm font-bold">
+                  {post.author.name.charAt(0)}
                 </div>
-              )}
-              <span className="text-slate-200">&middot;</span>
-              <span className="text-sm text-slate-500">{formatDate(post.publishedAt)}</span>
-              <span className="text-slate-200">&middot;</span>
-              <span className="text-sm text-slate-400">{estimatedReadTime} min read</span>
+                <div>
+                  <div className="text-sm font-semibold text-slate-900">{post.author.name}</div>
+                  {post.author.role && <div className="text-xs text-slate-400">{post.author.role}</div>}
+                </div>
+              </div>
+            )}
+            <div className="flex items-center gap-3 text-sm text-slate-400">
+              <span>{formatDate(post.publishedAt)}</span>
+              <span className="w-1 h-1 rounded-full bg-slate-300" />
+              <span>{estimatedReadTime} min read</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured image */}
+      {/* ── Featured image — full bleed ── */}
       {post.featuredImage?.asset && (
-        <div className="container mx-auto px-6 max-w-4xl mb-10">
-          <div className="relative aspect-[16/7] rounded-3xl overflow-hidden bg-slate-100 border border-slate-200">
-            <Image
-              src={urlFor(post.featuredImage).width(1600).url()}
-              alt={post.featuredImage.alt ?? post.title}
-              fill
-              className="object-cover"
-              priority
-            />
+        <div className="bg-slate-50">
+          <div className="container mx-auto px-6 max-w-7xl py-6 sm:py-8">
+            <div className="relative aspect-[2/1] sm:aspect-[21/9] md:aspect-[3/1] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-100">
+              <Image
+                src={urlFor(post.featuredImage).width(1200).auto('format').url()}
+                alt={post.featuredImage.alt ?? post.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 1280px"
+                priority
+              />
+            </div>
           </div>
         </div>
       )}
 
-      {/* Two-column layout: TOC sidebar + content */}
-      <div className="container mx-auto px-6 max-w-5xl pb-section">
-        <div className="lg:grid lg:grid-cols-[200px_1fr] lg:gap-12">
-          {/* TOC sidebar — desktop only */}
-          <aside className="hidden lg:block">
+      {/* ── Article body with TOC sidebar ── */}
+      <div className="container mx-auto px-6 max-w-7xl pt-10 md:pt-14 pb-6 md:pb-10">
+        {/* Mobile TOC */}
+        {headings.length > 0 && (
+          <div className="lg:hidden mb-8">
             <TableOfContents headings={headings} />
-          </aside>
+          </div>
+        )}
 
-          {/* Main content */}
-          <article className="max-w-3xl">
-            {/* Mobile TOC */}
-            {headings.length > 0 && (
-              <div className="lg:hidden mb-8">
+        <div className="lg:flex lg:gap-16 xl:gap-20">
+          {/* TOC sidebar — desktop only */}
+          {headings.length > 0 && (
+            <aside className="hidden lg:block lg:w-56 xl:w-60 lg:shrink-0">
+              <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pb-8">
                 <TableOfContents headings={headings} />
               </div>
-            )}
+            </aside>
+          )}
 
-            {/* Body content with optional mid-article CTA */}
+          {/* Article content */}
+          <article className="min-w-0 flex-1 max-w-[720px]">
             {bodyLength > 4 ? (
               <>
                 <PortableText value={bodyFirstHalf!} components={portableTextComponents} />
@@ -364,34 +380,49 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </>
             ) : null}
 
-            {/* Author box */}
-            {post.author && <AuthorBox author={post.author} />}
-
-            {/* Related posts */}
-            <RelatedPosts posts={relatedPosts} />
-
-            {/* Final CTA */}
-            <div className="bg-slate-900 text-white rounded-xl p-8 md:p-12 text-center mt-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">See Brahmin in action</h2>
-              <p className="text-slate-400 mb-6">Book a personalized demo with our team</p>
-              <Link
-                href="/demo"
-                className="inline-block bg-accent-500 hover:bg-accent-600 text-white px-8 py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-accent-500/30"
-              >
-                Book a demo
-              </Link>
-            </div>
-
-            {/* Back to blog */}
-            <div className="mt-12">
-              <Link href="/blog" className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold text-sm transition-colors">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-                </svg>
-                Back to Blog
-              </Link>
-            </div>
+            {/* About the author */}
+            {post.author && (
+              <div className="mt-10 pt-8 border-t border-slate-200">
+                <p className="text-xs text-slate-400 uppercase tracking-wider font-medium mb-2">About the author</p>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  <span className="font-semibold text-slate-900">{post.author.name}</span>
+                  {post.author.role && <> is {post.author.role} at Brahmin Solutions.</>}
+                </p>
+              </div>
+            )}
           </article>
+        </div>
+      </div>
+
+      {/* ── Below article (no sidebar) ── */}
+      <div>
+        <div className="container mx-auto px-6 max-w-7xl pt-4 pb-10 sm:pb-14">
+          {/* Related posts */}
+          <RelatedPosts posts={relatedPosts} />
+
+          {/* Final CTA */}
+          <div className="mt-12 sm:mt-16 bg-slate-900 text-white rounded-xl sm:rounded-2xl p-8 sm:p-10 md:p-14 text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3">Ready to streamline your operations?</h2>
+            <p className="text-slate-400 mb-6 sm:mb-8 max-w-lg mx-auto text-sm sm:text-base">
+              Book a 30-minute demo. We&apos;ll show you the software with your actual products and workflows.
+            </p>
+            <Link
+              href="/demo"
+              className="inline-block bg-accent-500 hover:bg-accent-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all shadow-lg shadow-accent-500/25 text-base sm:text-lg"
+            >
+              Book a demo
+            </Link>
+          </div>
+
+          {/* Back to blog */}
+          <div className="mt-10 sm:mt-12">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold text-sm transition-colors group">
+              <svg className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+              </svg>
+              Back to all articles
+            </Link>
+          </div>
         </div>
       </div>
     </main>

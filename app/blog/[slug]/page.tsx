@@ -171,6 +171,60 @@ function extractFaqs(body: any[]): { question: string; answer: string }[] {
   return faqs
 }
 
+// ─── Shared table renderer ──────────────────────────────────────────────────────
+
+function renderTable(rows: { cells: string[]; _key?: string }[]) {
+  if (!rows || rows.length === 0) return null
+  const [head, ...body] = rows
+
+  // Find max column count across all rows (handles header/data mismatch)
+  const maxCols = Math.max(head.cells.length, ...body.map((r) => r.cells.length))
+  const padCells = (cells: string[]) => {
+    if (cells.length >= maxCols) return cells
+    return [...cells, ...Array(maxCols - cells.length).fill('')]
+  }
+
+  const headerCells = padCells(head.cells)
+  const isWide = maxCols > 5
+
+  return (
+    <div className={`my-10 relative overflow-x-auto ${isWide ? 'lg:w-[calc(100%+16rem)] lg:-ml-8 xl:w-[calc(100%+20rem)] xl:-ml-10' : ''}`}>
+      <div className="rounded-xl border border-slate-200 shadow-sm">
+        <table className="w-full text-[13px] md:text-sm text-left">
+          <thead>
+            <tr className="bg-slate-800 text-white">
+              {headerCells.map((cell: string, j: number) => (
+                <th key={j} className="px-5 py-3.5 font-semibold tracking-wide whitespace-nowrap first:rounded-tl-xl last:rounded-tr-xl">
+                  {cell}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {body.map((row, i: number) => {
+              const cells = padCells(row.cells)
+              return (
+                <tr key={row._key ?? i} className={`${i % 2 === 0 ? 'bg-white' : 'bg-slate-50/60'} hover:bg-primary-50/40 transition-colors`}>
+                  {cells.map((cell: string, j: number) => (
+                    <td
+                      key={j}
+                      className={`px-5 py-3.5 border-t border-slate-100 leading-relaxed ${
+                        j === 0 ? 'font-medium text-slate-900' : 'text-slate-600'
+                      }`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )
+}
+
 // ─── PortableText components ───────────────────────────────────────────────────
 
 const portableTextComponents: PortableTextComponents = {
@@ -254,60 +308,8 @@ const portableTextComponents: PortableTextComponents = {
         </div>
       )
     },
-    table: ({ value }) => {
-      const rows = value?.rows ?? []
-      if (rows.length === 0) return null
-      const [head, ...body] = rows
-      return (
-        <div className="my-8 overflow-x-auto rounded-xl border border-slate-200">
-          <table className="w-full text-sm md:text-base text-left">
-            <thead>
-              <tr className="bg-slate-50 border-b border-slate-200">
-                {head.cells.map((cell: string, j: number) => (
-                  <th key={j} className="px-4 py-3 font-semibold text-slate-900 whitespace-nowrap">{cell}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {body.map((row: { cells: string[]; _key: string }, i: number) => (
-                <tr key={row._key} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
-                  {row.cells.map((cell: string, j: number) => (
-                    <td key={j} className="px-4 py-3 text-slate-600 border-t border-slate-100">{cell}</td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )
-    },
-    tableBlock: ({ value }) => {
-      const rows = value?.table?.rows ?? []
-      if (rows.length === 0) return null
-      const [head, ...body] = rows
-      return (
-        <div className="my-8 overflow-x-auto rounded-xl border border-slate-200">
-          <table className="w-full text-sm md:text-base text-left">
-            <thead>
-              <tr className="bg-slate-50 border-b border-slate-200">
-                {head.cells.map((cell: string, j: number) => (
-                  <th key={j} className="px-4 py-3 font-semibold text-slate-900 whitespace-nowrap">{cell}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {body.map((row: { cells: string[]; _key: string }, i: number) => (
-                <tr key={row._key} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
-                  {row.cells.map((cell: string, j: number) => (
-                    <td key={j} className="px-4 py-3 text-slate-600 border-t border-slate-100">{cell}</td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )
-    },
+    table: ({ value }) => renderTable(value?.rows ?? []),
+    tableBlock: ({ value }) => renderTable(value?.table?.rows ?? []),
     code: ({ value }) => (
       <pre className="my-8 rounded-xl bg-slate-900 text-slate-100 p-6 overflow-x-auto text-sm leading-relaxed">
         {value?.filename && (
@@ -534,7 +536,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           )}
 
           {/* Article content */}
-          <article className="min-w-0 flex-1 max-w-[720px]">
+          <article className="min-w-0 flex-1 max-w-[960px]">
             {bodyLength > 6 ? (
               <>
                 <PortableText value={bodyPart1!} components={portableTextComponents} />

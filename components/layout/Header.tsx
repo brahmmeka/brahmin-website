@@ -54,9 +54,7 @@ const compareLinks = [
 const learnLinks = [
   { icon: '✍️', label: 'Blog', href: '/blog', iconBg: 'bg-blue-50 text-blue-600' },
   { icon: '❓', label: 'FAQ', href: '/faq', iconBg: 'bg-sky-50 text-sky-600' },
-  { icon: '🎓', label: 'Webinars', href: '/webinars', iconBg: 'bg-purple-50 text-purple-600' },
   { icon: '💡', label: 'Help center', href: 'https://support.brahmin-solutions.com/en/', iconBg: 'bg-slate-100 text-slate-600', external: true },
-  { icon: '🛠️', label: 'Free tools & templates', href: '/tools', iconBg: 'bg-emerald-50 text-emerald-700' },
 ]
 
 const companyLinks = [
@@ -584,9 +582,7 @@ export default function Header() {
                     <Link href="/blog" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">Blog</Link>
                     <Link href="/customers" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">Customer stories</Link>
                     <Link href="/faq" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">FAQ</Link>
-                    <Link href="/webinars" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">Webinars</Link>
                     <a href="https://support.brahmin-solutions.com/en/" target="_blank" rel="noopener noreferrer" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">Help center</a>
-                    <Link href="/tools" onClick={closeAll} className="block pl-3 py-1.5 text-sm text-slate-600 hover:text-slate-900">Free tools & templates</Link>
                   </div>
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Compare</p>

@@ -230,10 +230,12 @@ After deleting a page:
 ### Pending
 - [ ] Add Brahm's headshot to `/public/images/brahm-meka.jpg`
 - [ ] Add team photos to `/public/images/team/`
-- [ ] Blog migration from Webflow to Sanity
-- [ ] Webinars page (`/webinars`) — linked in nav, not built
-- [ ] Free tools page (`/tools`) — linked in nav, not built
-- [ ] Help center — linked in nav, external URL
+- [ ] Webinars page (`/webinars`) — hidden from nav, post-launch
+- [ ] Free tools page (`/tools`) — hidden from nav, post-launch
+
+### Completed
+- [x] Blog migration from Webflow to Sanity
+- [x] Help center — external URL (https://support.brahmin-solutions.com/en/)
 
 ### Notes
 - **AEO/Schema:** Organization JSON-LD in layout.tsx, FAQPage on /faq, SoftwareApplication on homepage/pricing/pillar pages, BreadcrumbList on interior pages. Full spec: `specs/AEO-SPEC.md`

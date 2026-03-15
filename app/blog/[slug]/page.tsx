@@ -123,6 +123,54 @@ function extractHeadings(body: any[]): { id: string; text: string; level: 2 | 3 
     }))
 }
 
+// ─── FAQ extraction for JSON-LD ─────────────────────────────────────────────────
+
+function extractFaqs(body: any[]): { question: string; answer: string }[] {
+  if (!body) return []
+  const faqs: { question: string; answer: string }[] = []
+
+  // Find the FAQ section: look for an H2 containing "frequently asked" or "faq"
+  let inFaq = false
+  let currentQuestion = ''
+  let currentAnswer: string[] = []
+
+  for (const block of body) {
+    if (block._type !== 'block') continue
+    const text = block.children?.map((c: any) => c.text).join('') || ''
+
+    if (block.style === 'h2') {
+      // Save any pending Q&A before checking new H2
+      if (currentQuestion && currentAnswer.length) {
+        faqs.push({ question: currentQuestion, answer: currentAnswer.join(' ') })
+        currentQuestion = ''
+        currentAnswer = []
+      }
+      inFaq = text.toLowerCase().includes('frequently asked') || text.toLowerCase().includes('faq')
+      continue
+    }
+
+    if (!inFaq) continue
+
+    if (block.style === 'h3') {
+      // Save previous Q&A
+      if (currentQuestion && currentAnswer.length) {
+        faqs.push({ question: currentQuestion, answer: currentAnswer.join(' ') })
+      }
+      currentQuestion = text
+      currentAnswer = []
+    } else if (block.style === 'normal' && currentQuestion) {
+      currentAnswer.push(text)
+    }
+  }
+
+  // Don't forget the last Q&A
+  if (currentQuestion && currentAnswer.length) {
+    faqs.push({ question: currentQuestion, answer: currentAnswer.join(' ') })
+  }
+
+  return faqs
+}
+
 // ─── PortableText components ───────────────────────────────────────────────────
 
 const portableTextComponents: PortableTextComponents = {
@@ -342,6 +390,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const bodyPart2 = post.body?.slice(inlineCTAIndex, bannerCTAIndex)
   const bodyPart3 = post.body?.slice(bannerCTAIndex)
 
+  const faqs = extractFaqs(post.body ?? [])
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -361,13 +411,33 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     },
   }
 
+  const faqJsonLd = faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  } : null
+
   return (
     <main className="bg-white">
-      {/* JSON-LD */}
+      {/* JSON-LD: Article */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {/* JSON-LD: FAQ */}
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       {/* ── Full-width header area ── */}
       <section className="bg-white border-b border-slate-100">

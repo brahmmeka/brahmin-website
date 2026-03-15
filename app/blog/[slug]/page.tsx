@@ -17,7 +17,7 @@ import {
 import { SAMPLE_POSTS, SAMPLE_POST_FULL } from '@/lib/sanity.sample'
 import TableOfContents from '@/components/blog/TableOfContents'
 import RelatedPosts from '@/components/blog/RelatedPosts'
-import BlogCTA from '@/components/blog/BlogCTA'
+import BlogCTA, { InlineCTA } from '@/components/blog/BlogCTA'
 
 export const revalidate = 60
 
@@ -290,11 +290,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     ? Math.max(1, Math.ceil(JSON.stringify(post.body).split(' ').length / 200))
     : 3
 
-  // Split body roughly in half for mid-article CTA insertion
+  // Find H2 positions to insert CTAs at natural section breaks
   const bodyLength = post.body?.length ?? 0
-  const midPoint = Math.floor(bodyLength / 2)
-  const bodyFirstHalf = post.body?.slice(0, midPoint)
-  const bodySecondHalf = post.body?.slice(midPoint)
+  const h2Indices = (post.body ?? [])
+    .map((block: any, i: number) => (block._type === 'block' && block.style === 'h2' ? i : -1))
+    .filter((i: number) => i > 0)
+
+  // 1st CTA (inline): ~1/3 mark, 2nd CTA (banner): ~2/3 mark
+  const oneThird = Math.floor(bodyLength / 3)
+  const twoThirds = Math.floor((bodyLength * 2) / 3)
+
+  const inlineCTAIndex = h2Indices.length > 0
+    ? h2Indices.reduce((best: number, idx: number) =>
+        Math.abs(idx - oneThird) < Math.abs(best - oneThird) ? idx : best, h2Indices[0])
+    : oneThird
+
+  const bannerCTAIndex = h2Indices.length > 1
+    ? h2Indices
+        .filter((i: number) => i > inlineCTAIndex)
+        .reduce((best: number, idx: number) =>
+          Math.abs(idx - twoThirds) < Math.abs(best - twoThirds) ? idx : best, h2Indices[h2Indices.length - 1])
+    : Math.max(inlineCTAIndex + 2, twoThirds)
+
+  const bodyPart1 = post.body?.slice(0, inlineCTAIndex)
+  const bodyPart2 = post.body?.slice(inlineCTAIndex, bannerCTAIndex)
+  const bodyPart3 = post.body?.slice(bannerCTAIndex)
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -419,16 +439,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           {/* Article content */}
           <article className="min-w-0 flex-1 max-w-[720px]">
-            {bodyLength > 4 ? (
+            {bodyLength > 6 ? (
               <>
-                <PortableText value={bodyFirstHalf!} components={portableTextComponents} />
-                <BlogCTA />
-                <PortableText value={bodySecondHalf!} components={portableTextComponents} />
+                <PortableText value={bodyPart1!} components={portableTextComponents} />
+                <InlineCTA category={post.categories?.[0]} />
+                <PortableText value={bodyPart2!} components={portableTextComponents} />
+                <BlogCTA category={post.categories?.[0]} />
+                <PortableText value={bodyPart3!} components={portableTextComponents} />
               </>
             ) : post.body && bodyLength > 0 ? (
               <>
                 <PortableText value={post.body} components={portableTextComponents} />
-                <BlogCTA />
+                <BlogCTA category={post.categories?.[0]} />
               </>
             ) : null}
 

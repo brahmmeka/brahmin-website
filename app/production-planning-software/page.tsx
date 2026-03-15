@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     'cloud production planning',
   ],
   alternates: {
-    canonical: 'https://brahminsolutions.com/production-planning-software',
+    canonical: 'https://www.brahmin-solutions.com/production-planning-software',
   },
   openGraph: {
     title: 'Production Planning Software for Growing Manufacturers',
     description:
       'See what\'s running, what\'s next, and where bottlenecks are forming — before they delay your orders. Starting from $199/month.',
-    url: 'https://brahminsolutions.com/production-planning-software',
+    url: 'https://www.brahmin-solutions.com/production-planning-software',
     type: 'website',
     siteName: 'Brahmin Solutions',
   },
@@ -366,7 +366,7 @@ const softwareSchema = {
     '@type': 'Audience',
     audienceType: 'Small to mid-sized manufacturers',
   },
-  url: 'https://brahminsolutions.com',
+  url: 'https://www.brahmin-solutions.com',
   sameAs: [
     'https://www.linkedin.com/company/brahmin-solutions',
   ],
@@ -398,13 +398,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://brahminsolutions.com',
+      item: 'https://www.brahmin-solutions.com',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Production Planning Software',
-      item: 'https://brahminsolutions.com/production-planning-software',
+      item: 'https://www.brahmin-solutions.com/production-planning-software',
     },
   ],
 }

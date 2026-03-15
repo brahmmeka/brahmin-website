@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     'mrp software for small manufacturers',
   ],
   alternates: {
-    canonical: 'https://brahminsolutions.com/mrp-software',
+    canonical: 'https://www.brahmin-solutions.com/mrp-software',
   },
   openGraph: {
     title: 'MRP Software for Growing Manufacturers',
     description:
       'Plan production, manage materials, and finally know your true costs — without enterprise complexity.',
-    url: 'https://brahminsolutions.com/mrp-software',
+    url: 'https://www.brahmin-solutions.com/mrp-software',
     type: 'website',
     siteName: 'Brahmin Solutions',
   },
@@ -363,7 +363,7 @@ const softwareSchema = {
     '@type': 'Audience',
     audienceType: 'Small to mid-sized manufacturers',
   },
-  url: 'https://brahminsolutions.com',
+  url: 'https://www.brahmin-solutions.com',
   sameAs: [
     'https://www.linkedin.com/company/brahmin-solutions',
   ],
@@ -395,13 +395,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://brahminsolutions.com',
+      item: 'https://www.brahmin-solutions.com',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'MRP Software',
-      item: 'https://brahminsolutions.com/mrp-software',
+      item: 'https://www.brahmin-solutions.com/mrp-software',
     },
   ],
 }

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import fs from 'fs'
 import path from 'path'
 
-const baseUrl = 'https://brahminsolutions.com'
+const baseUrl = 'https://www.brahmin-solutions.com'
 
 // Priority mapping by route pattern
 function getPriority(route: string): number {

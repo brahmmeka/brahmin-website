@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     'lot tracking for manufacturers',
   ],
   alternates: {
-    canonical: 'https://brahminsolutions.com/lot-tracking-software',
+    canonical: 'https://www.brahmin-solutions.com/lot-tracking-software',
   },
   openGraph: {
     title: 'Lot Tracking Software for Manufacturers',
     description:
       'Track every batch from receiving to shipment. Pull recall reports in minutes, not days. Stay FDA-compliant without the paperwork burden.',
-    url: 'https://brahminsolutions.com/lot-tracking-software',
+    url: 'https://www.brahmin-solutions.com/lot-tracking-software',
     type: 'website',
     siteName: 'Brahmin Solutions',
   },
@@ -338,7 +338,7 @@ const softwareSchema = {
     '@type': 'Audience',
     audienceType: 'Small to mid-sized manufacturers',
   },
-  url: 'https://brahminsolutions.com',
+  url: 'https://www.brahmin-solutions.com',
   sameAs: [
     'https://www.linkedin.com/company/brahmin-solutions',
   ],
@@ -370,13 +370,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://brahminsolutions.com',
+      item: 'https://www.brahmin-solutions.com',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Lot tracking software',
-      item: 'https://brahminsolutions.com/lot-tracking-software',
+      item: 'https://www.brahmin-solutions.com/lot-tracking-software',
     },
   ],
 }

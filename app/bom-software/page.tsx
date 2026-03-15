@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     'bom for small manufacturers',
   ],
   alternates: {
-    canonical: 'https://brahminsolutions.com/bom-software',
+    canonical: 'https://www.brahmin-solutions.com/bom-software',
   },
   openGraph: {
     title: 'Bill of Materials Software for Manufacturers',
     description:
       'Build single-level or multi-level BOMs, track material costs in real time, and price products based on actual data — not guesswork.',
-    url: 'https://brahminsolutions.com/bom-software',
+    url: 'https://www.brahmin-solutions.com/bom-software',
     type: 'website',
     siteName: 'Brahmin Solutions',
   },
@@ -354,7 +354,7 @@ const softwareSchema = {
     '@type': 'Audience',
     audienceType: 'Small to mid-sized manufacturers',
   },
-  url: 'https://brahminsolutions.com',
+  url: 'https://www.brahmin-solutions.com',
   sameAs: [
     'https://www.linkedin.com/company/brahmin-solutions',
   ],
@@ -386,13 +386,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://brahminsolutions.com',
+      item: 'https://www.brahmin-solutions.com',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Bill of materials software',
-      item: 'https://brahminsolutions.com/bom-software',
+      item: 'https://www.brahmin-solutions.com/bom-software',
     },
   ],
 }

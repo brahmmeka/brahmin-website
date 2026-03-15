@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     'erp for growing manufacturers',
   ],
   alternates: {
-    canonical: 'https://brahminsolutions.com/manufacturing-erp',
+    canonical: 'https://www.brahmin-solutions.com/manufacturing-erp',
   },
   openGraph: {
     title: 'Manufacturing ERP for growing businesses',
     description:
       'All the capabilities of an ERP — production, inventory, purchasing — without 18 months of implementation or a six-figure budget.',
-    url: 'https://brahminsolutions.com/manufacturing-erp',
+    url: 'https://www.brahmin-solutions.com/manufacturing-erp',
     type: 'website',
     siteName: 'Brahmin Solutions',
   },
@@ -356,7 +356,7 @@ const softwareSchema = {
     '@type': 'Audience',
     audienceType: 'Small to mid-sized manufacturers',
   },
-  url: 'https://brahminsolutions.com',
+  url: 'https://www.brahmin-solutions.com',
   sameAs: [
     'https://www.linkedin.com/company/brahmin-solutions',
   ],
@@ -388,13 +388,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://brahminsolutions.com',
+      item: 'https://www.brahmin-solutions.com',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Manufacturing ERP',
-      item: 'https://brahminsolutions.com/manufacturing-erp',
+      item: 'https://www.brahmin-solutions.com/manufacturing-erp',
     },
   ],
 }

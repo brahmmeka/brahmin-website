@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     'cloud inventory software',
   ],
   alternates: {
-    canonical: 'https://brahminsolutions.com/inventory-management-software',
+    canonical: 'https://www.brahmin-solutions.com/inventory-management-software',
   },
   openGraph: {
     title: 'Inventory Management Software for Manufacturers',
     description:
       'Real-time inventory tracking for raw materials, WIP, and finished goods — built for manufacturers, not retailers.',
-    url: 'https://brahminsolutions.com/inventory-management-software',
+    url: 'https://www.brahmin-solutions.com/inventory-management-software',
     type: 'website',
     siteName: 'Brahmin Solutions',
   },
@@ -354,7 +354,7 @@ const softwareSchema = {
     '@type': 'Audience',
     audienceType: 'Small to mid-sized manufacturers',
   },
-  url: 'https://brahminsolutions.com',
+  url: 'https://www.brahmin-solutions.com',
   sameAs: [
     'https://www.linkedin.com/company/brahmin-solutions',
   ],
@@ -386,13 +386,13 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://brahminsolutions.com',
+      item: 'https://www.brahmin-solutions.com',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Inventory Management Software',
-      item: 'https://brahminsolutions.com/inventory-management-software',
+      item: 'https://www.brahmin-solutions.com/inventory-management-software',
     },
   ],
 }

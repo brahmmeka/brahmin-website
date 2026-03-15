@@ -258,7 +258,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       name: 'Brahmin Solutions',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://brahminsolutions.com/images/logo.webp',
+        url: 'https://www.brahmin-solutions.com/images/logo.webp',
       },
     },
   }

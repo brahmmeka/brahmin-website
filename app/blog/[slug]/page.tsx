@@ -209,27 +209,53 @@ const portableTextComponents: PortableTextComponents = {
     table: ({ value }) => {
       const rows = value?.rows ?? []
       if (rows.length === 0) return null
+      const [head, ...body] = rows
       return (
         <div className="my-8 overflow-x-auto rounded-xl border border-slate-200">
           <table className="w-full text-sm md:text-base text-left">
-            {rows.map((row: { cells: string[]; _key: string }, i: number) => {
-              const Tag = i === 0 ? 'th' : 'td'
-              const Wrapper = i === 0 ? 'thead' : 'tbody'
-              return (
-                <Wrapper key={row._key}>
-                  <tr className={i === 0 ? 'bg-slate-50' : i % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
-                    {row.cells.map((cell: string, j: number) => (
-                      <Tag
-                        key={j}
-                        className={`px-4 py-3 ${i === 0 ? 'font-semibold text-slate-900 border-b border-slate-200' : 'text-slate-600 border-b border-slate-100'}`}
-                      >
-                        {cell}
-                      </Tag>
-                    ))}
-                  </tr>
-                </Wrapper>
-              )
-            })}
+            <thead>
+              <tr className="bg-slate-50 border-b border-slate-200">
+                {head.cells.map((cell: string, j: number) => (
+                  <th key={j} className="px-4 py-3 font-semibold text-slate-900 whitespace-nowrap">{cell}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {body.map((row: { cells: string[]; _key: string }, i: number) => (
+                <tr key={row._key} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
+                  {row.cells.map((cell: string, j: number) => (
+                    <td key={j} className="px-4 py-3 text-slate-600 border-t border-slate-100">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )
+    },
+    tableBlock: ({ value }) => {
+      const rows = value?.table?.rows ?? []
+      if (rows.length === 0) return null
+      const [head, ...body] = rows
+      return (
+        <div className="my-8 overflow-x-auto rounded-xl border border-slate-200">
+          <table className="w-full text-sm md:text-base text-left">
+            <thead>
+              <tr className="bg-slate-50 border-b border-slate-200">
+                {head.cells.map((cell: string, j: number) => (
+                  <th key={j} className="px-4 py-3 font-semibold text-slate-900 whitespace-nowrap">{cell}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {body.map((row: { cells: string[]; _key: string }, i: number) => (
+                <tr key={row._key} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
+                  {row.cells.map((cell: string, j: number) => (
+                    <td key={j} className="px-4 py-3 text-slate-600 border-t border-slate-100">{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
       )

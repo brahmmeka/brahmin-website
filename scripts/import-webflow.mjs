@@ -442,14 +442,15 @@ async function importPosts() {
     console.log(`📝 Importing: "${row.Name}"`)
 
     try {
-      // Parse publish date
+      // Parse publish date — use "Created On" as the original publish date
+      // ("Published On" is unreliable — Webflow bulk-republished all posts on Nov 8 2024)
       let publishedAt = null
-      if (row['Published On']) {
-        const d = new Date(row['Published On'])
+      if (row['Created On']) {
+        const d = new Date(row['Created On'])
         if (!isNaN(d.getTime())) publishedAt = d.toISOString()
       }
-      if (!publishedAt && row['Created On']) {
-        const d = new Date(row['Created On'])
+      if (!publishedAt && row['Published On']) {
+        const d = new Date(row['Published On'])
         if (!isNaN(d.getTime())) publishedAt = d.toISOString()
       }
       if (!publishedAt) publishedAt = new Date().toISOString()

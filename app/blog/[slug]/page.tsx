@@ -206,6 +206,58 @@ const portableTextComponents: PortableTextComponents = {
         </div>
       )
     },
+    table: ({ value }) => {
+      const rows = value?.rows ?? []
+      if (rows.length === 0) return null
+      return (
+        <div className="my-8 overflow-x-auto rounded-xl border border-slate-200">
+          <table className="w-full text-sm md:text-base text-left">
+            {rows.map((row: { cells: string[]; _key: string }, i: number) => {
+              const Tag = i === 0 ? 'th' : 'td'
+              const Wrapper = i === 0 ? 'thead' : 'tbody'
+              return (
+                <Wrapper key={row._key}>
+                  <tr className={i === 0 ? 'bg-slate-50' : i % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
+                    {row.cells.map((cell: string, j: number) => (
+                      <Tag
+                        key={j}
+                        className={`px-4 py-3 ${i === 0 ? 'font-semibold text-slate-900 border-b border-slate-200' : 'text-slate-600 border-b border-slate-100'}`}
+                      >
+                        {cell}
+                      </Tag>
+                    ))}
+                  </tr>
+                </Wrapper>
+              )
+            })}
+          </table>
+        </div>
+      )
+    },
+    code: ({ value }) => (
+      <pre className="my-8 rounded-xl bg-slate-900 text-slate-100 p-6 overflow-x-auto text-sm leading-relaxed">
+        {value?.filename && (
+          <div className="mb-3 text-xs text-slate-400 font-mono">{value.filename}</div>
+        )}
+        <code className="font-mono">{value?.code}</code>
+      </pre>
+    ),
+    youtube: ({ value }) => {
+      if (!value?.url) return null
+      const id = value.url.match(/(?:youtu\.be\/|v=)([^&\s]+)/)?.[1]
+      if (!id) return null
+      return (
+        <div className="my-10 relative aspect-video rounded-xl overflow-hidden bg-slate-100">
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${id}`}
+            title="YouTube video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute inset-0 w-full h-full"
+          />
+        </div>
+      )
+    },
   },
   list: {
     bullet: ({ children }) => <ul className="my-6 space-y-3 list-none pl-0">{children}</ul>,

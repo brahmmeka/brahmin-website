@@ -128,6 +128,16 @@ export const postSchema = defineType({
             { name: 'text', type: 'text', title: 'Text' },
           ],
         },
+        { type: 'table' },
+        { type: 'code' },
+        {
+          type: 'object',
+          name: 'youtube',
+          title: 'YouTube Embed',
+          fields: [
+            { name: 'url', type: 'url', title: 'YouTube URL' },
+          ],
+        },
       ],
     }),
     // SEO fields

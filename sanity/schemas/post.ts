@@ -88,6 +88,10 @@ export const postSchema = defineType({
             { title: 'H4', value: 'h4' },
             { title: 'Quote', value: 'blockquote' },
           ],
+          lists: [
+            { title: 'Bullet', value: 'bullet' },
+            { title: 'Numbered', value: 'number' },
+          ],
           marks: {
             decorators: [
               { title: 'Bold', value: 'strong' },
